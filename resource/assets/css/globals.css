@@ -26,26 +26,20 @@
 }
 
 /* root 예시 코드 */
-button {
-  background-color: var(--primary-color);
-  color: #fff;
-  font-size: var(--font-size-base);
-  border-radius: var(--border-radius);
-  padding: var(--padding-vertical) var(--padding-horizontal);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--box-shadow);
-  transition: 0.2s ease;
-  margin: 0 auto;
-}
+button { background-color: var(--primary-color); color: #fff; font-size: var(--font-size-base); border-radius: var(--border-radius); padding: var(--padding-vertical) var(--padding-horizontal); border: 1px solid var(--border-color); box-shadow: var(--box-shadow); transition: 0.2s ease; margin: 0 auto;}
+button:hover { background-color: var(--primary-color-light);}
+button:active { background-color: var(--primary-color-dark);}
+button:focus { outline: 2px solid var(--secondary-color);}
 
-button:hover {
-  background-color: var(--primary-color-light);
-}
+/* 공통 */
+html, body{font-size:62.5%;}
+.container { width: 100%; max-width: 750px; margin: 0 auto;}
 
-button:active {
-  background-color: var(--primary-color-dark);
-}
+/* header start */ 
+  header .container { display: flex; align-items:center; justify-content: space-between; background-color: #eaeaea; padding: 0.85rem 2rem;}
+  header .container .right{display: flex; align-items: center; gap: 1rem;}
+/* header end */
 
-button:focus {
-  outline: 2px solid var(--secondary-color);
-}
+
+/* footer start */
+/* footer end */
