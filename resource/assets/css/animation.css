@@ -1,0 +1,25 @@
+/* 자동차 와이퍼처럼 움직이는 애니메이션 */
+@keyframes swaying {
+  0% {
+    transform: rotate(-10deg) translateZ(0);
+  }
+  50% {
+    transform: rotate(10deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(-10deg) translateZ(0);
+  }
+}
+
+/* 두둥실 떠다니는 애니메이션 */
+@keyframes floating {
+  0% {
+    transform: translateY(0) translateZ(0);
+  }
+  50% {
+    transform: translateY(-20px) translateZ(0);
+  }
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+}

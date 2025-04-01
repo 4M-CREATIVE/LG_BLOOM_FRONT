@@ -1,0 +1,123 @@
+/* box-sizing 규칙 명시 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* 폰트 크기 팽창 방지 */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* 기본 여백 제거 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+/* 리스트 기본 스타일 제거 */
+ul[role='list'],
+ol[role='list'],
+li {
+  list-style: none;
+}
+
+/* body 기본값 */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 제목 및 상호작용 요소의 line-height 조정 */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* 제목에 대한 text-wrap을 balance로 설정 (브라우저 호환성 참고) */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance; /* 최신 브라우저 */
+  overflow-wrap: break-word; /* 대체 속성 */
+}
+
+/* 기본 a 태그 스타일 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* 이미지 관련 작업 */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* 입력 및 버튼 기본값 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* 고정된 항목 스크롤 여백 */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* 선택 박스 커스텀 */
+select {
+  -webkit-appearance: none; /* for Chrome */
+  -moz-appearance: none; /* for Firefox */
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none; /* for IE10, 11 */
+}
+
+/* 기타 기본값 */
+a,
+del {
+  text-decoration: none;
+}
