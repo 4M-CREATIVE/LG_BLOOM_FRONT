@@ -1,6 +1,6 @@
 :root {
   /* 색상 변수 */
-  --primary-color: #2176c7;
+  --primary-color: #5D1E7E;
   --primary-color-light: #5aa8e6;
   --primary-color-dark: #1d5f99;
   --secondary-color: #2ecc71;
@@ -32,14 +32,21 @@ button:active { background-color: var(--primary-color-dark);}
 button:focus { outline: 2px solid var(--secondary-color);}
 
 /* 공통 */
+* {font-family: 'Noto Sans KR';}
 html, body{font-size:62.5%;}
-.container { width: 100%; max-width: 750px; margin: 0 auto;}
+.container { width: 100%; margin: 0 auto;}
+.flex-between { display: flex; align-items:center; justify-content: space-between;}
+.flex-center { display: flex; align-items:center; justify-content: center;}
 
 /* header start */ 
-  header .container { display: flex; align-items:center; justify-content: space-between; background-color: #eaeaea; padding: 0.85rem 2rem;}
-  header .container .right{display: flex; align-items: center; gap: 1rem;}
+header .container { padding: 0.8rem 2rem;}
+header .container .right{ display: flex; align-items: center; gap: 1rem;}
 /* header end */
 
 
 /* footer start */
+.footer .top { padding: 2.2rem 4rem; background-color: #efefef;}
+.footer .bottom { background-color: #222; display: flex; justify-content: space-between; gap: 10px; padding: 2rem 2rem 6rem 2rem;}
+.footer .bottom a { width: 10.5rem; height: 3.2rem; border-radius: 5rem; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; opacity: 0.8; transition: 0.3s ease;}
+.footer .bottom a:active { opacity: 1;}
 /* footer end */

@@ -121,3 +121,7 @@ a,
 del {
   text-decoration: none;
 }
+
+a {
+  color: #222;
+}
