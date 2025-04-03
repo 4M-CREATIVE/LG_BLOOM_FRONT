@@ -18,6 +18,7 @@
     $(document).ready(function () {
       // Including HTML
       $(".header").load("/src/main/webapp/WEB-INF/views/web/user/components/header.html");
+      $(".gnb").load("/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       $(".footer").load("/src/main/webapp/WEB-INF/views/web/user/components/footer.html");
     });
   </script>
@@ -27,10 +28,13 @@
   <!-- header -->
   <header class="header"></header>
 
+  <!-- gnb -->
+  <div class="gnb"></div>
+
   <!-- main -->
   <main class="main container">
     <div class="section01">
-      <h2>
+      <h2 class="tit--fz22 ellipsis--2">
         LG화학과 함께<br>
         희망을 꽃 피우는 <span>난임 치료 여정</span>
       </h2>
@@ -73,14 +77,14 @@
     </div>
 
     <div class="section02">
-      <div class="sub_title">
-        <div class="left">
+      <div class="sub_title flex--between ">
+        <div class="left flex flex--left">
           <img src="/src/main/resource/static/images/user/main/main02_title.svg" alt="난임백과_아이콘">
           <p>난임백과</p>
         </div>
         <img src="/src/main/resource/static/images/user/common/right_arrow.svg" alt="오른쪽_꺽새">
       </div>
-      <ul class="contents">
+      <ul class="contents flex">
         <li>
           <img src="/src/main/resource/static/images/user/main/main02_01.svg" alt="">
           난임의 이해
@@ -105,14 +109,14 @@
     </div>
 
     <div class="section03">
-      <div class="sub_title">
-        <div class="left">
+      <div class="sub_title flex--between ">
+        <div class="left flex flex--left">
           <img src="/src/main/resource/static/images/user/main/main03_title.svg" alt="난임지원_아이콘">
           <p>난임지원</p>
         </div>
         <img src="/src/main/resource/static/images/user/common/right_arrow.svg" alt="오른쪽_꺽새">
       </div>
-      <ul class="contents">
+      <ul class="contents flex">
         <li>
           <img src="/src/main/resource/static/images/user/main/main03_01.svg" alt="">
           병원 찾기
@@ -131,7 +135,7 @@
         </li>
       </ul>
 
-      <div class="section03_sub">
+      <div class="section03_sub flex flex-between">
         <p >
           난임에 대한 궁금증, <span>자주 묻는 질문</span>에서 확인하세요!
         </p>
