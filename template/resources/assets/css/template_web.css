@@ -68,6 +68,9 @@ body {
 .txt--fz14 {
   font-size: 14px;
 }
+.txt--fz12 {
+  font-size: 12px;
+}
 
 /* color */
 .color--primary {

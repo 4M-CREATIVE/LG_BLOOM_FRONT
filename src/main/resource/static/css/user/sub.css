@@ -4,9 +4,9 @@
 .main .circle { width: 1.8rem; height: 1.8rem; border-radius: 5rem; display: flex; align-items: center; justify-content: center; }
 .main .section01 {margin-bottom: 4rem;}
 .main .section01 h2 { font-weight: bold; line-height: 3rem; margin-bottom: 2rem; letter-spacing: -0.088rem;}
-.main .section01 h2 span { color:var(--primary-color);}
+.main .section01 h2 span { color:var(--primary-purple);}
 .main .section01 .content { display: flex; gap: 0.8rem; color:#fff; flex-grow: 1;}
-.main .section01 .content .left { background-color: var(--primary-color); height: 18.9rem; border-radius: 1.5rem; padding: 1.6rem; position: relative; width: 48.96%;}
+.main .section01 .content .left { background-color: var(--primary-purple); height: 18.9rem; border-radius: 1.5rem; padding: 1.6rem; position: relative; width: 48.96%;}
 .main .section01 .content .left .illust { position: absolute; bottom: 0; right: 0;}
 .main .section01 .content .right { width: 48.66%;}
 .main .section01 .content .right .top{ background-color: #2A77C1; height: 11.4rem; border-radius: 1.5rem; padding: 1.6rem; margin-bottom: 0.8rem; position: relative;}

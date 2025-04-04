@@ -1,32 +1,130 @@
-<div class="container">
-  <button type="button" class="close-btn"><img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="메뉴닫기"></button>
-  <div class="profile_info flex flex--between">
-    <p>
-      <span>김블루</span>님
-    </p>
-    <div class="flex flex--between">
-      <button type="button" class=""><img src="/src/main/resource/static/images/user/common/gnb_profile.svg" alt="나의정보"><button>
-      <button type="button" class=""><img src="/src/main/resource/static/images/user/common/gnb_quit.svg" alt="로그아웃"><button>
+<aside class="container" role="complementary">
+  <button type="button" class="close-btn" aria-label="메뉴 닫기">
+    <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="메뉴 닫기">
+  </button>
+
+  <!-- 사용자 정보 영역 -->
+  <section class="profile_info flex flex--between buvo" aria-label="사용자 정보">
+    <p><span class="color--primary">김블루</span>님</p>
+    <div class= "right flex flex--between">
+      <button type="button" aria-label="나의 정보">
+        <img src="/src/main/resource/static/images/user/common/gnb_profile.svg" alt="나의 정보">
+      </button>
+      <button type="button" aria-label="로그아웃">
+        <img src="/src/main/resource/static/images/user/common/gnb_quit.svg" alt="로그아웃">
+      </button>
+    </div>
+  </section>
+
+  <!-- 메뉴 콘텐츠 -->
+  <nav class="contents color--gray44" aria-label="메인 메뉴">
+    <section>
+      <h2 class="color--primary mb-24 tit--fz16">난임백과</h2>
+      <ul>
+        <li>
+          <strong class="mb-12 txt--fz13">나임이해</strong>
+          <ul class="flex mb-24  gap-16">
+            <li><a href="javascript:void(0);">난임정의</a></li>
+            <li><a href="javascript:void(0);">난임원인</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong class="mb-12 txt--fz13">가임력보존</strong>
+          <ul class="flex mb-24 gap-16">
+            <li><a href="javascript:void(0);">가임력정의</a></li>
+            <li><a href="javascript:void(0);">사회적난자동결</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong class="mb-12 txt--fz13">난임시술</strong>
+          <ul class="flex mb-24 gap-10">
+            <li><a href="javascript:void(0);">난임검사</a></li>
+            <li><a href="javascript:void(0);">인공수정(IUI)</a></li>
+            <li><a href="javascript:void(0);">체외수정</a></li>
+            <li><a href="javascript:void(0);">배아이식</a></li>
+            <li><a href="javascript:void(0);">난자냉동</a></li>
+            <li><a href="javascript:void(0);">시술통계</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong class="mb-12 txt--fz13">관련질환</strong>
+          <ul class="flex mb-24 gap-10">
+            <li><a href="javascript:void(0);">질환위치</a></li>
+            <li><a href="javascript:void(0);">난소질환</a></li>
+            <li><a href="javascript:void(0);">자궁질환</a></li>
+            <li><a href="javascript:void(0);">내막질환</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong class="mb-12 txt--fz13">건강관리</strong>
+          <ul class="flex mb-24 gap-10">
+            <li><a href="javascript:void(0);">추천사항</a></li>
+            <li><a href="javascript:void(0);">주의사항</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="menue_line mb-24"/>
+
+    <section>
+      <h2 class="color--blue mb-16 tit--fz16">난임지원</h2>
+      <ul class="flex mb-24 gap-16 txt--fz13">
+        <li><a href="javascript:void(0);">병원찾기</a></li>
+        <li><a href="javascript:void(0);">난임정책</a></li>
+        <li><a href="javascript:void(0);">심리상담센터</a></li>
+        <li><a href="javascript:void(0);">응원게시판</a></li>
+      </ul>
+    </section>
+
+    <hr class="menue_line mb-24"/>
+
+    <section>
+      <h2 class="color--pink mb-16 tit--fz16">FAQ</h2>
+      <ul class="flex mb-24 gap-16 txt--fz13">
+        <li><a href="javascript:void(0);">진단 및 검사</a></li>
+        <li><a href="javascript:void(0);">시술</a></li>
+        <li><a href="javascript:void(0);">배아이식</a></li>
+        <li><a href="javascript:void(0);">기타</a></li>
+      </ul>
+    </section>
+
+    <hr class="menue_line mb-24"/>
+
+    <section>
+      <ul class="tit--fz16">
+        <li class="mb-24">
+          <a href="javascript:void(0);"><strong>가임력테스트</strong></a>
+        </li>
+        <hr class="menue_line mb-24"/>
+
+        <li class="mb-24">
+          <a href="javascript:void(0);"><strong>Patient Journey</strong></a>
+        </li>
+        <hr class="menue_line mb-24"/>
+
+        <li class="mb-24">
+          <a href="javascript:void(0);"><strong>난임병원 방문 전 체크리스트</strong></a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</aside>
+
+<!-- 하단 약관 -->
+<footer>
+  <div class="top flex flex--between">
+    <a class="txt--fz12 color--gray666" href="javascript:void(0);">이용약관</a>
+    <a class="txt--fz12 color--blk" href="javascript:void(0);">개인정보 처리방침</a>
+    <a class="txt--fz12 color--blk" href="javascript:void(0);">민감정보 처리방침</a>
+    <a class="txt--fz12 color--gray666" href="javascript:void(0);">탈퇴신청</a>
+  </div>
+
+  <div class="gnb_footer bg--grayf9">
+    <div class="bottom flex-between">
+      <img src="/src/main/resource/static/images/user/common/footer_logo1.svg" alt="로고1">
+      <img src="/src/main/resource/static/images/user/common/footer_logo2.svg" alt="로고2">
+      <img src="/src/main/resource/static/images/user/common/footer_logo3.svg" alt="로고3">
     </div>
   </div>
-
-  <div class="contents">
-      
-  </div>
-
-  <div class="top flex flex--between">
-    <a class="" href="javascript:void(0);">이용약관</a>
-    <a class="" href="javascript:void(0);">개인정보 처리방침</a>
-    <a class="" href="javascript:void(0);">민감정보 처리방침</a>
-    <a class="" href="javascript:void(0);">탈퇴신청</a>
-  </div>
-</div>
-
-
-<div class="gnb_footer">
-  <div class="bottom flex-between">
-    <img src="/src/main/resource/static/images//user/common/footer_logo1.svg" alt="">
-    <img src="/src/main/resource/static/images//user/common/footer_logo2.svg" alt="">
-    <img src="/src/main/resource/static/images//user/common/footer_logo3.svg" alt="">
-  </div>
-</div>
+</footer>
