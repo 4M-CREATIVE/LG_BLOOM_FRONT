@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-전체검색</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/search_header.html?v=1.0");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      commonEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="total-search">
+
+    <div class="search-header-wrap">
+      <!-- header -->
+      <header class="header header--sub header--sub02" role="header" ></header>
+      <!-- tab__lists -->
+      <div class="tab__lists tab__lists--scroll">
+        <div class="tab__inner">
+          <ul>
+            <li class="active"><a href="javascript:;"><strong class="tit--fz14">전체</strong></a></li>
+            <li><a href="javascript:;"><strong class="tit--fz14">난임백과</strong></a></li>
+            <li><a href="javascript:;"><strong class="tit--fz14">난임병원</strong></a></li>
+            <li><a href="javascript:;"><strong class="tit--fz14">FAQ</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer"></div> 
+
+    <!-- main -->
+    <div class="search-result">
+      <div class="container">
+        <section class="purple">
+          <div class="tit">
+            <p>난임백과 <span>10</span></p>
+            <p><a href="javascript:void(0);">결과 더보기 <del></del></a></p>
+          </div>
+          <ul>
+            <li>
+              <a href="javascript:void(0)">시험관 아기 시술 과정</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">시험관 아기 시술 배양 상세 과정 상세과정</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">시험관 시술 실패 후 재시술 준비</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">시험관 아기 시술 과정</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">연간키워드 아기 시술 배양 상세 과정</a>
+            </li>
+          </ul>
+        </section>
+        <section class="blue">
+          <div>
+            <p>난임백과 <span>10</span></p>
+            <ul>
+              <li>
+                <a href="javascript:void(0)l">
+                  강남 AK시험관 의원
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)l">
+                  송파 AK시험관 의원
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)l">
+                  송파 잠실 시험관 의원
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="pink">
+          <div>
+            <p>난임백과 <span>10</span></p>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>

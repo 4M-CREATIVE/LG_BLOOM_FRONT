@@ -1,3 +1,48 @@
+/* a11y */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
+
+/* layout */
+#wrap {
+  min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정 */
+  display: flex;
+  flex-direction: column;
+  background: #f3f3f3;
+}
+.contents {
+  flex: 1; /* 콘텐츠가 차지할 공간을 늘림 */
+  overflow-y: auto; /* 내용이 길면 스크롤 가능 */
+  /* padding: 30px 20px 40px; */
+  margin-top: 5px;
+  background: #fff;
+}
+.contents_wrap {
+  padding: 30px 20px 40px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+}
+
+.top {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
 
 .flex {
   display: flex;
@@ -11,9 +56,6 @@
 }
 .flex--left {
   justify-content: left;
-}
-.drection--column {
-  flex-direction: column;
 }
 .align--start {
   align-items: flex-start;
@@ -29,19 +71,19 @@
 .box--gray {
   display: inline-flex;
   flex-direction: column;
-  padding: 1.4rem 16rem;
+  padding: 14px 16px;
   width: 100%;
-  min-height: 5rem;
-  border-radius: .5rem;
+  min-height: 50px;
+  border-radius: 5px;
   background: #f7f7f7;
 }
 .box--line-gray {
   display: inline-flex;
   flex-direction: column;
-  padding: 1.4rem 16rem;
+  padding: 14px 16px;
   width: 100%;
-  min-height: 5rem;
-  border-radius: .5rem;
+  min-height: 50px;
+  border-radius: 5px;
   border: 1px solid #e5e5e5;
 }
 
@@ -50,32 +92,21 @@
   width: 100%;
   display: flex;
   align-items: center;
-  height: 5rem;
-  padding: 0rem 2rem;
-  background: transparent;
-  margin-top: 2rem;
-  border-bottom: 1px solid #E3D9EA;
-}
-
-.header--sub input{
-  border-radius: 25px;
-  border: 1px solid var(--Neutral-gray-99, #999);
-  background: transparent;
+  height: 50px;
+  padding: 5px 20px;
+  background: #fff;
 }
 
 .btn--back {
   display: block;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 24px;
+  height: 24px;
   background: url(/src/main/resource/static/images/user/common/arrow_l_black.svg) no-repeat;
   background-size: contain;
-  margin-right: 2rem;
-}
-.header--sub02 {
-  padding-bottom: 0.8rem;
+  margin-right: 20px;
 }
 .header--sub02 .btn--back {
-  background: url(/src/main/resource/static/images/user/common/arrow_l_black.svg) no-repeat;
+  /* background: url(../images/common/icon_arrow_left-big-wht.png) no-repeat; */
   background-size: contain;
 }
 .btn__hamburger {
@@ -181,10 +212,7 @@
 .color--blk {
   color: var(--primary-black);
 }
-.color--grayAA {
-  color: var(--Neutral-gray-AA);
-}
-.color--gray66 {
+.color--gray666 {
   color: #666;
 }
 .color--gray55 {
@@ -550,14 +578,14 @@ select:disabled,
 .input__search { /* 흰색 searchbox */
   position: relative;
   overflow: hidden;
-  padding: 0 45px 0 16px;
+  padding: 0 4.5rem 0 1.6rem;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 4rem;
+  line-height: 4rem;
   background: #fff;
-  border-radius: 5px;
-  font-size: 12px;
-  color: #888;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--neutral-gray-99);
 }
 .input__search02 { /* 회색 searchbox */
   padding: 0 45px 0 20px;
@@ -570,7 +598,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .search__box button[type="submit"] {
   width: 24px;
   height: 24px;
-  background: url(/src/main/resource/static/images/user/common/search_magnifying.svg) no-repeat;
+  background: url(/src/main/resource/static/images/user/common/close_small.svg) no-repeat;
   background-size: contain;
   position: absolute;
   top: 50%;
@@ -584,10 +612,9 @@ input[type="search"]::-webkit-search-cancel-button {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background: url(/src/main/resource/static/images/user/common/close_small.svg) no-repeat 0 0;
+  background: url(../images/common/icon_clear.png) no-repeat 0 0;
   background-size: contain;
   display: none;
-  transition: .2s ease;
 }
 .search__result {
   margin-top: 30px;
@@ -797,10 +824,11 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* tab */
 .tab__lists {
-  background: transparent;
+  background: #fff;
 }
 .tab__lists--scroll {
-  padding: 2rem 3rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 10px;
 }
 .tab__lists--scroll .tab__inner {
   overflow-x: auto;
@@ -814,7 +842,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .tab__lists ul {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 10px;
 }
 .tab__lists--wrap ul {
   flex-wrap: wrap;
@@ -828,26 +856,9 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0 9px;
   font-size: 12px;
   color: #555;
-  position: relative;
 }
-
 .tab__lists ul .active {
-  color: var(--primary-black);
-}
-
-.tab__lists ul .active a{
-  position: relative;
-}
-
-.tab__lists ul .active a::after{
-  content: '';
-  display: block;
-  width: 100%;
-  height: 0.1rem;
-  background-color: #222;
-  margin-top: 0.2rem ;
-  position: absolute;
-  bottom: -0.2rem;
+  color: #57207e;
 }
 .tab__lists--scroll ul {
   display: flex;
