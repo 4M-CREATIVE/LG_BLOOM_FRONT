@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="no-scrollbar">
 
 <head>
   <meta charset="UTF-8">
@@ -11,25 +11,40 @@
 
   <!-- js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/src/main/resource/static/js/user/common.js"></script>
+  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
 
   <!-- Initialized Include Path -->
   <script>
-    $(document).ready(function () {
-      // Including HTML
-      $(".header").load("/src/main/webapp/WEB-INF/views/web/user/components/header.html");
-      $(".gnb").load("/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
-      $(".footer").load("/src/main/webapp/WEB-INF/views/web/user/components/footer.html");
-    });
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/header.html?v=1.0");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/footer.html");
+  
+      commonEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
   </script>
 </head>
 
 <body>
   <!-- header -->
-  <header class="header"></header>
+  <header class="header" role="header" ></header>
 
   <!-- gnb -->
-  <div class="gnb"></div>
+  <div class="gnb no-scrollbar"></div>
 
   <!-- main -->
   <main class="main container">
@@ -141,7 +156,7 @@
         </li>
       </ul>
 
-      <div class="section03_sub flex flex-between" aria-label="자주 묻는 질문 안내">
+      <div class="section03_sub flex flex--between" aria-label="자주 묻는 질문 안내">
         <p>
           난임에 대한 궁금증, <span>자주 묻는 질문</span>에서 확인하세요!
         </p>
