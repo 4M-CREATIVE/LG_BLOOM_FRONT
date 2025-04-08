@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-전체검색</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
+
+</head>
+
+<body id="wrap">
+
+  <h2>Button</h2>
+  <div class="wrap">
+    <h6>큰 버튼</h6>
+    <div class="btn__box">
+      <button class="btn btn--purple">.btn--purple</button>
+    </div>
+    <div class="btn__box">
+      <button class="btn btn--gray">.btn--gray</button>
+    </div>
+    <div class="btn__box">
+      <button class="btn btn--line-gray">.btn--line-purple</button>
+    </div>
+
+    
+    <div class="btn__box">
+      <button class="btn btn--gray">취소</button>
+      <button class="btn btn--purple">확인</button>
+    </div>
+ 
+    <div class="btn__box">
+      <button class="btn btn--gray">취소</button>
+      <button class="btn btn--purple btn--longer">.btn--longer</button>
+    </div>
+
+    <div class="btn__box">
+      <button class="btn btn--gray">취소</button>
+      <button class="btn btn--purple">확인</button>
+      <button class="btn btn--gray">취소</button>
+    </div>
+
+    <div class="btn__box"> 
+      <button class="btn btn--blue">.btn--blue</button>
+    </div>
+    <div class="btn__box">
+      <button class="btn btn--line-blue">.btn--line-purple</button>
+    </div>
+    <div class="btn__box">
+      <button class="btn btn--line-purple">.btn--line-purple</button>
+    </div>
+
+    <h6>작은 버튼</h6>
+    <button class="btn btn--small btn--purple">.btn--small</button>
+    <button class="btn btn--small btn--gray">보기</button>
+    <div class="btn__box">
+      <button class="btn btn--small btn--purple">보기</button>
+    </div>
+    <div class="btn__box">
+      <button class="btn btn--small btn--purple">보기</button>
+      <button class="btn btn--small btn--purple">보기</button>
+    </div>
+  </div>
+  <br>
+  <div class="wrap">
+
+    <div class="form__box">
+      <input type="text" name="" placeholder="input 기본" id="">
+    </div>
+    <div class="form__box">
+      <input type="text" name="" placeholder="input readonly" id="" readonly="">
+    </div>
+    <div class="form__box">
+      <input type="text" name="" placeholder="input disabled" id="" disabled="">
+    </div>
+
+    <div class="form__box">
+      <textarea name="" id="" placeholder="textarea"></textarea>
+    </div>
+
+    <h4>input column</h4>
+    <div class="form__group">
+      <div class="form__title">비밀번호</div>
+      <div class="form__box form__box--column">
+        <input type="text" name="" placeholder="비밀번호" id="">
+        <input type="text" name="" placeholder="비밀번호 확인" id="">
+      </div>
+      <div class="form__text color--gray99">영문과 숫자만 사용가능 영문과 숫자만 사용가능, 영문과 숫자만 사용가능 영문과 숫자만 사용가능</div>
+      <div class="form__text color--pink">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nesciunt est accusamus ex, voluptate optio non consectetur soluta iusto rerum quam quisquam quidem odit dolorem a.</div>
+    </div>
+
+    <h4>input row</h4>
+    <div class="form__group">
+      <div class="form__title form__title--required">비밀번호</div>
+      <div class="form__box form__box--row">
+        <input type="text" name="" placeholder="비밀번호" id="">
+        <button>중복확인</button>
+      </div>
+    </div>
+
+    <div class="form__group">
+      <div class="form__title">첨부파일</div>
+      <div class="form__box form__box--row">
+        <input type="text" class="file__name" id="file-name-display1" value="" placeholder="첨부파일1" readonly="">
+        <button class="file__btn" data-file-input="file1" aria-label="파일 선택">파일 선택</button>
+        <input type="file" class="file__input sr-only" id="file1">
+      </div>
+    </div>
+    <div class="form__group">
+      <div class="form__box form__box--row">
+        <input type="text" class="file__name" id="file-name-display2" value="" placeholder="첨부파일2" readonly="">
+        <button class="file__btn" data-file-input="file2" aria-label="파일 선택">파일 선택</button>
+        <input type="file" class="file__input sr-only" id="file2">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <div class="form__title form__title--required">이메일</div>
+      <div class="form__box form__box--row">
+        <input type="text" name="" placeholder="" id="">
+        <span>@</span>
+        <input type="text" name="" placeholder="" id="">
+      </div>
+    </div>
+
+    <br>
+    <div class="form__box">
+      <select name="" id="">
+        <option value="">일반 select</option>
+        <option value="">option1</option>
+        <option value="">option2</option>
+      </select>
+    </div>
+
+    <div class="form__group">
+      <div class="form__title form__title--required">생년월일</div>
+      <div class="form__box form__box--row">
+        <select name="" id="">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+        <select name="" id="">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+        <select name="" id="">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+      </div>
+    </div>
+
+    <h6>custom select</h6>
+    <div class="form__group">
+      <div class="select--custom">
+        <div class="select__box">.select--custom</div>
+        <div class="select__options"><div data-value="option1">옵션 1</div><div data-value="option2">옵션 2</div><div data-value="option3">옵션 3</div><div data-value="option4">옵션 4</div><div data-value="option5">옵션 5</div></div>
+        <select>
+          <option value="option1">옵션 1</option>
+          <option value="option2">옵션 2</option>
+          <option value="option3">옵션 3</option>
+          <option value="option4">옵션 4</option>
+          <option value="option5">옵션 5</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+    <h4>Search</h4>
+    <div class="form__group">
+      <div class="search__box">
+        <input type="search" name="" placeholder="회색 input search" id="" class="input__search input__search01">
+        <button type="submit">검색</button>
+      </div>
+      <div style="padding: 10px;background: #57207E;">
+        <div class="search__box">
+          <input type="search" name="" placeholder="흰색 input search" id="" class="input__search input__search02">
+          <button type="submit">검색</button>
+        </div>
+      </div>
+
+      <div class="search__result">
+        <div class="search__result--keyword">
+          <span class="color--primary">검색어</span>&nbsp;검색결과
+        </div>
+        <div class="search__result--num"><strong class="color--blk">2개</strong>의 컨텐츠 검색완료</div>
+      </div>
+    </div>
+    <h4>checkbox</h4>
+    <div class="check__group check__group--all">
+        <input type="checkbox" name="" class="checkbox sr-only" id="checkbox1" required="" checked="">
+        <label for="checkbox1"><span>전체 동의합니다.</span></label>
+    </div>
+    <div class="flex flex--between">
+      <div class="check__group">
+        <input type="checkbox" name="" class="checkbox sr-only" id="checkbox2">
+        <label for="checkbox2"><span>이용약관 동의</span><em>(필수)</em></label>
+      </div>
+      <button class="btn btn--small btn--gray">보기</button>
+    </div>
+
+    <h4>radio</h4>
+    <div class="radio__group">
+      <input type="radio" name="gender" class="radio sr-only" id="radio1">
+      <label for="radio1"><span>남</span></label>
+      <input type="radio" name="gender" class="radio sr-only" id="radio2">
+      <label for="radio2"><span>여</span></label>
+    </div>
+
+    <div class="radio__group">
+      <input type="radio" name="agreeYN" class="radio sr-only" id="radio3">
+      <label for="radio3"><span>동의</span></label>
+      <input type="radio" name="agreeYN" class="radio sr-only" id="radio4">
+      <label for="radio4"><span>비동의</span></label>
+    </div>
+    
+  </div>
+</body>
+
+</html>
