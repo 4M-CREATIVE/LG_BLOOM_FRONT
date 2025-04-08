@@ -29,7 +29,6 @@
   
     async function initPage() {
       await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/search_header.html?v=1.0");
-      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
   
       commonEvent.init();
@@ -46,13 +45,20 @@
       <header class="header header--sub header--sub02" role="header" ></header>
       <!-- tab__lists -->
       <div class="tab__lists tab__lists--scroll">
-        <div class="tab__inner">
-          <ul>
-            <li class="active"><a href="javascript:;"><strong class="tit--fz14">전체</strong></a></li>
-            <li><a href="javascript:;"><strong class="tit--fz14">난임백과</strong></a></li>
-            <li><a href="javascript:;"><strong class="tit--fz14">난임병원</strong></a></li>
-            <li><a href="javascript:;"><strong class="tit--fz14">FAQ</strong></a></li>
-          </ul>
+        <div class="tab__inner tab-link">
+
+            <button class="tab-menu active">
+              <span href="javascript:void(0);" data-title="item-1" data-content="item-1"><strong class="tit--fz14">전체</strong></span>
+            </button>
+            <button class="tab-menu">
+              <span href="javascript:void(0);" data-title="item-2" data-content="item-2"><strong class="tit--fz14">난임백과</strong></span>
+            </button>
+            <button class="tab-menu">
+              <span href="javascript:void(0);" data-title="item-3" data-content="item-3"><strong class="tit--fz14">난임병원</strong></span>
+            </button>
+            <button class="tab-menu">
+              <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">FAQ</strong></span>
+            </button>
         </div>
       </div>
     </div>
@@ -61,63 +67,70 @@
     <div class="spacer"></div> 
 
     <!-- main -->
-    <div class="search-result">
-      <div class="container">
-        <section class="purple">
-          <div class="tit">
-            <p>난임백과 <span>10</span></p>
-            <p><a href="javascript:void(0);">결과 더보기 <del></del></a></p>
-          </div>
-          <ul>
-            <li>
-              <a href="javascript:void(0)">시험관 아기 시술 과정</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">시험관 아기 시술 배양 상세 과정 상세과정</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">시험관 시술 실패 후 재시술 준비</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">시험관 아기 시술 과정</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">연간키워드 아기 시술 배양 상세 과정</a>
-            </li>
-          </ul>
-        </section>
-        <section class="blue">
-          <div>
-            <p>난임백과 <span>10</span></p>
+    <div class="content">
+      <div class="search-result tab-content active is-radius" id="item-1">
+        <div class="container">
+          <section class="purple">
+            <div class="tit">
+              <p>난임백과 <span>10</span></p>
+              <p><a href="javascript:void(0);">결과 더보기 <del></del></a></p>
+            </div>
             <ul>
               <li>
-                <a href="javascript:void(0)l">
-                  강남 AK시험관 의원
-                </a>
+                <a class="tab-menu active" href="javascript:void(0)">시험관 아기 시술 과정</a>
               </li>
               <li>
-                <a href="javascript:void(0)l">
-                  송파 AK시험관 의원
-                </a>
+                <a class="tab-menu" href="javascript:void(0)">시험관 아기 시술 배양 상세 과정 상세과정</a>
               </li>
               <li>
-                <a href="javascript:void(0)l">
-                  송파 잠실 시험관 의원
-                </a>
+                <a class="tab-menu" href="javascript:void(0)">시험관 시술 실패 후 재시술 준비</a>
+              </li>
+              <li>
+                <a class="tab-menu" href="javascript:void(0)">시험관 아기 시술 과정</a>
+              </li>
+              <li>
+                <a class="tab-menu" href="javascript:void(0)">연간키워드 아기 시술 배양 상세 과정</a>
               </li>
             </ul>
-          </div>
-        </section>
-        <section class="pink">
-          <div>
-            <p>난임백과 <span>10</span></p>
-          </div>
-        </section>
+          </section>
+          <section class="blue">
+            <div>
+              <p>난임백과 <span>10</span></p>
+              <ul>
+                <li>
+                  <a href="javascript:void(0)l">
+                    강남 AK시험관 의원
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)l">
+                    송파 AK시험관 의원
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)l">
+                    송파 잠실 시험관 의원
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="pink">
+            <div>
+              <p>난임백과 <span>10</span></p>
+            </div>
+          </section>
 
 
+        </div>
+      </div>
+      <div class="search-result tab-content is-radius" id="item-2">
+      </div>
+      <div class="search-result tab-content is-radius" id="item-3">
+      </div>
+      <div class="search-result tab-content is-radius" id="item-4">
       </div>
     </div>
-
 
     <!-- footer -->
     <footer class="footer"></footer>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+/* 변수 대체 */
+:root {
+  --p: 12px;
+  --n: 5;
+  --tab-width: calc(100% / 5); /* n = 5 */
+  --hr-height: calc(var(--p) / 3);
+  --padding: calc(var(--p) * 2);
+  --slate-light-50: #dfe6eb; /* lighten($slate, 50%) 정도로 가정 */
+  --slate-light-75: #f5f8fa; /* lighten($slate, 75%) 정도로 가정 */
+  --blue: #007BFF; /* 대체용 */
+}
+
+/* container */
+.tab-link {
+  display: flex;
+  position: relative;
+  background: white;
+  border-radius: 2px;
+}
+
+.tab-link hr {
+  transition: all 375ms ease-out;
+  will-change: transform, background;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 2px;
+  height: var(--hr-height);
+  width: var(--tab-width);
+  background: var(--slate-light-50);
+}
+
+.tab-link a {
+  display: block;
+  width: var(--tab-width);
+  padding: var(--padding);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* hover and active color changes */
+.tab-link a:hover ~ hr {
+  background: #bcd4f5; /* mix(lighten($slate, 50%), $blue, 75%) 가정 */
+  transition: transform 250ms cubic-bezier(0, .5, .5, 1.1), background 250ms ease-out;
+}
+
+.tab-link a:active ~ hr {
+  background: var(--blue);
+  transition: all 250ms ease-out;
+}
+
+/* nth-child transforms and active/hover/focus behavior */
+.tab-link a:nth-child(1).active ~ hr,
+.tab-link a:nth-child(1):hover ~ hr,
+.tab-link a:nth-child(1):focus ~ hr,
+.tab-link a:nth-child(1):active ~ hr,
+.tab-link a:nth-child(1):hover ~ .active ~ hr {
+  transform: translateX(0%);
+}
+
+.tab-link a:nth-child(2).active ~ hr,
+.tab-link a:nth-child(2):hover ~ hr,
+.tab-link a:nth-child(2):focus ~ hr,
+.tab-link a:nth-child(2):active ~ hr,
+.tab-link a:nth-child(2):hover ~ .active ~ hr {
+  transform: translateX(100%);
+}
+
+.tab-link a:nth-child(3).active ~ hr,
+.tab-link a:nth-child(3):hover ~ hr,
+.tab-link a:nth-child(3):focus ~ hr,
+.tab-link a:nth-child(3):active ~ hr,
+.tab-link a:nth-child(3):hover ~ .active ~ hr {
+  transform: translateX(200%);
+}
+
+.tab-link a:nth-child(4).active ~ hr,
+.tab-link a:nth-child(4):hover ~ hr,
+.tab-link a:nth-child(4):focus ~ hr,
+.tab-link a:nth-child(4):active ~ hr,
+.tab-link a:nth-child(4):hover ~ .active ~ hr {
+  transform: translateX(300%);
+}
+
+.tab-link a:nth-child(5).active ~ hr,
+.tab-link a:nth-child(5):hover ~ hr,
+.tab-link a:nth-child(5):focus ~ hr,
+.tab-link a:nth-child(5):active ~ hr,
+.tab-link a:nth-child(5):hover ~ .active ~ hr {
+  transform: translateX(400%);
+}
+
+/* additional styling */
+body {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: calc(var(--p) / 2);
+  background: var(--slate-light-75);
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    border-radius: 2px;
+  }
+}
+.tab-content {
+  display: none;
+}
+.tab-content.is-active {
+  display: block;
+}
+
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".tab-menu");
+    const contents = document.querySelectorAll(".tab-content");
+    const hr = document.querySelector(".tab-link hr");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // 탭 활성화 처리
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // hr 애니메이션 위치 이동
+        hr.style.transform = `translateX(${index * 100}%)`;
+
+        // 콘텐츠 표시 처리
+        const targetId = tab.getAttribute("data-content");
+        contents.forEach(content => {
+          if (content.id === targetId) {
+            content.classList.add("is-active");
+          } else {
+            content.classList.remove("is-active");
+          }
+        });
+      });
+    });
+
+    // 초기 상태 설정
+    tabs[0].classList.add("active");
+    hr.style.transform = `translateX(0%)`;
+    contents.forEach((content, idx) => {
+      if (idx === 0) {
+        content.classList.add("is-active");
+      } else {
+        content.classList.remove("is-active");
+      }
+    });
+  });
+</script>
+
+<body>
+  <main ontouchstart>
+    <nav class="tab-link">
+      <a class="tab-menu active" data-content="item-1">home</a>
+      <a class="tab-menu" data-content="item-2">shop</a>
+      <a class="tab-menu" data-content="item-3">blog</a>
+      <a class="tab-menu" data-content="item-4">about</a>
+      <a class="tab-menu" data-content="item-5">contact</a>
+      <hr/>
+    </nav>
+
+    <div class="content">
+      <div class="tab-content" id="item-1">
+        <div class="texts">
+          <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Rerum provident quaerat error aliquid aspernatur repellat perspiciatis delectus.
+            Ratione eius deserunt modi vel eaque animi provident reprehenderit.
+          </p>
+        </div>
+      </div>
+      <div class="tab-content is-active" id="item-2">
+        <div class="texts">
+          <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Saepe at sunt veritatis dolorem placeat iusto praesentium maiores natus.
+            Ratione atque odio magni quaerat rem odio hic velit delectus ipsam aliquam.
+          </p>
+        </div>
+      </div>
+      <div class="tab-content" id="item-3">
+        <div class="texts">
+          <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Similique alias expedita ut unde modi facere repellat tempora.
+            Aperiam dolores magni quos alias cum inventore molestiae dolorem placeat.
+          </p>
+        </div>
+      </div>
+      <div class="tab-content" id="item-4">
+        <div class="texts">
+          <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Fugiat quo minima officia et ratione eius deserunt modi vel eaque.
+            Animi provident reprehenderit beatae officiis molestias illum harum fugiat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

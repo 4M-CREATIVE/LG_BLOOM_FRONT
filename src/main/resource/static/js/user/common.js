@@ -4,16 +4,6 @@ var commonEvent = {
     this.searchEvent(); //통합검색 이벤트
   },
   headerEvent: () => {
-    // 브라우저감지
-    if (navigator.userAgent.includes('Edg')) {
-      document.body.classList.add('edge');
-      alert('edge');
-    }
-  
-    if (navigator.userAgent.includes('Whale')) {
-      document.body.classList.add('whale');
-      alert('whale');
-    }
 
     // 헤더 메뉴 토글
     const gnb = document.querySelector('.gnb');
@@ -39,38 +29,55 @@ var commonEvent = {
     const input = document.querySelector('.search__box .input__search');
     const clearBtn = document.querySelector('.search__box .btn__clear');
   
-    if (!input || !clearBtn) return;
+    if (input && clearBtn) {
+      input.addEventListener('input', () => {
+        clearBtn.style.display = input.value.trim() !== '' ? 'block' : 'none';
+      });
   
-    input.addEventListener('input', () => {
-      clearBtn.style.display = input.value.trim() !== '' ? 'block' : 'none';
-    });
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        clearBtn.style.display = 'none';
+        input.focus();
+      });
+    }
   
-    clearBtn.addEventListener('click', () => {
-      input.value = '';
-      clearBtn.style.display = 'none';
-      input.focus();
-    });
-
     // 통합검색 스크롤 애니메이션
     let lastScroll = 0;
     const header = document.querySelector(".search-header-wrap");
-    const tabs = document.querySelector(".search-result");
-
+    const tabs = document.querySelector(".tab-content");
+  
     window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset;
-      console.log(currentScroll);
-      console.log(lastScroll);
-
+  
       if (currentScroll <= lastScroll) {
-        // 위로 스크롤 시 헤더 보이기
         header.style.top = "0";
-        tabs.classList.remove("active");
+        tabs?.classList.add("is-radius");
       } else {
-        // 아래로 스크롤 시 헤더 숨기기
         header.style.top = "-151px";
-        tabs.classList.add("active");
+        tabs?.classList.remove("is-radius");
       }
-
+  
+      lastScroll = currentScroll;
     });
-  },
+  
+    // ✅ 탭 전환 이벤트 등록 (scroll과는 무관하게 분리)
+    const tabLink = document.querySelectorAll(".tab-menu");
+    const tabContent = document.querySelectorAll(".tab-content");
+  
+    tabLink.forEach((tab) => {
+      tab.addEventListener("click", function () {
+        const contentId = this.querySelector("span")?.dataset.content;
+        if (!contentId) return;
+  
+        // 탭 버튼 active 처리
+        tabLink.forEach((btn) => btn.classList.remove("active"));
+        this.classList.add("active");
+  
+        // 콘텐츠 전환
+        tabContent.forEach((box) => box.classList.remove("active"));
+        const targetBox = document.getElementById(contentId);
+        if (targetBox) targetBox.classList.add("active");
+      });
+    });
+  }
 }
