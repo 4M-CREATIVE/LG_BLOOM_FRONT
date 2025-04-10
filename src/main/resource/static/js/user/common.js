@@ -117,5 +117,26 @@ const commonEvent = {
       $select.val(value).trigger("change"); // select 값 변경 트리거
       $selectOptions.hide();
     });
+      // 키보드 네비게이션 추가
+    let currentIndex = -1;
+    $selectBox.on("keydown", function (e) {
+        let $items = $selectOptions.find("div");
+        if (e.key === "ArrowDown") {
+            currentIndex = (currentIndex + 1) % $items.length;
+        } else if (e.key === "ArrowUp") {
+            currentIndex = (currentIndex - 1 + $items.length) % $items.length;
+        } else if (e.key === "Enter") {
+            $items.eq(currentIndex).trigger("click");
+        }
+        $items.removeClass("active").eq(currentIndex).addClass("active");
+    });
+
+    // 외부 클릭 시 옵션 닫기
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(".select--custom").length) {
+          $selectOptions.hide();
+      }
+    });
+    
   }
 };
