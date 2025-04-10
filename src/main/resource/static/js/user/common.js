@@ -43,24 +43,27 @@ const commonEvent = {
 
     // 스크롤 시 헤더 고정 및 탭 반응
     const header = document.querySelector('.search-header-wrap');
-    const tabs = document.querySelector('.tab-content');
+    const tabs = document.querySelectorAll('.tab-content');
     const searchFooter = document.querySelector('.search-footer');
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
 
-      if (currentScroll <= lastScroll) {
-        header.style.top = '0';
-        tabs?.classList.add('is-radius');
-        searchFooter?.classList.add('is-radius');
-      } else {
-        header.style.top = '-151px';
-        tabs?.classList.remove('is-radius');
-        searchFooter?.classList.remove('is-radius');
-      }
-
-      lastScroll = currentScroll;
+      tabs.forEach(tab => {
+        if (tab.classList.contains('active')) {
+          if (currentScroll <= lastScroll) {
+            header.style.top = '0';
+            tab.classList.add('is-radius');
+            searchFooter?.classList.add('is-radius');
+          } else {
+            header.style.top = '-151px';
+            tab.classList.remove('is-radius');
+            searchFooter?.classList.remove('is-radius');
+          }
+        }
+      });
+    
     });
 
     // 탭 전환
