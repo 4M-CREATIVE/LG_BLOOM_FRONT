@@ -85,34 +85,21 @@
 /* total search end */
 
 /* login start */
-.login-wrap {
-  position: relative;
-  /* background-image: url(/src/main/resource/static/images/user/login/login_bg_left.svg),
-                    url(/src/main/resource/static/images/user/login/login_bg_right.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: left center, right center;
-  background-size: contain, contain; 필요에 따라 cover, auto 등으로 조절 가능 */
-}
-.login_bg_l {
-  background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat;
-}
-.login_bg_r {
-  background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;
-}
-.login_bg_l {
-  width: 60.8%;
-  height: 19.19%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-size: cover;
-}
-.login_bg_r {
-  width: 46.67%;
-  height: 24.19%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background-size: cover;
-}
+.login-wrap { position: relative;}
+.login-wrap .footer {margin-bottom: 3.7rem;}
+.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: cover;  }
+.login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
+.login-wrap .content { padding: 0 2rem;}
+.login-wrap .content img { margin-top: 15.7rem; margin-bottom: 2.2rem; margin-left: 2rem; }
+.login-wrap .content p { font-weight: 700; line-height: 36px; letter-spacing: -0.96px; margin-bottom: 3rem; margin-left: 2rem;}
+.login-wrap .content .login-form { margin-bottom: 9.6rem;}
+.login-wrap .content .login-form .form-group:first-child{ margin-bottom: 0.8rem;}
+.login-wrap .content .login-form .form-group:nth-child(2){ margin-bottom: 1.4rem;}
+.login-wrap .content .login-form .check__group {margin-left: 2rem; margin-bottom: 2.8rem;}
+.login-wrap .content .login-form .check__group span { font-size: 12px; font-weight: 400; line-height: 12px; letter-spacing: -0.48px; color: #222;}
+.login-wrap .content .login-form  .btn__box{ margin-bottom: 2.4rem;}
+.form-links {width: 21.1rem; height: 1.7rem; display: flex; align-items: center; justify-content: space-between; margin: 0 auto; font-size: 1.2rem; font-weight: 400; letter-spacing: -0.48px;}
+.form-links a { color: #888;}
+.form-links span{ color: #888;}
+.form-links a.color--primary {color: var(--primary-purple);}
 /* login end */

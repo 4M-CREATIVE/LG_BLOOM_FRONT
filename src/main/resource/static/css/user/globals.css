@@ -4,7 +4,6 @@
   --primary-light-purple: #F2EDF5;
   --primary-deep-blue: #424FAB;
   --primary-blue: #2A77C1;
-  --primary-blue: #2A77C1;
   --primary-light-blue: #20B6DA;
   --primary-deep-pink: #A2197A;
   --primary-pink: #CE1A77;
@@ -183,7 +182,6 @@ header .container .right {
 /* footer */
 .footer .top {
   padding: 2.2rem 4rem;
-  background-color: #efefef;
 }
 
 .footer .bottom {

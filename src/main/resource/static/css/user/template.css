@@ -1,3 +1,19 @@
+.tem-wrap {
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
 
 .flex {
   display: flex;
@@ -113,6 +129,9 @@
 .tit--fz30 {
   font-size: 30px;
 }
+.tit--fz24 {
+  font-size: 24px;
+}
 .tit--fz22 {
   font-size: 22px;
 }
@@ -213,6 +232,9 @@
 }
 .bg--grayf3 {
   color: var(--Neutral-gray-F3);
+}
+.bg--grayEf {
+  background-color: #efefef;
 }
 .bg--grayf7 {
   background-color: #F7F7F7;
@@ -396,14 +418,14 @@ input[type="file"],
 select {
   position: relative;
   overflow: hidden;
-  padding: 0 15px;
+  padding: 16px 16px 16px 25px;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 46px;
+  line-height: 46px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 13px;
   color: #555;
 }
 input[type="text"],
@@ -635,12 +657,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .check__group .checkbox02 + label::before {
   width: 24px;
   height: 24px;
-  background: #888 url(../images/common/icon_checked.png) no-repeat 50% 50%;
+  background: #888 url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: #888;
 }
 .check__group input[type="checkbox"]:checked + label::before {
-  background: #57207e url(../images/common/icon_checked.png) no-repeat 50% 50%;
+  background: #57207e url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: #57207e;
 }
@@ -670,7 +692,7 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-right: 10px;
 }
 .radio__group input[type="radio"]:checked + label::before {
-  background: #57207e url(../images/common/icon_checked.png) no-repeat 50% 50%;
+  background: #57207e url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: #57207e;
 }
@@ -937,7 +959,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .pagination--prev {
   margin-right: 25px;
 }
-.pagination ul {
+.pagination ul { 
   display: flex;
   align-items: center;
 }
