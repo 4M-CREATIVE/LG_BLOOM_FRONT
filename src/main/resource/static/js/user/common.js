@@ -2,6 +2,7 @@ const commonEvent = {
   init() {
     this.headerEvent();
     this.searchEvent();
+    this.faqEvent();
   },
 
   headerEvent() {
@@ -81,6 +82,40 @@ const commonEvent = {
         tabContents.forEach((content) => content.classList.remove('active'));
         document.getElementById(contentId)?.classList.add('active');
       });
+    });
+  },
+  faqEvent() {
+    $(".faq__question").on("click", function (e) {
+      e.preventDefault();
+      $(this).next('.faq__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.faq__answer').slideUp(300);
+    });
+  
+    // select
+    let $customSelect = $(".select--custom");
+    let $selectBox = $customSelect.find(".select__box");
+    let $selectOptions = $customSelect.find(".select__options");
+    let $select = $customSelect.find("select");
+
+    // 옵션 리스트 생성
+    $select.find("option").each(function () {
+      let value = $(this).val();
+      let text = $(this).text();
+      $selectOptions.append(`<div data-value="${value}">${text}</div>`);
+    });
+
+    // 선택 영역 클릭 시 옵션 토글
+    $selectBox.on("click", function () {
+        $selectOptions.toggle();
+    });
+
+    // 옵션 클릭 시 값 변경
+    $selectOptions.on("click", "div", function () {
+      let value = $(this).data("value");
+      let text = $(this).text();
+      $selectBox.text(text).addClass("selected");
+      $selectBox.text(text);
+      $select.val(value).trigger("change"); // select 값 변경 트리거
+      $selectOptions.hide();
     });
   }
 };

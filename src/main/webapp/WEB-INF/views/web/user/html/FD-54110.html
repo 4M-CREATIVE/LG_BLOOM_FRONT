@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bloom-전체검색</title>
+  <title>Bloom-FAQ</title>
 
   <!-- css -->
   <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
@@ -28,7 +28,6 @@
     }
   
     async function initPage() {
-      await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/search_header.html?v=1.0");
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
   
       commonEvent.init();
@@ -38,29 +37,42 @@
   </script>
 </head>
 
-<body id="wrap" class="total-search  bg--primary-light-purple">
+<body id="wrap" class="faq-list bg--primary-pink">
 
-    <div class="search-header-wrap">
-      <!-- header -->
-      <header class="header header--sub header--sub02" role="header" ></header>
-      <!-- tab__lists -->
-      <div class="tab__lists tab__lists--scroll">
-        <div class="tab__inner tab-link">
-            <button class="tab-menu active color--blk bd--blk">
-              <span href="javascript:void(0);" data-title="item-1" data-content="item-1"><strong class="tit--fz14">전체</strong></span>
-            </button>
-            <button class="tab-menu color--blk bd--blk">
-              <span href="javascript:void(0);" data-title="item-2" data-content="item-2"><strong class="tit--fz14">난임백과</strong></span>
-            </button>
-            <button class="tab-menu color--blk bd--blk">
-              <span href="javascript:void(0);" data-title="item-3" data-content="item-3"><strong class="tit--fz14">난임병원</strong></span>
-            </button>
-            <button class="tab-menu color--blk bd--blk">
-              <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">FAQ</strong></span>
-            </button>
-        </div>
+  <div class="search-header-wrap">
+    <!-- header -->
+    <div class="form__group">
+      <div class="select--custom">
+        <div class="select__box">.select--custom</div>
+        <div class="select__options"><div data-value="option1">옵션 1</div><div data-value="option2">옵션 2</div><div data-value="option3">옵션 3</div><div data-value="option4">옵션 4</div><div data-value="option5">옵션 5</div></div>
+        <select>
+          <option value="option1">옵션 1</option>
+          <option value="option2">옵션 2</option>
+          <option value="option3">옵션 3</option>
+          <option value="option4">옵션 4</option>
+          <option value="option5">옵션 5</option>
+        </select>
       </div>
     </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll">
+      <div class="tab__inner tab-link">
+          <button class="tab-menu active color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-1" data-content="item-1"><strong class="tit--fz14">진단 및 검사</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-2" data-content="item-2"><strong class="tit--fz14">시술</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-3" data-content="item-3"><strong class="tit--fz14">배아이식</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">기타</strong></span>
+          </button>
+      </div>
+    </div>
+  </div>
 
     <!-- 헤더 자리 확보 -->
     <div class="spacer"></div> 

@@ -103,3 +103,8 @@
 .form-links span{ color: #888;}
 .form-links a.color--primary {color: var(--primary-purple);}
 /* login end */
+
+/* FAQ start */
+.faq-list .tab__lists .tab-menu.active {opacity: 1;}
+.faq-list .tab__lists .tab-menu {opacity: 0.6;}
+/* FAQ end */
