@@ -234,13 +234,13 @@
   color: var(--neutral-gray-99);
 }
 .color--wht {
-  color: var(--Neutral-fff);
+  color: var(--neutral-fff);
 }
 .bg--primary {
   color: var(--primary-purple);
 }
 .bg--grayf3 {
-  color: var(--Neutral-gray-F3);
+  color: var(--neutral-gray-F3);
 }
 .bg--grayf7 {
   background-color: #F7F7F7;

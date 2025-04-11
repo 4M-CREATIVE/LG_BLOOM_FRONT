@@ -56,7 +56,7 @@
 .search-result .container .tit p:last-child a{ color: var(--neutral-gray-88); font-size: 1.2rem; font-weight: 500; line-height: 1.2rem; letter-spacing: -0.48px;
 }
 .search-result .container .tit p:last-child del {display: inline-block; width: 1.8rem; height: 1.8rem; background: url(/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg) no-repeat center center;}
-.search-result .container .tit span { display: flex; width: 21px; height: 16px; padding: 3px 6px; justify-content: center; align-items: center; gap: 10px; border-radius: 900px; color: var(--Neutral-fff); font-size: 9px; font-weight: 500; letter-spacing: -0.36px;}
+.search-result .container .tit span { display: flex; width: 21px; height: 16px; padding: 3px 6px; justify-content: center; align-items: center; gap: 10px; border-radius: 900px; color: var(--neutral-fff); font-size: 9px; font-weight: 500; letter-spacing: -0.36px;}
 .search-result .container .purple .tit span { background: var(--primary-purple);}
 .search-result .container .blue .tit span { background: var(--primary-blue);}
 .search-result .container .pink .tit span { background: var(--primary-pink);}
@@ -67,7 +67,7 @@
 .search-result .container .search_list li a .li-info {margin-bottom: 0.6rem;}
 .search-result .container .search_list li a .li-info .left span{font-size: 12px; font-weight: 500; line-height: 12px; letter-spacing: -0.48px; padding: 3px 8px 4px 8px;}
 .search-result .container .search_list li a .li-info .left .region {border-radius: 90px; background: rgba(42, 119, 193, 0.10);}
-.search-result .container .search_list li a .li-info .left .hospital {border-radius: 90px; background: var(--Neutral-gray-F6, #F6F6F6);}
+.search-result .container .search_list li a .li-info .left .hospital {border-radius: 90px; background: var(--neutral-gray-F6, #F6F6F6);}
 .search-result .container .search_list li a .q {margin-bottom: 0.9rem;}
 .search-result .container .search_list li a .q,
 .search-result .container .search_list li a .a { display: flex;}
@@ -82,7 +82,7 @@
 .search-footer {position: fixed; bottom: 0; z-index: 9999; width: 100%; height: 8.5rem; padding: 0px 10px 5px 10px; flex-shrink: 0;  background: #FFF; box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;}
 .search-footer.is-radius {border-radius: 30px 30px 0px 0px;}
 .search-footer li {width: 8.48rem;}
-.search-footer li a {  color: var(--Neutral-gray-AA); gap: 0.6rem; font-weight: 500; letter-spacing: -0.5px;}
+.search-footer li a {  color: var(--neutral-gray-AA); gap: 0.6rem; font-weight: 500; letter-spacing: -0.5px;}
 /* total search end */
 
 /* login start */
