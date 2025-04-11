@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임지원</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      commonEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary-blue">
+
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select--op tit--fz16">난임지원</div>
+          <div class="select__options">
+            <div data-value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div></div>
+          <select>
+            <option value="option1">옵션 1</option>
+            <option value="option2">옵션 2</option>
+            <option value="option3">옵션 3</option>
+            <option value="option4">옵션 4</option>
+            <option value="option5">옵션 5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll">
+      <div class="tab__inner tab-link">
+          <button class="tab-menu active color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-1" data-content="item-1"><strong class="tit--fz14">병원찾기</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-2" data-content="item-2"><strong class="tit--fz14">난임정책</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-3" data-content="item-3"><strong class="tit--fz14">심리상담센터</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">응원게시판</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">응원게시판</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">응원게시판</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">응원게시판</strong></span>
+          </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer"></div> 
+
+    <!-- main -->
+    <div class="content">
+      <div class="search-result tab-content active is-radius" id="item-1">
+        <div class="container">
+          <p>
+            보건복지부 정부 지정<br>
+            난임시술(체외수정) 의료기관
+          </p>
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-2">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-3">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-4">
+        <div class="container">
+
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>

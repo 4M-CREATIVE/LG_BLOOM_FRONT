@@ -108,10 +108,10 @@ $(document).ready(function () {
       $items.removeClass("active").eq(currentIndex).addClass("active");
   });
 
-  // 외부 클릭 시 옵션 닫기
-  $(document).on("click", function (e) {
-      if (!$(e.target).closest(".select--custom").length) {
-          $selectOptions.hide();
-      }
-  });
+  // // 외부 클릭 시 옵션 닫기
+  // $(document).on("click", function (e) {
+  //     if (!$(e.target).closest(".select--custom").length) {
+  //         $selectOptions.hide();
+  //     }
+  // });
 });

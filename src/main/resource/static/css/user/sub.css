@@ -107,5 +107,5 @@
 
 /* FAQ start */
 .faq-list .tab__lists .tab-menu.active {opacity: 1;}
-.faq-list .tab__lists .tab-menu {opacity: 0.6;}
+.faq-list .tab__lists .tab-menu {opacity: 0.6; overflow: visible; white-space: nowrap;}
 /* FAQ end */
