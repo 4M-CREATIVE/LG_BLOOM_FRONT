@@ -1,0 +1,10 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Property 1=Arrow_T_White">
+<mask id="mask0_95_483" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+<rect id="Bounding box" width="20" height="20" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_95_483)">
+<path id="arrow_forward_ios" d="M18.4466 13.4274L16.9675 14.9066L10.1133 8.05239L3.25913 14.9066L1.77997 13.4274L10.1133 5.09405L18.4466 13.4274Z" fill="white"/>
+</g>
+</g>
+</svg>

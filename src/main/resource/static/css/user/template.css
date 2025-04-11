@@ -186,6 +186,9 @@
 .gap-9 {
   gap: 0.9rem;
 }
+.gap-8 {
+  gap: 0.9rem;
+}
 
 /* color */
 .color--primary {
@@ -238,6 +241,9 @@
 .bg--primary-pink {
   background-color: var(--primary-pink);
 }
+.bg--primary-deep-pink {
+  background-color: var(--primary-deep-pink);
+}
 .bg--grayf3 {
   background-color: var(--Neutral-gray-F3);
 }
@@ -279,13 +285,20 @@
 }
 
 /* list */
-.list {
-  margin-top: 20px;
-  border-top: 1px solid #222;
-}
-.list ul li {
+/* .list ul li {
   border-bottom: 1px solid #F3F3F3;
   padding: 12px 10px;
+} */
+.list ul li::after {
+  content: '';
+  display: block;
+  width: calc(100% - 4rem);
+  height: 1px;
+  background-color: #eee;
+  margin: 0 auto;
+}
+.list ul li.on::after {
+  background-color: transparent;
 }
 .list ul li.list--none {
   font-size: 14px;
@@ -322,49 +335,65 @@
 }
 
 /* faq */
-.faq__list.on {
+/* .faq__list.on {
   border-top: 1px solid #57207e;
   border-bottom: 1px solid #57207e;
-}
+} */
 .faq__list:first-of-type.on {
   margin-top: -1px;
 }
 .faq__question {
-  padding: 5px 24px 0 20px;
+  padding: 14px 56px 14px 56px;
   position: relative;
-  background-image: url(../images/common/icon_arrow-down.png);
+  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_b_gray.svg);
   background-repeat: no-repeat;
-  background-position: calc(100% - 4px) 10px;
+  background-position: calc(100% - 34px) 19px;
   background-size: 15px 9px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
 }
 .faq__list.on .faq__question {
   padding-bottom: 12px;
-  background-image: url(../images/common/icon_arrow-up.png);
+  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg);
 }
 .faq__question .label {
   margin-top: 7px;
 }
 .faq__answer {
-  padding: 14px 20px 16px 20px;
+  padding: 14px 30px 16px 55.55px;
   position: relative;
   display: none;
-  border-top: 1px solid #F3F3F3;
+  background-color: var(--Neutral-gray-F6);
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
 }
 .faq__list > div::before {
   display: block;
   font-weight: 700;
   line-height: 1;
-  color: #57207e;
   position: absolute;
-  left: 0;
+  left: 30px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
 }
 .faq__question::before {
-  content: 'Q.';
-  top: 5px;
+  content: 'Q';
+  top: 15px;
+  background-color: var(--neutral-gray-55);
+  font-size: 1rem;
 }
 .faq__answer::before {
-  content: 'A.';
+  background-color: var(--primary-pink);
+  content: 'A';
   top: 17px;
+  font-size: 1rem;
 }
 
 
@@ -531,6 +560,20 @@ select option {
 }
 
 /* select */
+.back-btn {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.10);
+  border-radius: 25px;
+}
+
+.prev_btn{
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url(/src/main/resource/static/images/user/common/xl_arrow_l.svg) no-repeat center;
+}
+
 .form__box select {
   background-image: url(../images/common/icon_select.png);
   background-repeat: no-repeat;
@@ -539,23 +582,34 @@ select option {
 }
 .select--custom {
   position: relative;
+
 }
+.select--op {
+  background: rgba(0, 0, 0, 0.10);
+  color: #fff ;
+  height: 5rem!important;
+  border-radius: 25px;
+}
+
 /* 숨겨진 실제 select */
+.select-wrap{
+  padding: 20px 15px 0 15px;
+}
+
 .select--custom select {
   display: none;
 }
 .select__box {
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 15px 25px;
   width: 100%;
-  height: 40px;
-  border: 1px solid #e5e5e5;
-  border-radius: 5px;
-  /* background-image: url(../images/common/icon_select.png); */
+  height: 46px;
+  /* border-radius: 25px; */
+  background-image: url(/src/main/resource/static/images/user/common/arrow_b_wh.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) 50%;
-  background-size: 9px 5px;
+  background-size: 20px 20px;
   cursor: pointer;
   font-size: 12px;
   color: #999;
@@ -573,12 +627,18 @@ select option {
   overflow-y: auto;
   padding: 8px 0;
   border: 1px solid #e5e5e5;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background: #fff;
   font-size: 12px;
   color: #555;
   display: none;
   z-index: 10;
+}
+.select--op{
+  color: #fff;
+}
+.select--op.select__box.selected {
+  color: #fff;
 }
 .select__options div {
   padding: 12px 16px;
