@@ -106,6 +106,27 @@
 /* login end */
 
 /* FAQ start */
-.faq-list .tab__lists .tab-menu.active {opacity: 1;}
-.faq-list .tab__lists .tab-menu {opacity: 0.6; overflow: visible; white-space: nowrap;}
+.tab__lists .tab-menu.active {opacity: 1;}
+.tab__lists .tab-menu {opacity: 0.6; overflow: visible; white-space: nowrap;}
 /* FAQ end */
+
+/* 난임지원 start */
+.infertility-assistance-title {padding: 0 2rem; font-weight: 700; line-height: 28px; letter-spacing: -0.8px; margin-bottom: 2rem;}
+.infertility-assistance-list .content .search-result .container .form__group {margin-bottom: 0.8rem;}
+.infertility-assistance-list .content .search-result .container .search__box {margin-bottom: 4rem;}
+.infertility-assistance-list .content .search-result .container .pagination ul li.active a {color: var(--primary-blue);}
+.tag {font-weight: 500; line-height: 12px; letter-spacing: -0.48px; border-radius: 90px; display: inline-flex; height: 20px; padding: 3px 8px 4px 8px; margin-bottom: 0.6rem;}
+.find--center {width:100%; height: 100%; position: fixed; top: 0; left: 0; align-items: center; background: rgba(0, 0, 0, 0.70); z-index: 99999; display: flex; align-items: center; display: none;}
+.find--center .container {margin: 0 2rem; border-radius: 20px; position: relative;}
+.find--center .container .wrap{padding: 4rem 2rem 3rem 2rem;;}
+.find--center .container .wrap .title{ line-height: 28px; letter-spacing: -0.8px; margin-bottom: 1.5rem;}
+.pop_close_btn {position: absolute; top: 0; right:0; width: 50px;  height: 50px;}
+.call_number .icon_call {background: url(/src/main/resource/static/images/user/common/icon_call.svg) no-repeat center;}
+.call_number {margin-bottom : 0.75rem;}
+.location .icon_location{background: url(/src/main/resource/static/images/user/common/icon_location.svg) no-repeat center;}
+.location .icon_copy {background: url(/src/main/resource/static/images/user/common/icon_copy.svg) no-repeat center;}
+.call_number .icon_call,
+.location .icon_location,
+.location .icon_copy {width:1.6rem; height: 1.6rem; display:block;}
+.find--center-map{width: 100%; height: 18.8rem;border-radius: 10px; border: 1px solid var(--primary-gray-e5, #E5E5E5);}
+/* 난임지원 end */
