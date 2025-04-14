@@ -11,7 +11,7 @@
 
   <!-- js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
 
   <!-- Initialized Include Path -->
   <script>
@@ -30,7 +30,7 @@
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/login_footer.html");
   
-      commonEvent.init();
+      uiEvent.init();
     }
   
     document.addEventListener("DOMContentLoaded", initPage);
@@ -42,12 +42,30 @@
   <div class="login_bg_l"></div>
   <div class="login_bg_r"></div>
 
+  <!-- 로그인 팝업 -->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_confirm">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+      </span>
+      <div class="popup__title">
+        아이디 또는 비밀번호가<br> 잘못되었습니다.
+      </div> 
+      <p class="popup__text">
+        아이디와 비밀번호를 정확히 입력해 주세요.
+      </p>
+      <div class="btn__box">
+        <button class="btn btn--purple btn__pop-close">확인</button>
+      </div>
+    </div>
+  </div>
+
   <!-- login -->
   <div class="content">
     <img src="/src/main/resource/static/images/user/common/logo.svg" alt="로고">
     <p class="color--blk tit--fz24">
-      우리의 <span class="color--primary">난임 치료 여정!</span><br>
-      LG화학과 Bloom 함께 떠나요.
+      <span class="color--primary">새 생명의 기쁨</span>을,<br>
+      LG화학 Bloom.
     </p>
 
     <div class="login-form">
@@ -65,7 +83,8 @@
         </div>
 
         <div class="btn__box">
-          <button type="submit" class="btn btn--purple">로그인</button>
+          <!-- <button type="submit" class="login-btn btn btn--purple">로그인</button> -->
+          <button type="button" class="login-btn btn btn--purple" data-popup-target="pop_confirm">로그인</button>
         </div>
 
         <div class="form-links">

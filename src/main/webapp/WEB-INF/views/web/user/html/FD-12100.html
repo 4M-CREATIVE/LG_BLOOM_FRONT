@@ -11,7 +11,7 @@
 
   <!-- js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
 
   <!-- Initialized Include Path -->
   <script>
@@ -31,7 +31,7 @@
       await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/search_header.html?v=1.0");
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
   
-      commonEvent.init();
+      uiEvent.init();
     }
   
     document.addEventListener("DOMContentLoaded", initPage);

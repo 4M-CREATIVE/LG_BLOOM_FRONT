@@ -938,7 +938,7 @@ input[type="search"]::-webkit-search-cancel-button {
   z-index: 1000;
 }
 .popup {
-  padding: 40px 20px 30px;
+  padding: 40px 20px 20px 20px;
   background: #fff;
   border-radius: 10px;
   width: calc(100% - 40px);
@@ -955,10 +955,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .popup__title {
   font-size: 20px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .popup__text {
   font-size: 14px;
   color: #888;
+  text-align: center;
 }
 .popup__content--scroll {
   max-height: 264px;

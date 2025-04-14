@@ -11,7 +11,7 @@
 
   <!-- js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/src/main/resource/static/js/user/common.js?v=1.0"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
 
   <!-- Initialized Include Path -->
   <script>
@@ -30,7 +30,7 @@
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
   
-      commonEvent.init();
+      uiEvent.init();
     }
   
     document.addEventListener("DOMContentLoaded", initPage);
@@ -42,7 +42,7 @@
 
   <div class="search-header-wrap select-wrap">
     <!-- 병원찾기 팝업 -->
-     <div class="find--center">
+     <div class="list_popup">
       <div class="container bg--wh">
         <div class="wrap">
           <span class="pop_close_btn flex flex--center">
