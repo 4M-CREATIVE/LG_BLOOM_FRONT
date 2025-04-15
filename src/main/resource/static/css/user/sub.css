@@ -157,3 +157,22 @@
 .sub03 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #5D1E7E; margin-top: 6px;}
 .sub03 .content .container .form_wrap{margin-bottom: 43rem;}
 /* 비밀번호 재설정 휴대폰 인증 end */
+
+/* 마이페이지 start */
+.mypage .content .container {padding: 6.4rem 2rem 13rem 2rem;}
+.mypage .content .container .l-banner{border-radius: 15px; position: relative; margin-bottom: 1rem;}
+.mypage .content .container .l-banner .l-banner-box{padding: 1.6rem 1.6rem 2rem 1.6rem;}
+.mypage .content .container .l-banner .l-banner-box .l-banner-icon{margin-bottom: 0.6rem;}
+.mypage .content .container .l-banner .l-banner-box .txt {line-height: 22px; letter-spacing: -0.64px;text-transform: uppercase; margin-bottom: 0.4rem;}
+.mypage .content .container .l-banner .l-banner-box .sub_txt {color: rgba(255, 255, 255, 0.80); line-height: 120%; letter-spacing: -0.4px;}
+.mypage .content .container .l-banner .illust {position: absolute; bottom: 0; right: 2rem;}
+.mypage .content .container .sm-banner{border-radius: 15px; margin-bottom: 4rem;}
+.mypage .content .container .sm-banner .sm-banner-contents{ padding: 1.4rem 1.8rem;}
+.mypage .content .container .sm-banner .sm-banner-contents .txt_wrap{ letter-spacing: -0.55px;}
+.mypage .content .container .mypage_category {margin-bottom: 4rem;}
+.mypage .content .container .mypage_category .info_admin {padding: 0 2rem;}
+.mypage .content .container .mypage_category hr { width: 100%; height: 1px; background:#EEE; margin:3rem 0}
+.mypage .content .container .mypage_category p { color: #999; font-size: 12px; font-weight: 700; letter-spacing: -0.24px; margin-bottom: 1.6rem;}
+.mypage .content .container .mypage_category ul li {margin-bottom: 1.8rem;}
+.mypage .content .container .mypage_category ul li a{color: #222; font-size: 14px; font-weight: 700; letter-spacing: -0.56px}
+/* 마이페이지 end */

@@ -61,17 +61,21 @@ const uiEvent = {
       const currentScroll = window.pageYOffset;
       // 스크롤시 셀렉트 박스 닫기
       $(".select__options").hide();
-      
+
+      if (currentScroll <= lastScroll) {
+        searchFooter?.classList.add('is-radius');
+      } else {
+        searchFooter?.classList.remove('is-radius');
+      }
+
       tabs.forEach(tab => {
         if (tab.classList.contains('active')) {
           if (currentScroll <= lastScroll) {
             header.style.top = '0';
             tab.classList.add('is-radius');
-            searchFooter?.classList.add('is-radius');
           } else {
             header.style.top = '-151px';
             tab.classList.remove('is-radius');
-            searchFooter?.classList.remove('is-radius');
           }
         }
       });

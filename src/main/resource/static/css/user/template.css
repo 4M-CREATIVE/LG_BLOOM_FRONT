@@ -153,6 +153,9 @@
 .txt--fz12 {
   font-size: 12px;
 }
+.txt--fz11 {
+  font-size: 11px;
+}
 .txt--fz10 {
   font-size: 10px;
 }
@@ -170,11 +173,17 @@
 .txt--fw-700 {
   font-weight: 700;
 }
+.txt--fw-900 {
+  font-weight: 900;
+}
 
 
 /* margin */
 .mb-49 {
   margin-bottom:4.9rem;
+}
+.mb-30 {
+  margin-bottom:3rem;
 }
 .mb-24 {
   margin-bottom:2.4rem;

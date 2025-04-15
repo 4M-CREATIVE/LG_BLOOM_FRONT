@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-마이페이지</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="mypage">
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+        <p class="tit--fz20 color--blk txt--fw-700 mb-30">
+          <span class="color--primary">김블룸</span>님<br>
+          오늘도 좋은 하루 되세요 :)
+        </p>
+        <div class="l-banner bg--primary">
+          <div class="l-banner-box">
+            <img class="l-banner-icon" src="/src/main/resource/static/images/user/mypage/banner_add_task.svg" alt="마이페이지">
+            <p class="txt txt--fw-900 tit--fz16 color--wht">CHECK up 나의 가임력</p>
+            <p class="sub_txt">나의 가임력 테스트 결과 확인하기</p>
+          </div>
+            <img class="illust" src="/src/main/resource/static/images/user/mypage/banner_illust.svg" alt="가임력 테스트 일러스트">
+        </div>
+        <div class="sm-banner bg--primary-light-purple">
+          <div class="sm-banner-contents flex flex--between ">
+            <div class="txt_wrap color--blk txt--fw-400 txt--fz11">
+              테스트가 아직이라면? 지금 <span class="color--primary txt--fw-700">바로 테스트</span>에서 해보세요!
+            </div>
+            <div class="circle bg--primary">
+              <img src="/src/main/resource/static/images/user/common/sm_greater_than_sign.svg" alt="가임력 테스트 바로가기">
+            </div>
+          </div>
+        </div>
+        <div class="mypage_category">
+          <div class="info_admin">
+            <p>정보관리</p>
+            <ul>
+              <li><a href="javascript:void(0);">회원정보 변경</a></li>
+              <li><a href="javascript:void(0);">회원탈퇴</a></li>
+            </ul>
+          </div>
+          <hr>
+          <div class="info_admin">
+            <p>약관 및 방침</p>
+            <ul>
+              <li><a href="javascript:void(0);">이용약관</a></li>
+              <li><a href="javascript:void(0);">개인정보처리방침</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn__box">
+          <button class="btn btn--line-gray txt--fw-600">로그아웃</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>
