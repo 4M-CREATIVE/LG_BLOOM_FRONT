@@ -168,7 +168,7 @@
   font-weight: 600;
 }
 .txt--fw-700 {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 
@@ -654,6 +654,9 @@ select option {
 }
 .select__box_arrow_r_blk {
   background-image: url(/src/main/resource/static/images/user/common/arrow_r_black.svg);
+}
+.select__box_arrow_b_gray {
+  background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
 }
 
 .select__box.selected {
