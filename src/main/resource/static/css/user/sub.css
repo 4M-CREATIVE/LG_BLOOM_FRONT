@@ -176,3 +176,15 @@
 .mypage .content .container .mypage_category ul li {margin-bottom: 1.8rem;}
 .mypage .content .container .mypage_category ul li a{color: #222; font-size: 14px; font-weight: 700; letter-spacing: -0.56px}
 /* 마이페이지 end */
+
+/* 마이페이지 - 비밀번호 확인 start */
+.sub04 .content .container {padding: 4rem 2rem 5rem 2rem;}
+.sub04 .content .container .title_wrap {padding: 0 1.5rem;}
+.sub04 .content .container .title_wrap .title {margin-bottom: 3rem; letter-spacing: -0.8px;}
+.sub04 .content .container .title_wrap .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
+.sub04 .content .container .form_wrap .form__box:first-child{margin-bottom: 0.8rem;}
+.sub04 .content .container .form_wrap .form__box:nth-child(2){margin-bottom: 1rem;}
+.sub04 .content .container .form_wrap .info {line-height: 16px; letter-spacing: -0.4px; display: flex; gap: 0.8rem;}
+.sub04 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #5D1E7E; margin-top: 6px;}
+.sub04 .content .container .form_wrap{margin-bottom: 43rem;}
+/* 마이페이지 - 비밀번호 확인 end */

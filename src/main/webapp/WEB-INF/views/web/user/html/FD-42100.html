@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-회원정보 수정</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      // await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/sub_header.html?v=1.0");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="sub04">
+
+    <!-- 로그인 팝업 -->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <div class="popup__title">
+          비밀번호가 변경되었습니다.
+        </div> 
+        <div class="btn__box">
+          <button class="btn btn--purple btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <header class="header header--sub header--sub02" role="header" >
+      <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
+      <div class="title__box tit--fz18 color--blk txt--fw-700">
+        비밀번호 확인
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+        <div class="title_wrap">
+          <p class="title tit--fz20 color--blk txt--fw-700 ">
+            휴대폰 인증으로 재설정하기
+          </p>
+          <p class="sub_title tit--fz14 txt--fw-400 color--gray88">
+            <span class="tit--fz20 txt--fw-700 color--primary">Korea2024</span>님 <br>
+            회원님의 개인정보를 확인 가능한 페이지에<br>
+            접속하기 위해 먼저 비밀번호를 입력해 주세요.
+          </p>
+        </div>
+
+        <div class="form_wrap">
+          <div class="form__box">
+            <input class="bd--gray-99 color--gray99" type="password" name="" placeholder="비밀번호를 입력하세요." id="">
+          </div>
+        </div>
+        <div class="btn__box">
+          <button type="button" class="btn pop-btn btn--purple" data-popup-target="pop_confirm">비밀번호 변경하기</button>
+        </div>
+        <div class="btn__box">
+          <button class="btn btn--line-gray txt--fw-600">취소</button>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
