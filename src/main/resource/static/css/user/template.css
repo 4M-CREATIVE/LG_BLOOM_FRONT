@@ -244,7 +244,7 @@
   color: var(--neutral-gray-88);
 }
 .color--gray99 {
-  color: var(--neutral-gray-99);
+  color: var(--neutral-gray-99)!important;
 }
 .color--wht {
   color: var(--neutral-fff);
@@ -290,6 +290,9 @@
 }
 .bd--gray-e5 {
   border: 1px solid var(--neutral-gray-E5);
+}
+.bd--gray-99 {
+  border: 1px solid var(--neutral-gray-99)!important;
 }
 .bd--transparent {
   border-color: transparent;

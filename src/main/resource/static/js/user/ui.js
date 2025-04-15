@@ -208,6 +208,18 @@ const uiEvent = {
     //     $targetPopup.addClass("active");
     //   }
     // });
+    // 로그인 버튼 클릭 이벤트
+    $('.pop-btn').on('click', function (e) {
+      e.preventDefault();
+      const targetId = $(this).data("popup-target");
+      const $targetPopup = $(`#${targetId}`);
+      const $popupOverlay = $targetPopup.closest(".pop__overlay");
+  
+      // 아이디나 비밀번호가 빈 값일 경우 팝업 열기
+
+        $popupOverlay.fadeIn(300);
+        $targetPopup.addClass("active");
+    });
   },
 
   loginButtonEvent() {
@@ -237,7 +249,6 @@ const uiEvent = {
         return;
       }
   
-      // 아이디와 비밀번호가 입력된 경우 처리 로직 (예: 로그인 요청 등)
     });
   }
 };
