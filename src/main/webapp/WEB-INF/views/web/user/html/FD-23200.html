@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-아이디찾기</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/sub_header.html?v=1.0");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="sub01 ">
+
+      <!-- header -->
+      <header class="header header--sub header--sub02" role="header" ></header>
+
+
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+          <div class="check_box">
+            <img src="/src/main/resource/static/images/user/common/circle_check_purple.svg" alt="">
+          </div>
+          <p class="tit--fz24 txt--fw-500 color--gray88 mb-20">
+            아이디 찾기 검색 결과 <br>
+            <span class="txt--fw-600 color--blk">아이디 정보</span>는 아래와 같습니다.
+          </p>
+          <div class="form__box">
+            <input class="border-none" type="text" name="" value="korea2024" placeholder="" id="" readonly="">
+          </div>
+          <div class="btn__box">
+            <button class="btn btn--purple txt--fw-700">로그인</button>
+          </div>
+          <div class="btn__box">
+            <button class="btn btn--line-gray txt--fw-600">비밀번호 찾기</button>
+          </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>

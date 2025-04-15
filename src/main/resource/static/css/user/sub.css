@@ -130,3 +130,11 @@
 .location .icon_copy {width:1.6rem; height: 1.6rem; display:block;}
 .find--center-map{width: 100%; height: 18.8rem;border-radius: 10px; border: 1px solid var(--primary-gray-e5, #E5E5E5); display: flex; align-items: center; justify-content: center;}
 /* 난임지원 end */
+
+/* 아이디찾기 start */
+.title__box { display: block; width: calc(100% - 8.8rem); text-align: center;}
+.sub01 .content .container {padding: 10rem 2rem 5rem 2rem;}
+.sub01 .content .container .check_box {margin-bottom: 5rem;}
+.sub01 .content .container p {line-height: 36px;  letter-spacing: -0.96px;}
+.sub01 .content .container .form__box {margin-bottom: 23rem;}
+/* 아이디찾기 end */
