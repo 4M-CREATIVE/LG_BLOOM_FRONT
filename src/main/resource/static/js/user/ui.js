@@ -172,22 +172,26 @@ const uiEvent = {
   infertilityAassistanceEvent() {
     // 리스트 클릭하면 팝업 열기
     const searchLinks = document.querySelectorAll('.search_list li a');
-    const listPopup = document.querySelector('.list_popup');
-    
+    const $listPopup = $('.list_popup'); // jQuery 객체
+    const $popupOverlay = $listPopup.closest(".pop__overlay");
 
     searchLinks.forEach(link => {
       link.addEventListener('click', function () {
-        listPopup.style.display = 'flex';
+        $popupOverlay.fadeIn(300);
+        $listPopup.css('display', 'flex');
+        $listPopup.addClass("active");
       });
     });
 
     // 닫기 버튼 누르면 팝업 닫기
     const closeBtn = document.querySelector('.pop_close_btn');
-    closeBtn.addEventListener('click', function () {
-      listPopup.style.display = 'none';
+    closeBtn?.addEventListener('click', function () {
+      $popupOverlay.fadeOut(300);
+      $listPopup.removeClass("active");
     });
   },
   popupEvent() {
+    // 팝업 공통 닫기
     $(".btn__pop-close").on("click", function (e) {
       if ($(e.target).is(".btn__pop-close")) {
         $(e.target).closest(".pop__overlay").fadeOut(300);
@@ -195,41 +199,45 @@ const uiEvent = {
       }
     });
 
-    $(".btn__pop-open").on("click", function () {
-      const targetId = $(this).data("popup-target");
-      const $targetPopup = $(`#${targetId}`);
-      if ($targetPopup.length) {
-        $targetPopup.closest(".pop__overlay").fadeIn(300);
-        $targetPopup.addClass("active");
-      }
-    });
+    // 팝업 공통 열기
+    // $(".btn__pop-open").on("click", function () {
+    //   const targetId = $(this).data("popup-target");
+    //   const $targetPopup = $(`#${targetId}`);
+    //   if ($targetPopup.length) {
+    //     $targetPopup.closest(".pop__overlay").fadeIn(300);
+    //     $targetPopup.addClass("active");
+    //   }
+    // });
   },
 
   loginButtonEvent() {
-    const closeBtn = document.querySelector('.pop_close_btn');
-    closeBtn.addEventListener('click', function () {
-      if ($(e.target).is(".pop_close_btn")) {
-        $(e.target).closest(".pop__overlay").fadeOut(300);
-        $(e.target).closest(".popup").removeClass("active");
-      }
+    // 닫기 버튼 이벤트
+    $('.pop_close_btn').on('click', function (e) {
+      const $overlay = $(this).closest('.pop__overlay');
+      const $popup = $(this).closest('.popup');
+  
+      $overlay.fadeOut(300);
+      $popup.removeClass('active');
     });
-
-    $(".login-btn").on("click", function (e) {
+  
+    // 로그인 버튼 클릭 이벤트
+    $('.login-btn').on('click', function (e) {
       e.preventDefault();
+  
       const userId = $(".form-input[type='text']").val().trim();
       const password = $(".form-input[type='password']").val().trim();
       const targetId = $(this).data("popup-target");
       const $targetPopup = $(`#${targetId}`);
-
-      // 임시 아이디 비밀번호 빈값 확인
+      const $popupOverlay = $targetPopup.closest(".pop__overlay");
+  
+      // 아이디나 비밀번호가 빈 값일 경우 팝업 열기
       if (userId === "" || password === "") {
-        $targetPopup.closest(".pop__overlay").fadeIn(300);
+        $popupOverlay.fadeIn(300);
         $targetPopup.addClass("active");
         return;
       }
-
-      // 실제 로그인 처리 로직
-      // $("form").submit(); (원할 경우 주석 해제)
+  
+      // 아이디와 비밀번호가 입력된 경우 처리 로직 (예: 로그인 요청 등)
     });
   }
 };
