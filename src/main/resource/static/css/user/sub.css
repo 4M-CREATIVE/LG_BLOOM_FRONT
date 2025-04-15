@@ -138,3 +138,10 @@
 .sub01 .content .container p {line-height: 36px;  letter-spacing: -0.96px;}
 .sub01 .content .container .form__box {margin-bottom: 23rem;}
 /* 아이디찾기 end */
+
+/* 비밀번호 재설정 start */
+.sub02 .content .container {padding: 4rem 2rem 5rem 2rem;}
+.sub02 .content .container .title {margin-bottom: 1.2rem; letter-spacing: -0.8px;}
+.sub02 .content .container .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
+.sub02 .content .container .form__box {margin-bottom: 43rem;}
+/* 비밀번호 재설정 end */

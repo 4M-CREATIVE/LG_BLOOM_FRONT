@@ -158,6 +158,9 @@
 }
 
 /* font-weight */
+.txt--fw-400 {
+  font-weight: 400;
+}
 .txt--fw-500 {
   font-weight: 500;
 }
