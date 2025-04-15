@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임지원 난임정책</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="infertility-assistance-list bg--primary-blue">
+  <div class="search-header-wrap select-wrap">
+    <!-- 난임정책 팝업-->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <div class="popup__title color--blk">
+          <span class="txt--fw-600">정부24의 난임정책</span>은<br>
+          브라우저에서 확인이 가능합니다.
+        </div> 
+        <p class="popup__text">
+          지금 브라우저를 열어 확인하시겠습니까?
+        </p>
+        <div class="btn__box">
+          <button class="btn btn--gray btn__pop-close">취소</button>
+          <button class="btn bg--primary-blue btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 bd--transparent bd--gray-e5">난임지원</div>
+          <div class="select__options">
+            <div data-value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div></div>
+          <select>
+            <option value="option1">옵션 1</option>
+            <option value="option2">옵션 2</option>
+            <option value="option3">옵션 3</option>
+            <option value="option4">옵션 4</option>
+            <option value="option5">옵션 5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll">
+      <div class="tab__inner tab-link">
+          <button class="tab-menu color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-1" data-content="item-1"><strong class="tit--fz14">병원찾기</strong></span>
+          </button>
+          <button class="tab-menu active color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-2" data-content="item-2"><strong class="tit--fz14">난임정책</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-3" data-content="item-3"><strong class="tit--fz14">심리상담센터</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">응원게시판</strong></span>
+          </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer"></div> 
+
+    <!-- main -->
+    <div class="content infertility--policy">
+      <div class="search-result tab-content is-radius active" id="item-2">
+        <div class="container">
+          <section>
+            <p class="txt_wrap tit--fz20 txt--fw-700 color--blk">
+              현재 정부에서<br>
+              시행되고 있는 <span class="color--blue">난임정책</span>에 대해서<br>
+              알아볼 수 있습니다
+            </p>
+  
+            <ul class="infertility--policy-category">
+              <li>
+                <a href="javascript:void(0);">
+                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy01.svg" alt="난임정책">
+                  민원 서비스
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy02.svg" alt="난임정책">
+                  정책정보
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy03.svg" alt="난임정책">
+                  보조금
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy04.svg" alt="난임정책">
+                  기관정보
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <div class="btn__box"> 
+            <button class="btn pop-btn btn--blue" data-popup-target="pop_confirm">정부24 난임 정책 바로가기</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-3">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-4">
+        <div class="container">
+
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>
