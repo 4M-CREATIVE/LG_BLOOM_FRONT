@@ -15,6 +15,10 @@
   overflow: hidden !important;
 }
 
+.textarea--resize--none {
+	resize : none;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -179,8 +183,14 @@
 
 
 /* margin */
+.mb-62 {
+  margin-bottom:6.2rem;
+}
 .mb-49 {
   margin-bottom:4.9rem;
+}
+.mb-40 {
+  margin-bottom:4rem;
 }
 .mb-30 {
   margin-bottom:3rem;
@@ -194,6 +204,9 @@
 .mb-16 {
   margin-bottom:1.6rem;
 }
+.mb-14 {
+  margin-bottom:1.4rem;
+}
 .mb-12 {
   margin-bottom:1.2rem;
 }
@@ -201,6 +214,9 @@
 /* gap */
 .gap-16 {
   gap: 1.6rem;
+}
+.gap-12 {
+  gap: 1.2rem;
 }
 .gap-10 {
   gap: 1rem;
@@ -213,6 +229,12 @@
 }
 .gap-6 {
   gap: 0.6rem;
+}
+.gap-3 {
+  gap: 0.3rem;
+}
+.gap-2 {
+  gap: 0.2rem;
 }
 
 /* color */
@@ -281,6 +303,9 @@
 .bg--grayEf {
   background-color: #efefef;
 }
+.bg--grayf6 {
+  background-color: #F6F6F6;
+}
 .bg--grayf7 {
   background-color: #F7F7F7;
 }
@@ -331,7 +356,7 @@
   border-bottom: 1px solid #F3F3F3;
   padding: 12px 10px;
 } */
-.list ul li::after {
+.list ul > li::after {
   content: '';
   display: block;
   width: calc(100% - 4rem);
@@ -377,10 +402,7 @@
 }
 
 /* faq */
-/* .faq__list.on {
-  border-top: 1px solid #57207e;
-  border-bottom: 1px solid #57207e;
-} */
+
 .faq__list:first-of-type.on {
   margin-top: -1px;
 }
@@ -436,6 +458,146 @@
   content: 'A';
   top: 17px;
   font-size: 1rem;
+}
+
+/* comment 댓글 */
+
+.comment__list:first-of-type.on {
+  margin-top: -1px;
+}
+.comment__question {
+  padding: 14px 30px 14px 30px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 34px) 19px;
+  background-size: 15px 9px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
+}
+/* .comment__list.on .comment__answer {
+  background: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg) no-repeat;
+} */
+.comment__list.on .comment__question {
+  padding-bottom: 12px;
+}
+.comment__list .comment__question .comment_index {
+  line-height: 12px; 
+  letter-spacing: -0.48px;
+  margin-bottom: 0.6rem;
+}
+
+.comment__list .comment__question .comment_txt {
+  line-height: 20px;
+  letter-spacing: -0.48px;
+  margin-bottom: 1rem;
+}
+
+.comment__list .comment__question .comment_date { 
+  color: var(--Neutral-gray-AA, #AAA); 
+  font-size: 10px; 
+  font-weight: 400; 
+  line-height: 10px; 
+  letter-spacing: -0.4px;
+  margin-bottom: 1.2rem;
+}
+
+.comment__list .comment__question .comment_button {
+  color: var(--primary-blue, #2A77C1);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 10px;
+  letter-spacing: -0.48px;
+  border-radius: 90px;
+  background: rgba(42, 119, 193, 0.10);
+  padding: 5px 12px 6px 12px;
+}
+
+.comment__list .comment__question .icons ol li a {
+  color: var(--Neutral-gray-99, #999);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  letter-spacing: -0.4px;
+}
+
+.comment__question .label {
+  margin-top: 7px;
+}
+
+.comment_txt {
+  color: var(--neutral-gray-88);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.48px;
+}
+
+.comment__answer {
+  position: relative;
+  display: none;
+  background-color: var(--neutral-gray-F6);
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
+}
+
+.comment__answer .comment__answer_header {
+  border-top: 1px solid #E5E5E5;
+  padding: 12.5px 40px 14.5px 40px ;
+}
+
+.comment__answer .comment__answer_header p {
+  background: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg) no-repeat;
+  background-position: 100% center;
+  color: var(--Neutral-gray-55, #555);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+}
+
+.comment__answer ol li.comment__answer_contents {
+  padding: 16px 40px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.comment__answer ol li.comment__answer_contents span {
+  display: block;
+  color: var(--neutral-black-22);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.48px;
+  margin-bottom: 0.6rem;
+}
+.comment__answer ol li.comment__answer_contents p {
+  color: var(--neutral-gray-88);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.48px;
+  margin-bottom: 1rem;
+}
+.comment__answer ol li.comment__answer_contents del {
+  display: block;
+  color: var(--neutral-gray-AA);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: -0.4px;
+}
+
+.comment__answer ol li.comment__answer_contents textarea {
+  width: 100%;
+  height: 78px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  background: var(--neutral-fff);
+}
+
+.comment-list .pagination ul li.active a {
+  color: var(--primary-blue);
 }
 
 

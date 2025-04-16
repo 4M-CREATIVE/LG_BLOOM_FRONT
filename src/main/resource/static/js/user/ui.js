@@ -5,6 +5,7 @@ const uiEvent = {
     this.scrollEvent();
     this.tabEvent();
     this.accordionEvent();
+    this.commentToggleEvent();
     this.selectCustomEvent();
     this.pageOnloadEvent();
     this.infertilityAassistanceEvent();
@@ -105,6 +106,25 @@ const uiEvent = {
     $(".faq__question").on("click", function (e) {
       e.preventDefault();
       $(this).next('.faq__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.faq__answer').slideUp(300);
+    });
+
+  },
+
+  commentToggleEvent() {
+    // 댓글 답글 보기/접기
+    $(".comment_button").on("click", function (e) {
+      e.preventDefault();
+      const $answerBox = $(this).closest('.comment__list').find('.comment__answer');
+
+      $answerBox.slideToggle(300);
+    });
+
+    // 댓글 접기 버튼 클릭 시 닫기
+    $(".comment__answer_header").on("click", function (e) {
+      e.preventDefault();
+      const $answerBox = $(this).closest('.comment__answer');
+
+      $answerBox.slideUp(300);
     });
   },
 

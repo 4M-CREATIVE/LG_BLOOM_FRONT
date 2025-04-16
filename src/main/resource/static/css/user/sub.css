@@ -49,7 +49,8 @@
 .spacer {height: 15.1rem;}
 .search-result{ position: sticky; top: 0px; /* 헤더 높이만큼 고정 */ padding: 16px; background-color: #fff; font-weight: bold; padding: 10px 0; z-index: 999; transition: ease 0.3s;}
 .search-result .container { padding: 4rem 2rem 12rem 2rem;}
-.faq-list .search-result .container { padding: 4rem 0 9rem 0;}
+.faq-list .search-result .container { padding: 4rem 0 12rem 0;}
+
 .search-result .container section {margin-bottom: 3rem;}
 .search-result .container .tit {margin-bottom: 1.4rem;}
 .search-result .container .tit p:first-child { color: #222; font-size: 1.8rem; font-style: normal; font-weight: 700; line-height: 1.8rem; letter-spacing: -0.72px; gap: 0.4rem;}
@@ -138,6 +139,14 @@
 .infertility--policy .infertility--policy-category li {margin-bottom:2.1rem; }
 .infertility--policy .infertility--policy-category li a {display: flex; align-items: center; gap: 1rem; color: #444; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.64px;}
 /* 난임지원 난임정책 end */
+
+/* 난임지원 쉼터 start */
+.shelter .section01 {margin: 0 2rem 3rem 2rem;}
+.shelter .section02 {margin: 0 2rem 3rem 2rem;}
+.shelter hr {width: 100%; height: 1px; background: #E5E5E5; margin: 3rem 0;}
+.shelter .cheering-box {border-radius: 20px; background: rgba(42, 119, 193, 0.05); margin-bottom: 2rem;}
+.shelter .cheering-box .contents {padding: 4rem 2rem 3rem 2rem;}
+/* 난임지원 쉼터 end */
 
 /* 아이디찾기 start */
 .title__box { display: block; width: calc(100% - 8.8rem); text-align: center;}
