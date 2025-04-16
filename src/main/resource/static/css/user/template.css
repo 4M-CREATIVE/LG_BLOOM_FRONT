@@ -198,8 +198,14 @@
 .mb-24 {
   margin-bottom:2.4rem;
 }
+.mb-22 {
+  margin-bottom:2.2rem;
+}
 .mb-20 {
   margin-bottom:2rem;
+}
+.mb-18 {
+  margin-bottom:1.8rem;
 }
 .mb-16 {
   margin-bottom:1.6rem;
@@ -209,6 +215,9 @@
 }
 .mb-12 {
   margin-bottom:1.2rem;
+}
+.mb-8 {
+  margin-bottom:0.8rem;
 }
 
 /* gap */
@@ -720,7 +729,8 @@ textarea:-ms-input-placeholder {
 }
 input:read-only {
   color: #555;
-  background: #f3f3f3;
+  background: #f6f6f6;
+  border: none;
 }
 input::placeholder,
 textarea:read-only,
@@ -779,7 +789,7 @@ select option {
 }
 
 .form__box select {
-  background-image: url(/src/main/resource/static/images/user/common/arrow_b_wh.svg);
+  background-image: url(/src/main/resource/static/images/user/common/triangle_b_gray.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) 50%;
   background-size: 9px 5px;

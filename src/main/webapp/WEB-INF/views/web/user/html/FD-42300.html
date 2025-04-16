@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-회원정보 수정</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      // await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/sub_header.html?v=1.0");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="sub05">
+
+    <!-- 로그인 팝업 -->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <div class="popup__title">
+          비밀번호가 변경되었습니다.
+        </div> 
+        <div class="btn__box">
+          <button class="btn btn--purple btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <header class="header header--sub header--sub02" role="header" >
+      <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
+      <div class="title__box tit--fz18 color--blk txt--fw-700">
+        회원정보 수정
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+        <div class="title_wrap">
+          <p class="title tit--fz20 color--blk txt--fw-700">
+            기본정보 
+          </p>
+        </div>
+
+
+        <form class="edit_profile" action="#" method="post">
+          
+          <p class="sub_title">사용자계정</p>
+          <div class="form__box mb-20">
+            <input class="mb-8" type="text" name="" id="" readonly="" value="korea2024">
+            <input type="text" name="" id="" readonly="" value="김엘지">
+          </div>
+
+          <div class="form__box mb-30 ">
+            <input class="bd--gray-e5 color--gray99 mb-8 " type="password" name="" placeholder="비밀번호를 입력하세요." id="">
+            <input class="bd--gray-e5 color--gray99 mb-8 " type="password" name="" placeholder="비밀번호를 한번 더 입력하세요." id="">
+            <p class="mb-8">비밀번호는 변경을 원하는 경우에만 입력</p>
+            <p>비밀번호는 영문, 숫자를 포함하여 10자리 이상 또는 영문, 숫자,
+              특수문자를 포함하여 8자리 이상 입력해주세요.</p>
+          </div>
+                    
+          <p class="sub_title">휴대폰 번호</p>
+          <div class="form__box mb-18">
+            <input class="bd--gray-e5 color--gray99 mb-8" type="password" name="" placeholder="휴대폰 번호를 입력해주세요." id="">
+            <p>비밀번호는 영문, 숫자를 포함하여 10자리 이상 또는 영문, 숫자,
+              특수문자를 포함하여 8자리 이상 입력해주세요.</p>
+          </div>
+
+
+          <p class="sub_title">메일주소</p>
+          <div class="form__box form__box--row mb-30">
+            <input type="text" name="" placeholder="" id="">
+            <span>@</span>
+            <input type="text" name="" placeholder="직접입력" id="">
+          </div>
+
+
+          <p class="sub_title">생년월일</p>
+          <div class="form__box form__box--row">
+            <select name="" id="">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <select name="" id="">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <select name="" id="">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="btn__box">
+          <button type="button" class="btn pop-btn btn--purple" data-popup-target="pop_confirm">정보수정</button>
+        </div>
+        <div class="btn__box">
+          <button class="btn btn--line-gray txt--fw-600">취소</button>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html> 
