@@ -39,22 +39,58 @@
 
 <body id="wrap" class="faq-list bg--primary-blue">
   <div class="search-header-wrap select-wrap">
-    <!-- 난임정책 팝업-->
+    <!-- 응원 글 남기기 팝업-->
     <div class="pop__overlay" style="display: none;">
       <div class="popup" id="pop_confirm">
         <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
           <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
         </span>
         <div class="popup__title color--blk">
-          <span class="txt--fw-600">정부24의 난임정책</span>은<br>
-          브라우저에서 확인이 가능합니다.
+          응원글을 남겨주세요.<br>
+          <span class="txt--fw-600">당신의 응원은 큰 힘</span>이 됩니다.
         </div> 
         <p class="popup__text">
-          지금 브라우저를 열어 확인하시겠습니까?
+          <textarea class="textarea--resize--none mb-20">
+자연스럽게 임신을 기다렸지만,
+시간이 지나도 소식이 없었습니다.
+수많은 검사와 시술을 반복하며 지쳐갈 때마다
+서로의 손을 놓지 않았습니다.
+어느 날, 기적처럼 우리에게 아기 천사가 찾아왔습니다. 그 순간의 감동을 잊을 수 없습니다.
+          </textarea>
         </p>
+        <p class="warning_txt color--gray99">100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다.</p>
         <div class="btn__box">
-          <button class="btn btn--gray btn__pop-close">취소</button>
-          <button class="btn bg--primary-blue btn__pop-close">확인</button>
+          <button class="btn bg--primary-blue btn__pop-close">응원 글 남기기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 사연 올리기 팝업-->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_withdraw">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <div class="popup__title color--blk">
+          여러분의 사연을 올려주세요.<br>
+          <span class="txt--fw-600">따뜻한 사연</span>은 큰 힘이 됩니다.
+        </div>
+        <div class="form__box">
+          <input type="text" name="" placeholder="제목을 작성해주세요." id="">
+        </div> 
+        <p class="popup__text">
+          <textarea class="textarea--resize--none mb-20">
+자연스럽게 임신을 기다렸지만,
+시간이 지나도 소식이 없었습니다.
+수많은 검사와 시술을 반복하며 지쳐갈 때마다
+서로의 손을 놓지 않았습니다.
+어느 날, 기적처럼 우리에게 아기 천사가 찾아왔습니다. 그 순간의 감동을 잊을 수 없습니다.
+          </textarea>
+        </p>
+        <p class="warning_txt color--gray99">100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다.</p>
+        <p class="warning_txt color--blue">올리신 글은 심사 후에 노출여부가 결정됩니다.</p>
+        <div class="btn__box">
+          <button class="btn bg--primary-blue btn__pop-close">사연 올리기</button>
         </div>
       </div>
     </div>
@@ -157,7 +193,7 @@
             </div>
 
             <div class="btn__box mb-40">
-              <button class="btn btn--line-blue">응원 글 남기기</button>
+              <button class="btn pop-btn btn--line-blue" data-popup-target="pop_withdraw">응원 글 남기기</button>
             </div>
           </section>
 
