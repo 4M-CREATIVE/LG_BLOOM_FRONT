@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임지원 심리상담센터</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="infertility-assistance-list bg--primary-blue">
+
+
+  <div class="search-header-wrap select-wrap">
+
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 bd--transparent bd--gray-e5">난임지원</div>
+          <div class="select__options">
+            <div data-value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div></div>
+          <select>
+            <option value="option1">옵션 1</option>
+            <option value="option2">옵션 2</option>
+            <option value="option3">옵션 3</option>
+            <option value="option4">옵션 4</option>
+            <option value="option5">옵션 5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll">
+      <div class="tab__inner tab-link">
+          <button class="tab-menu color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-1" data-content="item-1"><strong class="tit--fz14">병원찾기</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-2" data-content="item-2"><strong class="tit--fz14">난임정책</strong></span>
+          </button>
+          <button class="tab-menu active color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-3" data-content="item-3"><strong class="tit--fz14">심리상담센터</strong></span>
+          </button>
+          <button class="tab-menu color--wht bd--b-wht">
+            <span href="javascript:void(0);" data-title="item-4" data-content="item-4"><strong class="tit--fz14">응원게시판</strong></span>
+          </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer"></div> 
+
+    <!-- main -->
+    <div class="content">
+      <div class="search-result tab-content active is-radius" id="item-3">
+        <div class="container">
+          <p class="infertility-assistance-title tit--fz20 color--blk mb-30">
+            난임에 대한 고민을 나누는<br>
+            <span class="color--blue">심리상담센터</span>
+          </p>
+ 
+          <div class="blue">
+            <div>
+              <ul class="search_list">
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">중앙</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      국립 중앙의료원
+                    </p> 
+                    <p class="pcc_address mb-6">https://22762276.nmc.or.kr</p>
+                    <p class="pcc_number mb-6">02)2276-2276</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">서울 권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      강남센터 / 송파센터
+                    </p>
+                    <p class="pcc_address mb-6">https://mindcare-for-family.kr</p>
+                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">강남센터</span>02) 2019-4581</p>
+                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">송파센터</span>02) 6956-6248</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">서울 서남권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      보라매센터 / 금천구센터
+                    </p>
+                    <p class="pcc_address mb-6">https://fmc.or.kr</p>
+                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">보라매 센터</span>02) 870-3617</p>
+                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">금천구 센터</span>02) 6956-6248</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">인천 권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      아인병원
+                    </p>
+                    <p class="pcc_address mb-6">https://id-incheon.co.kr</p>
+                    <p class="pcc_number mb-6">032) 466-3268</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">경기도권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      인구보건복지협회 / 경기도지회
+                    </p>
+                    <p class="pcc_address mb-6">https://happyfamily3375.or.kr/</p>
+                    <p class="pcc_number mb-6">031) 255-3374~5</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">경기 북부권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      동국대일산병원
+                    </p>
+                    <p class="pcc_address mb-6">http://www.hwc1234.co.kr</p>
+                    <p class="pcc_number mb-6">061) 901-1234</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">대구 권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      경북대학교병원
+                    </p>
+                    <p class="pcc_address mb-6">http://www.healthymom.or.kr/</p>
+                    <p class="pcc_number mb-6">053) 261-3375</p>
+                    <p class="pcc_number mb-6">053) 262-3375</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">경상북도 권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      안동의료원
+                    </p>
+                    <p class="pcc_address mb-6">https://happymoa.kr</p>
+                    <p class="pcc_number mb-6">054) 850-63767~9</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="li-info flex flex--between mb-6">
+                      <div class="left">
+                        <span class="region blue-color">경북서부 권역</span> 
+                      </div>  
+                    </div>
+                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                      김천의료원
+                    </p>
+                    <p class="pcc_address mb-6">https://www.gcmc.or.kr</p>
+                    <p class="pcc_number mb-6">054) 429-8540~3</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-4">
+        <div class="container">
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>
