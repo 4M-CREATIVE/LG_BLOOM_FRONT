@@ -15,7 +15,7 @@
 
   <!-- Initialized Include Path -->
   <script>
-    async function loadHtml(selector, url) {
+    async function loadHtml(selector,  url) {
       try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -47,6 +47,20 @@
     <!-- main -->
     <div class="content">
       <div class="container">
+
+        <div class="title_wrap mb-234">
+          <img class="mb-50" src="/src/main/resource/static/images/user/common/icon_check_test.svg " alt="">
+          <p class="title tit--fz30 color--blk txt--fw-700">
+            태어난 년도를<br>
+            알려주세요.
+          </p>
+          <p class="sub_title tit--fz14 txt--fw-400 color--gray88">
+            해당 체크리스트에 대한 답변은 참고용이며,<br>
+            전문의 진료를 대신할 수 없으므로 정확한<br>
+            증상과 의학적 판단을 위해<br>
+            가까운 의료기관을 방문하여 진료를 받아보세요.
+          </p>
+        </div>
 
         <div class="title_wrap mb-234">
           <img class="mb-50" src="/src/main/resource/static/images/user/common/icon_check_test.svg " alt="">
