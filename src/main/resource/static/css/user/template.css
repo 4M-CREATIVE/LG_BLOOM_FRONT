@@ -74,7 +74,7 @@
   padding: 0rem 2rem;
   background: transparent;
   margin-top: 2rem;
-  border-bottom: 1px solid #E3D9EA;
+  border-bottom: 1px solid transparent;
 }
 
 .header--sub input{
@@ -190,8 +190,14 @@
 } 
 
 /* margin-bottom */
+.mb-234 {
+  margin-bottom:23.4rem;
+} 
 .mb-62 {
   margin-bottom:6.2rem;
+}
+.mb-50 {
+  margin-bottom:5rem;
 }
 .mb-49 {
   margin-bottom:4.9rem;
@@ -348,7 +354,10 @@
   border-bottom: 1px solid var(--neutral-fff);
 }
 .bd--gray-e5 {
-  border: 1px solid var(--neutral-gray-E5);
+  border-bottom: 1px solid var(--neutral-gray-E5);
+}
+.bd--gray-e3 {
+  border-bottom: 1px solid #E3D9EA;
 }
 .bd--gray-99 {
   border: 1px solid var(--neutral-gray-99)!important;
