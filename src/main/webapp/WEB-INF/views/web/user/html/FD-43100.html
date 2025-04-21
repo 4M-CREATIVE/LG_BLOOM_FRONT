@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-회원정보 수정</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      // await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/sub_header.html?v=1.0");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="sub04">
+
+    <!-- 아이디 중복 확인 팝업 -->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <div class="popup__title">
+          <span class="txt--fw-600">사용할 수 있는</span>아이디입니다.
+        </div>  
+        <div class="btn__box">
+          <button class="btn btn--purple btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <header class="header header--sub header--sub02" role="header" >
+      <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
+      <div class="title__box tit--fz18 color--blk txt--fw-700">
+        나의 가임건강 체크 내역
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+        <div class="title_wrap">
+          <p class="title tit--fz20 color--blk txt--fw-700">
+            가임건강 체크
+          </p>
+          <p class="sub_title tit--fz14 txt--fw-400 color--gray88 mb-10">
+            가임건강 체크 결과는 42개 참고문헌과<br>
+            전문가의 조언으로 작성된 내용을 토대로 표기 됩니다.
+          </p>
+
+          <p class="warning_txt warning_txt_purple color--primary gap-10 txt--fz12 mb-30">가임건강 체크는 여성회원에게만 제공되고 있습니다.</p>
+        </div>
+        <div class="check_contents mb-30 ">
+          <div class="non--check-list ">
+            <p class="flex flex--center mb-20"><img src="/src/main/resource/static/images/user/common/icon_bang.svg" alt="가임건강_체크_내역"></p> 
+            <p class="txt align--center tit--fz20 txt--fw-600 mb-14">가임건강 체크를 한<br> 이력이 없습니다.</p>
+            <p class="sub_txt align--center txt--fz13 txt--fw-400 color--gray99">가임건강 체크는 성공적인 임신에<br> 도움이 됩니다.</p>
+          </div>
+        </div>
+
+
+        <!-- 사용할 수 있는, 사용할 수 없는 아이디 임시 팝업 연결  -->
+        <div class="btn__box">
+          <button type="button" class="btn pop-btn btn--purple" data-popup-target="pop_confirm">가임건강 체크하기</button>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html> 
