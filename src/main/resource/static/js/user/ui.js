@@ -11,6 +11,14 @@ const uiEvent = {
     this.infertilityAassistanceEvent();
     this.popupEvent();
     this.loginButtonEvent();
+
+    // 설문 개별 이벤트 등록
+    this.initSurvey04SelectEvent();
+    this.initSurvey05SelectEvent();
+    this.initSurvey07SelectEvent();
+    this.initSurvey08SelectEvent();
+    this.initSurvey09SelectEvent();
+    this.initSurvey10SelectEvent();
   },
 
   menuSlideEvent() {
@@ -278,5 +286,186 @@ const uiEvent = {
       }
   
     });
-  }
+  },
+  initSurvey04SelectEvent() {
+    const $container = $("#survey04");
+    const $noneButton = $container.find('[data-type="none"]');
+    const $diseaseButtons = $container.find('[data-type="disease"]');
+  
+    $noneButton.on("click", function () {
+      const isSelected = $(this).hasClass("selected");
+      $(this).toggleClass("selected");
+  
+      if (!isSelected) {
+        $diseaseButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        $diseaseButtons.prop("disabled", false);
+      }
+    });
+  
+    $diseaseButtons.on("click", function () {
+      $(this).toggleClass("selected");
+  
+      const anySelected = $diseaseButtons.toArray().some(btn =>
+        $(btn).hasClass("selected")
+      );
+  
+      if (anySelected) {
+        $noneButton.prop("disabled", true).removeClass("selected");
+      } else {
+        $noneButton.prop("disabled", false);
+      }
+    });
+  },
+  initSurvey05SelectEvent() {
+    const $container = $("#survey05");
+    const $noneType01 = $container.find('[data-type="none-type01"]');
+    const $noneType02 = $container.find('[data-type="none-type02"]');
+    const $noneButtons = $noneType01.add($noneType02);
+    const $diseaseButtons = $container.find('[data-type="disease"]');
+
+    // none-type01 클릭 시
+    $noneType01.on("click", function () {
+      const isSelected = $(this).hasClass("selected");
+      $(this).toggleClass("selected");
+
+      if (!isSelected) {
+        // 다른 버튼 전부 비활성화 및 선택 해제
+        $noneType02.prop("disabled", true).removeClass("selected");
+        $diseaseButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        // 초기화
+        $noneType02.prop("disabled", false);
+        $diseaseButtons.prop("disabled", false);
+      }
+    });
+
+    // none-type02 클릭 시
+    $noneType02.on("click", function () {
+      const isSelected = $(this).hasClass("selected");
+      $(this).toggleClass("selected");
+
+      if (!isSelected) {
+        $noneType01.prop("disabled", true).removeClass("selected");
+        $diseaseButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        $noneType01.prop("disabled", false);
+        $diseaseButtons.prop("disabled", false);
+      }
+    });
+
+    // 질환 선택 버튼
+    $diseaseButtons.on("click", function () {
+      $(this).toggleClass("selected");
+
+      const anySelected = $diseaseButtons.toArray().some(btn =>
+        $(btn).hasClass("selected")
+      );
+
+      if (anySelected) {
+        $noneButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        $noneButtons.prop("disabled", false);
+      }
+    });
+  },
+  initSurvey07SelectEvent() {
+    const $container = $("#survey07");
+    const $buttons = $container.find('[data-type="disease"]');
+  
+    $buttons.on("click", function () {
+      $(this).toggleClass("selected");
+    });
+  },
+  initSurvey08SelectEvent() {
+    const $container = $("#survey08");
+    const $noneButton = $container.find('[data-type="none"]');
+    const $diseaseButtons = $container.find('[data-type="disease"]');
+    
+    $noneButton.on("click", function () {
+      const isSelected = $(this).hasClass("selected");
+      $(this).toggleClass("selected");
+  
+      if (!isSelected) {
+        $diseaseButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        $diseaseButtons.prop("disabled", false);
+      }
+    });
+  
+    $diseaseButtons.on("click", function () {
+      $(this).toggleClass("selected"); // ✅ 여기 고침
+  
+      const anySelected = $diseaseButtons.toArray().some(btn =>
+        $(btn).hasClass("selected")
+      );
+  
+      if (anySelected) {
+        $noneButton.prop("disabled", true).removeClass("selected");
+      } else {
+        $noneButton.prop("disabled", false);
+      }
+    });
+  },
+  initSurvey09SelectEvent() {
+    const $container = $("#survey09");
+    const $noneButton = $container.find('[data-type="none"]');
+    const $diseaseButtons = $container.find('[data-type="disease"]');
+  
+    $noneButton.on("click", function () {
+      const isSelected = $(this).hasClass("selected");
+      $(this).toggleClass("selected");
+  
+      if (!isSelected) {
+        $diseaseButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        $diseaseButtons.prop("disabled", false);
+      }
+    });
+  
+    $diseaseButtons.on("click", function () {
+      $(this).toggleClass("selected");
+  
+      const anySelected = $diseaseButtons.toArray().some(btn =>
+        $(btn).hasClass("selected")
+      );
+  
+      if (anySelected) {
+        $noneButton.prop("disabled", true).removeClass("selected");
+      } else {
+        $noneButton.prop("disabled", false);
+      }
+    });
+  },
+  initSurvey10SelectEvent() {
+    const $container = $("#survey10");
+    const $noneButton = $container.find('[data-type="none"]');
+    const $diseaseButtons = $container.find('[data-type="disease"]');
+  
+    $noneButton.on("click", function () {
+      const isSelected = $(this).hasClass("selected");
+      $(this).toggleClass("selected");
+  
+      if (!isSelected) {
+        $diseaseButtons.prop("disabled", true).removeClass("selected");
+      } else {
+        $diseaseButtons.prop("disabled", false);
+      }
+    });
+  
+    $diseaseButtons.on("click", function () {
+      $(this).toggleClass("selected");
+  
+      const anySelected = $diseaseButtons.toArray().some(btn =>
+        $(btn).hasClass("selected")
+      );
+  
+      if (anySelected) {
+        $noneButton.prop("disabled", true).removeClass("selected");
+      } else {
+        $noneButton.prop("disabled", false);
+      }
+    });
+  },
+  
 };
