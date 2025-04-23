@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-가임건강 체크 결과</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="infertility-assistance-list bg--primary">
+  <div class="search-header-wrap select-wrap">
+    <!-- 팝업-->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <div class="popup__title color--blk">
+          기초 결과 <span class="txt--fw-600">참고문헌</span>
+        </div> 
+        <p class="popup__text">
+          <!-- 1. Rowe Timothy, J Reprod Med. 2006;51(3):157- 63
+          2. Hook E B, Obstet Gynecol. 1981;58(3):282-5
+          3. 임산부 비만관리 가이드, 2016 국민건강보험공단
+          4. Londero A.P. et al., BMC Pregnancy and Childbirth 2019;19(261)
+          5. Frisch Rose E. TEM 1991;2(5):191-197
+          6. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+          7. Cnattingius JAMA 2013 12;309(22):2362-70
+          8. Yao R. et al., AJOG 2014;210(5):457.e1-9
+          9. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+          10. 임산부 비만관리 가이드, 2016 국민건강보험공단
+          11. Lim S. et al., Current Obesity Reports 2022;11:405-414
+          12. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+          13. Cnattingius JAMA 2013 12;309(22):2362-70
+          14. Yao R. et al., AJOG 2014;210(5):457.e1-9
+          15. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+          16. 임산부 비만관리 가이드, 2016 국민건강보험공단
+          17. Lim S. et al., Current Obesity Reports 2022;11:405-414
+          18. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+          19. Cnattingius JAMA 2013 12;309(22):2362-70
+          20. Yao R. et al., AJOG 2014;210(5):457.e1-9
+          21. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+          22. 임산부 비만관리 가이드, 2016 국민건강보험공단
+          23. Lim S. et al., Current Obesity Reports 2022;11:405-414
+          24. Hart BN, Shubrook JH, Mason T. Pregestational Diabetes
+                  and Family Planning. Clin Diabetes. 2021;39(3):323-328. 
+          25. Kim SW. Endocrine disorders in pregnancy.
+                 The Korean Journal of Medicine. 1999;57(4):750-764
+          26. Colicchia M. et al., Hum Reprod Update, 2014;20(6):884-904
+          27. Curling T B et al., Med Chir Trans. 1850;33:303-6
+          28. Harvey C.B et al., Molecular Genetics and Metabolism
+                 2002;75:17-30
+          29. Yi K H et al., Int J Thyroidol 2023; 16(1):51-88
+          30. Krassas G E et al., Clin Endocrinol (Oxf), 1994:40(5):641-4
+          31. Bellamy L. et al., BMJ 2007;335:974
+          32. 대한고혈압학회 2022 고혈압 진료지침 -->
+        </p>
+        <div class="btn__box">
+          <button class="btn bg--primary btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <div class="flex check__result_header">
+      <div>
+        <a class="prev_btn_02" href="javascript:void(0)"></a>
+      </div>
+      <p class="title tit--fz18 txt--fw-700">가임건강 체크 결과</p>
+
+    </div>
+    <p class="check__resul_sub_title">체크 결과는 마이페이지에 자동저장 됩니다.</p>
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer h-112"></div> 
+
+    <!-- main -->
+    <div class="content infertility--policy">
+      <div class="search-result tab-content is-radius active" id="item-2">
+        <div class="container">
+          <section>
+            <p class="txt_wrap tit--fz16 txt--fw-400 color--blk align--center">
+              아래 내용은 BMI, 나이, 기저질환력<br>
+              <span class="txt--fw-600">세가지 문항</span>에 대한 <span class="txt--fw-600 color--primary">답변 기반의 결과</span>입니다.
+            </p>
+          </section>
+
+          <div class="btn__box"> 
+            <button class="btn pop-btn btn--line-purple " data-popup-target="pop_confirm">참고문헌</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-3">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-4">
+        <div class="container">
+
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>

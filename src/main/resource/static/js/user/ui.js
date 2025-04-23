@@ -96,36 +96,41 @@ const uiEvent = {
   },
 
   scrollEvent() {
-    // 스크롤 시 헤더 고정 및 탭 반응
     const header = document.querySelector('.search-header-wrap');
     const tabs = document.querySelectorAll('.tab-content');
     const searchFooter = document.querySelector('.search-footer');
+    const spacer = document.querySelector('.spacer');
     let lastScroll = 0;
-
+  
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
-      // 스크롤시 셀렉트 박스 닫기
+      const spacerHeight = spacer?.offsetHeight || 0;
+  
+      // 셀렉트박스 닫기
       $(".select__options").hide();
-
+  
       if (currentScroll <= lastScroll) {
         searchFooter?.classList.add('is-radius');
       } else {
         searchFooter?.classList.remove('is-radius');
       }
-
+  
       tabs.forEach(tab => {
         if (tab.classList.contains('active')) {
           if (currentScroll <= lastScroll) {
             header.style.top = '0';
             tab.classList.add('is-radius');
           } else {
-            header.style.top = '-151px';
+            header.style.top = `-${spacerHeight}px`; // 현재 spacer 높이에 따라 조정
             tab.classList.remove('is-radius');
           }
         }
       });
+  
+      lastScroll = currentScroll;
     });
   },
+  
 
   tabEvent() {
     // 탭 전환
