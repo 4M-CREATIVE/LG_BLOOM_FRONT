@@ -159,6 +159,10 @@ const uiEvent = {
       e.preventDefault();
       $(this).next('.faq__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.faq__answer').slideUp(300);
     });
+    $(".accordian__question").on("click", function (e) {
+      e.preventDefault();
+      $(this).next('.accordian__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.accordian__answer').slideUp(300);
+    });
 
   },
 

@@ -97,7 +97,8 @@
 .login-wrap .content .login-form { margin-bottom: 9.6rem;}
 .login-wrap .content .login-form .form-group:first-child{ margin-bottom: 0.8rem;}
 .login-wrap .content .login-form .form-group:nth-child(2){ margin-bottom: 1.4rem;}
-.login-wrap .content .login-form .check__group {margin-left: 2rem; margin-bottom: 2.8rem;}
+.login-wrap .content .login-form .check__group:first-child {margin-left: 2rem;}
+.login-wrap .content .login-form .check__group {margin-bottom: 2.8rem;}
 .login-wrap .content .login-form .check__group span { font-size: 12px; font-weight: 400; line-height: 12px; letter-spacing: -0.48px; color: #222;}
 .login-wrap .content .login-form  .btn__box{ margin-bottom: 2.4rem;}
 .form-links {width: 21.1rem; height: 1.7rem; display: flex; align-items: center; justify-content: space-between; margin: 0 auto; font-size: 1.2rem; font-weight: 400; letter-spacing: -0.48px;}
@@ -207,7 +208,7 @@
 /* 마이페이지 - 비밀번호 확인 start */
 .sub04 .content .container {padding: 4rem 2rem 5rem 2rem;}
 .sub04 .content .container .title_wrap {padding: 0 1.5rem;}
-.sub04 .content .container .title_wrap .title {margin-bottom: 3rem; letter-spacing: -0.8px;}
+.sub04 .content .container .title_wrap .title {letter-spacing: -0.8px;}
 .sub04 .content .container .title_wrap .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
 .sub04 .content .container .form_wrap .form__box:first-child{margin-bottom: 0.8rem;}
 .sub04 .content .container .form_wrap .form__box:nth-child(2){margin-bottom: 1rem;}
@@ -226,6 +227,11 @@
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
+/* 민감정보 수집 */
+.sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
+.sub08 .content .container .title_wrap {padding:  0 20px; margin-bottom: 3rem;}
+.personal_info_box { border-radius: 20px; border: 1px solid #5D1E7E; padding: 2rem; margin-bottom: 114px;}
+
 .check_contents .check_list li{border-radius: 10px; background: rgba(93, 30, 126, 0.05);padding: 14px 20px; letter-spacing: -0.52px; margin-bottom: 10px;}
 .check_contents .check_list li:last-child{margin-bottom: 0;}
 .check_contents .check_list li .left .check_list_index{color: #5D1E7E; font-size: 13px; font-weight: 700;}
@@ -238,6 +244,7 @@
 /* 마이페이지 - 나의 가임건강 체크 end */
 
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
+.sub07 .content .container {padding: 3rem 2rem 5rem 2rem;}
 .check__result_header {margin-bottom: 12px;}
 .check__result_header .title{width: calc(100% - 40px); display: flex; justify-content: center;}
 .check__result_sub_title{color: rgba(255, 255, 255, 0.50); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
@@ -246,17 +253,16 @@
 .check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.44px;}
 .check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #5D1E7E); color: #FFF; font-size: 11px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px; border: none;}
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
-/* 정상체중 */
+  /* 정상체중 */
 .normalweight_wrap{margin-bottom: 28px;}
 .normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
 .normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
 .normal_weight_illustration {margin-left: 74px;}
-/* 저체중 */
+  /* 저체중 */
 .underweight {display: none;}
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
 .underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
 .underweight_wrap .underweight--list .title {margin-bottom: 1rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
 .underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/src/main/resource/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
 .underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
-  
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
