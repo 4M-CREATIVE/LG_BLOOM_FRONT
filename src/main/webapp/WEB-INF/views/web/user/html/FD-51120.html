@@ -28,8 +28,6 @@
     }
   
     async function initPage() {
-      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-  
       uiEvent.init();
     }
   
@@ -38,58 +36,59 @@
 </head>
 
 <body id="wrap" class="infertility-assistance-list bg--primary">
-  <div class="search-header-wrap select-wrap">
-    <!-- 팝업-->
-    <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_confirm">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
-        </span>
-        <div class="popup__title color--blk">
-          기초 결과 <span class="txt--fw-600">참고문헌</span>
-        </div> 
-        <p class="popup__text">
-          <!-- 1. Rowe Timothy, J Reprod Med. 2006;51(3):157- 63
-          2. Hook E B, Obstet Gynecol. 1981;58(3):282-5
-          3. 임산부 비만관리 가이드, 2016 국민건강보험공단
-          4. Londero A.P. et al., BMC Pregnancy and Childbirth 2019;19(261)
-          5. Frisch Rose E. TEM 1991;2(5):191-197
-          6. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
-          7. Cnattingius JAMA 2013 12;309(22):2362-70
-          8. Yao R. et al., AJOG 2014;210(5):457.e1-9
-          9. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
-          10. 임산부 비만관리 가이드, 2016 국민건강보험공단
-          11. Lim S. et al., Current Obesity Reports 2022;11:405-414
-          12. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
-          13. Cnattingius JAMA 2013 12;309(22):2362-70
-          14. Yao R. et al., AJOG 2014;210(5):457.e1-9
-          15. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
-          16. 임산부 비만관리 가이드, 2016 국민건강보험공단
-          17. Lim S. et al., Current Obesity Reports 2022;11:405-414
-          18. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
-          19. Cnattingius JAMA 2013 12;309(22):2362-70
-          20. Yao R. et al., AJOG 2014;210(5):457.e1-9
-          21. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
-          22. 임산부 비만관리 가이드, 2016 국민건강보험공단
-          23. Lim S. et al., Current Obesity Reports 2022;11:405-414
-          24. Hart BN, Shubrook JH, Mason T. Pregestational Diabetes
-                  and Family Planning. Clin Diabetes. 2021;39(3):323-328. 
-          25. Kim SW. Endocrine disorders in pregnancy.
-                 The Korean Journal of Medicine. 1999;57(4):750-764
-          26. Colicchia M. et al., Hum Reprod Update, 2014;20(6):884-904
-          27. Curling T B et al., Med Chir Trans. 1850;33:303-6
-          28. Harvey C.B et al., Molecular Genetics and Metabolism
-                 2002;75:17-30
-          29. Yi K H et al., Int J Thyroidol 2023; 16(1):51-88
-          30. Krassas G E et al., Clin Endocrinol (Oxf), 1994:40(5):641-4
-          31. Bellamy L. et al., BMJ 2007;335:974
-          32. 대한고혈압학회 2022 고혈압 진료지침 -->
-        </p>
-        <div class="btn__box">
-          <button class="btn bg--primary btn__pop-close">확인</button>
+      <!-- 팝업-->
+      <div class="pop__overlay" style="display: none;">
+        <div class="popup" id="pop_confirm">
+          <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+            <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+          </span>
+          <div class="popup__title color--blk">
+            기초 결과 <span class="txt--fw-600">참고문헌</span>
+          </div> 
+          <textarea readonly class="check__result_popup_text">
+1. Rowe Timothy, J Reprod Med. 2006;51(3):157- 63
+2. Hook E B, Obstet Gynecol. 1981;58(3):282-5
+3. 임산부 비만관리 가이드, 2016 국민건강보험공단
+4. Londero A.P. et al., BMC Pregnancy and Childbirth 2019;19(261)
+5. Frisch Rose E. TEM 1991;2(5):191-197
+6. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+7. Cnattingius JAMA 2013 12;309(22):2362-70
+8. Yao R. et al., AJOG 2014;210(5):457.e1-9
+9. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+10. 임산부 비만관리 가이드, 2016 국민건강보험공단
+11. Lim S. et al., Current Obesity Reports 2022;11:405-414
+12. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+13. Cnattingius JAMA 2013 12;309(22):2362-70
+14. Yao R. et al., AJOG 2014;210(5):457.e1-9
+15. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+16. 임산부 비만관리 가이드, 2016 국민건강보험공단
+17. Lim S. et al., Current Obesity Reports 2022;11:405-414
+18. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+19. Cnattingius JAMA 2013 12;309(22):2362-70
+20. Yao R. et al., AJOG 2014;210(5):457.e1-9 
+21. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+22. 임산부 비만관리 가이드, 2016 국민건강보험공단
+23. Lim S. et al., Current Obesity Reports 2022;11:405-414
+24. Hart BN, Shubrook JH, Mason T. Pregestational Diabetes
+      and Family Planning. Clin Diabetes. 2021;39(3):323-328. 
+25. Kim SW. Endocrine disorders in pregnancy.
+      The Korean Journal of Medicine. 1999;57(4):750-764
+26. Colicchia M. et al., Hum Reprod Update, 2014;20(6):884-904
+27. Curling T B et al., Med Chir Trans. 1850;33:303-6
+28. Harvey C.B et al., Molecular Genetics and Metabolism
+      2002;75:17-30
+29. Yi K H et al., Int J Thyroidol 2023; 16(1):51-88
+30. Krassas G E et al., Clin Endocrinol (Oxf), 1994:40(5):641-4
+31. Bellamy L. et al., BMJ 2007;335:974
+32. 대한고혈압학회 2022 고혈압 진료지침
+          </textarea>
+          <div class="btn__box">
+            <button class="btn bg--primary btn__pop-close">확인</button>
+          </div>
         </div>
       </div>
-    </div>
+  <div class="search-header-wrap select-wrap">
+
 
     <!-- header -->
     <div class="flex check__result_header">
@@ -99,25 +98,89 @@
       <p class="title tit--fz18 txt--fw-700">가임건강 체크 결과</p>
 
     </div>
-    <p class="check__resul_sub_title">체크 결과는 마이페이지에 자동저장 됩니다.</p>
+    <p class="check__result_sub_title">체크 결과는 마이페이지에 자동저장 됩니다.</p>
   </div>
 
     <!-- 헤더 자리 확보 -->
-    <div class="spacer h-112"></div> 
+    <div class="spacer h-100"></div> 
 
     <!-- main -->
     <div class="content infertility--policy">
       <div class="search-result tab-content is-radius active" id="item-2">
+        <ul class="check__result_tap">
+          <li><a href="javascript:void(0);" class="active">기초결과</a></li>
+          <li><a href="javascript:void(0);">진단 원인별 설명</a></li>
+          <li><a href="javascript:void(0);">질환 자가진단</a></li>
+        </ul>
         <div class="container">
-          <section>
-            <p class="txt_wrap tit--fz16 txt--fw-400 color--blk align--center">
-              아래 내용은 BMI, 나이, 기저질환력<br>
-              <span class="txt--fw-600">세가지 문항</span>에 대한 <span class="txt--fw-600 color--primary">답변 기반의 결과</span>입니다.
-            </p>
-          </section>
+          <p class="txt_wrap tit--fz16 txt--fw-400 color--blk align--center">
+            아래 내용은 BMI, 나이, 기저질환력<br>
+            <span class="txt--fw-600">세가지 문항</span>에 대한 <span class="txt--fw-600 color--primary">답변 기반의 결과</span>입니다.
+          </p>
 
-          <div class="btn__box"> 
-            <button class="btn pop-btn btn--line-purple " data-popup-target="pop_confirm">참고문헌</button>
+          <div class="check__result_box">
+            <!-- 정상체중 -->
+            <p class="normalweight tit--fz20 txt--fw-400 color--gray44 align--center">
+              <span class="tit--fz14 txt--fw-600 color--blk">김엘지님의 BMI 는</span><br>
+              <span class="txt--fw-600 color--primary bd--b-purple">19.5 (kg/m2)</span> 이며,<br>
+              <span class="txt--fw-600 color--primary bd--b-purple">정상체중</span>에 해당합니다.
+            </p>
+            <!-- 저체중 -->
+            <p class="underweight tit--fz20 txt--fw-400 color--gray44 align--center">
+              <span class="tit--fz14 txt--fw-600 color--blk">김엘지님의 BMI 는</span><br>
+              <span class="txt--fw-600 color--primary bd--b-purple">18.5 (kg/m2)</span> 이며,<br>
+              <span class="txt--fw-600 color--primary bd--b-purple">저체중</span>에 해당합니다.
+            </p>
+          </div>
+
+          <!-- 정상체중 -->
+          <ul class="normalweight normalweight_wrap">
+            <li class="title align--center txt--fw-700 tit--fz20 mb-10 color--primary">축하드립니다.</li>
+            <li class="contents align--center txt--fw-400 tit--fz14 color--blk">
+              <span class="txt--fw-600 color--primary">김엘지님</span>은 고위험 임신부 카테고리에서<br>
+              한 발짝 떨어져 있습니다.<br>
+              건강한 생활 습관을 유지하고 정기적인<br>
+              검진을 통해 건강 관리에 힘써 주시기 바랍니다.
+            </li>
+          </ul>
+
+          <!-- 저체중 -->
+          <ul class="underweight underweight_wrap mb-60">
+            <li class="underweight--list">
+            <p class="title color--blk tit--fz14">가임력과 나이</p>
+            <p class="contents color--gray55 txt--fz12 bg--grayf6">
+              가임력에 여성의 나이는 가장 중요하게 작용합니다. 
+              여성의 난자는 태어날 때 이미 그 수가 결정되며 이후 지속적으로 감소합니다. 따라서 연령이 증가할수록 보유하고 있는 난자의 수가 줄어들며 임신의 가능성은 점차 낮아집니다.<br>
+              <br>
+              여성의 가임력은 20대 중반에 가장 높으며 35세가 되면 가임력이 급격하게 감소하기 시작합니다.<span class="tooltip"></span><br>
+              <br>
+              특히 여성의 나이 35세를 기준으로 고령 위험군 임신으로 구분하며, 이유는 임신으로 발생할 수 있는 모든 합병증의 발생 확률이 올라감과 동시에 유산, 조산, 태아의 유전이상을 야기할 수 있기 때문입니다.<span class="tooltip"></span><br>
+              <br>
+              최근에는 사회적 이유로 여성의 출산이 미뤄지고 원치 않게 난임으로 이어지는 경우가 많이 발생합니다.
+              35세 이상 여성의 경우 난임 치료 기준을 6개월 이상 피임이 없는 정상 관계에서 임신이 안되었을 때로 정하고 적극적 치료를 권고<span class="tooltip"></span> 하고 있으니 임신을 준비하고 있다면 병원에 방문하여 진단을 받아 보시는 것을 추천 드립니다.<br>
+              <br>
+              또한 지금 당장 출산할 여건이 되지 않으나 미래에 출산 계획이 있는 여성이라면 난자 냉동 등의 가임력 보존을 위한 방법을 고려해 보시는 것이 필요합니다.
+            </p>
+            </li>
+            <li class="underweight--list">
+            <p class="title color--blk tit--fz14">BMI</p>
+            <p class="contents color--gray55 txt--fz12 bg--grayf6">
+              정상 배란을 유지하기 위하여 체지방을 26~28% 정도로 유지해야 합니다.<span class="tooltip"></span> 적정량의 체지방은은 체내 호르몬 균형 유지에 도움이 되며 이는 난포의 성장과 자궁 내막의 발달에 중요한 역할을 합니다.<span class="tooltip"></span> 따라서 체지방이 낮은 저체중의 경우 균형 잡힌 식단을 통하여 영양분을 충분히 섭취하는 것이 필요합니다.
+            </p>
+            </li>
+            <li class="underweight--list">
+            <p class="title color--blk tit--fz14">기저질환 – 갑상선 질환</p>
+            <p class="contents color--gray55 txt--fz12 bg--grayf6">
+              갑상선 호르몬은 체내 대사작용에 영향을 미치는 호르몬이지만 임신을 준비하는 과정부터 배아의 착상과 수정란의 분열<span class="tooltip"></span>, 출산에 이르기까지 전 과정에서 중요한 역할을 하는 것으로 알려져 있습니다. 태아의 발달의 뇌와 신경계<span class="tooltip"></span> 및 뼈 형성에 필수적<span class="tooltip"></span> 이기 때문에 갑상선 호르몬이 부족하면 유산, 사산, 저체중아, 임신중독과 같은 합병증을 유발할 수 있습니다.<span class="tooltip"></span> 또한 갑상선 이상 여성에서 월경 불순이 발생할 수 있는 것으로 알려져 있어 난임 여성의 경우 갑상선 기능 검사나 갑상선기능저하증 치료는 권장됩니다.<span class="tooltip"></span>
+            </p>
+            </li>
+          </ul>
+
+          <div class="flex drection--column">
+            <img class="normalweight normal_weight_illustration" src="/src/main/resource/static/images/user/pregnancy_health_check/normal_weight_illustration.svg" alt="">
+            <div class="btn__box w-100p">
+              <button class="btn pop-btn btn--line-purple" data-popup-target="pop_confirm">참고문헌</button>
+            </div>
           </div>
 
         </div>
@@ -136,11 +199,6 @@
       </div>
       
     </div>
-
-    <!-- footer -->
-    <footer class="footer"></footer>
-
-
 </body>
 
 </html>

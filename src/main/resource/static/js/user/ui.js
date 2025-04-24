@@ -55,6 +55,9 @@ const uiEvent = {
 
     // 나의 가임력 체크 설문조사 페이지 진행
     this.initSurveyStepEvent();
+
+    // 💡 tooltip 숫자 자동 출력
+    this.numberTooltips();
   },
 
   menuSlideEvent() {
@@ -419,5 +422,10 @@ const uiEvent = {
       });
     });
   },
-  
+  numberTooltips() {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach((tooltip, index) => {
+      tooltip.textContent = index + 1;
+    });
+  },
 };

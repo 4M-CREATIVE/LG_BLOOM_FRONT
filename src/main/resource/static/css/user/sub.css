@@ -47,8 +47,8 @@
 .total-search {background-color: var(--primary-light-purple);}
 .search-header-wrap { position: fixed; top: 0; left: 0; right: 0; height: auto; color: white; display: flex; flex-direction: column;z-index: 999 ; transition: ease 0.1s;}
 .search-result{ position: sticky; top: 0px; /* 헤더 높이만큼 고정 */ padding: 16px; background-color: #fff; font-weight: bold; padding: 10px 0; z-index: 999; transition: ease 0.3s;}
-.search-result .container { padding: 4rem 2rem 13rem 2rem;}
-.faq-list .search-result .container { padding: 4rem 0 12rem 0;}
+.search-result .container { padding: 3rem 2rem 13rem 2rem;}
+.faq-list .search-result .container { padding: 3rem 0 12rem 0;}
 
 .search-result .container section {margin-bottom: 3rem;}
 .search-result .container .tit {margin-bottom: 1.4rem;}
@@ -240,5 +240,23 @@
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
 .check__result_header {margin-bottom: 12px;}
 .check__result_header .title{width: calc(100% - 40px); display: flex; justify-content: center;}
-.check__resul_sub_title{color: rgba(255, 255, 255, 0.50); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
+.check__result_sub_title{color: rgba(255, 255, 255, 0.50); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
+.check__result_popup_text{color: var(--Neutral-gray-77, #777); font-size: 10px; font-weight: 400; line-height: 18px; letter-spacing: -0.4px; width: 100%; height: 425px;}
+.check__result_tap{display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2rem;}
+.check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.44px;}
+.check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #5D1E7E); color: #FFF; font-size: 11px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px; border: none;}
+.check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
+/* 정상체중 */
+.normalweight_wrap{margin-bottom: 28px;}
+.normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
+.normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
+.normal_weight_illustration {margin-left: 74px;}
+/* 저체중 */
+.underweight {display: none;}
+.underweight_wrap .underweight--list {margin-bottom: 2rem;} 
+.underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
+.underweight_wrap .underweight--list .title {margin-bottom: 1rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
+.underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/src/main/resource/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
+.underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
+  
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
