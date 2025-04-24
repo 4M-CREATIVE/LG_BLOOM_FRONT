@@ -692,6 +692,9 @@
   letter-spacing: -0.56px;
   border-radius: 10px;
 }
+.accordian__list.on .accordian__answer {
+  display: block;
+}
 .accordian__list > div::before {
   display: block;
   font-weight: 700;
