@@ -159,9 +159,22 @@ const uiEvent = {
       e.preventDefault();
       $(this).next('.faq__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.faq__answer').slideUp(300);
     });
-    $(".accordian__question").on("click", function (e) {
-      e.preventDefault();
-      $(this).next('.accordian__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.accordian__answer').slideUp(300);
+    // 처음에 모든 항목을 열어둠
+    $(".accordian__list").each(function () {
+      $(this).addClass('on');
+      $(this).find('.accordian__answer').stop(true, true).slideDown(0);
+    });
+
+    $('.accordian__question').on('click', function (e) {
+      const $this = $(this);
+      const $parentLi = $this.closest('.accordian__list');
+      const $answer = $parentLi.find('.accordian__answer');
+    
+      // 체크박스나 label 클릭이어도 아코디언은 열고, 체크박스는 브라우저 기본 동작 사용
+      if (!$answer.is(':animated')) {
+        $answer.stop(true, true).slideToggle(300);
+        $parentLi.toggleClass('on');
+      }
     });
 
   },
