@@ -253,16 +253,52 @@
 .check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.44px;}
 .check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #5D1E7E); color: #FFF; font-size: 11px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px; border: none;}
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
-  /* 정상체중 */
 .normalweight_wrap{margin-bottom: 28px;}
 .normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
 .normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
 .normal_weight_illustration {margin-left: 74px;}
-  /* 저체중 */
 .underweight {display: none;}
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
 .underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
 .underweight_wrap .underweight--list .title {margin-bottom: 1rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
 .underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/src/main/resource/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
 .underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
+.underweight_wrap .sub_warning {margin: 0 10px 30px 10px ;  line-height: 16px; 
+  letter-spacing: -0.4px;}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid var(--primary-purple);
+}
+thead th {
+  background-color: #F7F3F8;
+  padding: 11px;
+  text-align: center;
+  color: var(--primary-purple);
+  font-weight: bold;
+  border-bottom: 1px solid #D9D9D9;
+  font-size: 12px;
+}
+tbody td {
+  vertical-align: top;
+  border-bottom: 1px solid #D9D9D9;
+}
+tbody td:nth-child(1) {
+  width: 72%;
+  padding: 10px 5px 10px 10px;
+  font-weight: bold;
+  color: #333;
+}
+tbody td:nth-child(2) {
+  width: 28%;
+  padding: 10px 10px 5px 10px;
+  color: #666;
+  font-size: 13px;
+}
+.range {
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+  vertical-align: middle;
+}
 /* 마이페이지 - 나의 가임건강 체크 결과 start */

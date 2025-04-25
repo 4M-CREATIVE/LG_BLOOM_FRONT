@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-가임건강 체크 결과</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="sub07 bg--primary">
+      <!-- 팝업-->
+      <div class="pop__overlay" style="display: none;">
+        <div class="popup" id="pop_confirm">
+          <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+            <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+          </span>
+          <div class="popup__title color--blk">
+            진단 원인별 설명 <span class="txt--fw-600">참고문헌</span>
+          </div> 
+          <textarea readonly class="check__result_popup_text">
+1. Rowe Timothy, J Reprod Med. 2006;51(3):157- 63
+2. Hook E B, Obstet Gynecol. 1981;58(3):282-5
+3. 임산부 비만관리 가이드, 2016 국민건강보험공단
+4. Londero A.P. et al., BMC Pregnancy and Childbirth 2019;19(261)
+5. Frisch Rose E. TEM 1991;2(5):191-197
+6. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+7. Cnattingius JAMA 2013 12;309(22):2362-70
+8. Yao R. et al., AJOG 2014;210(5):457.e1-9
+9. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+10. 임산부 비만관리 가이드, 2016 국민건강보험공단
+11. Lim S. et al., Current Obesity Reports 2022;11:405-414
+12. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+13. Cnattingius JAMA 2013 12;309(22):2362-70
+14. Yao R. et al., AJOG 2014;210(5):457.e1-9
+15. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+16. 임산부 비만관리 가이드, 2016 국민건강보험공단
+17. Lim S. et al., Current Obesity Reports 2022;11:405-414
+18. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
+19. Cnattingius JAMA 2013 12;309(22):2362-70
+20. Yao R. et al., AJOG 2014;210(5):457.e1-9 
+21. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
+22. 임산부 비만관리 가이드, 2016 국민건강보험공단
+23. Lim S. et al., Current Obesity Reports 2022;11:405-414
+24. Hart BN, Shubrook JH, Mason T. Pregestational Diabetes
+      and Family Planning. Clin Diabetes. 2021;39(3):323-328. 
+25. Kim SW. Endocrine disorders in pregnancy.
+      The Korean Journal of Medicine. 1999;57(4):750-764
+26. Colicchia M. et al., Hum Reprod Update, 2014;20(6):884-904
+27. Curling T B et al., Med Chir Trans. 1850;33:303-6
+28. Harvey C.B et al., Molecular Genetics and Metabolism
+      2002;75:17-30
+29. Yi K H et al., Int J Thyroidol 2023; 16(1):51-88
+30. Krassas G E et al., Clin Endocrinol (Oxf), 1994:40(5):641-4
+31. Bellamy L. et al., BMJ 2007;335:974
+32. 대한고혈압학회 2022 고혈압 진료지침
+          </textarea>
+          <div class="btn__box">
+            <button class="btn bg--primary btn__pop-close">확인</button>
+          </div>
+        </div>
+      </div>
+  <div class="search-header-wrap select-wrap">
+
+
+    <!-- header -->
+    <div class="flex check__result_header">
+      <div>
+        <a class="prev_btn_02" href="javascript:void(0)"></a>
+      </div>
+      <p class="title tit--fz18 txt--fw-700">가임건강 체크 결과</p>
+
+    </div>
+    <p class="check__result_sub_title">체크 결과는 마이페이지에 자동저장 됩니다.</p>
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer h-100"></div> 
+
+    <!-- main -->
+    <div class="content infertility--policy">
+      <div class="search-result tab-content is-radius active" id="item-2">
+        <ul class="check__result_tap">
+          <li><a href="javascript:void(0);" >기초결과</a></li>
+          <li><a href="javascript:void(0);" class="active">진단 원인별 설명</a></li>
+          <li><a href="javascript:void(0);">질환 자가진단</a></li>
+        </ul>
+        <div class="container">
+          <div class="align--center mb-40">
+            <p class="tit--fz20 txt--fw-700 mb-10">난임 주요 검사항목</p>
+            <p class="tit--fz16 txt--fw-400 color--blk ">
+              아래는 <span class="txt--fw-600">김엘지님</span>이 진단 이력이 있다고<br>
+              <span class="color--primary txt--fw-600">체크한 항목에 대한 설명</span>입니다.
+            </p>
+          </div>
+
+          <!-- 저체중 -->
+          <ul class="underweight_wrap mb-60">
+            <li class="underweight--list">
+            <p class="title color--blk tit--fz14">난임 원인 - 난소기능저하</p>
+            <p class="contents color--gray44 txt--fz12 bg--grayf6 mb-30">
+              감소된 난소 예비력(Diminished Ovarian Reserve)을
+              보이는 여성은 동일한 연령의 여성에 비해 난소 자극에 대한
+              반응이나 임신율이 감소되는 것으로 나타납니다.<br>
+              난포자극호르몬과 황체형성호르몬, 에스트라디올과 같은
+              호르몬은 난소의 기능 저하의 간접적 지표가 되기도 합니다.
+              월경 주기에 따라 수치 변동 폭이 큰 호르몬으로, 난임 검사는 초기 난포기(월경 시작 2-3일 째)를 기준으로 혈액검사를
+              진행합니다.<br>
+              호르몬 수치상 난소의 기능 저하가 의심되면 재검사를 할 수 있으며 지속적으로 참고치에서 벗어나는지 최종 확인 후 평가합니다.
+            </p>
+            <table class="mb-9">
+              <thead>
+                <tr>
+                  <th>검사 항목</th>
+                  <th>참고 정상수치<br>(난포기)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p class="color--blk txt--fw-500 txt--fz12 mb-4">                    
+                      난포자극호르몬(FSH)
+                    </p>
+                    <p class="color--gray88 txt--fw-400 txt--fz10">
+                      난포 발달에 관여하는 호르몬으로 난포의 성장이 중요한 역할을 하고
+                      난소 예비력을 평가하는 간접 지표입니다.<span class="tooltip"></span>
+                    </p>
+                  </td>
+                  <td class="range color--blk txt--fw-500 txt--fz12">3.0~20.0</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="color--blk txt--fw-500 txt--fz12 mb-4">                    
+                      황체형성호르몬 (LH, mIU/mL)
+                    </p>
+                    <p class="color--gray88 txt--fw-400 txt--fz10">
+                      난자의 성숙을 촉진하여 배란을 유도하는 호르몬입니다.<span class="tooltip"></span>
+                    </p>
+                  </td>
+                  <td class="range color--blk txt--fw-500 txt--fz12">2.0~15.0</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="color--blk txt--fw-500 txt--fz12 mb-4">                    
+                      에스트라디올 (Estradiol, pg/mL)
+                    </p>
+                    <p class="color--gray88 txt--fw-400 txt--fz10">
+                      대표적인 여성 호르몬으로 생리 주기 조절 등
+                      여성의 생식 기능을 조절합니다.<span class="tooltip"></span>
+                      난소의 예비력을 평가하는 간접 지표입니다.
+                    </p>
+                  </td>
+                  <td class="range color--blk txt--fw-500 txt--fz12">20~145</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="color--blk txt--fw-500 txt--fz12 mb-4">                    
+                      항뮬러관호르몬 (AMH)
+                    </p>
+                    <p class="color--gray88 txt--fw-400 txt--fz10">
+                      난소예비력의 지표로 나이가 증가함에 따라 감소하는
+                      경향이 있습니다.
+                    </p>
+                  </td>
+                  <td class="range color--blk txt--fw-500 txt--fz12">-</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="sub_warning color--gray99 mb-30 tit--fz10 txt--fw-400">
+              ※ 검사 참고치는 시행 기관에 따라 다를 수 있습니다. 검사 결과에 대한 해석이나 치료방향은 반드시 의료 전문가와 상의하세요.
+            </p>
+
+            <p class="contents color--gray44 txt--fz12 bg--grayf6">
+              난소기능을 확인하는 지표로 많이 사용되는 AMH(항뮬러관호르몬)은 난소에 남아있는 난자의 수에 따라 나타나며 나이가 증가함에 따라 자연스럽게 감소합니다.<br>
+              그러나 AMH가 일정 이상 높은 수치로 나타나는 경우 다낭난소증후군을 의심할 수 있는 등 절대적으로 높은 수치가 난소 기능을 보장하는 것은 아니기 때문에 결과에 대한 해석은 전문의 상담을 받는 것이 필요 할 수 있습니다.
+            </p>
+            </li>
+          </ul>
+
+          <div class="flex drection--column">
+            <div class="btn__box w-100p">
+              <button class="btn pop-btn btn--line-purple" data-popup-target="pop_confirm">참고문헌</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-3">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="search-result tab-content is-radius" id="item-4">
+        <div class="container">
+
+        </div>
+      </div>
+      
+    </div>
+</body>
+
+</html>
