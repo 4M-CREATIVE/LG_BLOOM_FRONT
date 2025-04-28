@@ -104,9 +104,6 @@ select {
 button {
   cursor: pointer;
 }
-textarea:not([rows]) {
-  min-height: 10em;
-}
 
 /* 고정된 항목 스크롤 여백 */
 :target {

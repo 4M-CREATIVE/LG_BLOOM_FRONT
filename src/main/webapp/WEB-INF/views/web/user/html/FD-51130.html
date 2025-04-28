@@ -45,43 +45,15 @@
           <div class="popup__title color--blk">
             진단 원인별 설명 <span class="txt--fw-600">참고문헌</span>
           </div> 
-          <textarea readonly class="check__result_popup_text">
-1. Rowe Timothy, J Reprod Med. 2006;51(3):157- 63
-2. Hook E B, Obstet Gynecol. 1981;58(3):282-5
-3. 임산부 비만관리 가이드, 2016 국민건강보험공단
-4. Londero A.P. et al., BMC Pregnancy and Childbirth 2019;19(261)
-5. Frisch Rose E. TEM 1991;2(5):191-197
-6. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
-7. Cnattingius JAMA 2013 12;309(22):2362-70
-8. Yao R. et al., AJOG 2014;210(5):457.e1-9
-9. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
-10. 임산부 비만관리 가이드, 2016 국민건강보험공단
-11. Lim S. et al., Current Obesity Reports 2022;11:405-414
-12. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
-13. Cnattingius JAMA 2013 12;309(22):2362-70
-14. Yao R. et al., AJOG 2014;210(5):457.e1-9
-15. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
-16. 임산부 비만관리 가이드, 2016 국민건강보험공단
-17. Lim S. et al., Current Obesity Reports 2022;11:405-414
-18. Rittenberg V. et al., Reprod Biomed Online 2011;23(4):421-39
-19. Cnattingius JAMA 2013 12;309(22):2362-70
-20. Yao R. et al., AJOG 2014;210(5):457.e1-9 
-21. Racusin D. et al., Semin Perinatol 2012;35(3):213-21
-22. 임산부 비만관리 가이드, 2016 국민건강보험공단
-23. Lim S. et al., Current Obesity Reports 2022;11:405-414
-24. Hart BN, Shubrook JH, Mason T. Pregestational Diabetes
-      and Family Planning. Clin Diabetes. 2021;39(3):323-328. 
-25. Kim SW. Endocrine disorders in pregnancy.
-      The Korean Journal of Medicine. 1999;57(4):750-764
-26. Colicchia M. et al., Hum Reprod Update, 2014;20(6):884-904
-27. Curling T B et al., Med Chir Trans. 1850;33:303-6
-28. Harvey C.B et al., Molecular Genetics and Metabolism
-      2002;75:17-30
-29. Yi K H et al., Int J Thyroidol 2023; 16(1):51-88
-30. Krassas G E et al., Clin Endocrinol (Oxf), 1994:40(5):641-4
-31. Bellamy L. et al., BMJ 2007;335:974
-32. 대한고혈압학회 2022 고혈압 진료지침
-          </textarea>
+          <p readonly class="check__result_popup_text">
+            40. Balen A. H. et al., Hum Reprod. Update 2024;30(3):355-382<br>
+            41. Donnez J. et al., Best Pract Res Clin Obstet Gynaecol<br>
+                    2024;92:102432<br>
+            42. Bulun S. E et al., Fertil Steril. 2023;119(5):746-750<br>
+            43. Hoeger K.M et al., J Clin Endocrinol Metab 2021, 8;106(3)e1071-e1083<br>
+            44. Hamoda H. and Sharma A. Best Pract Res Clin Endocrinol<br>
+                    Metab. 2024;38(1):101823
+          </p>
           <div class="btn__box">
             <button class="btn bg--primary btn__pop-close">확인</button>
           </div>
@@ -121,8 +93,21 @@
             </p>
           </div>
 
-          <!-- 저체중 -->
-          <ul class="underweight_wrap mb-60">
+          <div>
+            
+            
+          </div>
+
+          <!-- 체크 이력이 없을경우 -->
+          <div class="non--check-list bg--primary-light-purple02 mb-60" > 
+            <p class="flex flex--center mb-20"><img src="/src/main/resource/static/images/user/common/icon_bang_gray.svg" alt="가임건강_체크_내역"></p> 
+            <p class="txt align--center tit--fz16 txt--fw-4 00 mb-14">
+              난임관련 history에서 언급될 만한<br>
+              답변을 주시지 않았습니다.
+            </p>
+          </div>
+
+          <ul class="underweight_wrap mb-60" style="display: none;">
             <li class="underweight--list">
             <p class="title color--blk tit--fz14">난임 원인 - 난소기능저하</p>
             <p class="contents color--gray44 txt--fz12 bg--grayf6 mb-30">
