@@ -204,6 +204,12 @@
 .mb-312 {
   margin-bottom:31.2rem;
 } 
+.mb-298 {
+  margin-bottom:29.8rem;
+} 
+.mb-252{
+  margin-bottom:23.4rem;
+} 
 .mb-234 {
   margin-bottom:23.4rem;
 } 
@@ -350,6 +356,9 @@
 }
 .bg--primary-light-purple02{
   background-color: var(--primary-light-purple02);
+}
+.bg--primary-light-purple03{
+  background-color: var(--primary-light-purple03);
 }
 .bg--primary-blue {
   background-color: var(--primary-blue);

@@ -301,4 +301,6 @@ tbody td:nth-child(2) {
   font-weight: 500;
   vertical-align: middle;
 }
+.self-diagnosis {padding:  2rem; border-radius: 2rem;}
+.self-diagnosis .txt {line-height: 20px; letter-spacing: -0.48px;}
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
