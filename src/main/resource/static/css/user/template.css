@@ -157,16 +157,16 @@
 .tit--fz14 {
   font-size: 14px;
 }
-.txt--fz13 {
+.tit--fz13 {
   font-size: 13px;
 }
-.txt--fz12 {
+.tit--fz12 {
   font-size: 12px;
 }
-.txt--fz11 {
+.tit--fz11 {
   font-size: 11px;
 }
-.txt--fz10 {
+.tit--fz10 {
   font-size: 10px;
 }
 
@@ -374,6 +374,9 @@
 }
 .bg--grayEf {
   background-color: #efefef;
+}
+.bg--grayf4 {
+  background-color: #F4F8FC;
 }
 .bg--grayf6 {
   background-color: #F6F6F6!important;
