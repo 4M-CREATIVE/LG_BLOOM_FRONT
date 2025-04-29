@@ -130,7 +130,8 @@
 .call_number .icon_call,
 .location .icon_location,
 .location .icon_copy {width:1.6rem; height: 1.6rem; display:block;}
-.find--center-map{width: 100%; height: 18.8rem;border-radius: 10px; border: 1px solid var(--primary-gray-e5, #E5E5E5); display: flex; align-items: center; justify-content: center;}
+.find--center-map{width: 100%; height: 18.8rem;border-radius: 10px; border: 1px solid var(--primary-gray-e5, #E5E5E5); display: flex; align-items: center; justify-content: center; overflow: hidden;}
+.find--center-map img{object-fit: cover; width: 100%; height: 100%;} 
 /* 난임지원 병원찾기 end */
 
 /* 난임지원 난임정책 start */
@@ -229,6 +230,7 @@
 /* 마이페이지 - 나의 가임건강 체크 start */
 .reproductive-health-text {padding: 0 20px;}
 .reproductive-health-text .sub-text { line-height: 22px; letter-spacing: -0.56px;}
+.reproductive-health-text .logo {width: 117.091px; height: 46px;}
 
 /* 민감정보 수집 */
 .sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
