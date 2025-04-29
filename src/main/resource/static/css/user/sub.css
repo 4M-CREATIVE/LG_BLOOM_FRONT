@@ -227,6 +227,9 @@
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
+.reproductive-health-text {padding: 0 20px;}
+.reproductive-health-text .sub-text { line-height: 22px; letter-spacing: -0.56px;}
+
 /* 민감정보 수집 */
 .sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
 .sub08 .content .container .title_wrap {padding:  0 20px; margin-bottom: 3rem;}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-나의 가임력 체크 리스트</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector,  url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      // await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/sub_header.html?v=1.0");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+ <body id="wrap" class="sub06">
+
+    <!-- header -->
+    <header class="header header--sub header--sub02 bd--b-e5 mb-80" role="header" >
+      <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
+      <div class="title__box tit--fz18 color--blk txt--fw-700">
+        가임 건강 체크 리스트
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+        <div class="flex flex--center mb-50">
+          <img src="/src/main/resource/static/images/user/reproductive_health_check/checklist_illustration.svg" alt="가임 건강 체크 리스트">
+        </div>
+        <div class="reproductive-health-text mb-94">
+          <p class="tit--fz30 txt--fw-700 mb-16">
+            가임 건강 체크 리스트
+          </p>
+          <p class="sub-text tit--fz14 txt--fw-400 mb-10 color--gray88">
+            가임 건강 체크 결과는 42개 참고문헌과<br>
+            전문의의 자문으로 작성된 내용을 토대로 표기 됩니다.
+          </p>
+          <p class="warning_txt warning_txt_purple color--primary mb-8 tit--fz12">
+            가임 건강 체크는 여성회원에게만 제공되고 있습니다.
+          </p>
+        </div>
+        <div class="btn__box">
+          <button type="button" class="btn btn--purple" data-popup-target="pop_confirm">가임건강 체크하기</button>
+        </div> 
+      </div>
+    </div>
+
+
+</body>
+
+</html> 
