@@ -55,9 +55,6 @@ const uiEvent = {
 
     // 나의 가임력 체크 설문조사 페이지 진행
     this.initSurveyStepEvent();
-
-    // 💡 tooltip 숫자 자동 출력
-    this.numberTooltips();
   },
 
   menuSlideEvent() {
@@ -210,11 +207,11 @@ const uiEvent = {
       const $select = $customSelect.find("select");
   
       // 옵션 리스트 생성
-      $select.find("option").each(function () {
-        const value = $(this).val();
-        const text = $(this).text();
-        $selectOptions.append(`<div data-value="${value}">${text}</div>`);
-      });
+      // $select.find("option").each(function () {
+      //   const value = $(this).val();
+      //   const text = $(this).text();
+      //   $selectOptions.append(`<div data-value="${value}">${text}</div>`);
+      // });
   
       // 선택 영역 클릭 시 옵션 토글
       $selectBox.on("click", function (e) {
@@ -227,8 +224,8 @@ const uiEvent = {
       // 옵션 클릭 시 값 변경
       $selectOptions.on("click", "div", function () {
         const value = $(this).data("value");
-        const text = $(this).text();
-        $selectBox.text(text).addClass("selected");
+        const html = $(this).html(); // span 포함 전체 HTML
+        $selectBox.html(html).addClass("selected"); // 기존 .text() → .html()로 변경
         $select.val(value).trigger("change");
         $selectOptions.hide();
       });
@@ -437,12 +434,6 @@ const uiEvent = {
       $current.fadeOut(300, () => {
         $prev.fadeIn(300);
       });
-    });
-  },
-  numberTooltips() {
-    const tooltips = document.querySelectorAll('.tooltip');
-    tooltips.forEach((tooltip, index) => {
-      tooltip.textContent = index + 1;
     });
   },
 };

@@ -133,6 +133,10 @@
   overflow: hidden;
   -webkit-line-clamp: 3; /* 제한할 텍스트의 줄 수 */
 }
+/* line-height */
+.line-h46 {
+  line-height: 46px;
+}
 
 /* font-size */
 .tit--fz32 {
@@ -1020,7 +1024,7 @@ select option {
   color: #fff;
 }
 .select__options div {
-  padding: 12px 25px;
+  padding: 15px 25px;
   cursor: pointer;
   border-bottom: 1px solid var(--Neutral-gray-E5, #E5E5E5);
   color: var(--Neutral-gray-99, #999);
@@ -1583,4 +1587,21 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .h-151 {
   height: 151px;
+}
+
+.tooltip {
+  width: 9px;
+  height: 9px;
+  color: var(--Neutral-FFF, var(--Neutral-fff, #FFF));
+  text-align: center;
+  font-size: 6px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  background: var(--Neutral-gray-77, #777);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: super;
+  margin-left: 3px;
+  line-height: 9px ;
 }
