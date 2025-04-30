@@ -107,14 +107,17 @@ header .container .right {
 }
 
 .gnb .container .close-btn {
-  margin: 1.3rem 0 3.3rem;
+  position: absolute;
+  top: 26px;
+  right: 20px;
 }
 
 .gnb .container .contents {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 .gnb .container .profile_info {
+  margin-top: 74px;
   margin-bottom: 1.6rem;
   padding-bottom: 1.6rem;
   border-bottom: 2px solid #E5E5E5;
@@ -174,7 +177,7 @@ header .container .right {
 }
 
 .gnb footer .bottom {
-  padding: 3rem 2.2rem;
+  padding: 2rem 4rem;
 }
 
 .gnb .menue_line {
