@@ -55,6 +55,9 @@ const uiEvent = {
 
     // 나의 가임력 체크 설문조사 페이지 진행
     this.initSurveyStepEvent();
+
+    // 전체 동의 체크박스 이벤트 추가
+    this.initAgreementCheckboxEvent();
   },
 
   menuSlideEvent() {
@@ -436,4 +439,28 @@ const uiEvent = {
       });
     });
   },
+  initAgreementCheckboxEvent() {
+    const $allAgree = $('#checkboxAll');
+    const $checkboxes = $('input[type="checkbox"].checkbox03');
+    const $accordions = $('.accordian__list');
+  
+    $allAgree.on('change', function () {
+      const isChecked = $(this).prop('checked');
+      $checkboxes.prop('checked', isChecked);
+  
+      if (isChecked) {
+        // 전체 동의: 아코디언 모두 닫기
+        $accordions.removeClass('on').find('.accordian__answer').slideUp(300);
+      } else {
+        // 전체 해제: 아코디언 모두 열기
+        $accordions.addClass('on').find('.accordian__answer').slideDown(300);
+      }
+    });
+  
+    $checkboxes.not($allAgree).on('change', function () {
+      const allChecked = $checkboxes.not($allAgree).toArray().every(cb => $(cb).prop('checked'));
+      $allAgree.prop('checked', allChecked);
+    });
+  }
+  
 };

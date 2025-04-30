@@ -24,6 +24,14 @@
 	resize : none;
 }
 
+.non-image {
+  background-image: none!important;
+}
+
+.non-padding {
+  padding: 0!important;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -225,6 +233,9 @@
 .mb-234 {
   margin-bottom:23.4rem;
 } 
+.mb-114 {
+  margin-bottom:11.4rem;
+}
 .mb-112 {
   margin-bottom:11.2rem;
 }
@@ -721,6 +732,7 @@
   padding-bottom: 12px;
   background-image: url(/src/main/resource/static/images/user/common/arrow_t_black.svg);
 }
+
 .accordian__question .label {
   margin-top: 7px;
 }
