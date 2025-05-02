@@ -55,7 +55,7 @@
 .search-result .container .tit p:first-child { color: #222; font-size: 1.8rem; font-style: normal; font-weight: 700; line-height: 1.8rem; letter-spacing: -0.72px; gap: 0.4rem;}
 .search-result .container .tit p:last-child a{ color: var(--neutral-gray-88); font-size: 1.2rem; font-weight: 500; line-height: 1.2rem; letter-spacing: -0.48px;
 }
-.search-result .container .tit p:last-child del {display: inline-block; width: 1.8rem; height: 1.8rem; background: url(static/images/user/common/sm_arrow_r_gray.svg) no-repeat center center;}
+.search-result .container .tit p:last-child del {display: inline-block; width: 1.8rem; height: 1.8rem; background: url(/static/images/user/common/sm_arrow_r_gray.svg) no-repeat center center;}
 .search-result .container .tit span { display: flex; width: 21px; height: 16px; padding: 3px 6px; justify-content: center; align-items: center; gap: 10px; border-radius: 900px; color: var(--neutral-fff); font-size: 9px; font-weight: 500; letter-spacing: -0.36px;}
 .search-result .container .purple .tit span { background: var(--primary-purple);}
 .search-result .container .blue .tit span { background: var(--primary-blue);}
@@ -89,8 +89,8 @@
 /* login start */
 .login-wrap { position: relative;}
 .login-wrap .footer {margin-bottom: 3.7rem;}
-.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(static/images/user/login/login_bg_left.svg) no-repeat; background-size: cover;  }
-.login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
+.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/static/images/user/login/login_bg_left.svg) no-repeat; background-size: cover;  }
+.login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
 .login-wrap .content { padding: 0 2rem;}
 .login-wrap .content img { margin-top: 15.7rem; margin-bottom: 2.2rem; margin-left: 2rem; }
 .login-wrap .content p { font-weight: 700; line-height: 36px; letter-spacing: -0.96px; margin-bottom: 3rem; margin-left: 2rem;}
@@ -123,10 +123,10 @@
 .list_popup .container .wrap{padding: 4rem 2rem 3rem 2rem;;}
 .list_popup .container .wrap .title{ line-height: 28px; letter-spacing: -0.8px; margin-bottom: 1.5rem;}
 .pop_close_btn {position: absolute; top: 0; right:0; width: 50px;  height: 50px;}
-.call_number .icon_call {background: url(static/images/user/common/icon_call.svg) no-repeat center;}
+.call_number .icon_call {background: url(/static/images/user/common/icon_call.svg) no-repeat center;}
 .call_number {margin-bottom : 0.75rem;}
-.location .icon_location{background: url(static/images/user/common/icon_location.svg) no-repeat center;}
-.location .icon_copy {background: url(static/images/user/common/icon_copy.svg) no-repeat center;}
+.location .icon_location{background: url(/static/images/user/common/icon_location.svg) no-repeat center;}
+.location .icon_copy {background: url(/static/images/user/common/icon_copy.svg) no-repeat center;}
 .call_number .icon_call,
 .location .icon_location,
 .location .icon_copy {width:1.6rem; height: 1.6rem; display:block;}
@@ -147,8 +147,8 @@
 .pcc_number { position: relative; display: flex; align-items: center; color: var(--Neutral-gray-77, #777); font-size: 13px; font-weight: 500; line-height: 20px; letter-spacing: -0.52px; gap: 6px;}
 .pcc_address::before, 
 .pcc_number::before{content: ''; display: block; width: 1.6rem; height: 1.6rem; background-size: cover;}
-.pcc_address::before{background-image: url(static/images/user/infertility_assistance/icon_home.svg);}
-.pcc_number::before{background-image: url(static/images/user/infertility_assistance/icon_call.svg );}
+.pcc_address::before{background-image: url(/static/images/user/infertility_assistance/icon_home.svg);}
+.pcc_number::before{background-image: url(/static/images/user/infertility_assistance/icon_call.svg );}
 
 /* 난임지원 심리상담센터 end */
 
@@ -224,7 +224,7 @@
 .sub05 .content .container .edit_profile {margin-bottom: 6rem;}
 .sub05 .content .container .edit_profile .sub_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px; display: flex; align-items: center; gap:4px;}
 .sub05 .content .container .edit_profile .sub_title::after {content: ''; display: block; width: 12.766px;
-  height: 10px; background: url(static/images/user/common/check.svg);}
+  height: 10px; background: url(/static/images/user/common/check.svg);}
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
@@ -266,7 +266,7 @@
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
 .underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
 .underweight_wrap .underweight--list .title {margin-bottom: 1rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
-.underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
+.underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
 .underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
 .underweight_wrap .sub_warning {margin: 0 10px 30px 10px ;  line-height: 16px; 
   letter-spacing: -0.4px;}
