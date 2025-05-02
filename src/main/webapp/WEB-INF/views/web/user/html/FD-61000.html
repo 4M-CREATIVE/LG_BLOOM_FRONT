@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임지원 병원찾기</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="infertility-assistance-list bg--deep-blue">
+    <!-- 병원찾기 팝업 -->
+     <div class="list_popup pop__overlay">
+      <div class="container bg--wh">
+        <div class="wrap">
+          <span class="pop_close_btn flex flex--center">
+            <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+          </span>
+          <span class="tag bg--grayf3 color--gray99 tit--fz12 mb-6">종합병원</span>
+          <p class="title color--blk tit--fz20 txt--fw-700">차의과대학교 강남차병원</p>
+          <p class="call_number color--gray44 flex gap-6"><span class="icon_call"></span>1588-5700</p>
+          <p class="location color--gray44 flex gap-6 mb-20">
+            <span class="icon_location"></span>서울 강남구 봉은사로 156<span class="icon_copy"></span>
+          </p>
+
+          <!-- 위치 지도 -->
+          <div class="find--center-map">
+            <img src="/src/main/resource/static/images/user/common/dummy_map.svg" alt="난임지원-병원찾기">
+          </div>
+        </div>
+      </div>
+     </div>
+
+  <div class="search-header-wrap select-wrap">
+
+
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 bd--transparent bd--b-e5">난임병원 방문 전 체크리스트</div>
+          <div class="select__options">
+            <div data-value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div></div>
+          <select>
+            <option value="option1">옵션 1</option>
+            <option value="option2">옵션 2</option>
+            <option value="option3">옵션 3</option>
+            <option value="option4">옵션 4</option>
+            <option value="option5">옵션 5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer h-100 "></div> 
+
+    <!-- main -->
+    <div class="content">
+      <div class="search-result tab-content active is-radius before--bisiting-wrap">
+
+        <ul class="accordian__box mb-122">
+          <li class="accordian__list check--list-tit">
+            <div class="accordian__question check__group deep-blue">
+              <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox4">
+              <label for="checkbox4">
+                <div class="accordian__question--category">
+                  <p class="txt--fw-400 tit--fz14 color--blk">난임부부 시술비 <span class="txt--fw-600 ">지원결정통지서</span></p>
+                </div>
+              </label>
+            </div>
+            <div class="accordian__answer pd-type02">
+              <div class="check--list-txt">
+                <div class="mb-10">
+                  보조생식술 시술비 지원은 소급 적용되지 않으므로, 시술 시작 전 <span class="txt--fw-600">지원결정통지서</span>를 받아야 합니다. 신청을 위해서는 <span class="txt--fw-600">난임 진단서</span>가 필요합니다.
+                </div>
+
+
+                <p class="warning_txt warning_txt_purple color--gray55 mb-10 tit--fz11">
+                  시술 및 검사비 지원 결정통지서는 발급일로부터 유효기간(보통 3개월) 내 시술이 시작되어야 하니 스케줄 확인 후 진행하시는 것이 좋습니다.
+                </p>
+
+                <p class="warning_txt warning_txt_purple color--gray55 mb-20 tit--fz11">
+                  시술 및 검사비 지원은 법률혼 부부부터~사실혼 부부까지 모두 지원 가능하나 제출 서류와 신청 절차가 다를 수 있습니다.
+                </p>
+              </div>
+
+              <div class="btn__box">
+                <button type="button" class="btn pop-btn btn--deep-blue txt--fw-700" data-popup-target="pop_confirm">시술비 지원 신청 사이트 바로가기</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <p class="flex flex--end">
+          <img src="/src/main/resource/static/images/user/before_bisiting/before_bisiting_illustration..svg" alt="난임병원_방문_전_체크리스트">
+        </p>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>

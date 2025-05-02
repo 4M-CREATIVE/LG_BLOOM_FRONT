@@ -1,0 +1,11 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Arrow">
+<rect x="0.625" y="-0.625" width="28.75" height="28.75" rx="14.375" transform="matrix(1 0 0 -1 0 28.75)" stroke="#2A77C1" stroke-width="1.25"/>
+<mask id="mask0_975_4029" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+<rect id="Bounding box" width="30" height="30" transform="matrix(1 0 0 -1 0 30)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_975_4029)">
+<path id="arrow_forward_ios" d="M17.7238 22L18.8996 20.8462L13.4512 15.5L18.8996 10.1537L17.7238 9L11.0996 15.5L17.7238 22Z" fill="#2A77C1"/>
+</g>
+</g>
+</svg>
