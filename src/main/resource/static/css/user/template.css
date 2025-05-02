@@ -736,7 +736,7 @@
 }
 .accordian__question {
   position: relative;
-  background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
+  background-image: url(/static/images/user/common/arrow_b_gray.svg);
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 20px 20px;
@@ -1166,12 +1166,12 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-left: 28px;
 }
 .check__group.purple input[type="checkbox"]:checked + label::before {
-  background: #57207e url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: #57207e url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: #57207e;
 }
 .check__group.deep-blue input[type="checkbox"]:checked + label::before {
-  background: var(--primary-deep-blue) url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: var(--primary-deep-blue) url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: var(--primary-deep-blue);
 }

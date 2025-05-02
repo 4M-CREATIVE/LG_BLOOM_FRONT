@@ -162,8 +162,8 @@
 .swiper-button-prev{right:6.6rem; bottom: 3rem;  width: 3rem; height: 3rem;}
 .swiper-button-next{right:2rem; bottom: 3rem;  width: 3rem; height: 3rem;}
 .swiper-button-prev:after, .swiper-button-next:after{content:''; width: 3rem; height: 3rem;}
-.swiper-button-prev:after {background: url(/src/main/resource/static/images/user/common/slide_left_blue_border.svg);}
-.swiper-button-next:after {background: url(/src/main/resource/static/images/user/common/slide_right_blue.svg);}
+.swiper-button-prev:after {background: url(/static/images/user/common/slide_left_blue_border.svg);}
+.swiper-button-next:after {background: url(/static/images/user/common/slide_right_blue.svg);}
 /* 난임지원 쉼터 end */
 
 /* 아이디찾기 start */
