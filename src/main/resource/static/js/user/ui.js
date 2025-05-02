@@ -30,6 +30,26 @@ function initCommonSurveySelectEvent(surveyId, noneSelector, diseaseSelector) {
   });
 }
 
+const swiperInit = () => {
+  const swiperEl = document.querySelector('.cheering-box.swiper');
+  if (!swiperEl) return; // 요소가 없으면 초기화 하지 않음
+
+  new Swiper(swiperEl, {
+    loop: true,
+    slidesPerView: 1,
+    autoHeight: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+};
+
 const uiEvent = {
   init() {
     this.menuSlideEvent();
@@ -58,6 +78,9 @@ const uiEvent = {
 
     // 전체 동의 체크박스 이벤트 추가
     this.initAgreementCheckboxEvent();
+
+    // Swiper 슬라이드 초기화
+    swiperInit();
   },
 
   menuSlideEvent() {
@@ -112,23 +135,23 @@ const uiEvent = {
       // 셀렉트박스 닫기
       $(".select__options").hide();
   
-      if (currentScroll <= lastScroll) {
+      if (currentScroll === 0) {
         searchFooter?.classList.add('is-radius');
-      } else {
-        searchFooter?.classList.remove('is-radius');
-      }
-  
-      tabs.forEach(tab => {
-        if (tab.classList.contains('active')) {
-          if (currentScroll <= lastScroll) {
+        tabs.forEach(tab => {
+          if (tab.classList.contains('active')) {
             header.style.top = '0';
             tab.classList.add('is-radius');
-          } else {
-            header.style.top = `-${spacerHeight}px`; // 현재 spacer 높이에 따라 조정
+          }
+        });
+      } else {
+        searchFooter?.classList.remove('is-radius');
+        tabs.forEach(tab => {
+          if (tab.classList.contains('active')) {
+            header.style.top = `-${spacerHeight}px`;
             tab.classList.remove('is-radius');
           }
-        }
-      });
+        });
+      }
   
       lastScroll = currentScroll;
     });
@@ -159,11 +182,12 @@ const uiEvent = {
       e.preventDefault();
       $(this).next('.faq__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.faq__answer').slideUp(300);
     });
-    // 처음에 모든 항목을 열어둠
-    $(".accordian__list").each(function () {
-      $(this).addClass('on');
-      $(this).find('.accordian__answer').stop(true, true).slideDown(0);
-    });
+
+  // ✅ 처음에 모든 아코디언 닫힘 상태로 초기화
+  $(".accordian__list").each(function () {
+    $(this).removeClass('on');
+    $(this).find('.accordian__answer').stop(true, true).slideUp(0);
+  });
 
     $('.accordian__question').on('click', function (e) {
       const $this = $(this);
@@ -449,11 +473,11 @@ const uiEvent = {
       $checkboxes.prop('checked', isChecked);
   
       if (isChecked) {
-        // 전체 동의: 아코디언 모두 닫기
-        $accordions.removeClass('on').find('.accordian__answer').slideUp(300);
-      } else {
         // 전체 해제: 아코디언 모두 열기
         $accordions.addClass('on').find('.accordian__answer').slideDown(300);
+      } else {
+        // 전체 동의: 아코디언 모두 닫기
+        $accordions.removeClass('on').find('.accordian__answer').slideUp(300);
       }
     });
   
