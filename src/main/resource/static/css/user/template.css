@@ -45,6 +45,9 @@
 .flex--left {
   justify-content: left;
 }
+.flex--end {
+  justify-content: end;
+}
 .drection--column {
   flex-direction: column;
 }
@@ -679,7 +682,7 @@
   color: var(--neutral-black-22);
   font-size: 12px;
   font-weight: 500;
-  line-height: 12px; 
+  line-height: 12px;
   letter-spacing: -0.48px;
   margin-bottom: 0.6rem;
 }
