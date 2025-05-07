@@ -39,6 +39,26 @@
 
  <body id="wrap" class="sub06">
 
+    <!-- 아이디 중복 확인 팝업 -->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+        </span>
+        <!-- 사용 가능 아이디 -->
+        <div class="popup__title">
+          <span class="txt--fw-600">사용할 수 있는</span> 아이디입니다.
+        </div>  
+        <!-- 중복된 아이디 -->
+        <div class="popup__title" style="display: none;">
+          <span class="txt--fw-600">중복된</span> 아이디입니다.
+        </div>  
+        <div class="btn__box">
+          <button class="btn btn--purple btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
     <!-- header -->
     <header class="header header--sub header--sub02 mb-14" role="header" >
       <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
@@ -47,149 +67,308 @@
     <!-- main -->
     <div class="content">
       <div class="container">
-        <div iv class="title_wrap mt-14 mb-30">
-          <progress
-            class="progress mb-35"
-            id="progress"
-            value="10"
-            min="0"
-            max="100"
-          ></progress>
-          <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">1</span>/8</p> 
-          <p class="title tit--fz24 color--blk txt--fw-700">
-            <span class="color--primary">새로운 여정</span>을 떠나려면
-            동의가 필요해요!
-          </p>
+        <div id="signup06">
+          <div class="title_wrap mt-14 mb-30">
+            <progress
+              class="progress mb-35"
+              id="progress"
+              value="6"
+              min="0"
+              max="6"
+            ></progress>
+            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">6</span>/6</p> 
+            <p class="title tit--fz24 color--blk txt--fw-700">
+              메일 주소를<br>
+              입력해 주세요.
+            </p>
+          </div>
+
+          <div class="form__box form__box--row mb-310">
+            <input type="text" id="emailIdInput" placeholder="이메일 아이디 입력">
+            <span>@</span>
+            <div class="form__group ">
+              <div class="select--custom email-select">
+                <div class="select__box select__box_ancle_b_gray bd--gray-e5 tit--fz12">이메일 선택</div>
+                <div class="select__options" style="display: none;">
+                  <div data-value="naver.com">naver.com</div>
+                  <div data-value="gmail.com">gmail.com</div>
+                  <div data-value="hanmail.net">hanmail.net</div>
+                  <div data-value="direct" class="direct-option">직접입력</div>
+                </div>
+                <div class="direct-input-wrapper" style="display: none;">
+                  <input type="text" class="email-direct-input" placeholder="도메인 입력 (예: example.com)" />
+                </div>
+              </div>              
+            </div>
+          </div>
+
+          <div class="btn__box">
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup07">회원가입</button>
+          </div>
+          <div class="btn__box">
+            <button class="btn signup-prev-btn btn--line-gray" data-signup-target="signup05" >이전</button>
+          </div>
         </div>
-        <div class="personal_info_box mb-10">
-          <ul class="accordian__box">
-            <li class="accordian__list">
-              <div class="accordian__question check__group purple non-image non-padding">
-                <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkboxAll">
-                <label for="checkboxAll">
-                  <div class="accordian__question--category">
-                    <p class="txt--fw-700 tit--fz14">전체동의</p>
-                    <p class="txt--fw-400 tit--fz11 color--gray99">서비스를 이용하기 위해 약관동의가 필요합니다.</p>
-                  </div>
-                </label>
-              </div>
-            </li>
-          </ul>
+        <div id="signup05">
+          <div class="title_wrap mt-14 mb-30">
+            <progress
+              class="progress mb-35"
+              id="progress"
+              value="5"
+              min="0"
+              max="6"
+            ></progress>
+            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">5</span>/6</p> 
+            <p class="title tit--fz24 color--blk txt--fw-700">
+              비밀번호를<br>
+              입력해 주세요.
+            </p>
+          </div>
+
+          <div class="form__box mb-6">
+            <input class="bd--gray-e5 color--gray99 mb-8 " type="password" name="" placeholder="비밀번호를 입력하세요." >
+            <input class="bd--gray-e5 color--gray99 mb-8 " type="password" name="" placeholder="비밀번호를 한번 더 입력하세요." >
+          </div>
+          <p class="warning_txt warning_txt_purple color--gray99 tit--fz10 mb-282 ml-20">비밀번호는 영문, 숫자를 포함하여 10자리 이상 또는 영문, 숫자,<br>특수문자를 포함하여 8자리 이상 입력해주세요.</p>
+
+          <div class="btn__box">
+            <button class="btn signup-prev-btn btn--gray" data-signup-target="signup04" >이전</button>
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup06">다음</button>
+          </div>
         </div>
-        <div class="personal_info_box mb-10">
-          <ul class="accordian__box">
-            <li class="accordian__list">
-              <div class="accordian__question check__group purple">
-                <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox4">
-                <label for="checkbox4">
-                  <div class="accordian__question--category">
-                    <p class="txt--fw-700 tit--fz14">[필수] 만 14세 이상임을 확인</p>
-                    <p class="txt--fw-400 tit--fz11 color--gray99">만 14세 이상입니다.</p>
-                  </div>
-                </label>
-              </div>
-              <div class="accordian__answer pd-type01">
-                민감정보의 수집 및 이용 안내<br>
-                (1) 민감정보 수집 및 이용 항목<br>
-                민감정보의 수집 및 이용 안내<br>
-                (1) 민감정보 수집 및 이용 항목
-              </div>
-            </li>
-          </ul>
+        <div id="signup04">
+          <div iv class="title_wrap mt-14 mb-30">
+            <progress
+              class="progress mb-35"
+              id="progress"
+              value="4"
+              min="0"
+              max="6"
+            ></progress>
+            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">4</span>/6</p> 
+            <p class="title tit--fz24 color--blk txt--fw-700">
+              사용하실 계정 아이디를<br>
+              입력해 주세요.
+            </p>
+          </div>
+
+          <div class="form__box form__box--row mb-6">
+            <input type="text" name="" placeholder="아이디를 입력하세요" >
+            <button class="bg--grayAA color--wh pop-btn" data-popup-target="pop_confirm">중복확인</button>
+          </div>
+          <p class="warning_txt warning_txt_gray color--gray99 tit--fz10 mb-352 ml-20">영문과 숫자만 사용가능, 최소 4자, 최대 13자까지 가능</p>
+
+          <div class="btn__box">
+            <button class="btn signup-prev-btn btn--gray" data-signup-target="signup03" >이전</button>
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup05">다음</button>
+          </div>
         </div>
-        <div class="personal_info_box mb-10">
-          <ul class="accordian__box">
-            <li class="accordian__list">
-              <div class="accordian__question check__group purple">
-                <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox3">
-                <label for="checkbox3">
-                  <div class="accordian__question--category">
-                    <p class="txt--fw-700 tit--fz14">[필수] 이용약관 동의</p>
-                    <p class="txt--fw-400 tit--fz11 color--gray99">위와 같은 이용약관에 동의하십니까?</p>
-                  </div>
-                </label>
-              </div>
-              <div class="accordian__answer pd-type01">
-                1. 개인정보 수집 및 이용 목적<br>
-                본인은 귀사가 다음의 목적을 위해 본인의 개인정보를 수집하고
-                이용하는 것에 동의합니다.<br>
-                    서비스 제공 및 운영<br>
-                고객 상담 및 문의 응대<br>
-                마케팅 및 광고 활용<br>
-                법적 의무 준수<br>
-                
-                2. 수집하는 개인정보 항목<br>
-                성명<br>
-                연락처(전화번호, 이메일 등)<br>
-                주소<br>
-                기타 서비스 이용 과정에서 생성되는 정보
-              </div>
-            </li>
-          </ul>
+        <div id="signup03">
+          <div iv class="title_wrap mt-14 mb-30">
+            <progress
+              class="progress mb-35"
+              id="progress"
+              value="3"
+              min="0"
+              max="6"
+            ></progress>
+            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">3</span>/6</p> 
+            <p class="title tit--fz24 color--blk txt--fw-700">
+              정보를<br>
+              확인해 주세요.
+            </p>
+          </div>
+
+          <div class="form__box--label mb-10 bg--grayf6 tit--fz13 txt--fw-400">
+            <label class="txt--fw-500 color--gray55" for="">이름</label>
+            <input class="color--gray55" type="text" name="" placeholder="이름을 입력해주세요." >
+          </div>
+          <div class="form__box--label mb-10 bg--grayf6 tit--fz13 txt--fw-400">
+            <label class="txt--fw-500 color--gray55" for="">생년월일</label>
+            <input class="color--gray55" type="text" name="" placeholder="생년월일 입력해주세요." >
+          </div>
+          <div class="form__box--label mb-262 bg--grayf6 tit--fz13 txt--fw-400">
+            <label class="txt--fw-500 color--gray55" for="">성별</label>
+            <input class="color--gray55" type="text" name="" placeholder="성별을 입력해주세요." >
+          </div>
+
+          <div class="btn__box">
+            <button class="btn signup-prev-btn btn--gray" data-signup-target="signup02" >이전</button>
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup04">다음</button>
+          </div>
         </div>
-        <div class="personal_info_box mb-10">
-          <ul class="accordian__box">
-            <li class="accordian__list">
-              <div class="accordian__question check__group purple">
-                <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox2">
-                <label for="checkbox2">
-                  <div class="accordian__question--category">
-                    <p class="txt--fw-700 tit--fz14">[필수] 개인정보 수집 및 이용 동의</p>
-                    <p class="txt--fw-400 tit--fz11 color--gray99">위와 같은 개인정보의 처리에 동의하십니까?</p>
-                  </div>
-                </label>
-              </div>
-              <div class="accordian__answer pd-type01">
-                1. 개인정보 수집 및 이용 목적<br>
-                본인은 귀사가 다음의 목적을 위해 본인의 개인정보를 수집하고
-                이용하는 것에 동의합니다.<br>
-                    서비스 제공 및 운영<br>
-                고객 상담 및 문의 응대<br>
-                마케팅 및 광고 활용<br>
-                법적 의무 준수<br>
-                
-                2. 수집하는 개인정보 항목<br>
-                성명<br>
-                연락처(전화번호, 이메일 등)<br>
-                주소<br>
-                기타 서비스 이용 과정에서 생성되는 정보
-              </div>
-            </li>
-          </ul>
+        <div id="signup02">
+          <div iv class="title_wrap mt-14 mb-30">
+            <progress
+              class="progress mb-35"
+              id="progress"
+              value="2"
+              min="0"
+              max="6"
+            ></progress>
+            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">2</span>/6</p> 
+            <p class="title tit--fz24 color--blk txt--fw-700">
+              휴대전화를<br>
+              입력해 주세요.
+            </p>
+          </div>
+
+          <div class="form__box form__box--row mb-374">
+            <input type="text" name="" placeholder="휴대전화를 입력해주세요." >
+            <button class="bg--primary color--wh">본인인증</button>
+          </div>
+
+          <div class="btn__box">
+            <button class="btn signup-prev-btn btn--gray" data-signup-target="signup01" >이전</button>
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup03">다음</button>
+          </div>
         </div>
-        <div class="personal_info_box mb-60">
-          <ul class="accordian__box">
-            <li class="accordian__list">
-              <div class="accordian__question check__group purple">
-                <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox1">
-                <label for="checkbox1">
-                  <div class="accordian__question--category">
-                    <p class="txt--fw-700 tit--fz14">[선택] 광고성 정보 수신 동의</p>
-                    <p class="txt--fw-400 tit--fz11 color--gray99">위와 같은 광고성 정보 수신 처리에 동의하십니까?</p>
-                  </div>
-                </label>
-              </div>
-              <div class="accordian__answer pd-type01">
-                1. 개인정보 수집 및 이용 목적<br>
-                본인은 귀사가 다음의 목적을 위해 본인의 개인정보를 수집하고
-                이용하는 것에 동의합니다.<br>
-                    서비스 제공 및 운영<br>
-                고객 상담 및 문의 응대<br>
-                마케팅 및 광고 활용<br>
-                법적 의무 준수<br>
-                
-                2. 수집하는 개인정보 항목<br>
-                성명<br>
-                연락처(전화번호, 이메일 등)<br>
-                주소<br>
-                기타 서비스 이용 과정에서 생성되는 정보
-              </div>
-            </li>
-          </ul>
+        <div id="signup01">
+          <div class="title_wrap mt-14 mb-30">
+            <progress
+              class="progress mb-35"
+              id="progress"
+              value="10"
+              min="0"
+              max="100"
+            ></progress>
+            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">1</span>/6</p> 
+            <p class="title tit--fz24 color--blk txt--fw-700">
+              <span class="color--primary">새로운 여정</span>을 떠나려면
+              동의가 필요해요!
+            </p>
+          </div>
+          <div class="personal_info_box mb-10">
+            <ul class="accordian__box">
+              <li class="accordian__list">
+                <div class="accordian__question check__group purple non-image non-padding">
+                  <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkboxAll">
+                  <label for="checkboxAll">
+                    <div class="accordian__question--category">
+                      <p class="txt--fw-700 tit--fz14">전체동의</p>
+                      <p class="txt--fw-400 tit--fz11 color--gray99">서비스를 이용하기 위해 약관동의가 필요합니다.</p>
+                    </div>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="personal_info_box mb-10">
+            <ul class="accordian__box">
+              <li class="accordian__list">
+                <div class="accordian__question check__group purple">
+                  <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox4">
+                  <label for="checkbox4"> 
+                    <div class="accordian__question--category">
+                      <p class="txt--fw-700 tit--fz14">[필수] 만 14세 이상임을 확인</p>
+                      <p class="txt--fw-400 tit--fz11 color--gray99">만 14세 이상입니다.</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="accordian__answer pd-type01">
+                  민감정보의 수집 및 이용 안내<br>
+                  (1) 민감정보 수집 및 이용 항목<br>
+                  민감정보의 수집 및 이용 안내<br>
+                  (1) 민감정보 수집 및 이용 항목
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="personal_info_box mb-10">
+            <ul class="accordian__box">
+              <li class="accordian__list">
+                <div class="accordian__question check__group purple">
+                  <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox3">
+                  <label for="checkbox3">
+                    <div class="accordian__question--category">
+                      <p class="txt--fw-700 tit--fz14">[필수] 이용약관 동의</p>
+                      <p class="txt--fw-400 tit--fz11 color--gray99">위와 같은 이용약관에 동의하십니까?</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="accordian__answer pd-type01">
+                  1. 개인정보 수집 및 이용 목적<br>
+                  본인은 귀사가 다음의 목적을 위해 본인의 개인정보를 수집하고
+                  이용하는 것에 동의합니다.<br>
+                      서비스 제공 및 운영<br>
+                  고객 상담 및 문의 응대<br>
+                  마케팅 및 광고 활용<br>
+                  법적 의무 준수<br>
+                  
+                  2. 수집하는 개인정보 항목<br>
+                  성명<br>
+                  연락처(전화번호, 이메일 등)<br>
+                  주소<br>
+                  기타 서비스 이용 과정에서 생성되는 정보
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="personal_info_box mb-10">
+            <ul class="accordian__box">
+              <li class="accordian__list">
+                <div class="accordian__question check__group purple">
+                  <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox2">
+                  <label for="checkbox2">
+                    <div class="accordian__question--category">
+                      <p class="txt--fw-700 tit--fz14">[필수] 개인정보 수집 및 이용 동의</p>
+                      <p class="txt--fw-400 tit--fz11 color--gray99">위와 같은 개인정보의 처리에 동의하십니까?</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="accordian__answer pd-type01">
+                  1. 개인정보 수집 및 이용 목적<br>
+                  본인은 귀사가 다음의 목적을 위해 본인의 개인정보를 수집하고
+                  이용하는 것에 동의합니다.<br>
+                      서비스 제공 및 운영<br>
+                  고객 상담 및 문의 응대<br>
+                  마케팅 및 광고 활용<br>
+                  법적 의무 준수<br>
+                  
+                  2. 수집하는 개인정보 항목<br>
+                  성명<br>
+                  연락처(전화번호, 이메일 등)<br>
+                  주소<br>
+                  기타 서비스 이용 과정에서 생성되는 정보
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="personal_info_box mb-60">
+            <ul class="accordian__box">
+              <li class="accordian__list">
+                <div class="accordian__question check__group purple">
+                  <input type="checkbox" name="" class="checkbox checkbox03 sr-only" id="checkbox1">
+                  <label for="checkbox1">
+                    <div class="accordian__question--category">
+                      <p class="txt--fw-700 tit--fz14">[선택] 광고성 정보 수신 동의</p>
+                      <p class="txt--fw-400 tit--fz11 color--gray99">위와 같은 광고성 정보 수신 처리에 동의하십니까?</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="accordian__answer pd-type01">
+                  1. 개인정보 수집 및 이용 목적<br>
+                  본인은 귀사가 다음의 목적을 위해 본인의 개인정보를 수집하고
+                  이용하는 것에 동의합니다.<br>
+                      서비스 제공 및 운영<br>
+                  고객 상담 및 문의 응대<br>
+                  마케팅 및 광고 활용<br>
+                  법적 의무 준수<br>
+                  
+                  2. 수집하는 개인정보 항목<br>
+                  성명<br>
+                  연락처(전화번호, 이메일 등)<br>
+                  주소<br>
+                  기타 서비스 이용 과정에서 생성되는 정보
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="btn__box">
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup02">다음</button>
+          </div>
         </div>
-        <div class="btn__box">
-          <button type="button" class="btn pop-btn btn--purple" data-popup-target="pop_confirm">다음</button>
-        </div>
+
       </div>
     </div>
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-회원가입</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector,  url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      // await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/sub_header.html?v=1.0");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+ <body id="wrap" class="sub06">
+
+    <!-- header -->
+    <header class="header header--sub header--sub02 bd--b-e5 mb-98" role="header" >
+      <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
+      <div class="title__box tit--fz18 color--blk txt--fw-700">
+        회원가입
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="content">
+      <div class="container">
+        <div class="reproductive-health-text mb-100">
+          <img class="mb-50" src="/src/main/resource/static/images/user/common/icon_bang_purple.svg" alt="회원가입">
+          <p class="tit--fz24 txt--fw-500 mb-11  color--gray88"> 
+            <span class="txt--fw-600 color--blk">010 0000 0000 </span>번호는<br>
+            이미 가입된 번호입니다.
+          </p>
+          <p class="sub-text tit--fz13 txt--fw-400 mb-245 color--gray99">
+            아이디가 기억나지 않는다면<br>
+            아이디찾기를 통해 아이디를 확인하세요.
+          </p>
+        </div>
+        <div class="btn__box">
+          <button type="button" class="btn btn--purple" data-popup-target="pop_confirm">로그인</button>
+        </div> 
+        <div class="btn__box">
+          <button class="btn signup-prev-btn btn--line-gray" data-signup-target="signup05" >이전</button>
+        </div> 
+      </div>
+    </div>
+
+
+</body>
+
+</html> 
