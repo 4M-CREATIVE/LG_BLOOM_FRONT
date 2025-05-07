@@ -223,15 +223,36 @@
 /* margin-bottom */
 .mb-387 {
   margin-bottom:38.7rem;
+}
+.mb-374 {
+  margin-bottom:37.4rem;
+} 
+.mb-352 {
+  margin-bottom:35.2rem;
+} 
+.mb-349 {
+  margin-bottom:34.9rem;
 } 
 .mb-312 {
   margin-bottom:31.2rem;
 } 
+.mb-310 {
+  margin-bottom:31rem;
+} 
 .mb-298 {
   margin-bottom:29.8rem;
 } 
+.mb-282{
+  margin-bottom:28.2rem;
+} 
+.mb-262{
+  margin-bottom:26.2rem;
+} 
 .mb-252{
-  margin-bottom:23.4rem;
+  margin-bottom:25.2rem;
+} 
+.mb-245 {
+  margin-bottom:24.5rem;
 } 
 .mb-234 {
   margin-bottom:23.4rem;
@@ -301,6 +322,9 @@
 }
 .mb-12 {
   margin-bottom:1.2rem;
+}
+.mb-11 {
+  margin-bottom:1.1rem;
 }
 .mb-10 {
   margin-bottom:1rem;
@@ -413,6 +437,9 @@
 .bg--primary-deep-pink {
   background-color: var(--primary-deep-pink);
 }
+.bg--grayAA {
+  background-color: #aaa;
+}
 .bg--grayf3 {
   background-color: var(--neutral-gray-F3);
 }
@@ -444,7 +471,7 @@
 .bd--b-purple{ 
   border-bottom: 1px solid var(--primary-purple);
 }
-.bd--grey-e5 {
+.bd--gray-e5 {
   border: 1px solid var(--neutral-gray-E5);
 }
 .bd--b-e5 {
@@ -850,6 +877,7 @@
   gap: 7px;
   font-size: 13px;
   color: #999;
+  position: relative;
 }
 .form__box-inline-row {
   display: inline-flex;
@@ -859,10 +887,10 @@
   width: 12rem;
 } 
 
-input[type="text"],
-input[type="password"],
-input[type="file"],
-select {
+.form__box input[type="text"],
+.form__box input[type="password"],
+.form__box input[type="file"],
+.form__box select {
   position: relative;
   overflow: hidden;
   padding: 16px 16px 16px 25px;
@@ -871,16 +899,15 @@ select {
   line-height: 11px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 5px;
   font-size: 13px;
   color: #555;
 }
-input[type="text"],
-input[type="password"],
-input[type="file"]{
+.form__box input[type="text"],
+.form__box input[type="password"],
+.form__box input[type="file"]{
   border-radius: 23px;
 }
-select {
+.form__box select {
   border-radius: 25px;
 }
 .h50 {
@@ -918,7 +945,7 @@ textarea:-ms-input-placeholder {
 }
 input:read-only {
   color: #555;
-  background: #f6f6f6;
+  background: #f6f6f6!important;
   border: none;
 }
 input::placeholder,
@@ -935,15 +962,20 @@ select option {
   margin-top: 10px;
 }
 .form__box--row button {
-  width: 90px;
-  height: 40px;
-  border-radius: 5px;
+  width: 80px;
+  height: 38px;
+  border-radius: 20px;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-weight: 500;
+  position: absolute;
+  top:50%;
+  right: 4px;
+  transform: translate(0, -50%);
 }
 
 .form__text {
@@ -1652,3 +1684,6 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-left: 3px;
   line-height: 9px ;
 }
+
+.form__box--label {display: flex; width: 100%; height: 46px; padding: 16px 25px; align-items: center; gap: 20px; border-radius: 25px;}
+.form__box--label label{width: 50px;}

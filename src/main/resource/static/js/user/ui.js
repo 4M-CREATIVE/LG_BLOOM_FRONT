@@ -76,11 +76,17 @@ const uiEvent = {
     // 나의 가임력 체크 설문조사 페이지 진행
     this.initSurveyStepEvent();
 
+    // 회원가입 절차
+    this.initSignupStepEvent();
+
     // 전체 동의 체크박스 이벤트 추가
     this.initAgreementCheckboxEvent();
 
     // Swiper 슬라이드 초기화
     swiperInit();
+
+    // 이메일 직접입력
+    this.initEmailSelectEvent();
   },
 
   menuSlideEvent() {
@@ -227,32 +233,22 @@ const uiEvent = {
 
   selectCustomEvent() {
 
-    $(".select--custom").each(function () {
+    $(".select--custom").not(".email-select").each(function () {
       const $customSelect = $(this);
       const $selectBox = $customSelect.find(".select__box");
       const $selectOptions = $customSelect.find(".select__options");
       const $select = $customSelect.find("select");
   
-      // 옵션 리스트 생성
-      // $select.find("option").each(function () {
-      //   const value = $(this).val();
-      //   const text = $(this).text();
-      //   $selectOptions.append(`<div data-value="${value}">${text}</div>`);
-      // });
-  
-      // 선택 영역 클릭 시 옵션 토글
       $selectBox.on("click", function (e) {
         e.stopPropagation();
-        // 모든 옵션 닫고 현재 것만 토글
         $(".select__options").not($selectOptions).hide();
         $selectOptions.toggle();
       });
   
-      // 옵션 클릭 시 값 변경
       $selectOptions.on("click", "div", function () {
         const value = $(this).data("value");
-        const html = $(this).html(); // span 포함 전체 HTML
-        $selectBox.html(html).addClass("selected"); // 기존 .text() → .html()로 변경
+        const html = $(this).html();
+        $selectBox.html(html).addClass("selected");
         $select.val(value).trigger("change");
         $selectOptions.hide();
       });
@@ -485,6 +481,74 @@ const uiEvent = {
       const allChecked = $checkboxes.not($allAgree).toArray().every(cb => $(cb).prop('checked'));
       $allAgree.prop('checked', allChecked);
     });
-  }
+  },
+  initSignupStepEvent() {
+    // 회원가입 절차
+    $("div[id^='signup']").hide();
+    $("#signup01").show();
   
+    // 다음 버튼
+    $(document).on("click", ".signup-next-btn", function () {
+      const $current = $(this).closest("div[id^='signup']");
+      const nextId = $(this).data("signup-target");
+      const $next = $("#" + nextId);
+  
+      if (!$next.length) return;
+  
+      $current.fadeOut(300, () => {
+        $next.fadeIn(300);
+      });
+    });
+  
+    // 이전 버튼
+    $(document).on("click", ".signup-prev-btn", function () {
+      const $current = $(this).closest("div[id^='signup']");
+      const prevId = $(this).data("signup-target");
+      const $prev = $("#" + prevId);
+  
+      if (!$prev.length) return;
+  
+      $current.fadeOut(300, () => {
+        $prev.fadeIn(300);
+      });
+    });
+  },
+  initEmailSelectEvent() {
+    const $selectWrapper = $('.email-select');
+    const $selectBox = $selectWrapper.find('.select__box');
+    const $selectOptions = $selectWrapper.find('.select__options');
+    const $directInputWrapper = $selectWrapper.find('.direct-input-wrapper');
+    const $directInput = $directInputWrapper.find('.email-direct-input');
+  
+    $selectBox.on('click', function (e) {
+      e.stopPropagation();
+      $('.select__options').not($selectOptions).hide();
+      $selectOptions.toggle();
+    });
+  
+    $selectOptions.on('click', 'div[data-value]', function (e) {
+      e.stopPropagation();
+      const value = $(this).data('value');
+      const label = $(this).text();
+  
+      if (value === 'direct') {
+        $selectBox.hide();
+        $directInputWrapper.show();
+        $directInput.val('').focus();
+      } else {
+        $selectBox.html(label).addClass('selected').show();
+        $directInputWrapper.hide();
+        $selectOptions.hide();
+      }
+    });
+  
+    $directInput.on('click', function (e) {
+      e.stopPropagation();
+      $selectOptions.show();
+    });
+  
+    $(document).on('click', function () {
+      $selectOptions.hide();
+    });  
+  }
 };
