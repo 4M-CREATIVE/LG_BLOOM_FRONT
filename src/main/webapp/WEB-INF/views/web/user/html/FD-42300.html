@@ -37,35 +37,6 @@
 
 <body id="wrap" class="sub05">
 
-    <!-- 아이디 중복 확인 팝업 -->
-    <!-- <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_confirm">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
-        </span>
-        <div class="popup__title">
-          <span class="txt--fw-600">사용할 수 있는</span>아이디입니다.
-        </div>  
-        <div class="btn__box">
-          <button class="btn btn--purple btn__pop-close">확인</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_withdraw">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
-        </span>
-        <div class="popup__title">
-          <span class="txt--fw-600">사용할 수 없는</span>아이디입니다.
-        </div>  
-        <div class="btn__box">
-          <button class="btn btn--purple btn__pop-close">확인</button>
-        </div>
-      </div>
-    </div> -->
-
     <!-- header -->
     <header class="header header--sub header--sub02 bd--b-e5" role="header" >
       <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
@@ -75,7 +46,7 @@
     </header>
 
     <!-- main -->
-    <div class="content">
+    <div class="content min--70">
       <div class="container">
         <div class="title_wrap">
           <p class="title tit--fz20 color--blk txt--fw-700">
@@ -139,12 +110,15 @@
         </form>
 
         <!-- 사용할 수 있는, 사용할 수 없는 아이디 임시 팝업 연결  -->
-        <div class="btn__box">
-          <button type="button" class="btn pop-btn btn--purple" data-popup-target="pop_confirm">정보수정</button>
-        </div>
-        <div class="btn__box">
-          <button class="btn pop-btn btn--line-gray txt--fw-600" data-popup-target="pop_withdraw">취소</button>
-        </div>
+         <div class="position-abs bottom-40 width-calc40 transform-left-50">
+          <div class="btn__box">
+            <button type="button" class="btn pop-btn btn--purple" data-popup-target="pop_confirm">정보수정</button>
+          </div>
+          <div class="btn__box">
+            <button class="btn pop-btn btn--line-gray txt--fw-600" data-popup-target="pop_withdraw">취소</button>
+          </div>
+         </div>
+
       </div>
     </div>
 
