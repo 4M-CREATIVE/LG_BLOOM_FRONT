@@ -74,10 +74,10 @@ const uiEvent = {
     initCommonSurveySelectEvent("survey11", '[data-type="none"]', '[data-type="disease"]');
 
     // 나의 가임력 체크 설문조사 페이지 진행
-    this.initSurveyStepEvent();
+    this.initStepEvent('survey');
 
     // 회원가입 절차
-    this.initSignupStepEvent();
+    this.initStepEvent('signup');
 
     // 전체 동의 체크박스 이벤트 추가
     this.initAgreementCheckboxEvent();
@@ -186,27 +186,33 @@ const uiEvent = {
   accordionEvent() {
     $(".faq__question").on("click", function (e) {
       e.preventDefault();
-      $(this).next('.faq__answer').slideToggle(300).parent().toggleClass('on').siblings('li').removeClass('on').children('.faq__answer').slideUp(300);
-    });
-
-  // ✅ 처음에 모든 아코디언 닫힘 상태로 초기화
-  $(".accordian__list").each(function () {
-    $(this).removeClass('on');
-    $(this).find('.accordian__answer').stop(true, true).slideUp(0);
-  });
-
-    $('.accordian__question').on('click', function (e) {
-      const $this = $(this);
-      const $parentLi = $this.closest('.accordian__list');
-      const $answer = $parentLi.find('.accordian__answer');
-    
-      // 체크박스나 label 클릭이어도 아코디언은 열고, 체크박스는 브라우저 기본 동작 사용
-      if (!$answer.is(':animated')) {
-        $answer.stop(true, true).slideToggle(300);
-        $parentLi.toggleClass('on');
+      const $question = $(this);
+      const $parent = $question.closest("li");
+      const $answer = $parent.find(".faq__answer");
+  
+      if (!$answer.is(":animated")) {
+        $answer.slideToggle(300);
+        $parent.toggleClass("on").siblings("li").removeClass("on").find(".faq__answer").slideUp(300);
       }
     });
-
+  
+    $(".accordian__list").removeClass("on").find(".accordian__answer").hide();
+  
+    $(".accordian__question").on("click", function () {
+      const $this = $(this);
+      const $parentLi = $this.closest(".accordian__list");
+      const $answer = $parentLi.find(".accordian__answer");
+  
+      if (!$answer.is(":animated")) {
+        $answer.slideToggle(300);
+        $parentLi.toggleClass("on");
+      }
+  
+      const $checkbox = $this.find("input[type='checkbox']");
+      if ($checkbox.length) {
+        $checkbox.prop("checked", !$checkbox.prop("checked")).trigger("change");
+      }
+    });
   },
 
   commentToggleEvent() {
@@ -428,89 +434,23 @@ const uiEvent = {
       $(this).toggleClass("selected");
     });
   },
-  initSurveyStepEvent() {
-    // 모든 설문 숨기고 첫 설문만 표시
-    $("div[id^='survey']").hide();
-    $("#survey01").show();
-  
-    // 다음 버튼
-    $(document).on("click", ".survey-next-btn", function () {
-      const $current = $(this).closest("div[id^='survey']");
-      const nextId = $(this).data("survey-target");
-      const $next = $("#" + nextId);
-  
-      if (!$next.length) return;
-  
-      $current.fadeOut(300, () => {
-        $next.fadeIn(300);
-      });
-    });
-  
-    // 이전 버튼
-    $(document).on("click", ".survey-prev-btn", function () {
-      const $current = $(this).closest("div[id^='survey']");
-      const prevId = $(this).data("survey-target");
-      const $prev = $("#" + prevId);
-  
-      if (!$prev.length) return;
-  
-      $current.fadeOut(300, () => {
-        $prev.fadeIn(300);
-      });
-    });
-  },
   initAgreementCheckboxEvent() {
     const $allAgree = $('#checkboxAll');
-    const $checkboxes = $('input[type="checkbox"].checkbox03');
+    const $checkboxes = $('input.checkbox03').not($allAgree);
     const $accordions = $('.accordian__list');
   
     $allAgree.on('change', function () {
-      const isChecked = $(this).prop('checked');
-      $checkboxes.prop('checked', isChecked);
-  
-      if (isChecked) {
-        // 전체 해제: 아코디언 모두 열기
-        $accordions.addClass('on').find('.accordian__answer').slideDown(300);
-      } else {
-        // 전체 동의: 아코디언 모두 닫기
-        $accordions.removeClass('on').find('.accordian__answer').slideUp(300);
-      }
+      const checked = this.checked;
+      $checkboxes.prop('checked', checked);
+      $accordions.toggleClass('on', checked);
+      $accordions.find('.accordian__answer').stop().slideToggle(300, () => {
+        $(this).css('display', checked ? 'block' : 'none');
+      });
     });
   
-    $checkboxes.not($allAgree).on('change', function () {
-      const allChecked = $checkboxes.not($allAgree).toArray().every(cb => $(cb).prop('checked'));
+    $checkboxes.on('change', function () {
+      const allChecked = $checkboxes.length === $checkboxes.filter(':checked').length;
       $allAgree.prop('checked', allChecked);
-    });
-  },
-  initSignupStepEvent() {
-    // 회원가입 절차
-    $("div[id^='signup']").hide();
-    $("#signup01").show();
-  
-    // 다음 버튼
-    $(document).on("click", ".signup-next-btn", function () {
-      const $current = $(this).closest("div[id^='signup']");
-      const nextId = $(this).data("signup-target");
-      const $next = $("#" + nextId);
-  
-      if (!$next.length) return;
-  
-      $current.fadeOut(300, () => {
-        $next.fadeIn(300);
-      });
-    });
-  
-    // 이전 버튼
-    $(document).on("click", ".signup-prev-btn", function () {
-      const $current = $(this).closest("div[id^='signup']");
-      const prevId = $(this).data("signup-target");
-      const $prev = $("#" + prevId);
-  
-      if (!$prev.length) return;
-  
-      $current.fadeOut(300, () => {
-        $prev.fadeIn(300);
-      });
     });
   },
   initEmailSelectEvent() {
@@ -550,5 +490,30 @@ const uiEvent = {
     $(document).on('click', function () {
       $selectOptions.hide();
     });  
+  },
+  initStepEvent(prefix) {
+    const firstStep = $(`div[id^='${prefix}']`).last();
+    $(`div[id^='${prefix}']`).hide();
+    firstStep.show();
+  
+    $(document).on('click', `.${prefix}-next-btn`, function () {
+      const $current = $(this).closest(`div[id^='${prefix}']`);
+      const nextId = $(this).data(`${prefix}-target`);
+      const $next = $(`#${nextId}`);
+  
+      if ($next.length) {
+        $current.fadeOut(300, () => $next.fadeIn(300));
+      }
+    });
+  
+    $(document).on('click', `.${prefix}-prev-btn`, function () {
+      const $current = $(this).closest(`div[id^='${prefix}']`);
+      const prevId = $(this).data(`${prefix}-target`);
+      const $prev = $(`#${prevId}`);
+  
+      if ($prev.length) {
+        $current.fadeOut(300, () => $prev.fadeIn(300));
+      }
+    });
   }
 };
