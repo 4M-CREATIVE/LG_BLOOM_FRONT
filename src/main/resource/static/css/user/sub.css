@@ -89,7 +89,7 @@
 /* login start */
 .login-wrap { position: relative;}
 .login-wrap .footer {margin-bottom: 3.7rem;}
-.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/static/images/user/login/login_bg_left.svg) no-repeat; background-size: cover;  }
+.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  }
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
 .login-wrap .content { padding: 0 2rem;}
 .login-wrap .content img { margin-top: 15.7rem; margin-bottom: 2.2rem; margin-left: 2rem; }
@@ -120,8 +120,8 @@
 .tag {font-weight: 500; line-height: 12px; letter-spacing: -0.48px; border-radius: 90px; display: inline-flex; height: 20px; padding: 3px 8px 4px 8px;}
 .list_popup{width:100%; height: 100%; position: fixed; top: 0; left: 0; align-items: center; background: rgba(0, 0, 0, 0.70); z-index: 99999; display: flex; align-items: center; display: none;}
 .list_popup .container {margin: 0 2rem; border-radius: 20px; position: relative;}
-.list_popup .container .wrap{padding: 4rem 2rem 3rem 2rem;;}
-.list_popup .container .wrap .title{ line-height: 28px; letter-spacing: -0.8px; margin-bottom: 1.5rem;}
+.list_popup .container .content{padding: 4rem 2rem 3rem 2rem;;}
+.list_popup .container .content .title{ line-height: 28px; letter-spacing: -0.8px; margin-bottom: 1.5rem;}
 .pop_close_btn {position: absolute; top: 0; right:0; width: 50px;  height: 50px;}
 .call_number .icon_call {background: url(/static/images/user/common/icon_call.svg) no-repeat center;}
 .call_number {margin-bottom : 0.75rem;}
@@ -208,7 +208,8 @@
 .mypage .content .container .mypage_category .info_admin {padding: 0 2rem;}
 .mypage .content .container .mypage_category hr { width: 100%; height: 1px; background:#EEE; margin:3rem 0}
 .mypage .content .container .mypage_category p { color: #999; font-size: 12px; font-weight: 700; letter-spacing: -0.24px; margin-bottom: 1.6rem;}
-.mypage .content .container .mypage_category ul li {margin-bottom: 1.8rem;}
+.mypage .content .container .mypage_category ul li {margin-bottom: 1.8rem; display: flex; width: 100%; justify-content: space-between;}
+.mypage .content .container .mypage_category ul li::after {content:''; display: block; width: 24px; height: 24px; background: url(/src/main/resource/static/images/user/common/arrow_r_gray.svg) no-repeat right; background-position: contain;}
 .mypage .content .container .mypage_category ul li a{color: #222; font-size: 14px; font-weight: 700; letter-spacing: -0.56px}
 /* 마이페이지 end */
 
@@ -229,8 +230,7 @@
 .sub05 .content .container .title_wrap .title {margin-bottom: 2.2rem; letter-spacing: -0.8px;}
 .sub05 .content .container .edit_profile {margin-bottom: 6rem;}
 .sub05 .content .container .edit_profile .sub_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px; display: flex; align-items: center; gap:4px;}
-.sub05 .content .container .edit_profile .sub_title::after {content: ''; display: block; width: 12.766px;
-  height: 10px; background: url(/static/images/user/common/check.svg);}
+.sub05 .content .container .edit_profile .sub_title::after {content: ''; display: block; width: 12.766px; height: 10px; background: url(/static/images/user/common/check.svg) no-repeat; background-size: cover;}
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
@@ -249,9 +249,9 @@
 .check_contents .check_list li .left .check_list_date{color: var(--Neutral-black-22, #222); font-size: 13px; font-weight: 500; margin: 0 4px 0 6px;}
 .check_contents .check_list li .left .check_list_time{color: var(--Neutral-gray-99, #999); font-size: 13px; font-weight: 500;}
 .non--check-list{ width: 100%; height:339px; border-radius: 15px; text-align: center; padding-top: 8rem;}
-.sub06 .content .container {padding: 0rem 2rem 5rem 2rem;}
-.sub06 .content .container .title_wrap {padding: 0 2rem;}
-.sub06 .content .container .btn__box {width: 100%;}
+.sub06 .container {padding: 0rem 2rem 5rem 2rem;}
+.sub06 .container .title_wrap {padding: 0 2rem;}
+.sub06 .container .btn__box {width: 100%;}
 /* 마이페이지 - 나의 가임건강 체크 end */
 
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
@@ -260,7 +260,7 @@
 .check__result_header .title{width: calc(100% - 40px); display: flex; justify-content: center;}
 .check__result_sub_title{color: rgba(255, 255, 255, 0.50); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
 .check__result_popup_text{color: var(--Neutral-gray-77, #777); font-size: 10px; font-weight: 400; line-height: 18px; letter-spacing: -0.4px; width: 100%; max-height: 425px; overflow-y: scroll;}
-.check__result_tap{display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2rem;}
+.check__result_tap{display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2rem; }
 .check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.44px;}
 .check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #5D1E7E); color: #FFF; font-size: 11px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px; border: none;}
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
