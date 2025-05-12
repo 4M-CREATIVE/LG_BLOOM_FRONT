@@ -37,6 +37,23 @@
 
  <body id="wrap" class="sub04">
 
+    <!-- 아이디 중복 확인 팝업 -->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/static/images/user/common/gnb_close.svg" alt="닫기버튼">
+        </span>
+        <!-- 사용 가능 아이디 -->
+        <div class="popup__title">
+          <span class="txt--fw-600">삭제</span> 하시겠습니까?
+        </div>    
+        <div class="btn__box">
+          <button class="btn btn--gray">취소</button>
+          <button class="btn btn--purple btn__pop-close">삭제하기</button>
+        </div>
+      </div>
+    </div>
+
     <!-- header -->
     <header class="header header--sub header--sub02 bd--b-e5" role="header" >
       <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
@@ -60,54 +77,48 @@
           <p class="warning_txt warning_txt_purple color--primary gap-10 tit--fz12 mb-30">가임 건강 체크는 여성회원에게만 제공되고 있습니다.</p>
         </div>
 
-        <div class="check_contents mb-30" >
-          <ul class="check_list">
+        <div class="check_contents " >
+          <ul class="check_list mb-60">
             <li class="flex flex--between">
               <p class="left"><span class="check_list_index">6.</span> <span class="check_list_date">2025-06-25</span> <span class="check_list_time">09:13:27</span></p>
               <p class="right flex gap-12">
-                <span class="circle" style="background: rgba(93, 30, 126, 0.30);"><img src="/static/images/user/common/sm_arrow_r_wh.svg" alt=""></span>
-                <span class="circle" style="background: rgba(0, 0, 0, 0.20);"><img src="/static/images/user/common/sm_close.svg" alt=""></span>
+                <button class="circle pop-btn" style="background: rgba(0, 0, 0, 0.20);" data-popup-target="pop_confirm"><img src="/static/images/user/common/sm_close.svg"></button>
               </p>
             </li>
             <li class="flex flex--between">
               <p class="left"><span class="check_list_index">5.</span> <span class="check_list_date">2025-05-25</span> <span class="check_list_time">09:13:27</span></p>
               <p class="right flex gap-12">
-                <span class="circle" style="background: rgba(93, 30, 126, 0.30);"><img src="/static/images/user/common/sm_arrow_r_wh.svg" alt=""></span>
-                <span class="circle" style="background: rgba(0, 0, 0, 0.20);"><img src="/static/images/user/common/sm_close.svg" alt=""></span>
+                <button class="circle pop-btn" style="background: rgba(0, 0, 0, 0.20);" data-popup-target="pop_confirm"><img src="/static/images/user/common/sm_close.svg"></button>
               </p>
             </li>
             <li class="flex flex--between">
               <p class="left"><span class="check_list_index">4.</span> <span class="check_list_date">2025-04-25</span> <span class="check_list_time">09:13:27</span></p>
               <p class="right flex gap-12">
-                <span class="circle" style="background: rgba(93, 30, 126, 0.30);"><img src="/static/images/user/common/sm_arrow_r_wh.svg" alt=""></span>
-                <span class="circle" style="background: rgba(0, 0, 0, 0.20);"><img src="/static/images/user/common/sm_close.svg" alt=""></span>
+                <button class="circle pop-btn" style="background: rgba(0, 0, 0, 0.20);" data-popup-target="pop_confirm"><img src="/static/images/user/common/sm_close.svg"></button>
               </p>
             </li>
             <li class="flex flex--between">
               <p class="left"><span class="check_list_index">3.</span> <span class="check_list_date">2025-03-25</span> <span class="check_list_time">09:13:27</span></p>
               <p class="right flex gap-12">
-                <span class="circle" style="background: rgba(93, 30, 126, 0.30);"><img src="/static/images/user/common/sm_arrow_r_wh.svg" alt=""></span>
-                <span class="circle" style="background: rgba(0, 0, 0, 0.20);"><img src="/static/images/user/common/sm_close.svg" alt=""></span>
+                <button class="circle pop-btn" style="background: rgba(0, 0, 0, 0.20);" data-popup-target="pop_confirm"><img src="/static/images/user/common/sm_close.svg"></button>
               </p>
             </li>
             <li class="flex flex--between">
               <p class="left"><span class="check_list_index">2.</span> <span class="check_list_date">2025-02-25</span> <span class="check_list_time">09:13:27</span></p>
               <p class="right flex gap-12">
-                <span class="circle" style="background: rgba(93, 30, 126, 0.30);"><img src="/static/images/user/common/sm_arrow_r_wh.svg" alt=""></span>
-                <span class="circle" style="background: rgba(0, 0, 0, 0.20);"><img src="/static/images/user/common/sm_close.svg" alt=""></span>
+                <button class="circle pop-btn" style="background: rgba(0, 0, 0, 0.20);" data-popup-target="pop_confirm"><img src="/static/images/user/common/sm_close.svg"></button>
               </p>
             </li>
             <li class="flex flex--between">
               <p class="left"><span class="check_list_index">1.</span> <span class="check_list_date">2025-01-25</span> <span class="check_list_time">09:13:27</span></p>
               <p class="right flex gap-12">
-                <span class="circle" style="background: rgba(93, 30, 126, 0.30);"><img src="/static/images/user/common/sm_arrow_r_wh.svg" alt=""></span>
-                <span class="circle" style="background: rgba(0, 0, 0, 0.20);"><img src="/static/images/user/common/sm_close.svg" alt=""></span>
+                <button class="circle pop-btn" style="background: rgba(0, 0, 0, 0.20);" data-popup-target="pop_confirm"><img src="/static/images/user/common/sm_close.svg"></button>
               </p>
             </li>
           </ul>
 
           <!-- 체크 이력이 없을경우 -->
-          <div class="non--check-list " style="display: none;"> 
+          <div class="non--check-list bg--pink-F7F3F8 mb-60" style="display: none; "> 
             <p class="flex flex--center mb-20"><img src="/static/images/user/common/icon_bang_purple.svg" alt="가임건강_체크_내역"></p> 
             <p class="txt align--center tit--fz20 txt--fw-600 mb-14">가임건강 체크를 한<br> 이력이 없습니다.</p>
             <p class="sub_txt align--center tit--fz13 txt--fw-400 color--gray99">
@@ -118,7 +129,7 @@
         </div>
 
         <div class="btn__box  position-abs bottom-40 width-calc40 transform-left-50">
-          <button type="button" class="btn btn--purple" data-popup-target="pop_confirm">가임건강 체크하기</button>
+          <button type="button" class="btn btn--purple" >가임건강 체크하기</button>
         </div>
       </div>
     </div>

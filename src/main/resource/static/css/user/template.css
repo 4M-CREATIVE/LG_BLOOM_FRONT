@@ -458,6 +458,9 @@
 .bg--primary-deep-pink {
   background-color: var(--primary-deep-pink);
 }
+.bg--pink-F7F3F8{
+  background-color: #F7F3F8;
+}
 .bg--grayAA {
   background-color: #aaa;
 }
@@ -1403,7 +1406,8 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #2A77C1;
 }
 .btn:disabled {
-  background: #999;
+  background: #e5e5e5;
+  color: #999;
 }
 .btn--longer {
   flex-basis: 23% !important;

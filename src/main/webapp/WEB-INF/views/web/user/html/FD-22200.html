@@ -39,26 +39,6 @@
 
  <body id="wrap" class="sub06">
 
-    <!-- 아이디 중복 확인 팝업 -->
-    <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_confirm">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/static/images/user/common/gnb_close.svg" alt="닫기버튼">
-        </span>
-        <!-- 사용 가능 아이디 -->
-        <div class="popup__title">
-          <span class="txt--fw-600">사용할 수 있는</span> 아이디입니다.
-        </div>  
-        <!-- 중복된 아이디 -->
-        <div class="popup__title" style="display: none;">
-          <span class="txt--fw-600">중복된</span> 아이디입니다.
-        </div>  
-        <div class="btn__box">
-          <button class="btn btn--purple btn__pop-close">확인</button>
-        </div>
-      </div>
-    </div>
-
     <!-- header -->
     <header class="header header--sub header--sub02 mb-14" role="header" >
       <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
@@ -78,7 +58,7 @@
             ></progress>
             <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">6</span>/6</p> 
             <p class="title tit--fz24 color--blk txt--fw-700">
-              메일 주소를<br>
+              이메일 주소를<br>
               입력해 주세요.
             </p>
           </div>
@@ -118,7 +98,6 @@
               min="0"
               max="6"
             ></progress>
-            <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">5</span>/6</p> 
             <p class="title tit--fz24 color--blk txt--fw-700">
               비밀번호를<br>
               입력해 주세요.
@@ -147,20 +126,25 @@
             ></progress>
             <p class="txt--fw-500 tit--fz13 color--gray99 mb-10"><span class="color--primary txt--fw-700">4</span>/6</p> 
             <p class="title tit--fz24 color--blk txt--fw-700">
-              사용하실 계정 아이디를<br>
+              사용하실 아이디를<br>
               입력해 주세요.
             </p>
           </div>
 
-          <div class="form__box form__box--row mb-6">
-            <input type="text" name="" placeholder="아이디를 입력하세요" >
-            <button class="bg--grayAA color--wh pop-btn" data-popup-target="pop_confirm">중복확인</button>
+          <div class="mb-352">
+            <div class="form__box form__box--row mb-6">
+              <input type="text" name="" placeholder="아이디를 입력하세요" >
+              <button class="bg--grayAA color--wh pop-btn">중복확인</button>
+            </div>
+            <p class="warning_txt warning_txt_gray color--gray99 tit--fz10 ml-20">영문과 숫자만 사용가능, 최소 4자, 최대 13자까지 가능</p>
+            <p class="warning_txt warning_txt_gray color--deep-blue tit--fz10 ml-20">사용 가능한 아이디 입니다.</p>
+            <p class="warning_txt warning_txt_gray color--pink tit--fz10 ml-20">중복된 아이디입니다.</p>
           </div>
-          <p class="warning_txt warning_txt_gray color--gray99 tit--fz10 mb-352 ml-20">영문과 숫자만 사용가능, 최소 4자, 최대 13자까지 가능</p>
+
 
           <div class="btn__box">
             <button class="btn signup-prev-btn btn--gray" data-signup-target="signup03" >이전</button>
-            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup05">다음</button>
+            <button type="button" class="btn signup-next-btn btn--purple" data-signup-target="signup05" disabled>다음</button>
           </div>
         </div>
         <div id="signup03">
