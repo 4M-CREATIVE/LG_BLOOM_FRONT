@@ -87,6 +87,9 @@ const uiEvent = {
 
     // 이메일 직접입력
     this.initEmailSelectEvent();
+
+    // 아이디 입력 이벤트 임시 추가
+    this.initIdInputEvent();
   },
 
   menuSlideEvent() {
@@ -513,6 +516,24 @@ const uiEvent = {
   
       if ($prev.length) {
         $current.fadeOut(300, () => $prev.fadeIn(300));
+      }
+    });
+  },
+  
+  initIdInputEvent() {
+    const $input = $('#signup04 input[type="text"]');
+    const $checkBtn = $('#signup04 .pop-btn');
+    const $nextBtn = $('#signup04 .signup-next-btn');
+  
+    $input.on('input', function () {
+      const hasText = $(this).val().trim().length > 0;
+  
+      if (hasText) {
+        $checkBtn.removeClass('bg--grayAA').addClass('bg--primary');
+        $nextBtn.prop('disabled', false);
+      } else {
+        $checkBtn.removeClass('bg--primary').addClass('bg--grayAA');
+        $nextBtn.prop('disabled', true);
       }
     });
   }
