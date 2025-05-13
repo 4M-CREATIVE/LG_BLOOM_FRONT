@@ -224,6 +224,9 @@
 .mt-30 {
   margin-top: 3rem;
 }
+.mt-10 {
+  margin-top: 1rem;
+}
 
 /* margin-left */
 .ml-20{
@@ -450,10 +453,10 @@
   background-color: var(--primary-light-purple03);
 }
 .bg--deep-blue {
-  background-color: var(--primary-deep-blue);
+  background-color: var(--primary-deep-blue)!important;
 }
 .bg--primary-blue {
-  background-color: var(--primary-blue);
+  background-color: var(--primary-blue)!important;
 }
 .bg--primary-pink {
   background-color: var(--primary-pink);
@@ -512,6 +515,17 @@
 }
 .bd--transparent {
   border-color: transparent;
+}
+
+/* select background color */
+.select--bg-deep-blue {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #424FAB!important;
+}
+.select--bg-blue {
+  background: var(--primary-blue-b10, linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #2A77C2)!important;
+}
+.select--bg-deep-pink {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #8E0B86!important;
 }
 
 /* position */
@@ -1123,6 +1137,35 @@ select option {
 .select__box.selected {
   color: #555;
 }
+/* 헤더 커스텀 셀렉트 */
+.search-header-wrap  .select__options {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 8px 0;
+  border-radius: 25px;
+  font-size: 12px;
+  display: none;
+  z-index: 10;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.search-header-wrap  .select__options div{
+  padding: 17px 25px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.8px;
+}
+/* 일반 커스텀 셀렉트 */
 .select__options {
   position: absolute;
   top: calc(100% + 10px);
@@ -1131,14 +1174,22 @@ select option {
   max-height: 176px;
   overflow-y: auto;
   padding: 8px 0;
-  border: 1px solid #999;
   border-radius: 25px;
   background: #fff;
   font-size: 12px;
   color: #555;
   display: none;
   z-index: 10;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+/* 공통 커스텀 셀렉트 */
+.header__select_options::-webkit-scrollbar,
+.select__options::-webkit-scrollbar {
+  display: none;
+}
+
 .select--op.select__box.selected {
   color: #fff;
 }

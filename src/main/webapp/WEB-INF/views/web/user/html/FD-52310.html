@@ -73,19 +73,12 @@
       <div class="form__group">
         <div class="select--custom">
           <div class="select__box select__box_arrow_b_white select--op tit--fz16 bd--transparent bd--b-e5">난임지원</div>
-          <div class="select__options">
+          <div class="select__options select--bg-blue">
             <div data-value="option1">옵션 1</div>
             <div data-value="option2">옵션 2</div>
             <div data-value="option3">옵션 3</div>
             <div data-value="option4">옵션 4</div>
             <div data-value="option5">옵션 5</div></div>
-          <select>
-            <option value="option1">옵션 1</option>
-            <option value="option2">옵션 2</option>
-            <option value="option3">옵션 3</option>
-            <option value="option4">옵션 4</option>
-            <option value="option5">옵션 5</option>
-          </select>
         </div>
       </div>
     </div>
@@ -123,19 +116,12 @@
           <div class="form__group">
             <div class="select--custom">
               <div class="select__box select__box_arrow_r_blk tit--fz13 color--gray99 bd--gray-e5 txt--fw-500">전국</div>
-              <div class="select__options tit--fz13 color--gray99">
+              <div class="select__options tit--fz13 color--gray99 bd--gray-e5">
                 <div data-value="option1">옵션 1</div>
                 <div data-value="option2">옵션 2</div>
                 <div data-value="option3">옵션 3</div>
                 <div data-value="option4">옵션 4</div>
                 <div data-value="option5">옵션 5</div></div>
-              <select>
-                <option value="option1">옵션 1</option>
-                <option value="option2">옵션 2</option>
-                <option value="option3">옵션 3</option>
-                <option value="option4">옵션 4</option>
-                <option value="option5">옵션 5</option>
-              </select>
             </div>
           </div>
           <div class="search__box">
@@ -200,24 +186,29 @@
                   </a>
                 </li>
               </ul>
+              <div class="pagination tit--fz14">
+                <a href="javascript:;" title="이전" class="pagination--prev">
+                  <img src="/src/main/resource/static/images/user/common/sm_arrow_l_gray.svg" alt="이전">
+                </a>
+                <ul class="flex">
+                  <li class="active"><a href="javascript:;">1</a></li>
+                  <li><a class="color--gray55" href="javascript:;">2</a></li>
+                  <li><a class="color--gray55" href="javascript:;">3</a></li>
+                  <li><a class="color--gray55" href="javascript:;">4</a></li>
+                  <li><a class="color--gray55" href="javascript:;">5</a></li>
+                  <li><a class="color--gray55" href="javascript:;">6</a></li>
+                </ul>
+                <a href="javascript:;" title="다음" class="pagination--next">
+                  <img src="/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg" alt="다음">
+                </a>
+                <input id="pageIndex" name="pageIndex" type="hidden" value="1">
+              </div>
             </div>
-            <div class="pagination tit--fz14">
-              <a href="javascript:;" title="이전" class="pagination--prev">
-                <img src="/src/main/resource/static/images/user/common/sm_arrow_l_gray.svg" alt="이전">
-              </a>
-              <ul class="flex">
-                <li class="active"><a href="javascript:;">1</a></li>
-                <li><a class="color--gray55" href="javascript:;">2</a></li>
-                <li><a class="color--gray55" href="javascript:;">3</a></li>
-                <li><a class="color--gray55" href="javascript:;">4</a></li>
-                <li><a class="color--gray55" href="javascript:;">5</a></li>
-                <li><a class="color--gray55" href="javascript:;">6</a></li>
-              </ul>
-              <a href="javascript:;" title="다음" class="pagination--next">
-                <img src="/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg" alt="다음">
-              </a>
-              <input id="pageIndex" name="pageIndex" type="hidden" value="1">
-            </div>
+            <!-- 검색결과 없음 -->
+            <div class="no-search-result flex flex--center drection--column color--gray44 tit--fz14 txt--fw-400 gap-16" style="display: none;">
+                <img src="/src/main/resource/static/images/user/common/icon_bang_gray.svg" alt="">
+                검색결과가 없습니다.
+              </div>
           </section>
         </div>
       </div>

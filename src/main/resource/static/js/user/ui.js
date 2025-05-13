@@ -73,23 +73,19 @@ const uiEvent = {
     initCommonSurveySelectEvent("survey10", '[data-type="none"]', '[data-type="disease"]');
     initCommonSurveySelectEvent("survey11", '[data-type="none"]', '[data-type="disease"]');
 
-    // 나의 가임력 체크 설문조사 페이지 진행
-    this.initStepEvent('survey');
+    this.initStepEvent('survey'); // 나의 가임력 체크 설문조사 페이지 진행
 
-    // 회원가입 절차
-    this.initStepEvent('signup');
+    this.initStepEvent('signup'); // 회원가입 절차
 
-    // 전체 동의 체크박스 이벤트 추가
-    this.initAgreementCheckboxEvent();
+    this.initAgreementCheckboxEvent(); // 약관 동의 체크박스 이벤트
 
-    // Swiper 슬라이드 초기화
-    swiperInit();
+    swiperInit(); // Swiper 슬라이드 초기화
 
-    // 이메일 직접입력
-    this.initEmailSelectEvent();
+    this.initEmailSelectEvent();  // 이메일 직접입력
 
-    // 아이디 입력 이벤트 임시 추가
-    this.initIdInputEvent();
+    this.initIdInputEvent();  // 아이디 입력 이벤트 임시 추가
+
+    this.initWithdrawTextareaToggle();  // 기타 선택 시 textarea 보이기
   },
 
   menuSlideEvent() {
@@ -519,7 +515,6 @@ const uiEvent = {
       }
     });
   },
-  
   initIdInputEvent() {
     const $input = $('#signup04 input[type="text"]');
     const $checkBtn = $('#signup04 .pop-btn');
@@ -535,6 +530,18 @@ const uiEvent = {
         $checkBtn.removeClass('bg--primary').addClass('bg--grayAA');
         $nextBtn.prop('disabled', true);
       }
+    });
+  },
+  initWithdrawTextareaToggle() {
+    const $selectBox = $('#withdraw-reason');
+    const $textarea = $('.withdraw-reason-textarea');
+    const $options = $selectBox.siblings('.select__options').find('div');
+
+    $textarea.hide(); // 초기에 숨기기
+
+    $options.on('click', function () {
+      const selectedValue = $(this).data('value');
+      $textarea.toggle(selectedValue === '기타');
     });
   }
 };

@@ -117,6 +117,7 @@
 
 /* 난임지원 병원찾기 start */
 .infertility-assistance-title {padding: 0 2rem; font-weight: 700; line-height: 28px; letter-spacing: -0.8px; }
+.infertility-assistance-list .no-search-result {border-top: 1px solid #eee; border-bottom: 1px solid #eee;padding: 95px 0 94px 0;}
 .infertility-assistance-list .content .search-result .container .form__group {margin-bottom: 0.8rem;}
 .infertility-assistance-list .content .search-result .container .search__box {margin-bottom: 4rem;}
 .infertility-assistance-list .content .search-result .container .pagination ul li.active a {color: var(--primary-blue);}
@@ -304,3 +305,8 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
 .before--bisiting-wrap .check__group .checkbox03 + label .accordian__question--category {padding-left: 54px;}
 .before--bisiting-wrap .check--list .accordian__question .checkbox4 {padding: 0 30px;}
 /* 병원 방문 준비하기 end */
+
+/* 회원탈퇴 start */
+.withdraw-reason-textarea {width:100%; height:100%; min-height: 166px; border-radius: 15px; border: 1px solid var(--primary-gray-e5, #E5E5E5); padding: 1.6rem 2.5rem; margin-bottom: 2rem; display: none;}
+.withdraw-reason-textarea.color--gray99::placeholder {color: #999;}
+/* 회원탈퇴 end */
