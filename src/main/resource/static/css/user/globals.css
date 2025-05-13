@@ -1,14 +1,14 @@
 :root {
   /* 색상 */
-  --primary-purple: #5D1E7E;
+  --primary-purple: #660F89;
   --primary-light-purple: #F2EDF5;
   --primary-light-purple02: #F2EDF5;
   --primary-light-purple03: #f6f6f6;
   --primary-deep-blue: #424FAB;
   --primary-blue: #2A77C1;
-  --primary-light-blue: #20B6DA;
-  --primary-deep-pink: #A2197A;
-  --primary-pink: #CE1A77;
+  --primary-light-blue: #00C1EA;
+  --primary-deep-pink: #8E0B86;
+  --primary-pink: #BE0683 ;
   --primary-light-pink: #E61C76;
   --background-color: #fff;
   --primary-black: #222;
