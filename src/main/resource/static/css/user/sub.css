@@ -45,6 +45,10 @@
 
 /* total search start */
 .total-search {background-color: var(--primary-light-purple);}
+.total-search .no-search-result {border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+.total-search .no-search-result.sp-77 {padding: 77px 0;}
+.total-search .no-search-result.sp-185 {padding: 185px 0 184px 0; }
+.total-search .no-search-result img{width:30px; height:30px;}
 .search-header-wrap { position: fixed; top: 0; left: 0; right: 0; height: auto; color: white; display: flex; flex-direction: column;z-index: 999 ; transition: ease 0.1s;}
 .search-result{ position: sticky; top: 0px; /* 헤더 높이만큼 고정 */ padding: 16px; background-color: #fff; font-weight: bold; padding: 10px 0; z-index: 999; transition: ease 0.3s;}
 .search-result .container { padding: 3rem 2rem 13rem 2rem;}
@@ -118,6 +122,7 @@
 /* 난임지원 병원찾기 start */
 .infertility-assistance-title {padding: 0 2rem; font-weight: 700; line-height: 28px; letter-spacing: -0.8px; }
 .infertility-assistance-list .no-search-result {border-top: 1px solid #eee; border-bottom: 1px solid #eee;padding: 95px 0 94px 0;}
+.infertility-assistance-list .no-search-result img{width:30px; height:30px;}
 .infertility-assistance-list .content .search-result .container .form__group {margin-bottom: 0.8rem;}
 .infertility-assistance-list .content .search-result .container .search__box {margin-bottom: 4rem;}
 .infertility-assistance-list .content .search-result .container .pagination ul li.active a {color: var(--primary-blue);}
