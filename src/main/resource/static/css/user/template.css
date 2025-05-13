@@ -1223,7 +1223,7 @@ select:disabled,
   height: 40px;
   line-height: 40px;
   border-radius: 25px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 input[type="search"]::-webkit-search-cancel-button {

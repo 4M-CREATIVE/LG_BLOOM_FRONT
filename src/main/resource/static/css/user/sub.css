@@ -99,7 +99,8 @@
 .login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  }
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
 .login-wrap .content { padding: 0 2rem;}
-.login-wrap .content img { margin-top: 15.7rem; margin-bottom: 2.2rem; margin-left: 2rem; }
+.login-wrap .content .login-title{ margin-top:20rem;}
+.login-wrap .content .login-title .login_logo { width: 101px; height: 32px;}
 .login-wrap .content p { font-weight: 700; line-height: 36px; letter-spacing: -0.96px; margin-bottom: 3rem; margin-left: 2rem;}
 .login-wrap .content .login-form { margin-bottom: 9.6rem;}
 .login-wrap .content .login-form .form-group:first-child{ margin-bottom: 0.8rem;}
