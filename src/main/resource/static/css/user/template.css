@@ -359,6 +359,9 @@
 .pt-105 {
   padding-top: 10.5rem;
 }
+.pt-98 {
+  padding-top: 9.8rem;
+}
 .pt-80 {
   padding-top: 8rem;
 }
@@ -1719,13 +1722,16 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 151px;
 }
 
+.min-100vh {
+  min-height: 100vh;
+}
+
 .min--70 {
   min-height: calc(100vh - 70px);
 }
 .min--100 {
   min-height: calc(100vh - 100px);
 }
-
 .min--151 {
   min-height: calc(100vh - 151px);
 }
