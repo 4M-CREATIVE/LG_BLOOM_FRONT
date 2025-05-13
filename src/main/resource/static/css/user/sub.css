@@ -212,7 +212,7 @@
 .mypage .content .container .mypage_category hr { width: 100%; height: 1px; background:#EEE; margin:3rem 0}
 .mypage .content .container .mypage_category p { color: #999; font-size: 12px; font-weight: 700; letter-spacing: -0.24px; margin-bottom: 1.6rem;}
 .mypage .content .container .mypage_category ul li {margin-bottom: 1.8rem; display: flex; width: 100%; justify-content: space-between;}
-.mypage .content .container .mypage_category ul li::after {content:''; display: block; width: 24px; height: 24px; background: url(/src/main/resource/static/images/user/common/arrow_r_gray.svg) no-repeat right; background-position: contain;}
+.mypage .content .container .mypage_category ul li::after {content:''; display: block; width: 24px; height: 24px; background: url(/static/images/user/common/arrow_r_gray.svg) no-repeat right; background-position: contain;}
 .mypage .content .container .mypage_category ul li a{color: #222; font-size: 14px; font-weight: 700; letter-spacing: -0.56px}
 /* 마이페이지 end */
 
