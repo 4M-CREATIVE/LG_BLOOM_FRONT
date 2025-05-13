@@ -391,7 +391,7 @@
 
 /* color */
 .color--primary {
-  color: var(--primary-purple);
+  color: var(--primary-purple)!important;
 }
 .color--blue {
   color: var(--primary-blue);

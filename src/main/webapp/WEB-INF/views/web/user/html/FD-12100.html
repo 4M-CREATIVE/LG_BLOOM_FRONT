@@ -29,7 +29,7 @@
   
     async function initPage() {
       await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/search_header.html?v=1.0");
-      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      // await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
   
       uiEvent.init();
     }
@@ -303,9 +303,37 @@
       
     </div>
 
-    <!-- footer -->
-    <footer class="footer"></footer>
-
+    <!-- footer --> 
+    <footer class="footer">
+      <ul class="search-footer flex flex--between is-radius">
+        <li>
+          <a class="flex flex--center drection--column" href="javascript:void(0);">
+            <img src="/src/main/resource/static/images/user/search/search_home.svg" alt="검색홈버튼">
+            홈
+          </a>
+        </li>
+        <li>
+          <a class="flex flex--center drection--column" href="javascript:void(0);">
+            <img src="/src/main/resource/static/images/user/search/search_menu.svg" alt="검색홈버튼">
+            전체메뉴
+          </a>
+        </li>
+        <li class="on">
+          <a class="flex flex--center drection--column color--primary" href="javascript:void(0);">
+            <img class="" src="/src/main/resource/static/images/user/common/search_magnifying_gray.svg" alt="검색홈버튼">
+            <img class="" src="/src/main/resource/static/images/user/common/search_magnifying_purple.svg" alt="검색홈버튼_활성화">
+            검색
+          </a>
+        </li>
+        <li>
+          <a class="flex flex--center drection--column" href="javascript:void(0);">
+            <img src="/src/main/resource/static/images/user/search/search_profile_gray.svg" alt="검색홈버튼">
+            <img src="/src/main/resource/static/images/user/search/search_profile_purple.svg" alt="검색홈버튼_활성화">
+            마이
+          </a>
+        </li>
+      </ul>
+    </footer>
 
 </body>
 
