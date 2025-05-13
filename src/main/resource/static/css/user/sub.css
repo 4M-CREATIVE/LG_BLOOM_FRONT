@@ -230,7 +230,7 @@
 /* 마이페이지 - 비밀번호 확인 end */
 
 /* 마이페이지 - 비밀번호 확인 start */
-.sub05 .content .container {padding: 4rem 2rem 5rem 2rem;}
+.sub05 .content .container {padding: 3rem 2rem 5rem 2rem;}
 .sub05 .content .container .title_wrap .title {margin-bottom: 2.2rem; letter-spacing: -0.8px;}
 .sub05 .content .container .edit_profile {margin-bottom: 15rem;}
 .sub05 .content .container .edit_profile .sub_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px; display: flex; align-items: center; gap:4px;}
