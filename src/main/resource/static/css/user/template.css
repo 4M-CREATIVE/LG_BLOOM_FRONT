@@ -1777,7 +1777,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .h-100 {
   height: 100px;
 }
-
 .h-136 {
   height: 136px;
 }
@@ -1785,8 +1784,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .min-100vh {
   min-height: 100vh;
 }
-
-
 .min--136 {
   min-height: calc(100vh - 136px);
 }

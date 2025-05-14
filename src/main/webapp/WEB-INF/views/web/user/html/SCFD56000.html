@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임시술 쉽게 이해하기</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="infertility-guide-simple bg--primary-blue">
+    <!-- 팝업 -->
+    <div class="pop__overlay" style="display: none;">
+      <div class="popup" id="pop_confirm">
+        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
+        </span>
+        <div class="popup__title">
+          <!-- <span class="txt--fw-600">탈퇴신청</span>을 하시겠습니까? -->
+          본 페이지에서는<br>
+          <span class="color--blue txt--fw-600">IUI(인공수정시술)</span>와<br>
+          <span class="color--blue txt--fw-600">IVF(체외수정시술)</span>에 대해<br>
+          알기 쉽게 소개했습니다.
+        </div> 
+        <p class="popup__text align--center">
+          ‘자세히 보기’를 누르시면<br>
+          세부 사항을 확인하실 수 있습니다.
+        </p>
+        <div class="btn__box">
+          <button class="btn btn--gray btn__pop-close">다시보지않기</button>
+          <button class="btn btn--blue btn__pop-close">확인</button>
+        </div>
+      </div>
+    </div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 bd--transparent bd--b-e5">난임시술 쉽게 이해하기 </div>
+          <div class="select__options select--bg-blue">
+            <div data-value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div></div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+    <!-- 헤더 자리 확보 -->
+    <div class="spacer h-100"></div> 
+
+    <!-- main -->
+    <div class="content">
+      <div class="search-result tab-content active is-radius min--100" id="item-1">
+        <div class="container">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+</body>
+
+</html>
