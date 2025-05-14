@@ -323,4 +323,10 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
 
 /* 난임시술 쉽게 이해학시 start */
 .infertility-guide-simple .container {padding: 0 2rem;}
+/* 탭 버튼 스타일 */
+.tab__b { display: flex; gap: 10px; margin-bottom: 20px;}
+.tab__b .btn { padding: 0.5rem 1rem; background-color: #e0e0e0; border: none; border-radius: 4px; cursor: pointer;}
+.tab__b .btn.on { background-color: #004aad; color: #fff;}
+.tab-panel {display: none;}
+.tab-panel.active {display: block;}
 /* 난임시술 쉽게 이해학시 end */
