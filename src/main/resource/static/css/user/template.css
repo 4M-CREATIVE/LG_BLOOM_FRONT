@@ -480,6 +480,9 @@
 .bg--grayAA {
   background-color: #aaa;
 }
+.bg--grayEE {
+  background-color: #eee;
+}
 .bg--grayf3 {
   background-color: var(--neutral-gray-F3);
 }
