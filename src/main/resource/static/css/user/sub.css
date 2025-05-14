@@ -56,7 +56,7 @@
 .search-result .container { padding: 3rem 2rem 13rem 2rem;}
 .faq-list .search-result .container { padding: 3rem 0 12rem 0;}
 
-.search-result .container section {margin-bottom: 3rem;}
+/* .search-result .container section {margin-bottom: 3rem;} */
 .search-result .container .tit {margin-bottom: 1.4rem;}
 .search-result .container .tit p:first-child { color: #222; font-size: 1.8rem; font-style: normal; font-weight: 700; line-height: 1.8rem; letter-spacing: -0.72px; gap: 0.4rem;}
 .search-result .container .tit p:last-child a{ color: var(--neutral-gray-88); font-size: 1.2rem; font-weight: 500; line-height: 1.2rem; letter-spacing: -0.48px;
@@ -307,7 +307,7 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
 .before--bisiting-wrap {padding-top: 40px;}
 .before--bisiting-wrap .check--list .check--list-txt{padding: 0 10px;}
 .before--bisiting-wrap .check--list .check--list-txt .check-blue{ font-weight: 600; color: #222; display: flex; align-items: center; gap: 8.23px;}
-.before--bisiting-wrap .check--list .check--list-txt .check-blue::before { display: block; content: ''; width: 12.766px; height: 10px; background: url(/src/main/resource/static/images/user/common/check_blue.svg); background-size: cover;}
+.before--bisiting-wrap .check--list .check--list-txt .check-blue::before { display: block; content: ''; width: 12.766px; height: 10px; background: url(/src/main/resource/static/images/user/common/check_deep_blue.svg); background-size: cover;}
 .before--bisiting-wrap .check--list .accordian__question {background-position: calc(100% - 30px) 0; padding-bottom: 14px;}
 .before--bisiting-wrap .check--list::after {content: ''; display: block; width: calc(100% - 40px); height: 1px; background-color: #eee; margin-bottom: 14px; margin: 0 auto 14px auto;}
 .before--bisiting-wrap .check--list.on::after{visibility: hidden;}
@@ -321,9 +321,7 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
 .withdraw-reason-textarea.color--gray99::placeholder {color: #999;}
 /* 회원탈퇴 end */
 
-/* 난임시술 쉽게 이해학시 start */
-.infertility-guide-simple .container {padding: 0 2rem;}
-/* 탭 버튼 스타일 */
+/* 난임시술 쉽게 이해하기기 start */
 .tab__b { display: flex; gap: 5px; margin-top: 10px; margin-bottom: 30px;}
 .tab__b .btn {width: 100%; display: flex; justify-content: center;
 align-items: center; border-radius: 50px; padding: 10px 16px; color: #222; font-weight: 400; border: 1px solid var(--Neutral-gray-E8, #E8E8E8);}
@@ -332,85 +330,27 @@ align-items: center; border-radius: 50px; padding: 10px 16px; color: #222; font-
 .tab-panel section {border-radius: 10px;}
 .tab-panel section .title {border-radius: 10px; padding: 11px 0;}
 .tab-panel .box-shadow  {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);}
-.tab-panel .box-shadow .box_container{padding: 20px 10px;}
+.tab-panel .box_container{padding: 20px 10px;}
 .tab-panel.active {display: block;}
-/* 난임시술 쉽게 이해하기: 세로 타임라인 라인 및 점 추가 */
-.step-wrapper {
-  position: relative;
-}
-
-.step-line {
-  position: absolute;
-  top: 32px;
-  bottom: 0;
-  left: 14px; /* 점 중앙 기준 */
-  width: 2px;
-  background-color: #ccc;
-  z-index: 0;
-  max-height: 233px;
-}
-
-.infertility-step-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.step-item {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.step-dot {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
-  z-index: 1;
-  transform: translate(0, -50%);
-}
-
-/* 기존 step-icon 재정렬 */
-.step-icon {
-  margin-left: 16px;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-/* 텍스트 및 링크 */
-.step-content {
-  flex: 1;
-}
-
-.step-text {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-  margin: 0 0 4px;
-}
-
-.step-detail-link {
-  font-size: 12px;
-  color: #007BFF;
-  text-decoration: underline;
-}
-
-/* 하단 강조 문구 */
-.step-note {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.highlight-link {
-  color: #e53935;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-
-/* 난임시술 쉽게 이해학시 end */
+.step-wrapper {position: relative;}
+.step-line { position: absolute; top: 39px; bottom: 0; left: 15px; width: 2px; background-color: #ccc; z-index: 0; max-height: 233px;}
+.infertility-step-list { list-style: none; padding: 0; margin: 0;}
+.box-shadow .step-item { position: relative; display: flex; align-items: flex-start; margin-bottom: 14px;}
+.box-shadow .step-item:last-child {margin-bottom: 0;}
+.box-shadow .step-item .box { width: 100%; border-radius: 10px; border: 1px solid var(--Neutral-gray-E5, #E5E5E5); margin-left: 42px; padding: 12px 15px ; gap: 10px;}
+.ai-section02 .step-item {background-color: #fff; border-radius: 10px; margin-bottom: 0;}
+.ai-section02 .step-item .box { width: 100%; border-radius: 10px; padding: 12px 15px ; gap: 10px;}
+.step-dot { position: absolute; left: 10px; top: 50%; width: 12px; height: 12px; background-color: #ccc; border-radius: 50%; z-index: 1; transform: translate(0, -50%);}
+.step-icon { width: 44px; height: 40px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;}
+.step-content { flex: 1; justify-content: space-between;}
+.step-text { font-size: 14px; line-height: 16px; font-weight: 500; margin: 0 0 4px; letter-spacing: -0.56px;}
+.step-detail-link { font-size: 10px; line-height: 10px; font-weight: 500; letter-spacing: -0.4px; display: flex; align-items: center;}
+.step-detail-link::after { content:''; display: inline-block; width: 18px; height: 18px; background-size: 4px 10px;}
+.step-detail-link.color--gray88::after {background: url('/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg') no-repeat center;}
+.step-detail-link.color--blue::after {background: url('/src/main/resource/static/images/user/common/sm_arrow_r_blue.svg') no-repeat center;}
+.check_icon::before { display: block; content: ''; width: 12.766px; height: 10px; background: url(/src/main/resource/static/images/user/common/check_blue.svg); background-size: cover; margin-right: 8px;}
+.step-note { margin-top: 8px; text-align: center;}
+.arrow_b_blue { width: 100%; height: 20px; display: flex; justify-content: center; align-items: center; background: url(/src/main/resource/static/images/user/common/arrow_b_blue.svg) no-repeat center;}
+.ai-section02 {background: rgba(42, 119, 194, 0.05);}
+.tab-panel .noti {margin: 0 10px;  line-height: 16px; letter-spacing: -0.4px;}
+/* 난임시술 쉽게 이해하기 end */

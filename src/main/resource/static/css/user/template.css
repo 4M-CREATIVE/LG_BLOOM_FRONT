@@ -38,7 +38,9 @@
 .non-padding {
   padding: 0!important;
 }
-
+.block {
+  display: block!important;
+}
 .flex {
   display: flex;
   align-items: center;
@@ -233,6 +235,9 @@
 .mt-10 {
   margin-top: 1rem;
 }
+.mt-6 {
+  margin-top: .6rem;
+}
 
 /* margin-left */
 .ml-20{
@@ -340,7 +345,7 @@
   margin-bottom:1.6rem;
 }
 .mb-14 {
-  margin-bottom:1.4rem;
+  margin-bottom:1.4rem!important;
 }
 .mb-12 {
   margin-bottom:1.2rem;
@@ -356,6 +361,9 @@
 }
 .mb-8 {
   margin-bottom:0.8rem;
+}
+.mb-7 {
+  margin-bottom:0.7rem;
 }
 .mb-6 {
   margin-bottom:0.6rem;
