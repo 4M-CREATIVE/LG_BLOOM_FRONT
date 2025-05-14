@@ -261,7 +261,7 @@
 .check_contents .check_list li .left .check_list_date{color: var(--Neutral-black-22, #222); font-size: 13px; font-weight: 500; margin: 0 4px 0 6px;}
 .check_contents .check_list li .left .check_list_time{color: var(--Neutral-gray-99, #999); font-size: 13px; font-weight: 500;}
 .non--check-list{ width: 100%; height:339px; border-radius: 15px; text-align: center; padding-top: 8rem;}
-.sub06 .container {padding: 0rem 2rem 5rem 2rem;}
+.sub06 .container {padding: 0rem 2rem;}
 .sub06 .container .title_wrap {padding: 0 2rem;}
 /* 마이페이지 - 나의 가임건강 체크 end */
 

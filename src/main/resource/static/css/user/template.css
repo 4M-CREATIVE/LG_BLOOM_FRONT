@@ -221,8 +221,14 @@
 .mt-100 {
   margin-top: 10rem;
 }
+.mt-80 {
+  margin-top: 8rem;
+}
 .mt-30 {
   margin-top: 3rem;
+}
+.mt-14 {
+  margin-top: 1.4rem;
 }
 .mt-10 {
   margin-top: 1rem;
@@ -367,6 +373,10 @@
 }
 .pt-80 {
   padding-top: 8rem;
+}
+
+.pb-198 {
+  padding-bottom: 19.8rem;
 }
 
 /* gap */
@@ -1776,14 +1786,18 @@ input[type="search"]::-webkit-search-cancel-button {
   min-height: 100vh;
 }
 
-.min--70 {
-  min-height: calc(100vh - 70px);
+
+.min--151 {
+  min-height: calc(100vh - 151px);
+}
+.min--134 {
+  min-height: calc(100vh - 134px);
 }
 .min--100 {
   min-height: calc(100vh - 100px);
 }
-.min--151 {
-  min-height: calc(100vh - 151px);
+.min--70 {
+  min-height: calc(100vh - 70px);
 }
 
 .tooltip {
