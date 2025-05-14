@@ -124,6 +124,36 @@ const uiEvent = {
         input.focus();
       });
     }
+
+    // 슬라이드 토글
+    const $searchToggleBtn = $('button[aria-label="검색"]');
+    const $searchHeader = $('.main--search-header');
+
+    // 초기에 숨기기 (transition: top 방식 사용 시 필요 없음)
+    $searchHeader.removeClass('active');
+
+    // 버튼 클릭 시 토글
+    $searchToggleBtn.on('click', function (e) {
+      e.stopPropagation();
+      $searchHeader.toggleClass('active');
+    });
+
+    // 헤더 내부 클릭 시 닫힘 방지
+    $searchHeader.on('click', function (e) {
+      e.stopPropagation();
+    });
+
+    // 문서 클릭 시 헤더 영역 밖이면 슬라이드업
+    $(document).on('click', function () {
+      if ($searchHeader.hasClass('active')) {
+        $searchHeader.removeClass('active');
+      }
+    });
+
+    // 뒤로가기 버튼 클릭 시 닫기
+    $('.btn--back').on('click', function () {
+      $searchHeader.removeClass('active');
+    });
   },
 
   scrollEvent() {
@@ -543,5 +573,6 @@ const uiEvent = {
       const selectedValue = $(this).data('value');
       $textarea.toggle(selectedValue === '기타');
     });
-  }
+  },
+
 };

@@ -46,7 +46,35 @@
 
   <main class="wrap">
     <!-- header -->
-    <header class="header" role="header" ></header>
+    <header class="header" role="header" >
+      <div class="container flex flex--between">
+        <div class="left">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/FD-31000.html">
+            <img src="/src/main/resource/static/images/user/common/logo.svg" alt="로고">
+          </a>
+        </div>
+
+        <div class="right flex items-center gap-2">
+          <button type="button" aria-label="검색">
+            <img src="/src/main/resource/static/images/user/common/header_search.svg" alt="검색 버튼">
+          </button>
+          <button class="menu-open-btn" type="button" aria-label="메뉴 열기">
+            <img src="/src/main/resource/static/images/user/common/header_menu.svg" alt="메뉴 버튼">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 검색버튼 슬랑이드 다운 -->
+    <div class="main--search-header header--sub02 bd--gray-e3" role="search-header" >
+      <a href="javascript:;" class="btn--back" aria-label="이전으로 돌아가기"></a>
+      <div class="search__box">
+        <input type="search" name="" placeholder="검색어를 입력하세요." id="" class="input__search tit--fz13 color--gray99 bd--gray-e5">
+        <button type="button" class="btn__clear" aria-label="검색어 삭제"></button>
+        <button type="submit" aria-label="검색"></button>
+      </div>
+    </div>
+
     
     <!-- main -->
     <div class="main container">
