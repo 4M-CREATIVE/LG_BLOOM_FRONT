@@ -74,7 +74,9 @@
 .search-result .container .search_list li a .li-info {margin-bottom: 0.6rem;}
 .search-result .container .search_list li a .li-info .left span{font-size: 12px; font-weight: 500; line-height: 12px; letter-spacing: -0.48px; padding: 3px 8px 4px 8px;}
 .search-result .container .search_list li a .li-info .left .region {border-radius: 90px; background: rgba(42, 119, 193, 0.10);}
-.search-result .container .search_list li a .li-info .left .hospital {border-radius: 90px; background: var(--neutral-gray-F6, #F6F6F6);}
+.search-result .container .search_list li a .li-info .left .hospital {border-radius: 90px;}
+.search-result .container .search_list li a .li-info .left .hospital.gray-color {background: var(--neutral-gray-F6, #F6F6F6);}
+.search-result .container .search_list li a .li-info .left .hospital.color--deep-blue {background: rgba(66, 79, 171, 0.10);}
 .search-result .container .search_list li a .q {margin-bottom: 0.9rem;}
 .search-result .container .search_list li a .q,
 .search-result .container .search_list li a .a { display: flex;}
@@ -318,3 +320,7 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
 .withdraw-reason-textarea {width:100%; height:100%; min-height: 166px; border-radius: 15px; border: 1px solid var(--primary-gray-e5, #E5E5E5); padding: 1.6rem 2.5rem; margin-bottom: 2rem; display: none;}
 .withdraw-reason-textarea.color--gray99::placeholder {color: #999;}
 /* 회원탈퇴 end */
+
+/* 난임시술 쉽게 이해학시 start */
+.infertility-guide-simple .container {padding: 0 2rem;}
+/* 난임시술 쉽게 이해학시 end */
