@@ -622,6 +622,15 @@
 
 /* faq */
 
+.list ul > li::after {
+  content: '';
+  display: block;
+  width: calc(100% - 4rem);
+  height: 1px;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
 .faq__list:first-of-type.on {
   margin-top: -1px;
 }
@@ -1594,7 +1603,6 @@ input[type="search"]::-webkit-search-cancel-button {
   display: none;
   width: 100%;
   transition: all 0.3s ease;
-  /* min-height: 100vh; */
 }
 
 .search-result.tab-content.active {

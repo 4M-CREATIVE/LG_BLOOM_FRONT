@@ -55,7 +55,6 @@ const uiEvent = {
     this.menuSlideEvent();
     this.searchEvent();
     this.scrollEvent();
-    this.tabEvent();
     this.accordionEvent();
     this.commentToggleEvent();
     this.selectCustomEvent();
@@ -63,6 +62,7 @@ const uiEvent = {
     this.infertilityAassistanceEvent();
     this.popupEvent();
     this.loginButtonEvent();
+    this.initTabEvent(); // 탭 기능
 
     // 나의 가임력 체크 설문조사 복수 버튼 선택
     initCommonSurveySelectEvent("survey04", '[data-type="none"]', '[data-type="disease"]');
@@ -74,7 +74,6 @@ const uiEvent = {
     initCommonSurveySelectEvent("survey11", '[data-type="none"]', '[data-type="disease"]');
 
     this.initStepEvent('survey'); // 나의 가임력 체크 설문조사 페이지 진행
-
     this.initStepEvent('signup'); // 회원가입 절차
 
     this.initAgreementCheckboxEvent(); // 약관 동의 체크박스 이벤트
@@ -191,27 +190,6 @@ const uiEvent = {
       lastScroll = currentScroll;
     });
   },
-  
-
-  tabEvent() {
-    // 탭 전환
-    const tabLinks = document.querySelectorAll('.tab-menu');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabLinks.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const contentId = tab.querySelector('span')?.dataset.content;
-        if (!contentId) return;
-
-        tabLinks.forEach((btn) => btn.classList.remove('active'));
-        tab.classList.add('active');
-
-        tabContents.forEach((content) => content.classList.remove('active'));
-        document.getElementById(contentId)?.classList.add('active');
-      });
-    });
-  },
-
   accordionEvent() {
     $(".faq__question").on("click", function (e) {
       e.preventDefault();
@@ -574,5 +552,18 @@ const uiEvent = {
       $textarea.toggle(selectedValue === '기타');
     });
   },
+  initTabEvent() {
+    const $tabButtons = $(".tab__b .btn");
+    const $tabPanels = $(".tab-panel");
 
+    $tabButtons.on("click", function () {
+      const target = $(this).data("content");
+
+      $tabButtons.removeClass("on");
+      $(this).addClass("on");
+
+      $tabPanels.removeClass("active");
+      $("#" + target).addClass("active");
+    });
+  }
 };
