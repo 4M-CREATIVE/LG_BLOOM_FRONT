@@ -62,7 +62,8 @@ const uiEvent = {
     this.infertilityAassistanceEvent();
     this.popupEvent();
     this.loginButtonEvent();
-    this.initTabEvent(); // 탭 기능
+    this.initTabEvent(); // 탭
+    this.initSubTabEvent(); // 서브탭
 
     // 나의 가임력 체크 설문조사 복수 버튼 선택
     initCommonSurveySelectEvent("survey04", '[data-type="none"]', '[data-type="disease"]');
@@ -565,5 +566,20 @@ const uiEvent = {
       $tabPanels.removeClass("active");
       $("#" + target).addClass("active");
     });
-  }
+  },
+  initSubTabEvent() {
+    const $subTabButtons = $(".sub-tab__b .btn");
+
+    $subTabButtons.on("click", function () {
+      const target = $(this).data("subcontent");
+
+      // 버튼 on/off
+      $subTabButtons.removeClass("on");
+      $(this).addClass("on");
+
+      // 콘텐츠 패널 전환
+      $(".sub-tab-panel").removeClass("active");
+      $(`.sub-tab-panel[data-subcontent="${target}"]`).addClass("active");
+    });
+  },
 };
