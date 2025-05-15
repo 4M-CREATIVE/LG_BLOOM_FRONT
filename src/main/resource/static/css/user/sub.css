@@ -322,18 +322,18 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
 /* 회원탈퇴 end */
 
 /* 난임시술 쉽게 이해하기기 start */
+.infertility-guide-simple .search-result .container { padding: 0rem 2rem 13rem 2rem;}
 .tab__b { display: flex; gap: 5px; margin-top: 10px; margin-bottom: 30px;}
-.tab__b .btn {width: 100%; display: flex; justify-content: center;
-align-items: center; border-radius: 50px; padding: 10px 16px; color: #222; font-weight: 400; border: 1px solid var(--Neutral-gray-E8, #E8E8E8);}
+.tab__b .btn {width: 100%; display: flex; justify-content: center; align-items: center; border-radius: 50px; padding: 10px 16px; color: #222; font-weight: 400; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); font-size: 12px;}
 .tab__b .btn.on { background-color: var(--primary-blue); color: #fff; font-weight: 600;}
 .tab-panel {display: none;}
-.tab-panel section {border-radius: 10px;}
-.tab-panel section .title {border-radius: 10px; padding: 11px 0;}
-.tab-panel .box-shadow  {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);}
-.tab-panel .box_container{padding: 20px 10px;}
-.tab-panel.active {display: block;}
+.panel section {border-radius: 10px;}
+.panel section .title {border-radius: 10px; padding: 11px 0;}
+.panel .box-shadow  {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);}
+.panel .box_container{padding: 20px 10px;}
+.panel.active {display: block;}
 .step-wrapper {position: relative;}
-.step-line { position: absolute; top: 39px; bottom: 0; left: 15px; width: 2px; background-color: #ccc; z-index: 0; max-height: 233px;}
+.step-line { position: absolute; top: 39px; bottom: 0; left: 15px; width: 1px; background-color: #ccc; z-index: 0; max-height: 233px;}
 .infertility-step-list { list-style: none; padding: 0; margin: 0;}
 .box-shadow .step-item { position: relative; display: flex; align-items: flex-start; margin-bottom: 14px;}
 .box-shadow .step-item:last-child {margin-bottom: 0;}
@@ -345,12 +345,45 @@ align-items: center; border-radius: 50px; padding: 10px 16px; color: #222; font-
 .step-content { flex: 1; justify-content: space-between;}
 .step-text { font-size: 14px; line-height: 16px; font-weight: 500; margin: 0 0 4px; letter-spacing: -0.56px;}
 .step-detail-link { font-size: 10px; line-height: 10px; font-weight: 500; letter-spacing: -0.4px; display: flex; align-items: center;}
-.step-detail-link::after { content:''; display: inline-block; width: 18px; height: 18px; background-size: 4px 10px;}
+.step-detail-link::after { content:''; display: inline-block; width: 4px; height: 6px; background-size: cover!important; margin-left: 7px;}
 .step-detail-link.color--gray88::after {background: url('/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg') no-repeat center;}
 .step-detail-link.color--blue::after {background: url('/src/main/resource/static/images/user/common/sm_arrow_r_blue.svg') no-repeat center;}
 .check_icon::before { display: block; content: ''; width: 12.766px; height: 10px; background: url(/src/main/resource/static/images/user/common/check_blue.svg); background-size: cover; margin-right: 8px;}
 .step-note { margin-top: 8px; text-align: center;}
 .arrow_b_blue { width: 100%; height: 20px; display: flex; justify-content: center; align-items: center; background: url(/src/main/resource/static/images/user/common/arrow_b_blue.svg) no-repeat center;}
+.arrow_b_purple { width: 100%; height: 20px; display: flex; justify-content: center; align-items: center; background: url(/src/main/resource/static/images/user/common/arrow_b_purple.svg) no-repeat center;}
 .ai-section02 {background: rgba(42, 119, 194, 0.05);}
 .tab-panel .noti {margin: 0 10px;  line-height: 16px; letter-spacing: -0.4px;}
+.ai-section03 {background: rgba(102, 15, 137, 0.05);}
+.ai-section03 .title {background: rgba(102, 15, 137, 0.10); text-align: center ;}
+.ai-section03 .step-item {background-color: #fff; border-radius: 10px; margin-bottom: 0;}
+.ai-section03 .step-item .box { width: 100%; border-radius: 10px; padding: 12px 15px; gap: 10px;}
+/* 자식 탭 버튼 스타일 */
+.sub-tab__b {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.sub-tab__b .btn { width: 100%; display: flex; justify-content: center; align-items: center; border-radius: 50px; padding: 10px 16px; color: #222; font-weight: 400; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background-color: #fff; font-size: 12px;}
+
+.sub-tab__b .btn.on {
+  background-color: var(--primary-purple); /* 기존 테마 색상과 통일 */
+  color: #fff;
+  font-weight: 600;
+
+
+}
+
+/* 자식 탭 패널 기본 숨김 */
+.sub-tab-panel {
+  display: none;
+}
+
+/* 활성화된 자식 탭 패널 */
+.sub-tab-panel.active {
+  display: block;
+}
+
 /* 난임시술 쉽게 이해하기 end */
