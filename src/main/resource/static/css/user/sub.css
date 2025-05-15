@@ -32,7 +32,7 @@
 .main .section03 .sub_title p { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.09rem; color: #222;}
 .main .section02 .sub_title .left,
 .main .section03 .sub_title .left { gap: 1rem;}
-
+ 
 .main .section02 .contents,
 .main .section03 .contents { gap: 8px; align-self: stretch; }
 .main .section02 .contents li,

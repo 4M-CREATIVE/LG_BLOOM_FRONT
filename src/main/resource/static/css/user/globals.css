@@ -25,20 +25,6 @@
   --neutral-gray-EE: #EEE;
   --neutral-gray-F3: #f3f3f3;
   --neutral-fff: #fff;
-
-  /* 폰트 */
-  --font-family: 'Noto Sans KR', sans-serif;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-sm: 0.875rem;
-
-  /* 여백 */
-  --padding-vertical: 12px;
-  --padding-horizontal: 20px;
-
-  /* 스타일 */ 
-  --border-radius: 4px;
-  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* 기본 스타일 */
