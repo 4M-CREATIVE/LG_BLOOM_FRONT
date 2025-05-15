@@ -543,14 +543,31 @@ const uiEvent = {
   },
   initWithdrawTextareaToggle() {
     const $selectBox = $('#withdraw-reason');
-    const $textarea = $('.withdraw-reason-textarea');
     const $options = $selectBox.siblings('.select__options').find('div');
+    const $textareaApp = $('.withdraw-reason-textarea.reason--app');
+    const $textareaEtc = $('.withdraw-reason-textarea.reason--etc');
 
-    $textarea.hide(); // 초기에 숨기기
+    // 처음에 모두 숨기기
+    $textareaApp.hide();
+    $textareaEtc.hide();
 
     $options.on('click', function () {
       const selectedValue = $(this).data('value');
-      $textarea.toggle(selectedValue === '기타');
+
+      // 선택된 텍스트로 셀렉트 박스 텍스트 변경
+      $selectBox.text($(this).text());
+
+      // 조건별로 textarea 보여주기
+      if (selectedValue === '다른어플 이용') {
+        $textareaApp.show();
+        $textareaEtc.hide();
+      } else if (selectedValue === '기타') {
+        $textareaApp.hide();
+        $textareaEtc.show();
+      } else {
+        $textareaApp.hide();
+        $textareaEtc.hide();
+      }
     });
   },
   initTabEvent() {
