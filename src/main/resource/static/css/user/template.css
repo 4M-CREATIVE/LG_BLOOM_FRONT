@@ -251,6 +251,12 @@
 .mb-112 {
   margin-bottom:11.2rem;
 }
+.mb-90 {
+  margin-bottom: 9rem;
+}
+.mb-87 {
+  margin-bottom: 8.7rem;
+}
 .mb-62 {
   margin-bottom:6.2rem;
 }
@@ -452,28 +458,28 @@
   background-color: #F7F3F8;
 }
 .bg--grayAA {
-  background-color: #aaa;
+  background-color: var(--neutral-gray-AA);
 }
 .bg--grayEE {
-  background-color: #eee;
+  background-color: var(--neutral-gray-EE);
 }
 .bg--grayf3 {
   background-color: var(--neutral-gray-F3);
 }
 .bg--grayEf {
-  background-color: #efefef;
+  background-color: var(--neutral-gray-EF);
 }
 .bg--grayf4 {
   background-color: #F4F8FC;
 }
 .bg--grayf6 {
-  background-color: #F6F6F6!important;
+  background-color: var(--neutral-gray-F6)!important;
 }
 .bg--grayf7 {
-  background-color: #F7F7F7;
+  background-color: var(--neutral-gray-F7);
 }
 .bg--grayf9 {
-  background-color: #F9F9F9;
+  background-color: var(--neutral-gray-F9);
 }
 .bg--wh {
   background-color: var(--neutral-fff);
@@ -506,7 +512,7 @@
 
 /* select background color */
 .select--bg-deep-blue {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #424FAB!important;
+  background: #424FAB!important;
 }
 .select--bg-blue {
   background: var(--primary-blue-b10, linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #2A77C2)!important;
@@ -830,6 +836,22 @@
 }
 .accordian__question {
   position: relative;
+  /* background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 20px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
+  transition: all 0.1s ease; */
+}
+.accordian__list.on .accordian__question {
+  padding-bottom: 12px;
+  /* background-image: url(/src/main/resource/static/images/user/common/arrow_t_black.svg); */
+}
+.accordian__question .accordian_btn{
+  width: 18px;
+  height: 18px;
   background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
   background-repeat: no-repeat;
   background-position: 100% 0;
@@ -838,11 +860,15 @@
   line-height: 22px;
   letter-spacing: -0.56px;
   transition: all 0.1s ease;
+  position: absolute;
+  top:0;
+  right: 0;
 }
-.accordian__list.on .accordian__question {
-  padding-bottom: 12px;
+
+.accordian__list.on .accordian__question  .accordian_btn{
   background-image: url(/src/main/resource/static/images/user/common/arrow_t_black.svg);
 }
+
 .accordian__question .label {
   margin-top: 7px;
 }
@@ -1779,6 +1805,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .h-136 {
   height: 136px;
+}
+
+.right-30 {
+  right: 30px!important;
 }
 
 .min-100vh {

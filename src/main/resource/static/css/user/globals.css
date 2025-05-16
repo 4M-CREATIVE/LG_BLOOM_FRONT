@@ -1,16 +1,18 @@
-:root {
+ :root {
   /* 색상 */
   --primary-purple: #660F89;
+  --primary-purple10: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #660F89;
   --primary-light-purple: #F2EDF5;
   --primary-light-purple02: #F2EDF5;
   --primary-light-purple03: #f6f6f6;
   --primary-deep-blue: #424FAB;
-  --primary-blue: #2A77C1;
+  --primary-deep-blue10: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #424FAB;
+  --primary-blue: #2A77C2;
   --primary-light-blue: #00C1EA;
   --primary-deep-pink: #8E0B86;
   --primary-pink: #BE0683 ;
+  --primary-pink10: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #8E0B86;
   --primary-light-pink: #E61C76;
-  --background-color: #fff;
   --primary-black: #222;
   --neutral-gray-44: #444;
   --neutral-gray-55: #555;
@@ -20,9 +22,12 @@
   --neutral-gray-99: #999;
   --neutral-gray-AA: #aaa;
   --neutral-gray-F6: #f6f6f6;
+  --neutral-gray-F7: #f7f7f7;
+  --neutral-gray-F9: #f9f9f9;
   --neutral-gray-cc: #ccc;
   --neutral-gray-E5: #e5e5e5;
   --neutral-gray-EE: #EEE;
+  --neutral-gray-EF: #EFEFEF;
   --neutral-gray-F3: #f3f3f3;
   --neutral-fff: #fff;
 }
@@ -176,9 +181,6 @@ header .container .right {
 }
 
 .footer .bottom {
-  /* display: flex;
-  justify-content: space-between;
-  gap: 1rem; */
   padding: 2rem 2rem 6rem;
   background-color: #222;
 }
