@@ -77,6 +77,10 @@
 .search-result .container .search_list li a .li-info .left .hospital {border-radius: 90px;}
 .search-result .container .search_list li a .li-info .left .hospital.gray-color {background: var(--neutral-gray-F6, #F6F6F6);}
 .search-result .container .search_list li a .li-info .left .hospital.color--deep-blue {background: rgba(66, 79, 171, 0.10);}
+.warning_txt .ai {margin-right: 4px;}
+.warning_txt_gray.middle::before{top:50%; left:6px; transform: translate(-50%, 0 );}
+.ai {border-radius: 90px; padding: 3px 8px 4px 8px;}
+.ai.pink-color{background: #BE06831A}
 .search-result .container .search_list li a .q {margin-bottom: 0.9rem;}
 .search-result .container .search_list li a .q,
 .search-result .container .search_list li a .a { display: flex;}
@@ -91,7 +95,7 @@
 .search-footer {position: fixed; bottom: 0; z-index: 9999; width: 100%; height: 8.5rem; padding: 0px 10px 5px 10px; flex-shrink: 0;  background: #FFF; box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;}
 .search-footer.is-radius {border-radius: 30px 30px 0px 0px;}
 .search-footer li {width: 8.48rem;}
-.search-footer li a {  color: var(--neutral-gray-AA); gap: 0.6rem; font-weight: 500; letter-spacing: -0.5px;}
+.search-footer li a { color: var(--neutral-gray-AA); gap: 0.6rem; font-weight: 500; letter-spacing: -0.5px;}
 .search-footer li img[src*="purple"] {display: none;}
 .search-footer li.on img[src*="gray"] {display: none;}
 .search-footer li.on img[src*="purple"] {display: inline;}
@@ -150,7 +154,7 @@
 
 /* 난임지원 난임정책 start */
 .infertility--policy section {padding: 0 2rem;}
-.infertility--policy .txt_wrap {line-height: 28px; letter-spacing: -0.8px; margin-bottom: 4rem;}
+.infertility--policy .txt_wrap {line-height: 24px; letter-spacing: -0.8px; margin-bottom: 3rem;}
 .infertility--policy .infertility--policy-category {margin-bottom: 12.4rem;}
 .infertility--policy .infertility--policy-category li {margin-bottom:2.1rem; }
 .infertility--policy .infertility--policy-category li a {display: flex; align-items: center; gap: 1rem; color: #444; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.64px;}
@@ -270,18 +274,18 @@
 .check__result_header .title{width: calc(100% - 40px); display: flex; justify-content: center;}
 .check__result_sub_title{color: rgba(255, 255, 255, 0.50); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
 .check__result_popup_text{color: var(--Neutral-gray-77, #777); font-size: 10px; font-weight: 400; line-height: 18px; letter-spacing: -0.4px; width: 100%; max-height: 425px; overflow-y: scroll;}
-.check__result_tap{display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2rem; }
-.check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.44px;}
+.check__result_tap{display: flex; align-items: center; justify-content: center; gap: 10 px; margin-top: 2rem; }
+.check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.44px;} 
 .check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #5D1E7E); color: #FFF; font-size: 11px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px; border: none;}
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
-.normalweight_wrap{margin-bottom: 268px;}
+.normalweight_wrap{margin-bottom: 208px;}
 .normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
 .normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
 .normal_weight_illustration {margin-left: 74px;}
 .underweight {display: none;}
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
 .underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
-.underweight_wrap .underweight--list .title {margin-bottom: 1rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
+.underweight_wrap .underweight--list .title {margin-bottom: 1.4rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
 .underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
 .underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
 .underweight_wrap .sub_warning {margin: 0 10px 30px 10px ;  line-height: 16px; letter-spacing: -0.4px;}
@@ -369,8 +373,6 @@ tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;color: #666;font-s
   background-color: var(--primary-purple); /* 기존 테마 색상과 통일 */
   color: #fff;
   font-weight: 600;
-
-
 }
 
 /* 자식 탭 패널 기본 숨김 */

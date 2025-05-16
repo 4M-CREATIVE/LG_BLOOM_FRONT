@@ -206,7 +206,12 @@ const uiEvent = {
   
     $(".accordian__list").removeClass("on").find(".accordian__answer").hide();
   
-    $(".accordian__question").on("click", function () {
+    $(".accordian_btn").on("click", function (e) {
+      // checkbox 클릭 막기
+      if ($(e.target).is('input[type="checkbox"]')) {
+        e.preventDefault();
+        return;
+      }
       const $this = $(this);
       const $parentLi = $this.closest(".accordian__list");
       const $answer = $parentLi.find(".accordian__answer");
@@ -214,11 +219,6 @@ const uiEvent = {
       if (!$answer.is(":animated")) {
         $answer.slideToggle(300);
         $parentLi.toggleClass("on");
-      }
-  
-      const $checkbox = $this.find("input[type='checkbox']");
-      if ($checkbox.length) {
-        $checkbox.prop("checked", !$checkbox.prop("checked")).trigger("change");
       }
     });
   },
@@ -445,15 +445,10 @@ const uiEvent = {
   initAgreementCheckboxEvent() {
     const $allAgree = $('#checkboxAll');
     const $checkboxes = $('input.checkbox03').not($allAgree);
-    const $accordions = $('.accordian__list');
-  
+
     $allAgree.on('change', function () {
       const checked = this.checked;
       $checkboxes.prop('checked', checked);
-      $accordions.toggleClass('on', checked);
-      $accordions.find('.accordian__answer').stop().slideToggle(300, () => {
-        $(this).css('display', checked ? 'block' : 'none');
-      });
     });
   
     $checkboxes.on('change', function () {
