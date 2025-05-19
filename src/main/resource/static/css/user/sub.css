@@ -14,7 +14,7 @@
 .main .section01 .content .right .top{ background-color: #2A77C1; height: 11.4rem; border-radius: 1.5rem; padding: 1.6rem; margin-bottom: 0.8rem; position: relative;}
 .main .section01 .content .right .bottom{ background-color: #424FAB; height: 6.7rem; border-radius: 1.5rem; padding: 1.6rem; position: relative;}
 .main .section01 .content .left p,
-.main .section01 .content .right p { font-weight: 900; font-size: 1.5rem; margin-top: 0.2rem;}
+.main .section01 .content .right p { font-weight: 900; font-size: 1.5rem; margin-top: 0.2rem; color: #fff;}
 .main .section01 .content .right .top p { line-height: 1.95rem; letter-spacing: -0.64px;}
 .main .section01 .content .right .bottom p{line-height: 1.92rem; letter-spacing: -0.64px;}
 .main .section01 .content .circle { background-color: rgba(0, 0, 0, 0.2); position: absolute;}
