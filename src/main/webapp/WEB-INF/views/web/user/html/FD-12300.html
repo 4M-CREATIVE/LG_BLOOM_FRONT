@@ -29,6 +29,7 @@
   
     async function initPage() {
       await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/search_header.html?v=1.0");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       // await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
   
       uiEvent.init();
@@ -39,6 +40,9 @@
 </head>
 
 <body id="wrap" class="total-search  bg--primary-light-purple">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+  
   <div class="search-header-wrap">
     <!-- header -->
     <header class="header header--sub header--sub02 bd--gray-e3" role="header" ></header>
@@ -143,7 +147,7 @@
         </a>
       </li>
       <li>
-        <a class="flex flex--center drection--column" href="javascript:void(0);">
+        <a class="menu-open-btn flex flex--center drection--column" href="javascript:void(0);">
           <img src="/static/images/user/search/search_menu.svg" alt="검색홈버튼">
           전체메뉴
         </a>
@@ -157,8 +161,8 @@
       </li>
       <li>
         <a class="flex flex--center drection--column" href="javascript:void(0);">
-          <img src="/static/images/user/search/search_profile_gray.svg" alt="검색홈버튼">
-          <img src="/static/images/user/search/search_profile_purple.svg" alt="검색홈버튼_활성화">
+          <img src="/static/images/user/search/search_profile_gray.svg" alt="마이버튼">
+          <img src="/static/images/user/search/search_profile_purple.svg" alt="마이버튼_활성화">
           마이
         </a>
       </li>

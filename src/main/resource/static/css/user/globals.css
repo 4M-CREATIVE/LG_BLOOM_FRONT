@@ -87,6 +87,7 @@ header .container .right {
   z-index: 9;
   overflow-y: scroll;
   transition: left 0.3s ease-in-out;
+  z-index: 99999;
 }
 
 .gnb.open {
