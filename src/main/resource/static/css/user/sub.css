@@ -289,7 +289,7 @@
 .underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
 .underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
 .underweight_wrap .sub_warning {margin: 0 10px 30px 10px ;  line-height: 16px; letter-spacing: -0.4px;}
-table {width: 100%;border-collapse: collapse;border-top: 2px solid var(--primary-purple);}
+table {width: 100%;border-collapse: collapse;border-top: 1px solid var(--primary-purple);}
 thead th {background-color: #F7F3F8;padding: 11px;text-align: center;color: var(--primary-purple);font-weight: bold;border-bottom: 1px solid #D9D9D9;font-size: 12px;}
 tbody td {vertical-align: top;border-bottom: 1px solid #D9D9D9;}
 tbody td:nth-child(1) {width: 72%;padding: 10px 5px 10px 10px;font-weight: bold;color: #333;}
