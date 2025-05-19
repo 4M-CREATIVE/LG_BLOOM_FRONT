@@ -29,7 +29,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-  
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       uiEvent.init();
     }
   
@@ -38,7 +38,8 @@
 </head>
 
 <body id="wrap" class="infertility-assistance-list bg--primary-blue">
-
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
 
   <div class="search-header-wrap select-wrap">
 
@@ -82,214 +83,213 @@
     </div>
   </div>
 
-    <!-- 헤더 자리 확보 -->
-    <div class="spacer h-136"></div> 
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
 
-    <!-- main -->
-    <div class="content">
-      <div class="search-result tab-content active is-radius min--136" id="item-3">
-        <div class="container">
-          <div class="infertility-assistance-title tit--fz20 color--blk mb-30 section02">
-            난임에 대한 고민을 나누는<br>
-            <p class="color--blue mb-10">심리상담센터</p>
-            <p class="tit--fz14 txt--fw-400 color--gray88 mb-30 ">
-              국가에서는 난임 부부를 위해<br>
-              심리 상담 서비스를 지원하고 있습니다.<br>
-              희망을 품고, 따뜻한 마음으로 새 생명의 탄생을<br>
-              함께 기다려요.
-            </p>
-          </div>
- 
-          <div class="box-color  bg--grayf4 mb-30">
-            <p class="title tit--fz14 txt--fw-600 color--wht bg--primary-blue flex flex--center mb-16">
-              대상자
-            </p>
-            <ul class="contents tit--fz12">
-              <li class="">
-                <p  class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">난임부부</p>
-                <p class="color--blk txt--fw-400">
-                  부부가 피임을 하지 않고 1년 이상 정기적인
-                  부부생활을 하여도 임신이 되지 않는 경우
-                </p>
+  <!-- main -->
+  <div class="content">
+    <div class="search-result tab-content active is-radius min--136" id="item-3">
+      <div class="container">
+        <div class="infertility-assistance-title tit--fz20 color--blk mb-30 section02">
+          난임에 대한 고민을 나누는<br>
+          <p class="color--blue mb-10">심리상담센터</p>
+          <p class="tit--fz14 txt--fw-400 color--gray88 mb-30 ">
+            국가에서는 난임 부부를 위해<br>
+            심리 상담 서비스를 지원하고 있습니다.<br>
+            희망을 품고, 따뜻한 마음으로 새 생명의 탄생을<br>
+            함께 기다려요.
+          </p>
+        </div>
+
+        <div class="box-color  bg--grayf4 mb-30">
+          <p class="title tit--fz14 txt--fw-600 color--wht bg--primary-blue flex flex--center mb-16">
+            대상자
+          </p>
+          <ul class="contents tit--fz12">
+            <li class="">
+              <p  class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">난임부부</p>
+              <p class="color--blk txt--fw-400">
+                부부가 피임을 하지 않고 1년 이상 정기적인
+                부부생활을 하여도 임신이 되지 않는 경우
+              </p>
+            </li>
+            <li>
+              <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">임신부</p>
+              <p class="color--blk txt--fw-400 flex">
+                임신 중인 여성
+              </p>
+            </li>
+            <li>
+              <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">산모</p>
+              <p class="color--blk txt--fw-400 flex">
+                출산 후 12주 이내 산모
+              </p>
+            </li>
+            <li>
+              <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">양육모</p>
+              <p class="color--blk txt--fw-400">
+                출산 12주 이후 3년 이내의 산모 및 양육모<br>
+                <span class="tit--fz10">(단, 미혼모의 경우 출산 후 7년 이내까지 대상자로 등록 가능)</span>
+              </p>
+            </li>
+            <li>
+              <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">기타</p>
+              <p class="color--blk txt--fw-400">
+                난임 부부, 임신부, 산모 및
+                양육모의 배우자 또는 가족 등
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex mb-10 gap-2 color--gray99 tit--fz10 txt--fw-400 flex--end">
+          <img src="/src/main/resource/static/images/user/common/history.svg" alt="난임지원">
+          <p>
+            업데이트 일시: 2025. 04. 28
+          </p>
+        </div>
+
+        <div class="blue">
+          <div>
+            <ul class="search_list">
+              <li>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">중앙</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    국립 중앙의료원
+                  </p> 
+                  <p class="pcc_address mb-6">https://22762276.nmc.or.kr</p>
+                  <p class="pcc_number mb-6">02)2276-2276</p>
+                </a> 
               </li>
               <li>
-                <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">임신부</p>
-                <p class="color--blk txt--fw-400 flex">
-                  임신 중인 여성
-                </p>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">서울 권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    강남센터 / 송파센터
+                  </p>
+                  <p class="pcc_address mb-6">https://mindcare-for-family.kr</p>
+                  <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">강남센터</span>02) 2019-4581</p>
+                  <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">송파센터</span>02) 6956-6248</p>
+                </a>
               </li>
               <li>
-                <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">산모</p>
-                <p class="color--blk txt--fw-400 flex">
-                  출산 후 12주 이내 산모
-                </p>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">서울 서남권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    보라매센터 / 금천구센터
+                  </p>
+                  <p class="pcc_address mb-6">https://fmc.or.kr</p>
+                  <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">보라매 센터</span>02) 870-3617</p>
+                  <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">금천구 센터</span>02) 6956-6248</p>
+                </a>
               </li>
               <li>
-                <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">양육모</p>
-                <p class="color--blk txt--fw-400">
-                  출산 12주 이후 3년 이내의 산모 및 양육모<br>
-                  <span class="tit--fz10">(단, 미혼모의 경우 출산 후 7년 이내까지 대상자로 등록 가능)</span>
-                </p>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">인천 권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    아인병원
+                  </p>
+                  <p class="pcc_address mb-6">https://id-incheon.co.kr</p>
+                  <p class="pcc_number mb-6">032) 466-3268</p>
+                </a>
               </li>
               <li>
-                <p class="balloon-text-blue flex color--blue txt--fw-600 flex flex--center">기타</p>
-                <p class="color--blk txt--fw-400">
-                  난임 부부, 임신부, 산모 및
-                  양육모의 배우자 또는 가족 등
-                </p>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">경기도권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    인구보건복지협회 / 경기도지회
+                  </p>
+                  <p class="pcc_address mb-6">https://happyfamily3375.or.kr/</p>
+                  <p class="pcc_number mb-6">031) 255-3374~5</p>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">경기 북부권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    동국대일산병원
+                  </p>
+                  <p class="pcc_address mb-6">http://www.hwc1234.co.kr</p>
+                  <p class="pcc_number mb-6">061) 901-1234</p>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">대구 권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    경북대학교병원
+                  </p>
+                  <p class="pcc_address mb-6">http://www.healthymom.or.kr/</p>
+                  <p class="pcc_number mb-6">053) 261-3375</p>
+                  <p class="pcc_number mb-6">053) 262-3375</p>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">경상북도 권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    안동의료원
+                  </p>
+                  <p class="pcc_address mb-6">https://happymoa.kr</p>
+                  <p class="pcc_number mb-6">054) 850-63767~9</p>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <div class="li-info flex flex--between mb-6">
+                    <div class="left">
+                      <span class="region blue-color">경북서부 권역</span> 
+                    </div>  
+                  </div>
+                  <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
+                    김천의료원
+                  </p>
+                  <p class="pcc_address mb-6">https://www.gcmc.or.kr</p>
+                  <p class="pcc_number mb-6">054) 429-8540~3</p>
+                </a>
               </li>
             </ul>
-          </div>
-
-          <div class="flex mb-10 gap-2 color--gray99 tit--fz10 txt--fw-400 flex--end">
-            <img src="/src/main/resource/static/images/user/common/history.svg" alt="난임지원">
-            <p>
-              업데이트 일시: 2025. 04. 28
-            </p>
-          </div>
-
-          <div class="blue">
-            <div>
-              <ul class="search_list">
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">중앙</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      국립 중앙의료원
-                    </p> 
-                    <p class="pcc_address mb-6">https://22762276.nmc.or.kr</p>
-                    <p class="pcc_number mb-6">02)2276-2276</p>
-                  </a> 
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">서울 권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      강남센터 / 송파센터
-                    </p>
-                    <p class="pcc_address mb-6">https://mindcare-for-family.kr</p>
-                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">강남센터</span>02) 2019-4581</p>
-                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">송파센터</span>02) 6956-6248</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">서울 서남권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      보라매센터 / 금천구센터
-                    </p>
-                    <p class="pcc_address mb-6">https://fmc.or.kr</p>
-                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">보라매 센터</span>02) 870-3617</p>
-                    <p class="pcc_number mb-6"><span class="tag bg--grayf3 color--gray99">금천구 센터</span>02) 6956-6248</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">인천 권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      아인병원
-                    </p>
-                    <p class="pcc_address mb-6">https://id-incheon.co.kr</p>
-                    <p class="pcc_number mb-6">032) 466-3268</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">경기도권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      인구보건복지협회 / 경기도지회
-                    </p>
-                    <p class="pcc_address mb-6">https://happyfamily3375.or.kr/</p>
-                    <p class="pcc_number mb-6">031) 255-3374~5</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">경기 북부권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      동국대일산병원
-                    </p>
-                    <p class="pcc_address mb-6">http://www.hwc1234.co.kr</p>
-                    <p class="pcc_number mb-6">061) 901-1234</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">대구 권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      경북대학교병원
-                    </p>
-                    <p class="pcc_address mb-6">http://www.healthymom.or.kr/</p>
-                    <p class="pcc_number mb-6">053) 261-3375</p>
-                    <p class="pcc_number mb-6">053) 262-3375</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">경상북도 권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      안동의료원
-                    </p>
-                    <p class="pcc_address mb-6">https://happymoa.kr</p>
-                    <p class="pcc_number mb-6">054) 850-63767~9</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <div class="li-info flex flex--between mb-6">
-                      <div class="left">
-                        <span class="region blue-color">경북서부 권역</span> 
-                      </div>  
-                    </div>
-                    <p class="ellipsis color--blk  tit--fz15 txt--fw-500 mb-8">
-                      김천의료원
-                    </p>
-                    <p class="pcc_address mb-6">https://www.gcmc.or.kr</p>
-                    <p class="pcc_number mb-6">054) 429-8540~3</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <footer class="footer"></footer>
-
+  <!-- footer -->
+  <footer class="footer"></footer>
 
 </body>
 

@@ -29,7 +29,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-  
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       uiEvent.init();
     }
   
@@ -38,7 +38,8 @@
 </head>
 
 <body id="wrap" class="faq-list bg--primary-deep-pink">
-
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
 
   <div class="search-header-wrap select-wrap">
     <!-- header -->
@@ -122,7 +123,6 @@
 
   <!-- footer -->
   <footer class="footer"></footer>
-
 
 </body>
 

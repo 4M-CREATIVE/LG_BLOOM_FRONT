@@ -29,7 +29,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-  
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       uiEvent.init();
     }
   
@@ -38,28 +38,31 @@
 </head>
 
 <body id="wrap" class="infertility-guide-simple bg--primary-blue">
-    <!-- 팝업 -->
-    <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_confirm">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
-        </span>
-        <div class="popup__title">
-          본 페이지에서는<br>
-          <span class="color--blue txt--fw-600">IUI(인공수정시술)</span>와<br>
-          <span class="color--blue txt--fw-600">IVF(체외수정시술)</span>에 대해<br>
-          알기 쉽게 소개했습니다.
-        </div> 
-        <p class="popup__text align--center">
-          ‘자세히 보기’를 누르시면<br>
-          세부 사항을 확인하실 수 있습니다.
-        </p>
-        <div class="btn__box">
-          <button class="btn btn--gray btn__pop-close">다시보지않기</button>
-          <button class="btn btn--blue btn__pop-close">확인</button>
-        </div>
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+  
+  <!-- 팝업 -->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_confirm">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
+      </span>
+      <div class="popup__title">
+        본 페이지에서는<br>
+        <span class="color--blue txt--fw-600">IUI(인공수정시술)</span>와<br>
+        <span class="color--blue txt--fw-600">IVF(체외수정시술)</span>에 대해<br>
+        알기 쉽게 소개했습니다.
+      </div> 
+      <p class="popup__text align--center">
+        ‘자세히 보기’를 누르시면<br>
+        세부 사항을 확인하실 수 있습니다.
+      </p>
+      <div class="btn__box">
+        <button class="btn btn--gray btn__pop-close">다시보지않기</button>
+        <button class="btn btn--blue btn__pop-close">확인</button>
       </div>
     </div>
+  </div>
 
   <div class="search-header-wrap select-wrap">
     <!-- header -->
@@ -84,166 +87,310 @@
     
   </div>
 
-    <!-- 헤더 자리 확보 -->
-    <div class="spacer h-100"></div> 
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-100"></div> 
 
-    <!-- main -->
-    <div class="content">
-      <div class="search-result tab-content active is-radius min--100">
-        <div class="container">
-          <!-- tab -->
-          <div class="tab__b">
-            <button class="btn on" data-content="item-1">IUI(인공수정)</button>
-            <button class="btn" data-content="item-2">IVF(체외수정)</button>
-          </div>
-          <div class="panel">
-            <section class="box-shadow">
-              <div class="box_container">
-                <p class="title color--gray44 flex flex--center txt--fw-700 tit--fz12 bg--grayEE mb-14">
-                  시술 종류와는 무관한 공통 범위
-                </p>
-                <div class="step-wrapper">
-                  <!-- 세로선 -->
-                  <div class="step-line"></div>
-                  <ul class="infertility-step-list">
-                    <li class="step-item">
-                      <span class="step-dot"></span>
-                      <div class="box flex">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/hospital_visit.svg" alt="병원 방문 결정">
-                        </div>
-                        <p class="step-text color--blk">병원 방문 결정</p>
+  <!-- main -->
+  <div class="content">
+    <div class="search-result tab-content active is-radius min--100">
+      <div class="container">
+        <!-- tab -->
+        <div class="tab__b">
+          <button class="btn on" data-content="item-1">IUI(인공수정)</button>
+          <button class="btn" data-content="item-2">IVF(체외수정)</button>
+        </div>
+        <div class="panel">
+          <section class="box-shadow">
+            <div class="box_container">
+              <p class="title color--gray44 flex flex--center txt--fw-700 tit--fz12 bg--grayEE mb-14">
+                시술 종류와는 무관한 공통 범위
+              </p>
+              <div class="step-wrapper">
+                <!-- 세로선 -->
+                <div class="step-line"></div>
+                <ul class="infertility-step-list">
+                  <li class="step-item">
+                    <span class="step-dot"></span>
+                    <div class="box flex">
+                      <div class="step-icon">
+                        <img src="/src/main/resource/static/images/user/infertility/hospital_visit.svg" alt="병원 방문 결정">
                       </div>
-                    </li>
-            
-                    <li class="step-item">
-                      <span class="step-dot"></span>
-                      <div class="box flex">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/hospital_search.svg" alt="병원검색">
-                        </div>
-                        <div class="step-content flex">
-                          <p class="step-text color--blk">병원검색</p>
-                          <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                        </div>
+                      <p class="step-text color--blk">병원 방문 결정</p>
+                    </div>
+                  </li>
+          
+                  <li class="step-item">
+                    <span class="step-dot"></span>
+                    <div class="box flex">
+                      <div class="step-icon">
+                        <img src="/src/main/resource/static/images/user/infertility/hospital_search.svg" alt="병원검색">
                       </div>
-                    </li>
-            
-                    <li class="step-item">
-                      <span class="step-dot"></span>
-                      <div class="box flex">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/examination.svg" alt="난임검사">
-                        </div>
-                        <div class="step-content flex">
-                          <p class="step-text color--blk">난임검사</p>
-                          <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                        </div>
+                      <div class="step-content flex">
+                        <p class="step-text color--blk">병원검색</p>
+                        <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
                       </div>
-                    </li>
-            
-                    <li class="step-item">
-                      <span class="step-dot"></span>
-                      <div class="box flex">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/support_apply.svg" alt="시술비 지원 신청">
-                        </div>
-                        <div class="step-content flex">
-                          <p class="step-text color--blk">시술비 지원 신청 <span class="color--gray77 tit--fz10 txt--fw-500"><br>(지원 여부
-                              확인)</span></p>
-                          <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                        </div>
+                    </div>
+                  </li>
+          
+                  <li class="step-item">
+                    <span class="step-dot"></span>
+                    <div class="box flex">
+                      <div class="step-icon">
+                        <img src="/src/main/resource/static/images/user/infertility/examination.svg" alt="난임검사">
                       </div>
-                    </li>
-                  </ul>
-            
-                  <div class="step-note">
-                    <p class="check_icon flex flex--center txt--fw-400 tit--fz12k color--blk">시술 시작 전 <span
-                        class="color--blue txt--fw-600">지원 결정통지서 받기!</span></p>
+                      <div class="step-content flex">
+                        <p class="step-text color--blk">난임검사</p>
+                        <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
+                      </div>
+                    </div>
+                  </li>
+          
+                  <li class="step-item">
+                    <span class="step-dot"></span>
+                    <div class="box flex">
+                      <div class="step-icon">
+                        <img src="/src/main/resource/static/images/user/infertility/support_apply.svg" alt="시술비 지원 신청">
+                      </div>
+                      <div class="step-content flex">
+                        <p class="step-text color--blk">시술비 지원 신청 <span class="color--gray77 tit--fz10 txt--fw-500"><br>(지원 여부
+                            확인)</span></p>
+                        <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+          
+                <div class="step-note">
+                  <p class="check_icon flex flex--center txt--fw-400 tit--fz12k color--blk">시술 시작 전 <span
+                      class="color--blue txt--fw-600">지원 결정통지서 받기!</span></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <div class="arrow_b_blue mt-10 mb-10"></div>
+        </div>
+
+        <div  id="item-1" class="tab-panel panel active">
+          <section class="ai-section02 mb-20">
+            <div class="box_container">
+              <!-- 시술시작 -->
+              <div class="step-item">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/start_treatment.svg" alt="시술시작">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blk">
+                      <span class="color--blue txt--fw-600">시술시작</span> <br>
+                      <span class="color--gray77 tit--fz10 txt--fw-5 00">(월경 2~3일차)</span></p>
+                    <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="arrow_b_blue mt-6 mb-6"></div>
+
+              <!-- 병원 방문 -->
+              <div class="step-item block">
+                <div class="box">
+                  <div class="flex mb-7 gap-10">
+                    <div class="step-icon">
+                      <img src="/src/main/resource/static/images/user/infertility/hospital_prescription_visit01.svg" alt="병원 방문 처방">
+                    </div>
+                    <div class="step-content">
+                      <p class="step-text color--blk">처방 및 검사를 위한 <span class="color--blue">병원 방문</span></p>
+                    </div>
+                  </div>
+                  <p class="color--blk tit--fz12 txt--fw-400 mb-4">
+                    과배란 유도 중에는 약 2주간 3-5회 병원에 방문하여<br>
+                    난포의 성장을 검사하게 됩니다. (초음파, 혈액 검사)
+                  </p>
+                  <p class="warning_txt warning_txt_gray color--gray99">개인의 상태에 따라 병원 방문 횟수는 변경 될 수 있습니다.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-6 flex--center mt-10 mb-10">
+                <img src="/src/main/resource/static/images/user/infertility/pill_icon.svg" alt="알약">
+                <img src="/src/main/resource/static/images/user/infertility/pill_icon.svg" alt="알약">
+                <img src="/src/main/resource/static/images/user/infertility/pill_icon.svg" alt="알약">
+              </div>
+              
+              <!-- 배란유도제 복용 -->
+              <div class="step-item">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/medicine.svg" alt="배란유도제 복용">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blue">배란유도제 복용</p>
                   </div>
                 </div>
               </div>
-            </section>
-            
-            <div class="arrow_b_blue mt-10 mb-10"></div>
-          </div>
 
-          <div  id="item-1" class="tab-panel panel active">
-            <section class="ai-section02 mb-20">
-              <div class="box_container">
-                <!-- 시술시작 -->
-                <div class="step-item">
-                  <div class="box flex">
-                    <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/start_treatment.svg" alt="시술시작">
-                    </div>
-                    <div class="step-content flex">
-                      <p class="step-text color--blk">
-                        <span class="color--blue txt--fw-600">시술시작</span> <br>
-                        <span class="color--gray77 tit--fz10 txt--fw-5 00">(월경 2~3일차)</span></p>
-                      <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                    </div>
+              <div class="arrow_b_blue mt-6 mb-6"></div>
+              
+              <!-- 정자 채취 및 인공수정 -->
+              <div class="step-item">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/insemination.svg" alt="정자 채취 및 인공수정">
                   </div>
-                </div> 
-
-                <div class="arrow_b_blue mt-6 mb-6"></div>
-
-                <!-- 병원 방문 -->
-                <div class="step-item block">
-                  <div class="box">
-                    <div class="flex mb-7 gap-10">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/hospital_prescription_visit01.svg" alt="병원 방문 처방">
-                      </div>
-                      <div class="step-content">
-                        <p class="step-text color--blk">처방 및 검사를 위한 <span class="color--blue">병원 방문</span></p>
-                      </div>
-                    </div>
-                    <p class="color--blk tit--fz12 txt--fw-400 mb-4">
-                      과배란 유도 중에는 약 2주간 3-5회 병원에 방문하여<br>
-                      난포의 성장을 검사하게 됩니다. (초음파, 혈액 검사)
+                  <div class="step-content flex">
+                    <p class="step-text color--blk">정자 채취 및 인공수정 시술<br> 
+                      <span class="color--gray77 tit--fz10 txt--fw-500">(월경 12~16일)</span>
                     </p>
-                    <p class="warning_txt warning_txt_gray color--gray99">개인의 상태에 따라 병원 방문 횟수는 변경 될 수 있습니다.</p>
+                    <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
                   </div>
                 </div>
+              </div>
 
-                <div class="flex gap-6 flex--center mt-10 mb-10">
-                  <img src="/src/main/resource/static/images/user/infertility/pill_icon.svg" alt="알약">
-                  <img src="/src/main/resource/static/images/user/infertility/pill_icon.svg" alt="알약">
-                  <img src="/src/main/resource/static/images/user/infertility/pill_icon.svg" alt="알약">
-                </div>
-                
-                <!-- 배란유도제 복용 -->
-                <div class="step-item">
-                  <div class="box flex">
-                    <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/medicine.svg" alt="배란유도제 복용">
-                    </div>
-                    <div class="step-content flex">
-                      <p class="step-text color--blue">배란유도제 복용</p>
-                    </div>
+              <div class="arrow_b_blue mt-6 mb-6"></div>
+              
+              <!-- 임신 여부 확인 -->
+              <div class="step-item">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/pregnancy_test.svg" alt="임신 여부 확인">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blk">임신 여부 확인(혈액 검사,B-HCG)</p>
                   </div>
                 </div>
+              </div>
 
-                <div class="arrow_b_blue mt-6 mb-6"></div>
-                
-                <!-- 정자 채취 및 인공수정 -->
-                <div class="step-item">
+              <div class="arrow_b_blue mt-6 mb-6"></div>
+              
+              <!-- 임신 확인 -->
+              <div class="step-item mb-14">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/pregnancy_confirm.svg" alt="임신 확인">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blk">임신 확인 <span class="color--gray77 tit--fz10 txt--fw-500"><br>(인공수정 12~14일 후)</span></p>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:void(0);" class="step-detail-link color--blue flex flex--center">인공수정(IUI)에 대해 자세히 알아보기</a>
+            </div>
+          </section>
+          <p class="noti color--gray99 tit--fz10 txt--fw-400">
+            ※ 위 도식은 경구용 배란유도제를 사용하는 배란유도 주기 기준으로
+            작성되었습니다. 보다 자세한 내용은 반드시 전문의와 상담이 필요합니다.
+          </p>
+        </div>
+
+        <div id="item-2" class="tab-panel panel">
+          <section class="ai-section02">
+            <div class="box_container">
+              <!-- 시술시작 -->
+              <div class="step-item">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/start_treatment.svg" alt="시술시작">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blk">
+                      <span class="color--blue txt--fw-600">시술시작</span> <br>
+                      <span class="color--gray77 tit--fz10 txt--fw-5 00">(월경 2~3일차)</span>
+                    </p>
+                    <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="arrow_b_blue mt-6 mb-6"></div>
+          
+              <!-- 병원 방문 -->
+              <div class="step-item block">
+                <div class="box">
+                  <div class="flex mb-7 gap-10">
+                    <div class="step-icon">
+                      <img src="/src/main/resource/static/images/user/infertility/hospital_prescription_visit02.svg" alt="병원 방문 처방">
+                    </div>
+                    <div class="step-content">
+                      <p class="step-text color--blk">처방 및 검사를 위한 <span class="color--blue">병원 방문</span></p>
+                    </div>
+                  </div>
+                  <p class="color--blk tit--fz12 txt--fw-400 mb-4">
+                    배란 유도 중에는 약 2주간 3~5회 병원에 <br>
+                    방문하여 난포의 성장을 검사하게 됩니다. (초음파)
+                  </p>
+                  <p class="warning_txt warning_txt_gray color--gray99">개인의 상태에 따라 병원 방문 횟수는 변경 될 수 있습니다.</p>
+                </div>
+              </div>
+          
+              <div class="flex gap-6 flex--center mt-10 mb-10">
+                <img src="/src/main/resource/static/images/user/infertility/injection_icon.svg" alt="주사기">
+                <img src="/src/main/resource/static/images/user/infertility/injection_icon.svg" alt="주사기">
+                <img src="/src/main/resource/static/images/user/infertility/injection_icon.svg" alt="주사기">
+              </div>
+          
+              <!-- 과배란 유도주사 -->
+              <div class="step-item">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/fertility_shot.svg" alt="과배란 유도주사">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blue">과배란 유도주사</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="arrow_b_blue mt-6 mb-6"></div>
+          
+              <!-- 난자 & 정자 채취 -->
+              <div class="step-item mb-14">
+                <div class="box flex">
+                  <div class="step-icon">
+                    <img src="/src/main/resource/static/images/user/infertility/insemination.svg" alt="정자 채취 및 인공수정">
+                  </div>
+                  <div class="step-content flex">
+                    <p class="step-text color--blk">난자 & 정자 채취<br>
+                      <span class="color--gray77 tit--fz10 txt--fw-500">(월경 12~16일)</span>
+                    </p>
+                    <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:void(0);" class="step-detail-link color--blue flex flex--center">체외수정(IVF)에 대해 자세히 알아보기</a>
+            </div>
+          </section>
+
+          <div class="arrow_b_purple mt-10 mb-12"></div>
+
+          <section class="ai-section03 mb-14">
+            <div class="box_container">
+              <p class="title color--primary flex flex--center txt--fw-700 tit--fz12 mb-14">
+                아래 과정 동안<br>
+                착상유지제/황체기 보강이 필요할 수 있습니다.
+              </p>
+              <!-- 자식탭 패널 -->
+              <div class="sub-tab__b">
+                <button class="btn on" data-subcontent="sub3">신선 배아 이식</button>
+                <button class="btn" data-subcontent="sub4">냉동 배아 이식</button>
+              </div>
+              <!-- 자식탭 패널 -->
+              <div class="sub-tab-panel active" data-subcontent="sub3">
+                <!-- 신선 배아 이식 -->
+                <div class="step-item mb-14">
                   <div class="box flex">
                     <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/insemination.svg" alt="정자 채취 및 인공수정">
+                      <img src="/src/main/resource/static/images/user/infertility/embryo_transfer_fresh.svg" alt="신선 배아 이식">
                     </div>
                     <div class="step-content flex">
-                      <p class="step-text color--blk">정자 채취 및 인공수정 시술<br> 
-                        <span class="color--gray77 tit--fz10 txt--fw-500">(월경 12~16일)</span>
+                      <p class="step-text color--blk">신선 배아 이식<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(채취 3~5일 후)</span>
                       </p>
                       <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
                     </div>
                   </div>
                 </div>
 
-                <div class="arrow_b_blue mt-6 mb-6"></div>
-                
+                <div class="arrow_b_purple mt-6 mb-6"></div>
+
                 <!-- 임신 여부 확인 -->
                 <div class="step-item">
                   <div class="box flex">
@@ -251,326 +398,181 @@
                       <img src="/src/main/resource/static/images/user/infertility/pregnancy_test.svg" alt="임신 여부 확인">
                     </div>
                     <div class="step-content flex">
-                      <p class="step-text color--blk">임신 여부 확인(혈액 검사,B-HCG)</p>
+                      <p class="step-text color--blk">
+                        임신 여부 확인(혈액 검사,B-HCG)<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(이식 9~11일 후)</span>
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="arrow_b_blue mt-6 mb-6"></div>
-                
-                <!-- 임신 확인 -->
-                <div class="step-item mb-14">
-                  <div class="box flex">
-                    <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/pregnancy_confirm.svg" alt="임신 확인">
-                    </div>
-                    <div class="step-content flex">
-                      <p class="step-text color--blk">임신 확인 <span class="color--gray77 tit--fz10 txt--fw-500"><br>(인공수정 12~14일 후)</span></p>
-                    </div>
-                  </div>
-                </div>
-                <a href="javascript:void(0);" class="step-detail-link color--blue flex flex--center">인공수정(IUI)에 대해 자세히 알아보기</a>
-              </div>
-            </section>
-            <p class="noti color--gray99 tit--fz10 txt--fw-400">
-              ※ 위 도식은 경구용 배란유도제를 사용하는 배란유도 주기 기준으로
-              작성되었습니다. 보다 자세한 내용은 반드시 전문의와 상담이 필요합니다.
-            </p>
-          </div>
+                <div class="arrow_b_purple mt-6 mb-6"></div>
 
-          <div id="item-2" class="tab-panel panel">
-            <section class="ai-section02">
-              <div class="box_container">
-                <!-- 시술시작 -->
+                <!-- 임신 여부 확인 -->
                 <div class="step-item">
                   <div class="box flex">
                     <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/start_treatment.svg" alt="시술시작">
+                      <img src="/src/main/resource/static/images/user/infertility/ultrasound_implantation_check.svg" alt="임신 여부 확인">
                     </div>
                     <div class="step-content flex">
                       <p class="step-text color--blk">
-                        <span class="color--blue txt--fw-600">시술시작</span> <br>
-                        <span class="color--gray77 tit--fz10 txt--fw-5 00">(월경 2~3일차)</span>
+                        임신 여부 확인(초음파, 아기집)<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(이식 16~21일 후)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="arrow_b_purple mt-6 mb-6"></div>
+
+                <!-- 임신 확인 -->
+                <div class="step-item">
+                  <div class="box">
+                    <div class="flex mb-7 gap-10">
+                      <div class="step-icon">
+                        <img src="/src/main/resource/static/images/user/infertility/pregnancy_confirm.svg" alt="임신 확인">
+                      </div>
+                      <div class="step-content">
+                        <p class="step-text color--blk">
+                          임신 유지~분만<br>
+                          <span class="color--gray77 tit--fz10 txt--fw-500">(인공수정 12~14일 후)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <p class="warning_txt warning_txt_gray color--gray99">
+                      병원에 따라 주치의가 계속 진료를 이어가거나,<br>
+                      분만병원으로 전원해 드릴 수 있으니 참고 부탁드립니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sub-tab-panel" data-subcontent="sub4">
+
+                <!-- 냉동 배아 이식주기 시작 -->
+                <div class="step-item mb-14">
+                  <div class="box flex">
+                    <div class="step-icon">
+                      <img src="/src/main/resource/static/images/user/infertility/embryo_transfer_frozen_start.svg" alt="냉동 배아 이식주기 시작">
+                    </div>
+                    <div class="step-content flex">
+                      <p class="step-text color--blk">냉동 배아 이식주기 시작<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(월경 2~3일)</span>
                       </p>
                       <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
                     </div>
                   </div>
                 </div>
-            
-                <div class="arrow_b_blue mt-6 mb-6"></div>
-            
+
+                <div class="arrow_b_purple mt-6 mb-6"></div>
+
                 <!-- 병원 방문 -->
                 <div class="step-item block">
                   <div class="box">
                     <div class="flex mb-7 gap-10">
                       <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/hospital_prescription_visit02.svg" alt="병원 방문 처방">
+                        <img src="/src/main/resource/static/images/user/infertility/hospital_visit.svg" alt="병원 방문 처방">
                       </div>
                       <div class="step-content">
-                        <p class="step-text color--blk">처방 및 검사를 위한 <span class="color--blue">병원 방문</span></p>
+                        <p class="step-text color--blk">병원 방문</p>
                       </div>
                     </div>
                     <p class="color--blk tit--fz12 txt--fw-400 mb-4">
-                      배란 유도 중에는 약 2주간 3~5회 병원에 <br>
-                      방문하여 난포의 성장을 검사하게 됩니다. (초음파)
+                      자연 주기/인공 주기에 따라 내원 빈도가 달라집니다.<br>
+                      약 3주간 많게는 3~5회 이상 병원 방문이 필요할 수 있습니다.
                     </p>
                     <p class="warning_txt warning_txt_gray color--gray99">개인의 상태에 따라 병원 방문 횟수는 변경 될 수 있습니다.</p>
                   </div>
                 </div>
-            
-                <div class="flex gap-6 flex--center mt-10 mb-10">
-                  <img src="/src/main/resource/static/images/user/infertility/injection_icon.svg" alt="주사기">
-                  <img src="/src/main/resource/static/images/user/infertility/injection_icon.svg" alt="주사기">
-                  <img src="/src/main/resource/static/images/user/infertility/injection_icon.svg" alt="주사기">
-                </div>
-            
-                <!-- 과배란 유도주사 -->
-                <div class="step-item">
-                  <div class="box flex">
-                    <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/fertility_shot.svg" alt="과배란 유도주사">
-                    </div>
-                    <div class="step-content flex">
-                      <p class="step-text color--blue">과배란 유도주사</p>
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="arrow_b_blue mt-6 mb-6"></div>
-            
-                <!-- 난자 & 정자 채취 -->
+
+                <div class="arrow_b_purple mt-6 mb-6"></div>
+
+                <!-- 신선 배아 이식 -->
                 <div class="step-item mb-14">
                   <div class="box flex">
                     <div class="step-icon">
-                      <img src="/src/main/resource/static/images/user/infertility/insemination.svg" alt="정자 채취 및 인공수정">
+                      <img src="/src/main/resource/static/images/user/infertility/embryo_transfer_fresh.svg" alt="신선 배아 이식">
                     </div>
                     <div class="step-content flex">
-                      <p class="step-text color--blk">난자 & 정자 채취<br>
-                        <span class="color--gray77 tit--fz10 txt--fw-500">(월경 12~16일)</span>
+                      <p class="step-text color--blk">신선 배아 이식<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(채취 3~5일 후)</span>
                       </p>
                       <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
                     </div>
                   </div>
                 </div>
-                <a href="javascript:void(0);" class="step-detail-link color--blue flex flex--center">체외수정(IVF)에 대해 자세히 알아보기</a>
-              </div>
-            </section>
 
-            <div class="arrow_b_purple mt-10 mb-12"></div>
+                <div class="arrow_b_purple mt-6 mb-6"></div>
 
-            <section class="ai-section03 mb-14">
-              <div class="box_container">
-                <p class="title color--primary flex flex--center txt--fw-700 tit--fz12 mb-14">
-                  아래 과정 동안<br>
-                  착상유지제/황체기 보강이 필요할 수 있습니다.
-                </p>
-                <!-- 자식탭 패널 -->
-                <div class="sub-tab__b">
-                  <button class="btn on" data-subcontent="sub3">신선 배아 이식</button>
-                  <button class="btn" data-subcontent="sub4">냉동 배아 이식</button>
-                </div>
-                <!-- 자식탭 패널 -->
-                <div class="sub-tab-panel active" data-subcontent="sub3">
-                  <!-- 신선 배아 이식 -->
-                  <div class="step-item mb-14">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/embryo_transfer_fresh.svg" alt="신선 배아 이식">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">신선 배아 이식<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(채취 3~5일 후)</span>
-                        </p>
-                        <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                      </div>
+                <!-- 임신 여부 확인 -->
+                <div class="step-item">
+                  <div class="box flex">
+                    <div class="step-icon">
+                      <img src="/src/main/resource/static/images/user/infertility/pregnancy_test.svg" alt="임신 여부 확인">
                     </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 임신 여부 확인 -->
-                  <div class="step-item">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/pregnancy_test.svg" alt="임신 여부 확인">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">
-                          임신 여부 확인(혈액 검사,B-HCG)<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(이식 9~11일 후)</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 임신 여부 확인 -->
-                  <div class="step-item">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/ultrasound_implantation_check.svg" alt="임신 여부 확인">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">
-                          임신 여부 확인(초음파, 아기집)<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(이식 16~21일 후)</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 임신 확인 -->
-                  <div class="step-item">
-                    <div class="box">
-                      <div class="flex mb-7 gap-10">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/pregnancy_confirm.svg" alt="임신 확인">
-                        </div>
-                        <div class="step-content">
-                          <p class="step-text color--blk">
-                            임신 유지~분만<br>
-                            <span class="color--gray77 tit--fz10 txt--fw-500">(인공수정 12~14일 후)</span>
-                          </p>
-                        </div>
-                      </div>
-                      <p class="warning_txt warning_txt_gray color--gray99">
-                        병원에 따라 주치의가 계속 진료를 이어가거나,<br>
-                        분만병원으로 전원해 드릴 수 있으니 참고 부탁드립니다.
+                    <div class="step-content flex">
+                      <p class="step-text color--blk">
+                        임신 여부 확인(혈액 검사,B-HCG)<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(이식 9~11일 후)</span>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="sub-tab-panel" data-subcontent="sub4">
+                <div class="arrow_b_purple mt-6 mb-6"></div>
 
-                  <!-- 냉동 배아 이식주기 시작 -->
-                  <div class="step-item mb-14">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/embryo_transfer_frozen_start.svg" alt="냉동 배아 이식주기 시작">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">냉동 배아 이식주기 시작<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(월경 2~3일)</span>
-                        </p>
-                        <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                      </div>
+                <!-- 임신 여부 확인 -->
+                <div class="step-item">
+                  <div class="box flex">
+                    <div class="step-icon">
+                      <img src="/src/main/resource/static/images/user/infertility/ultrasound_implantation_check.svg" alt="임신 여부 확인">
                     </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 병원 방문 -->
-                  <div class="step-item block">
-                    <div class="box">
-                      <div class="flex mb-7 gap-10">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/hospital_visit.svg" alt="병원 방문 처방">
-                        </div>
-                        <div class="step-content">
-                          <p class="step-text color--blk">병원 방문</p>
-                        </div>
-                      </div>
-                      <p class="color--blk tit--fz12 txt--fw-400 mb-4">
-                        자연 주기/인공 주기에 따라 내원 빈도가 달라집니다.<br>
-                        약 3주간 많게는 3~5회 이상 병원 방문이 필요할 수 있습니다.
-                      </p>
-                      <p class="warning_txt warning_txt_gray color--gray99">개인의 상태에 따라 병원 방문 횟수는 변경 될 수 있습니다.</p>
-                    </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 신선 배아 이식 -->
-                  <div class="step-item mb-14">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/embryo_transfer_fresh.svg" alt="신선 배아 이식">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">신선 배아 이식<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(채취 3~5일 후)</span>
-                        </p>
-                        <a href="javascript:void(0);" class="step-detail-link color--gray88">자세히 보기</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 임신 여부 확인 -->
-                  <div class="step-item">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/pregnancy_test.svg" alt="임신 여부 확인">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">
-                          임신 여부 확인(혈액 검사,B-HCG)<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(이식 9~11일 후)</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 임신 여부 확인 -->
-                  <div class="step-item">
-                    <div class="box flex">
-                      <div class="step-icon">
-                        <img src="/src/main/resource/static/images/user/infertility/ultrasound_implantation_check.svg" alt="임신 여부 확인">
-                      </div>
-                      <div class="step-content flex">
-                        <p class="step-text color--blk">
-                          임신 여부 확인(초음파, 아기집)<br>
-                          <span class="color--gray77 tit--fz10 txt--fw-500">(이식 16~21일 후)</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="arrow_b_purple mt-6 mb-6"></div>
-
-                  <!-- 임신 확인 -->
-                  <div class="step-item">
-                    <div class="box">
-                      <div class="flex mb-7 gap-10">
-                        <div class="step-icon">
-                          <img src="/src/main/resource/static/images/user/infertility/pregnancy_confirm.svg" alt="임신 확인">
-                        </div>
-                        <div class="step-content">
-                          <p class="step-text color--blk">
-                            임신 유지~분만<br>
-                            <span class="color--gray77 tit--fz10 txt--fw-500">(인공수정 12~14일 후)</span>
-                          </p>
-                        </div>
-                      </div>
-                      <p class="warning_txt warning_txt_gray color--gray99">
-                        병원에 따라 주치의가 계속 진료를 이어가거나,<br>
-                        분만병원으로 전원해 드릴 수 있으니 참고 부탁드립니다.
+                    <div class="step-content flex">
+                      <p class="step-text color--blk">
+                        임신 여부 확인(초음파, 아기집)<br>
+                        <span class="color--gray77 tit--fz10 txt--fw-500">(이식 16~21일 후)</span>
                       </p>
                     </div>
+                  </div>
+                </div>
+
+                <div class="arrow_b_purple mt-6 mb-6"></div>
+
+                <!-- 임신 확인 -->
+                <div class="step-item">
+                  <div class="box">
+                    <div class="flex mb-7 gap-10">
+                      <div class="step-icon">
+                        <img src="/src/main/resource/static/images/user/infertility/pregnancy_confirm.svg" alt="임신 확인">
+                      </div>
+                      <div class="step-content">
+                        <p class="step-text color--blk">
+                          임신 유지~분만<br>
+                          <span class="color--gray77 tit--fz10 txt--fw-500">(인공수정 12~14일 후)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <p class="warning_txt warning_txt_gray color--gray99">
+                      병원에 따라 주치의가 계속 진료를 이어가거나,<br>
+                      분만병원으로 전원해 드릴 수 있으니 참고 부탁드립니다.
+                    </p>
                   </div>
                 </div>
               </div>
-            </section>
-            <p class="noti color--gray99 tit--fz10 txt--fw-400">
-              ※ 위 도식은 단기 요법 기준으로 작성되었습니다.<br>
-              실제 스케줄은 배란 유도 요법의 종류, 개인의 상태에 따라 달라질 수 있습니다.<br>
-              보다 자세한 내용은 반드시 전문의 상담이 필요합니다.
-            </p>
-          </div>
+            </div>
+          </section>
+          <p class="noti color--gray99 tit--fz10 txt--fw-400">
+            ※ 위 도식은 단기 요법 기준으로 작성되었습니다.<br>
+            실제 스케줄은 배란 유도 요법의 종류, 개인의 상태에 따라 달라질 수 있습니다.<br>
+            보다 자세한 내용은 반드시 전문의 상담이 필요합니다.
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <footer class="footer"></footer>
-
+  <!-- footer -->
+  <footer class="footer"></footer>
 
 </body>
 

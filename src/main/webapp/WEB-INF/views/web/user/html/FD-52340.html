@@ -31,7 +31,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-  
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       uiEvent.init();
     }
   
@@ -40,6 +40,9 @@
 </head>
 
 <body id="wrap" class="faq-list bg--primary-blue">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
   <!-- 응원 글 남기기 팝업-->
   <div class="pop__overlay" style="display: none;">
     <div class="popup" id="pop_confirm">
@@ -67,34 +70,35 @@
     </div>
   </div>
 
-    <!-- 사연 올리기 팝업-->
-    <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_withdraw">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
-        </span>
-        <div class="popup__title color--blk">
-          여러분의 사연을 올려주세요.<br>
-          <span class="txt--fw-600">따뜻한 사연</span>은 큰 힘이 됩니다.
-        </div>
-        <div class="form__box">
-          <input type="text" name="" placeholder="제목을 작성해주세요." id="">
-        </div> 
-        <p class="popup__text align--center">
-          <textarea class="textarea--resize--none mb-20">
+  <!-- 사연 올리기 팝업-->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_withdraw">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
+      </span>
+      <div class="popup__title color--blk">
+        여러분의 사연을 올려주세요.<br>
+        <span class="txt--fw-600">따뜻한 사연</span>은 큰 힘이 됩니다.
+      </div>
+      <div class="form__box">
+        <input type="text" name="" placeholder="제목을 작성해주세요." id="">
+      </div> 
+      <p class="popup__text align--center">
+        <textarea class="textarea--resize--none mb-20">
 자연스럽게 임신을 기다렸지만,
 시간이 지나도 소식이 없었습니다.
 수많은 검사와 시술을 반복하며 지쳐갈 때마다
 서로의 손을 놓지 않았습니다.
 어느 날, 기적처럼 우리에게 아기 천사가 찾아왔습니다. 그 순간의 감동을 잊을 수 없습니다.
-          </textarea>
-        </p>
-        <p class="warning_txt warning_txt_light_blue color--gray99 mb-8 tit--fz10">건전한 소통을 위해 광고, 비방, 욕설 등 게시판 성격에 맞지 않는 글은 별도의 고지 없이 삭제될 수 있습니다.</p>
-        <div class="btn__box">
-          <button class="btn bg--primary-blue btn__pop-close">사연 올리기</button>
-        </div>
+        </textarea>
+      </p>
+      <p class="warning_txt warning_txt_light_blue color--gray99 mb-8 tit--fz10">건전한 소통을 위해 광고, 비방, 욕설 등 게시판 성격에 맞지 않는 글은 별도의 고지 없이 삭제될 수 있습니다.</p>
+      <div class="btn__box">
+        <button class="btn bg--primary-blue btn__pop-close">사연 올리기</button>
       </div>
     </div>
+  </div>
+
   <div class="search-header-wrap select-wrap">
     <!-- header -->
     <div class="flex flex--between gap-8">
@@ -135,295 +139,294 @@
     </div>
   </div>
 
-    <!-- 헤더 자리 확보 -->
-    <div class="spacer h-136"></div> 
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
 
-    <!-- main -->
-    <div class="content shelter">
-      <div class="search-result tab-content is-radius active min--136">
-        <div class="container">
-          <section class="section01 mb-30">
-            <div class="section02">
-              <p class="tit--fz20 txt--fw-700 color--blk mb-12">
-                쉼터
-              </p>
-              <p class="tit--fz14  txt--fw-400 color--gray88 mb-30 ">
-                새로운 생명을 만나러 가는 여정 속에서<br>
-                서로를 응원하며 잠시 쉬어가는 공간입니다.<br>
-                당신의 이야기를 들려주세요.<br>
-                따뜻한 한마디는 큰 힘이 됩니다.
-              </p>
-            </div>
+  <!-- main -->
+  <div class="content shelter">
+    <div class="search-result tab-content is-radius active min--136">
+      <div class="container">
+        <section class="section01 mb-30">
+          <div class="section02">
+            <p class="tit--fz20 txt--fw-700 color--blk mb-12">
+              쉼터
+            </p>
+            <p class="tit--fz14  txt--fw-400 color--gray88 mb-30 ">
+              새로운 생명을 만나러 가는 여정 속에서<br>
+              서로를 응원하며 잠시 쉬어가는 공간입니다.<br>
+              당신의 이야기를 들려주세요.<br>
+              따뜻한 한마디는 큰 힘이 됩니다.
+            </p>
+          </div>
 
 
-            <div class="btn__box"> 
-              <button class="btn pop-btn btn--blue" data-popup-target="pop_confirm">내 사연 올리기</button>
-            </div>
-  
-            <hr>
+          <div class="btn__box"> 
+            <button class="btn pop-btn btn--blue" data-popup-target="pop_confirm">내 사연 올리기</button>
+          </div>
 
-            <!-- 응원 슬라이드 박스 -->
-            <div class="cheering-box swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="contents">
-                    <span class="flex gap-6 color--blue tit--fz12 txt--fw-700 mb-14">
-                      <img src="/src/main/resource/static/images/user/infertility_assistance/icon_message.svg" alt="난임지원"> 
-                      첫번째 사연
+          <hr>
+
+          <!-- 응원 슬라이드 박스 -->
+          <div class="cheering-box swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="contents">
+                  <span class="flex gap-6 color--blue tit--fz12 txt--fw-700 mb-14">
+                    <img src="/src/main/resource/static/images/user/infertility_assistance/icon_message.svg" alt="난임지원"> 
+                    첫번째 사연
+                  </span>
+                  <p class="color--blk txt--fw-700 tit--fz22 mb-20">우리에게 찾아온 작은 기적</p>
+                  <p class="color--gray44 tit--fz14 txt--fw-400 mb-62">
+                    그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
+                    같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
+                    우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
+                  </p>
+                  <div class="flex gap-12">
+                    <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
+                      <img src="/src/main/resource/static/images/user/infertility_assistance/icon_view.svg" alt="난임지원"> 
+                      1324
                     </span>
-                    <p class="color--blk txt--fw-700 tit--fz22 mb-20">우리에게 찾아온 작은 기적</p>
-                    <p class="color--gray44 tit--fz14 txt--fw-400 mb-62">
-                      그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
-                      같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
-                      우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
-                    </p>
-                    <div class="flex gap-12">
-                      <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
-                        <img src="/src/main/resource/static/images/user/infertility_assistance/icon_view.svg" alt="난임지원"> 
-                        1324
-                      </span>
-                      <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
-                        <img src="/src/main/resource/static/images/user/infertility_assistance/icon_comment.svg" alt="난임지원"> 
-                        1324
-                      </span>
-                    </div> 
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="contents">
-                    <span class="flex gap-6 color--blue tit--fz12 txt--fw-700 mb-14">
-                      <img src="/src/main/resource/static/images/user/infertility_assistance/icon_message.svg" alt="난임지원"> 
-                      두번째 사연
+                    <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
+                      <img src="/src/main/resource/static/images/user/infertility_assistance/icon_comment.svg" alt="난임지원"> 
+                      1324
                     </span>
-                    <p class="color--blk txt--fw-700 tit--fz22 mb-20">우리에게 찾아온 작은 기적</p>
-                    <p class="color--gray44 tit--fz14 txt--fw-400 mb-62">
-                      그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
-                      같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
-                      우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
-                      그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
-                      같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
-                      우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
-                      그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
-                      같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
-                      우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
-                    </p>
-                    <div class="flex gap-12">
-                      <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
-                        <img src="/src/main/resource/static/images/user/infertility_assistance/icon_view.svg" alt="난임지원"> 
-                        1324
-                      </span>
-                      <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
-                        <img src="/src/main/resource/static/images/user/infertility_assistance/icon_comment.svg" alt="난임지원"> 
-                        1324
-                      </span>
-                    </div> 
-                  </div>
+                  </div> 
                 </div>
-                <!-- 추가 슬라이드 -->
               </div>
-
-              <!-- Swiper 버튼 및 페이지네이션 옵션 -->
-              <!-- <div class="swiper-pagination"></div> -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-slide">
+                <div class="contents">
+                  <span class="flex gap-6 color--blue tit--fz12 txt--fw-700 mb-14">
+                    <img src="/src/main/resource/static/images/user/infertility_assistance/icon_message.svg" alt="난임지원"> 
+                    두번째 사연
+                  </span>
+                  <p class="color--blk txt--fw-700 tit--fz22 mb-20">우리에게 찾아온 작은 기적</p>
+                  <p class="color--gray44 tit--fz14 txt--fw-400 mb-62">
+                    그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
+                    같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
+                    우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
+                    그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
+                    같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
+                    우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
+                    그동안의 아픔과 눈물이 헛되지 않았음을 깨달았고,
+                    같은 길을 걷는 이들에게 희망을 전하고 싶습니다.
+                    우리 부부가 걸어온 길은 쉽지 않았지만, 포기하지 않는다면 반드시 기적이 찾아올 것이라고 믿습니다.
+                  </p>
+                  <div class="flex gap-12">
+                    <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
+                      <img src="/src/main/resource/static/images/user/infertility_assistance/icon_view.svg" alt="난임지원"> 
+                      1324
+                    </span>
+                    <span class="flex gap-3 color--blue tit--fz14 txt--fw-700">
+                      <img src="/src/main/resource/static/images/user/infertility_assistance/icon_comment.svg" alt="난임지원"> 
+                      1324
+                    </span>
+                  </div> 
+                </div>
+              </div>
+              <!-- 추가 슬라이드 -->
             </div>
 
-            <div class="btn__box mb-40">
-              <button class="btn pop-btn btn--line-blue" data-popup-target="pop_withdraw">응원 글 남기기</button>
-            </div>
-          </section>
+            <!-- Swiper 버튼 및 페이지네이션 옵션 -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
 
-          <div class="list comment-list">
-            <ul class="comment__box">
-              <li class="comment__list">
-                <div class="comment__question">
-                  <div class="comment__question--category">
-                    <p class="comment_index color--blk txt--fw-500 tit--fz12"><span class="color--blue txt--fw-700">213.</span> kim*****</p>
-                    <p class="comment_txt">앞으로도 좋을 글 많이 부탁드리겠습니다</p>
-                    <p class="comment_date">2025-09-25 23:12</p>
-                    <div class="flex flex--between">
-                      <p class="comment_button">답글<span>12</span></p>
-                      <div class="icons">
-                        <ol class="flex gap-8">
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_like.svg" alt="난임지원">
-                              213
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_luck.svg" alt="난임지원">
-                              45
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_clap.svg" alt="난임지원">
-                              65
-                            </a>
-                          </li>
-                        </ol>
-                      </div>
+          <div class="btn__box mb-40">
+            <button class="btn pop-btn btn--line-blue" data-popup-target="pop_withdraw">응원 글 남기기</button>
+          </div>
+        </section>
+
+        <div class="list comment-list">
+          <ul class="comment__box">
+            <li class="comment__list">
+              <div class="comment__question">
+                <div class="comment__question--category">
+                  <p class="comment_index color--blk txt--fw-500 tit--fz12"><span class="color--blue txt--fw-700">213.</span> kim*****</p>
+                  <p class="comment_txt">앞으로도 좋을 글 많이 부탁드리겠습니다</p>
+                  <p class="comment_date">2025-09-25 23:12</p>
+                  <div class="flex flex--between">
+                    <p class="comment_button">답글<span>12</span></p>
+                    <div class="icons">
+                      <ol class="flex gap-8">
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_like.svg" alt="난임지원">
+                            213
+                          </a>
+                        </li>
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_luck.svg" alt="난임지원">
+                            45
+                          </a>
+                        </li>
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_clap.svg" alt="난임지원">
+                            65
+                          </a>
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>
-                <div class="comment__answer" >
-                  <div class="comment__answer_header">
-                    <p>댓글접기</p>
-                  </div>
-                  <ol>
-                    <li class="comment__answer_contents">
-                      <span>you******</span>
-                      <p>큰 도움이 되었습니다. 굿~~</p>
-                      <del>2025-09-23 23:12</del>
-                    </li>
-                    <li class="comment__answer_contents">
-                      <span>hh******</span>
-                      <p>좋은 답변이었습니다</p>
-                      <del>2025-09-23 23:12</del>
-                    </li>
-                    <li class="comment__answer_contents">
-                      <textarea class="textarea--resize--none" placeholder="100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다."></textarea>
-                    </li>
-                  </ol>
+              </div>
+              <div class="comment__answer" >
+                <div class="comment__answer_header">
+                  <p>댓글접기</p>
                 </div>
-              </li>
-              <li class="comment__list">
-                <div class="comment__question">
-                  <div class="comment__question--category">
-                    <p class="comment_index color--blk txt--fw-500 tit--fz12"><span class="color--blue txt--fw-700">213.</span> kim*****</p>
-                    <p class="comment_txt">앞으로도 좋을 글 많이 부탁드리겠습니다</p>
-                    <p class="comment_date">2025-09-25 23:12</p>
-                    <div class="flex flex--between">
-                      <p class="comment_button">답글<span>12</span></p>
-                      <div class="icons">
-                        <ol class="flex gap-8">
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_like.svg" alt="난임지원">
-                              213
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_luck.svg" alt="난임지원">
-                              45
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_clap.svg" alt="난임지원">
-                              65
-                            </a>
-                          </li>
-                        </ol>
-                      </div>
+                <ol>
+                  <li class="comment__answer_contents">
+                    <span>you******</span>
+                    <p>큰 도움이 되었습니다. 굿~~</p>
+                    <del>2025-09-23 23:12</del>
+                  </li>
+                  <li class="comment__answer_contents">
+                    <span>hh******</span>
+                    <p>좋은 답변이었습니다</p>
+                    <del>2025-09-23 23:12</del>
+                  </li>
+                  <li class="comment__answer_contents">
+                    <textarea class="textarea--resize--none" placeholder="100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다."></textarea>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li class="comment__list">
+              <div class="comment__question">
+                <div class="comment__question--category">
+                  <p class="comment_index color--blk txt--fw-500 tit--fz12"><span class="color--blue txt--fw-700">213.</span> kim*****</p>
+                  <p class="comment_txt">앞으로도 좋을 글 많이 부탁드리겠습니다</p>
+                  <p class="comment_date">2025-09-25 23:12</p>
+                  <div class="flex flex--between">
+                    <p class="comment_button">답글<span>12</span></p>
+                    <div class="icons">
+                      <ol class="flex gap-8">
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_like.svg" alt="난임지원">
+                            213
+                          </a>
+                        </li>
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_luck.svg" alt="난임지원">
+                            45
+                          </a>
+                        </li>
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_clap.svg" alt="난임지원">
+                            65
+                          </a>
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>
-                <div class="comment__answer" >
-                  <div class="comment__answer_header">
-                    <p>댓글접기</p>
-                  </div>
-                  <ol>
-                    <li class="comment__answer_contents">
-                      <span>you******</span>
-                      <p>큰 도움이 되었습니다. 굿~~</p>
-                      <del>2025-09-23 23:12</del>
-                    </li>
-                    <li class="comment__answer_contents">
-                      <span>hh******</span>
-                      <p>좋은 답변이었습니다</p>
-                      <del>2025-09-23 23:12</del>
-                    </li>
-                    <li class="comment__answer_contents">
-                      <textarea class="textarea--resize--none" placeholder="100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다."></textarea>
-                    </li>
-                  </ol>
+              </div>
+              <div class="comment__answer" >
+                <div class="comment__answer_header">
+                  <p>댓글접기</p>
                 </div>
-              </li>
-              <li class="comment__list">
-                <div class="comment__question">
-                  <div class="comment__question--category">
-                    <p class="comment_index color--blk txt--fw-500 tit--fz12"><span class="color--blue txt--fw-700">213.</span> kim*****</p>
-                    <p class="comment_txt">앞으로도 좋을 글 많이 부탁드리겠습니다</p>
-                    <p class="comment_date">2025-09-25 23:12</p>
-                    <div class="flex flex--between">
-                      <p class="comment_button">답글<span>12</span></p>
-                      <div class="icons">
-                        <ol class="flex gap-8">
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_like.svg" alt="난임지원">
-                              213
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_luck.svg" alt="난임지원">
-                              45
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex gap-2" href="javascript:void(0);">
-                              <img src="/src/main/resource/static/images/user/infertility_assistance/icon_clap.svg" alt="난임지원">
-                              65
-                            </a>
-                          </li>
-                        </ol>
-                      </div>
+                <ol>
+                  <li class="comment__answer_contents">
+                    <span>you******</span>
+                    <p>큰 도움이 되었습니다. 굿~~</p>
+                    <del>2025-09-23 23:12</del>
+                  </li>
+                  <li class="comment__answer_contents">
+                    <span>hh******</span>
+                    <p>좋은 답변이었습니다</p>
+                    <del>2025-09-23 23:12</del>
+                  </li>
+                  <li class="comment__answer_contents">
+                    <textarea class="textarea--resize--none" placeholder="100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다."></textarea>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li class="comment__list">
+              <div class="comment__question">
+                <div class="comment__question--category">
+                  <p class="comment_index color--blk txt--fw-500 tit--fz12"><span class="color--blue txt--fw-700">213.</span> kim*****</p>
+                  <p class="comment_txt">앞으로도 좋을 글 많이 부탁드리겠습니다</p>
+                  <p class="comment_date">2025-09-25 23:12</p>
+                  <div class="flex flex--between">
+                    <p class="comment_button">답글<span>12</span></p>
+                    <div class="icons">
+                      <ol class="flex gap-8">
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_like.svg" alt="난임지원">
+                            213
+                          </a>
+                        </li>
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_luck.svg" alt="난임지원">
+                            45
+                          </a>
+                        </li>
+                        <li>
+                          <a class="flex gap-2" href="javascript:void(0);">
+                            <img src="/src/main/resource/static/images/user/infertility_assistance/icon_clap.svg" alt="난임지원">
+                            65
+                          </a>
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>
-                <div class="comment__answer" >
-                  <div class="comment__answer_header">
-                    <p>댓글접기</p>
-                  </div>
-                  <ol>
-                    <li class="comment__answer_contents">
-                      <span>you******</span>
-                      <p>큰 도움이 되었습니다. 굿~~</p>
-                      <del>2025-09-23 23:12</del>
-                    </li>
-                    <li class="comment__answer_contents">
-                      <span>hh******</span>
-                      <p>좋은 답변이었습니다</p>
-                      <del>2025-09-23 23:12</del>
-                    </li>
-                    <li class="comment__answer_contents">
-                      <textarea class="textarea--resize--none" placeholder="100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다."></textarea>
-                    </li>
-                  </ol>
+              </div>
+              <div class="comment__answer" >
+                <div class="comment__answer_header">
+                  <p>댓글접기</p>
                 </div>
-              </li>
+                <ol>
+                  <li class="comment__answer_contents">
+                    <span>you******</span>
+                    <p>큰 도움이 되었습니다. 굿~~</p>
+                    <del>2025-09-23 23:12</del>
+                  </li>
+                  <li class="comment__answer_contents">
+                    <span>hh******</span>
+                    <p>좋은 답변이었습니다</p>
+                    <del>2025-09-23 23:12</del>
+                  </li>
+                  <li class="comment__answer_contents">
+                    <textarea class="textarea--resize--none" placeholder="100자 이내 / 광고, 비방 글은 동의 없이 삭제됩니다."></textarea>
+                  </li>
+                </ol>
+              </div>
+            </li>
+          </ul>
+          <div class="pagination tit--fz14">
+            <a href="javascript:;" title="이전" class="pagination--prev">
+              <img src="/src/main/resource/static/images/user/common/sm_arrow_l_gray.svg" alt="이전">
+            </a>
+            <ul class="flex">
+              <li class="active"><a href="javascript:;">1</a></li>
+              <li><a class="color--gray55" href="javascript:;">2</a></li>
+              <li><a class="color--gray55" href="javascript:;">3</a></li>
+              <li><a class="color--gray55" href="javascript:;">4</a></li>
+              <li><a class="color--gray55" href="javascript:;">5</a></li>
+              <li><a class="color--gray55" href="javascript:;">6</a></li>
             </ul>
-            <div class="pagination tit--fz14">
-              <a href="javascript:;" title="이전" class="pagination--prev">
-                <img src="/src/main/resource/static/images/user/common/sm_arrow_l_gray.svg" alt="이전">
-              </a>
-              <ul class="flex">
-                <li class="active"><a href="javascript:;">1</a></li>
-                <li><a class="color--gray55" href="javascript:;">2</a></li>
-                <li><a class="color--gray55" href="javascript:;">3</a></li>
-                <li><a class="color--gray55" href="javascript:;">4</a></li>
-                <li><a class="color--gray55" href="javascript:;">5</a></li>
-                <li><a class="color--gray55" href="javascript:;">6</a></li>
-              </ul>
-              <a href="javascript:;" title="다음" class="pagination--next">
-                <img src="/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg" alt="다음">
-              </a>
-              <input id="pageIndex" name="pageIndex" type="hidden" value="1">
-            </div>
+            <a href="javascript:;" title="다음" class="pagination--next">
+              <img src="/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg" alt="다음">
+            </a>
+            <input id="pageIndex" name="pageIndex" type="hidden" value="1">
           </div>
         </div>
       </div>
-      
     </div>
+    
+  </div>
 
-    <!-- footer -->
-    <footer class="footer"></footer>
-
+  <!-- footer -->
+  <footer class="footer"></footer>
 
 </body>
 

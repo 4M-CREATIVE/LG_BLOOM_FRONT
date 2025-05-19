@@ -29,7 +29,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-  
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
       uiEvent.init();
     }
   
@@ -38,25 +38,28 @@
 </head>
 
 <body id="wrap" class="infertility-assistance-list bg--primary-blue">
-    <!-- 난임정책 팝업-->
-    <div class="pop__overlay" style="display: none;">
-      <div class="popup" id="pop_confirm">
-        <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
-          <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
-        </span>
-        <div class="popup__title color--blk">
-          <span class="txt--fw-600">정부24의 난임정책</span>은<br>
-          브라우저에서 확인이 가능합니다.
-        </div> 
-        <p class="popup__text align--center">
-          지금 브라우저를 열어 확인하시겠습니까?
-        </p>
-        <div class="btn__box">
-          <button class="btn btn--gray btn__pop-close">취소</button>
-          <button class="btn bg--primary-blue btn__pop-close">확인</button>
-        </div>
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <!-- 난임정책 팝업-->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_confirm">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="닫기버튼">
+      </span>
+      <div class="popup__title color--blk">
+        <span class="txt--fw-600">정부24의 난임정책</span>은<br>
+        브라우저에서 확인이 가능합니다.
+      </div> 
+      <p class="popup__text align--center">
+        지금 브라우저를 열어 확인하시겠습니까?
+      </p>
+      <div class="btn__box">
+        <button class="btn btn--gray btn__pop-close">취소</button>
+        <button class="btn bg--primary-blue btn__pop-close">확인</button>
       </div>
     </div>
+  </div>
 
   <div class="search-header-wrap select-wrap">
     <!-- header -->
@@ -98,59 +101,58 @@
     </div>
   </div>
 
-    <!-- 헤더 자리 확보 -->
-    <div class="spacer h-136"></div> 
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
 
-    <!-- main -->
-    <div class="content infertility--policy">
-      <div class="search-result tab-content is-radius active min--136">
-        <div class="container">
-          <section>
-            <p class="txt_wrap tit--fz20 txt--fw-700 color--blk">
-              현재 정부에서<br>
-              시행하고 있는 <span class="color--blue">난임정책</span>에 대해서<br>
-              알아볼 수 있습니다
-            </p>
-  
-            <ul class="infertility--policy-category">
-              <li>
-                <a href="javascript:void(0);">
-                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy01.svg" alt="난임정책">
-                  민원 서비스
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy02.svg" alt="난임정책">
-                  정책정보
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy03.svg" alt="난임정책">
-                  보조금
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">
-                  <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy04.svg" alt="난임정책">
-                  기관정보
-                </a>
-              </li>
-            </ul>
-          </section>
+  <!-- main -->
+  <div class="content infertility--policy">
+    <div class="search-result tab-content is-radius active min--136">
+      <div class="container">
+        <section>
+          <p class="txt_wrap tit--fz20 txt--fw-700 color--blk">
+            현재 정부에서<br>
+            시행하고 있는 <span class="color--blue">난임정책</span>에 대해서<br>
+            알아볼 수 있습니다
+          </p>
 
-          <div class="btn__box position-abs bottom-125 width-calc40"> 
-            <button class="btn pop-btn btn--blue" data-popup-target="pop_confirm">정부24 난임 정책 바로가기</button>
-          </div>
+          <ul class="infertility--policy-category">
+            <li>
+              <a href="javascript:void(0);">
+                <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy01.svg" alt="난임정책">
+                민원 서비스
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy02.svg" alt="난임정책">
+                정책정보
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy03.svg" alt="난임정책">
+                보조금
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <img src="/src/main/resource/static/images/user/infertility_assistance/icon_infertility_policy04.svg" alt="난임정책">
+                기관정보
+              </a>
+            </li>
+          </ul>
+        </section>
 
+        <div class="btn__box position-abs bottom-125 width-calc40"> 
+          <button class="btn pop-btn btn--blue" data-popup-target="pop_confirm">정부24 난임 정책 바로가기</button>
         </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <footer class="footer"></footer>
-
+  <!-- footer -->
+  <footer class="footer"></footer>
 
 </body>
 
