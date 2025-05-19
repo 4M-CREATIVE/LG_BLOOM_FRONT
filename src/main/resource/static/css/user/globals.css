@@ -76,6 +76,11 @@ header .container .right {
   gap: 1rem;
 }
 
+header .container .left a img{
+  width: 83px;
+  height: 26px;
+}
+
 /* gnb */
 .gnb {
   width: 100%;
