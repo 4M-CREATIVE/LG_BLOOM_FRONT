@@ -308,9 +308,9 @@
 
 /* 도형 리스트트 */
 .ck-content .check_icon{ width: 11.489px; height: 9px; display: inline-flex; background-size: cover; background-repeat: no-repeat;}
-.ck-content .check_icon_purple{ background-image: url(/src/main/resource/static/images/user/common/check_puple.svg);}
-.ck-content .check_icon_blue{ background-image: url(/src/main/resource/static/images/user/common/check_blue.svg);}
-.ck-content .check_icon_pink{ background-image: url(/src/main/resource/static/images/user/common/check_pink.svg);}
+.ck-content .check_icon_purple{ background-image: url(/static/images/user/common/check_puple.svg);}
+.ck-content .check_icon_blue{ background-image: url(/static/images/user/common/check_blue.svg);}
+.ck-content .check_icon_pink{ background-image: url(/static/images/user/common/check_pink.svg);}
 .ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%;  margin-bottom: 10px;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}
 .ck-content .circle_icon_purple{background-color: #660F89;}
@@ -407,7 +407,7 @@ hr {height:  1px; margin-bottom: 10px;}
  .faq__question {
   padding: 14px 56px 14px 56px;
   position: relative;
-  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_b_gray.svg);
+  background-image: url(/static/images/user/common/sm_arrow_b_gray.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 34px) 19px;
   background-size: 15px 9px;
@@ -417,7 +417,7 @@ hr {height:  1px; margin-bottom: 10px;}
 }
  .faq__list.on .faq__question {
   padding-bottom: 12px;
-  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg);
+  background-image: url(/static/images/user/common/sm_arrow_t_gray.svg);
 }
  .faq__question .label {
   margin-top: 7px;

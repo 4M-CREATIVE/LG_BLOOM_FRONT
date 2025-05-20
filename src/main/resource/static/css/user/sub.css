@@ -408,7 +408,7 @@ table.table-d tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;colo
   display: block;
   width: 24px;
   height: 24px;
-  background: url(/src/main/resource/static/images/user/common/arrow_r_gray.svg) no-repeat center;
+  background: url(/static/images/user/common/arrow_r_gray.svg) no-repeat center;
 }
 .agreement-list li p {
   color: var(--Neutral-gray-88, #888);
