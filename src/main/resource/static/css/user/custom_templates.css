@@ -312,6 +312,7 @@
 .ck-content .check_icon_blue{ background-image: url(/src/main/resource/static/images/user/common/check_blue.svg);}
 .ck-content .check_icon_pink{ background-image: url(/src/main/resource/static/images/user/common/check_pink.svg);}
 .ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%;  margin-bottom: 10px;}
+.ck-content .circle_icon_black{ background-color: #222;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}
 .ck-content .circle_icon_purple{background-color: #660F89;}
 .ck-content .circle_icon_blue{background-color: #2A77C2;}
