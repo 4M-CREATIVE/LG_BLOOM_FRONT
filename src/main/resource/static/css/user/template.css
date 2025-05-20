@@ -611,70 +611,14 @@
 
 /* faq */
 
-.list ul > li::after {
+.list ul > li.comment__list::after,
+.list ul > li.faq__list::after {
   content: '';
   display: block;
   width: calc(100% - 4rem);
   height: 1px;
   background-color: #eee;
   margin: 0 auto;
-}
-
-.faq__list:first-of-type.on {
-  margin-top: -1px;
-}
-.faq__question {
-  padding: 14px 56px 14px 56px;
-  position: relative;
-  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_b_gray.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 34px) 19px;
-  background-size: 15px 9px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.56px;
-}
-.faq__list.on .faq__question {
-  padding-bottom: 12px;
-  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg);
-}
-.faq__question .label {
-  margin-top: 7px;
-}
-.faq__answer {
-  padding: 14px 30px 16px 55.55px;
-  position: relative;
-  display: none;
-  background-color: var(--neutral-gray-F6);
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.56px;
-}
-.faq__list > div::before {
-  display: block;
-  font-weight: 700;
-  line-height: 1;
-  position: absolute;
-  left: 30px;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color:#fff;
-}
-.faq__question::before {
-  content: 'Q';
-  top: 15px;
-  background-color: var(--neutral-gray-55);
-  font-size: 1rem;
-}
-.faq__answer::before {
-  background-color: var(--primary-pink);
-  content: 'A';
-  top: 17px;
-  font-size: 1rem;
 }
 
 /* comment 댓글 */
@@ -836,18 +780,9 @@
 }
 .accordian__question {
   position: relative;
-  /* background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 20px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.56px;
-  transition: all 0.1s ease; */
 }
 .accordian__list.on .accordian__question {
   padding-bottom: 12px;
-  /* background-image: url(/src/main/resource/static/images/user/common/arrow_t_black.svg); */
 }
 .accordian__question .accordian_btn{
   width: 18px;
