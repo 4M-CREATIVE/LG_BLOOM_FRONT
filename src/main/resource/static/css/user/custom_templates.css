@@ -1,7 +1,3 @@
-@import url("reset.css");
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-
 /* Typography */
 .ck-content { font-family: 'Noto Sans KR', sans-serif !important; font-size: 16px; color: #222; line-height: 1.6; letter-spacing: -0.5px;}
 /* 폰트 굵기 */
@@ -97,11 +93,11 @@
 
 /* border color */
 /* border top color */
-.bt-purple-10 { border-top:1px solid var(--color-purple10);}
+.ck-content .bt-purple-10 { border-top:1px solid var(--color-purple10);}
 /* border bottom color */
-.bb-purple-10 { border-bottom:1px solid var(--color-purple10)!important;}
-.bb-purple-20 { border-bottom:1px solid #480b60!important;}
-.bb-gray-d9 { border-bottom:1px solid #d9d9d9 ;}
+.ck-content .bb-purple-10 { border-bottom:1px solid var(--color-purple10)!important;}
+.ck-content .bb-purple-20 { border-bottom:1px solid #480b60!important;}
+.ck-content .bb-gray-d9 { border-bottom:1px solid #d9d9d9 ;}
 
 /* 테이블 */ 
 .ck-content .text-center { text-align: center;}
@@ -112,24 +108,24 @@
 }
 
 /* 스크롤바 숨김 */
-.no-scrollbar {
+.ck-content .no-scrollbar {
   overflow: auto;
-  -ms-overflow-style: none;       /* IE, Edge */
-  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;                  /* Chrome, Safari */
+.ck-content .no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* 테이블 A 타입  */
 .ck-content .sub_warning {
-  margin: 0 10px 30px;
-  font-size: 11px;
-  color: var(--color-gray-99);
+  color: var(--Neutral-gray-99, #999);
+  font-size: 10px;
+  font-weight: 400;
   line-height: 16px;
   letter-spacing: -0.4px;
-  margin-top:10px;
+  margin: 0 30px;
 }
 .ck-content .table-a {
   width: 100%;
@@ -144,13 +140,13 @@
 }
 .ck-content .table-a thead th {
   text-align: center;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 12px; 
   border-bottom: 1px solid #D9D9D9; 
   font-weight: 700; 
 }
 .ck-content .table-a.purple thead th {
   padding: 10px;
+  background-color: var(--color-light-pink02);
   color: var(--color-purple);
 }
 .ck-content .table-a.gray thead th {
@@ -269,7 +265,7 @@
 }
 
 /* 하이퍼링크 */
-a.link-purple{
+.ck-content a.link-purple{
   color: var(--color-purple);
   font-size: 14px;
   font-weight: 400;
@@ -330,7 +326,7 @@ a.link-purple{
 
 /* 참고문헌 */
 .ck-content .reference-list {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .ck-content .reference-label {
@@ -344,21 +340,20 @@ a.link-purple{
   line-height: 9px;
   padding: 2px 5px;
   border-radius: 50px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   width: 53px;
 }
 .ck-content .reference-title{width: 100%; position: relative;}
 .ck-content .reference-title::after {
   display: block;
   content: '';
-  width: 100%;
+  width: calc(100% - 53px);
   height: 1px;
   background-color: #e8e8e8;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
-  z-index: -1;
 }
 
 .ck-content .reference-items {
@@ -366,17 +361,23 @@ a.link-purple{
   font-size: 10px;
   font-weight: 300;
   line-height: 14px;
+}
+
+.ck-content ol.reference-items{
   padding-left: 13px;
 }
 
 .ck-content .reference-items li {
   margin-bottom: 8px;
-  list-style: decimal;
   color: var(--Neutral-gray-77, #777);
   font-size: 10px;
   font-weight: 300;
   line-height: 14px;
   padding-left: 3px;
+}
+
+.ck-content ol.reference-items li {
+  list-style: decimal;
 }
 
 .ck-content .reference-items li::marker {
@@ -396,4 +397,63 @@ a.link-purple{
 .ck-content .image-scroll .image-inner {
   min-width: 315px;
   display: inline-block; /* 중요: 이미지가 줄바꿈되지 않게 함 */
+}
+
+/* faq */
+
+ .faq__list:first-of-type.on {
+  margin-top: -1px;
+}
+ .faq__question {
+  padding: 14px 56px 14px 56px;
+  position: relative;
+  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_b_gray.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 34px) 19px;
+  background-size: 15px 9px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
+}
+ .faq__list.on .faq__question {
+  padding-bottom: 12px;
+  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg);
+}
+ .faq__question .label {
+  margin-top: 7px;
+}
+ .faq__answer {
+  padding: 14px 30px 16px 55.55px;
+  position: relative;
+  display: none;
+  background-color: var(--neutral-gray-F6);
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.56px;
+}
+ .faq__list > div::before {
+  display: block;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  left: 30px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+}
+ .faq__question::before {
+  content: 'Q';
+  top: 15px;
+  background-color: var(--neutral-gray-55);
+  font-size: 1rem;
+}
+ .faq__answer::before {
+  background-color: var(--primary-pink);
+  content: 'A';
+  top: 17px;
+  font-size: 1rem;
 }
