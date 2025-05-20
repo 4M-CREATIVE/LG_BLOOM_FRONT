@@ -1,5 +1,5 @@
 /* Typography */
-.ck-content { font-family: 'Noto Sans KR', sans-serif !important; font-size: 16px; color: #222; line-height: 1.6; letter-spacing: -0.5px;}
+.ck-content { font-family: 'Noto Sans KR', sans-serif !important;}
 /* 폰트 굵기 */
 .ck-content .fw_black   { font-weight: 900; }
 .ck-content .fw_bold    { font-weight: 700; }
@@ -318,7 +318,7 @@
 .ck-content .circle_icon_pink{background-color: #BE0683;}
 
 /* 구분 라인 */
-.ck-content hr {height:  1px; margin-bottom: 10px;}
+hr {height:  1px; margin-bottom: 10px;}
 .hr_gray_ee{ background-color: #eee;}
 .hr_gray_d9{ background-color: #d9d9d9;}
 .hr_gray_aa{ background-color: #aaa;}
@@ -456,4 +456,60 @@
   content: 'A';
   top: 17px;
   font-size: 1rem;
+}
+
+/* 아코디언 이용약관 */
+.ck-content .privacy-agreement .title {
+  color: var(--Neutral-gray-77, #777);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.48px;
+}
+.ck-content .privacy-agreement .description {
+  color: var(--Neutral-gray-99, #999);
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+}
+.ck-content .privacy-agreement .table-a {border-top: 1px solid var(--Neutral-gray-77, #777);}
+.ck-content .privacy-agreement .table-a thead th{padding: 10px 15px;
+  color: var(--Neutral-gray-77, #777);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.4px;
+}
+.ck-content .privacy-agreement .table-a thead th:nth-child(2) { min-width: 124px; width: 39.62%;}
+
+.ck-content .privacy-agreement .table-a tbody td p.text{
+  color: var(--Neutral-gray-99, #999);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.4px;
+}
+
+/* 이용약관 페이지 */
+.ck-content  .terms{
+  color: #222;
+}
+.ck-content .terms h2 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.48px;
+}
+.ck-content .terms{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.48px;
+}
+
+.ck-content .notice-txt {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.4px;
 }

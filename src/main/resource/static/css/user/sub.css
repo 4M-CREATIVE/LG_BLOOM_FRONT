@@ -384,5 +384,36 @@ table.table-d tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;colo
 .sub-tab-panel.active {
   display: block;
 }
-
 /* 난임시술 쉽게 이해하기 end */
+
+/* 약관 및 개인정보 처리 동의 start */
+.agreements-wrap {padding: 0 2rem;}
+.agreement-list li {
+  margin-bottom: 14px;
+}
+.agreement-list li:last-child {
+  margin-bottom: 0;
+}
+.agreement-list li a {
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agreement-list li a::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(/src/main/resource/static/images/user/common/arrow_r_gray.svg) no-repeat center;
+}
+.agreement-list li p {
+  color: var(--Neutral-gray-88, #888);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.48px;
+}
+/* 약관 및 개인정보 처리 동의 end */
