@@ -490,6 +490,8 @@ hr {height:  1px; margin-bottom: 10px;}
   align-items: center;
   justify-content: center;
   color:#fff;
+  padding-bottom: 2px;
+  padding-right: 1px;
 }
  .faq__question::before {
   content: 'Q';
