@@ -157,8 +157,14 @@
   -webkit-line-clamp: 3; /* 제한할 텍스트의 줄 수 */
 }
 /* line-height */
-.line-h46 {
+.lh-46 {
   line-height: 46px;
+}
+.lh-28 {
+  line-height: 28px;
+}
+.lh-24 {
+  line-height: 24px;
 }
 
 /* font-size */
@@ -240,6 +246,11 @@
 .ml-20{
   margin-left: 2rem;
 } 
+
+/* margin-right */
+.mr-30{
+  margin-right: 30px;
+}
 
 /* margin-bottom */
 .mb-242 {
@@ -518,7 +529,7 @@
 
 /* select background color */
 .select--bg-deep-blue {
-  background: #424FAB!important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #424FAB!important;
 }
 .select--bg-blue {
   background: var(--primary-blue-b10, linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #2A77C2)!important;
@@ -763,22 +774,7 @@
 .comment-list .pagination ul li.active a {
   color: var(--primary-blue);
 }
-.comment__box li:first-child::before {
-  content: '';
-  display: block;
-  width: calc(100% - 4rem);
-  height: 1px;
-  background-color: #eee;
-  margin: 0 auto;
-}
-.comment__box li:first-child::after {
-  content: '';
-  display: block;
-  width: calc(100% - 4rem);
-  height: 1px;
-  background-color: #eee;
-  margin: 0 auto;
-}
+
 /* accordian */
 
 .accordian__list:first-of-type.on {
@@ -1690,6 +1686,17 @@ input[type="search"]::-webkit-search-cancel-button {
   left: 0;
   top: 6px;
 }
+.warning_txt_deep_blue::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--primary-deep-blue);
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
 
 #progress {
   margin-bottom: 17px;
@@ -1722,7 +1729,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .question-list hr {
   width: 88.06%;
   height: 1px;
-  background-color: #CCC;
+  border: 1px dotted #ccc;
   margin: 14px auto;
 }
 

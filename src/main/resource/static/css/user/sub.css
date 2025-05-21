@@ -154,7 +154,7 @@
 
 /* 난임지원 난임정책 start */
 .infertility--policy section {padding: 0 2rem;}
-.infertility--policy .txt_wrap {line-height: 24px; letter-spacing: -0.8px; margin-bottom: 3rem;}
+.infertility--policy .txt_wrap {letter-spacing: -0.8px; margin-bottom: 3rem;}
 .infertility--policy .infertility--policy-category {margin-bottom: 12.4rem;}
 .infertility--policy .infertility--policy-category li {margin-bottom:2.1rem; }
 .infertility--policy .infertility--policy-category li a {display: flex; align-items: center; gap: 1rem; color: #444; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.64px;}
@@ -344,7 +344,7 @@ table.table-d tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;colo
 .step-dot { position: absolute; left: 10px; top: 50%; width: 12px; height: 12px; background-color: #ccc; border-radius: 50%; z-index: 1; transform: translate(0, -50%);}
 .step-icon { width: 44px; height: 40px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;}
 .step-content { flex: 1; justify-content: space-between;}
-.step-text { font-size: 14px; line-height: 16px; font-weight: 500; margin: 0 0 4px; letter-spacing: -0.56px;}
+.step-text { font-size: 14px; line-height: 16px; font-weight: 500; letter-spacing: -0.56px;}
 .step-detail-link { font-size: 10px; line-height: 10px; font-weight: 500; letter-spacing: -0.4px; display: flex; align-items: center;}
 .step-detail-link::after { content:''; display: inline-block; width: 4px; height: 6px; background-size: cover!important; margin-left: 7px;}
 .step-detail-link.color--gray88::after {background: url('/src/main/resource/static/images/user/common/sm_arrow_r_gray.svg') no-repeat center;}
