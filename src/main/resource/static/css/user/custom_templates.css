@@ -91,6 +91,15 @@
 .ck-content .bg-gray-88     { background-color: var(--color-gray-88); }
 .ck-content .bg-gray-99     { background-color: var(--color-gray-99); }
 
+/* 난임백과 */
+.outter_bg {background-color: #FAF8FB!important;}
+.inner_contents {border-radius: 20px; background: #FFF; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04); margin: 0 15px 0 15px; min-height: 40vh; padding: 30px 15px 25px 15px ;}
+.inner_contents .text_wrap{ margin: 0 15px;}
+.ck-content.inner_contents .title_txt{ text-align: center; font-size: 24px; font-weight: 700; line-height: 28px; letter-spacing: -0.96px;}
+.ck-content.inner_contents .description_txt{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
+.ck-content.inner_contents .sub_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px;}
+.ck-content.inner_contents .sub_text{ color: #555; font-size: 12px; font-weight: 400; line-height: 20px; letter-spacing: -0.48px;}
+
 /* border color */
 /* border top color */
 .ck-content .bt-purple-10 { border-top:1px solid var(--color-purple10);}
@@ -130,7 +139,9 @@
 .ck-content .table-a {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+}
+.ck-content .layout_fixed {
+table-layout: fixed;
 }
 .ck-content .table-a.purple {
   border-top: 1px solid var(--color-purple);
@@ -157,7 +168,7 @@
 .ck-content .table-a tbody td {
   vertical-align: middle ;
   border-bottom: 1px solid #D9D9D9;
-  padding: 10px 10px 10px 5px;;
+  padding: 10px;
 }
 .ck-content .table-a tbody td p.title {
   color: var(--Neutral-black-22, #222);
@@ -173,7 +184,6 @@
   letter-spacing: -0.4px;
 }
 .ck-content .table-a tbody td p.text {
-  color: var(--Neutral-black-22, #222);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.48px;
@@ -396,15 +406,43 @@ hr {height:  1px; margin-bottom: 10px;}
   letter-spacing: -0.32px;
 }
 
-/* 이미지 가로 315px 이상 스크롤 생성성 */
+/* 이미지 가로 315px 이상 스크롤 생성 */
 .ck-content .image-scroll {
   max-width: 100%;
   overflow-x: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  scrollbar-height: thin; /* Firefox 대응 */
+}
+
+/* 스크롤바 전체 영역 */
+.ck-content .image-scroll::-webkit-scrollbar {
+  height: 6px; /* 스크롤바 두께 */
+}
+
+/* 스크롤바 트랙 (배경) */
+.ck-content .image-scroll::-webkit-scrollbar-track {
+  background: #F6F6F6;
+  border-radius: 4px;
+}
+
+/* 스크롤바 썸(움직이는 바) */
+.ck-content .image-scroll::-webkit-scrollbar-thumb {
+  background: #660F89;
+  border-radius: 4px;
 }
 
 .ck-content .image-scroll .image-inner {
   min-width: 315px;
-  display: inline-block; /* 중요: 이미지가 줄바꿈되지 않게 함 */
+  display: inline-block; /* 이미지가 줄바꿈되지 않게 함 */
+}
+
+.ck-content .image-scroll .image-inner img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block; /* 줄바꿈 공백 제거 */
 }
 
 /* faq */

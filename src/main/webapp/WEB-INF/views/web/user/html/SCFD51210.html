@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임백과</title>
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16">난임백과</div>
+          <div class="select__options select--bg-deep-pink">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="#"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="#"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="#"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <ul class="check__result_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"  class="active">가임력정의</a></li>
+        <li><a href="#">난자동결보존</a></li>
+      </ul>
+      <div class="container">
+        <div class="ck-content inner_contents">
+          <div class="text_wrap">
+            <h2 class="title_txt mb-10">
+              <span class="text-purple">가임력</span>이란?
+            </h2>
+            <p class="description_txt mb-30">
+              여성이 임신할 수 있는 능력을 의미합니다.
+              난소에서 난자를 배란하고 수정하여 착상될 가능성이 있는 기간으로 일반적으로 사춘기 이후부터
+              폐경까지의 기간을 가임기라고 부르며, 가임기 내의 여성이라고 하더라도 다양한 요인에 의하여
+              가임력이 결정될 수 있습니다.<br>
+              <br>
+              크게는 여성의 생물학적 나이, 건강 상태, 난소와 자궁기관의 생식 건강, 음주나 흡연, 스트레스 등의 생활 습관에 의해 가임력이 영향을 받을 수 있습니다.
+            </p>
+          </div>
+
+          <!-- 이미지 -->
+          <div class="image-scroll mb-20">
+            <div class="image-inner">
+              <img src="/src/main/resource/static/images/user/infertility_guide/doctor_couple_talk.png" alt="샘플 이미지" />
+            </div>
+          </div>
+
+          <!-- 참고문헌 -->
+          <div class="reference-list">
+            <div class="reference-title">
+              <div class="reference-label">참고문헌</div>
+            </div>
+            <ol class="reference-items">
+              <li>
+                Sharma R. et al., Reprod Biol Endocrinol. 2013 Jul 16:11:66
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>
