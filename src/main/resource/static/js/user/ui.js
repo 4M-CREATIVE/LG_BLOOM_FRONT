@@ -340,18 +340,26 @@ const uiEvent = {
     //   }
     // });
     // 로그인 버튼 클릭 이벤트
-  // 저장 버튼 클릭 시 data-popup-target을 동적으로 바꾼 후 팝업 열기
-  $('.pop-btn').on('click', function (e) {
+  // 마케팅 동의 버튼용 로직
+  $('.marketing-btn').on('click', function (e) {
     e.preventDefault();
 
     const $btn = $(this);
     const $marketingCheckbox = $('#checkboxMarketing');
 
-    // 체크 상태에 따라 data-popup-target 변경
     const targetPopupId = $marketingCheckbox.prop('checked') ? 'pop_agree' : 'pop_withdraw';
-    $btn.attr('data-popup-target', targetPopupId);
+    const $targetPopup = $('#' + targetPopupId);
+    const $popupOverlay = $targetPopup.closest('.pop__overlay');
 
-    // 해당 target 팝업 열기
+    $popupOverlay.fadeIn(300);
+    $targetPopup.addClass('active');
+  });
+
+  // 기타 팝업 버튼 로직 (data-popup-target 정적으로 지정된 경우)
+  $('.pop-btn').not('.marketing-btn').on('click', function (e) {
+    e.preventDefault();
+
+    const targetPopupId = $(this).data('popup-target');
     const $targetPopup = $('#' + targetPopupId);
     const $popupOverlay = $targetPopup.closest('.pop__overlay');
 
