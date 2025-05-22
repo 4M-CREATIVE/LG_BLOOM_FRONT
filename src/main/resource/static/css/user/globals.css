@@ -30,6 +30,9 @@
   --neutral-gray-EF: #EFEFEF;
   --neutral-gray-F3: #f3f3f3;
   --neutral-fff: #fff;
+
+  /* 폰트 */
+  --font-family: 'Noto Sans KR';
 }
 
 /* 기본 스타일 */
