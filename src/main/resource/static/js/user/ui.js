@@ -208,10 +208,10 @@ const uiEvent = {
   
     $(".accordian_btn").on("click", function (e) {
       // checkbox 클릭 막기
-      if ($(e.target).is('input[type="checkbox"]')) {
-        e.preventDefault();
-        return;
-      }
+      // if ($(e.target).is('input[type="checkbox"]')) {
+      //   e.preventDefault();
+      //   return;
+      // }
       const $this = $(this);
       const $parentLi = $this.closest(".accordian__list");
       const $answer = $parentLi.find(".accordian__answer");
