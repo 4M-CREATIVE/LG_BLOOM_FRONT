@@ -38,7 +38,6 @@ const swiperInit = () => {
     loop: true,
     slidesPerView: 1,
     autoHeight: true,
-    spaceBetween: 20,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
