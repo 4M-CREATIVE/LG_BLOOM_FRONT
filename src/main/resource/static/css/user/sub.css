@@ -265,6 +265,7 @@
 .check_contents .check_list li .left .check_list_date{color: var(--Neutral-black-22, #222); font-size: 13px; font-weight: 500; margin: 0 4px 0 6px;}
 .check_contents .check_list li .left .check_list_time{color: var(--Neutral-gray-99, #999); font-size: 13px; font-weight: 500;}
 .non--check-list{ width: 100%; height:339px; border-radius: 15px; text-align: center; padding-top: 8rem;}
+.non--check-result-list{ width: 100%; height:436px; border-radius: 15px; text-align: center; padding-top: 16rem;}
 .sub06 .container {padding: 0rem 2rem;}
 .sub06 .container .title_wrap {padding: 0 2rem;}
 /* 마이페이지 - 나의 가임건강 체크 end */
@@ -283,7 +284,7 @@
 .normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
 .normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
 .normal_weight_illustration { width: 163.356px; height: 154px; position: absolute; bottom: 86px; left: 36%;}
-.underweight {display: none;}
+/* .underweight {display: none;} */
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
 .underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
 .underweight_wrap .underweight--list .title {margin-bottom: 1.4rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
