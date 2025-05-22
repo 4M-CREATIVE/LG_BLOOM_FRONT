@@ -919,6 +919,7 @@
 .form__box input[type="text"],
 .form__box input[type="password"],
 .form__box input[type="file"],
+.form__box input[type="number"]
 .form__box select {
   position: relative;
   overflow: hidden;
@@ -933,7 +934,8 @@
 }
 .form__box input[type="text"],
 .form__box input[type="password"],
-.form__box input[type="file"]{
+.form__box input[type="file"],
+.form__box input[type="number"]{
   border-radius: 23px;
 }
 .form__box select {
