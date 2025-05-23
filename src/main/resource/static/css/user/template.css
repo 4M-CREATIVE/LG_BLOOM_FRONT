@@ -148,13 +148,13 @@
   display: -webkit-box;   
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 2; /* 제한할 텍스트의 줄 수 */
+  -webkit-line-clamp: 2;
 }
 .ellipsis--3 {
   display: -webkit-box;   
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 3; /* 제한할 텍스트의 줄 수 */
+  -webkit-line-clamp: 3;
 }
 /* line-height */
 .lh-46 {
