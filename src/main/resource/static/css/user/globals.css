@@ -128,10 +128,6 @@ header .container .left a img{
   font-weight: 600;
 }
 
-.gnb .container .profile_info p span {
-  color: var(--primary-purple);
-}
-
 .gnb .container .profile_info .right {
   gap: 1.6rem;
 }
@@ -147,6 +143,7 @@ header .container .left a img{
   line-height: 1.2rem;
   letter-spacing: -0.48px;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .gnb .container .contents section:nth-child(3) ul li a,
