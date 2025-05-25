@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom-난임백과</title>
+
+  <!-- css -->
+  <link type="text/css" href="/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html" class="active">추천사항</a></li>
+        <li><a href="javascript:void(0);">금기사항</a></li>
+      </ul>
+      <ul class="ai_tap_4depth">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html" class="active">예방접종</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51512.html">적절한 영양섭취</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51513.html">운동</a></li>
+      </ul>
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content inner_contents">
+          <div class="text_wrap">
+            <h2 class="title_txt mb-10">
+              예방 접종
+            </h2>
+            <p class="description_txt mb-40">
+              임신부와 태어날 아기는 여러가지 질환에
+              취약합니다. 따라서 임신 시도 전 감염성 질환을
+              예방하기 위하여 백신 접종을 해 두는 것이
+              바람직합니다. 특히 생백신(MMR, 수두,
+              일부 인플루엔자 백신)의 경우 임신 시도 최소
+              한 달 이전에 접종할 수 있도록 합니다.
+              남성의 경우에도 태어날 아기와 배우자에게
+              감염을 최소화하기 위하여 통상적으로 성인에게
+              권고되는 백신을 접종하는 것이 좋습니다.
+            </p>
+            <ul class="circle_list circle_list_top mb-40 ">
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span><strong class="text-purple ">생백신:</strong> 살아있는 바이러스나 세균을 약독화하여 독성을 제거한 백신</span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span><strong class="text-purple ">불활성 백신:</strong> 열이나 화학약품으로 병원균을 비활성 시키 백신</span>
+              </li>
+            </ul> 
+
+            <h3 class="sub_title mb-12">여성 추천 예방 접종 리스트<span class="tooltip">1</span><span class="tooltip">2</span></h3>
+            <ul class="circle_list circle_list_top mb-20 ">
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>성인용 Tdap 백신 (파상풍, 디프테리아, 백일해)</span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>MMR 백신 (홍역, 볼거리, 풍진)<span class="text-blue">*</span></span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>자궁경부암 백신 (HPV 백신)</span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>수두 백신<span class="text-blue">*</span></span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>A형, B형 간염 백신</span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>인플루엔자 백신 <span class="text-pink">**</span></span>
+              </li>
+              <li class="fs_12 text-gray-55 fw_regular">
+                <div class="circle_icon circle_icon_purple"></div>
+                <span>수막구균 백신 <br> (당뇨, 심혈관 질환, 면역저하, 천식 등 고위험인 경우)</span>
+              </li>
+            </ul> 
+            <p class="fs_10 fw_regular text-caption lh_16">
+              <span class="text-blue">*</span>국내 생백신 유통; <span class="text-pink">**</span>사백신/생백신 모두 사용됨으로 접종시 확인 필요<br>
+              B형 간염 백신: 질병관리청 주산기감염 예방 사업 링크 <br>
+              (URL : https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133)
+            </p>
+          </div>
+
+          <!-- 참고문헌 -->
+          <div class="reference-list">
+            <div class="reference-title">
+              <div class="reference-label">참고문헌</div>
+            </div>
+            <ol class="reference-items">
+              <li>
+                질병관리청. 예방접종 정보, 국내 예방접종 백신 현황 (2024.12월 기준).
+              </li>
+              <li>
+                임신육아종합포털 아이사랑(http://www.childcare.go.kr/), 임신준비>예방접종: 임신 시도 전에 예방주사를 맞아야 할 항목들 (2025.03.17 인출).
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>
