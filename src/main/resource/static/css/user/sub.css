@@ -210,7 +210,7 @@
 .sub03 .content .container .form_wrap .form__box:first-child{margin-bottom: 0.8rem;}
 .sub03 .content .container .form_wrap .form__box:nth-child(2){margin-bottom: 1rem;}
 .sub03 .content .container .form_wrap .info {line-height: 16px; letter-spacing: -0.4px; display: flex; gap: 0.8rem;}
-.sub03 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #5D1E7E; margin-top: 6px;}
+.sub03 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #660F89; margin-top: 6px;}
 .sub03 .content .container .form_wrap{margin-bottom: 43rem;}
 /* 비밀번호 재설정 휴대폰 인증 end */
 
@@ -242,7 +242,7 @@
 .sub04 .content .container .form_wrap .form__box:first-child{margin-bottom: 0.8rem;}
 .sub04 .content .container .form_wrap .form__box:nth-child(2){margin-bottom: 1rem;}
 .sub04 .content .container .form_wrap .info {line-height: 16px; letter-spacing: -0.4px; display: flex; gap: 0.8rem;}
-.sub04 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #5D1E7E; margin-top: 6px;}
+.sub04 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #660F89; margin-top: 6px;}
 .sub04 .content .container .form_wrap{margin-bottom: 43rem;}
 /* 마이페이지 - 비밀번호 확인 end */
 
@@ -260,10 +260,10 @@
 .reproductive-health-text .logo {width: 120px; height: 38px; margin-bottom: 12px;}
 .sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
 .sub08 .content .container .title_wrap {padding:  0 20px; margin-bottom: 3rem;}
-.personal_info_box { border-radius: 20px; border: 1px solid #5D1E7E; padding: 2rem;}
+.personal_info_box { border-radius: 20px; border: 1px solid #660F89; padding: 2rem;}
 .check_contents .check_list li{border-radius: 10px; background: rgba(93, 30, 126, 0.05);padding: 14px 20px; letter-spacing: -0.52px; margin-bottom: 10px;}
 .check_contents .check_list li:last-child{margin-bottom: 0;}
-.check_contents .check_list li .left .check_list_index{color: #5D1E7E; font-size: 13px; font-weight: 700;}
+.check_contents .check_list li .left .check_list_index{color: #660F89; font-size: 13px; font-weight: 700;}
 .check_contents .check_list li .left .check_list_date{color: var(--Neutral-black-22, #222); font-size: 13px; font-weight: 500; margin: 0 4px 0 6px;}
 .check_contents .check_list li .left .check_list_time{color: var(--Neutral-gray-99, #999); font-size: 13px; font-weight: 500;}
 .non--check-list{ width: 100%; height:339px; border-radius: 15px; text-align: center; padding-top: 8rem;}
@@ -284,12 +284,13 @@
 .ai_tap li,
 .ai_tap02 li { display: flex ;align-items: center; height: 100%;}
 .check__result_tap{display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 1rem; }
+.check__result_tap li {height: 100%;}
 .ai_tap li a,
 .ai_tap02 li a,
-.check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 12px; line-height: 14px; letter-spacing: -0.44px; white-space: nowrap;} 
+.check__result_tap li a{padding: 10px 20px; border-radius: 50px; border: 1px solid var(--Neutral-gray-E8, #E8E8E8); background: #FFF; font-weight: 400; font-size: 12px; line-height: 14px; letter-spacing: -0.44px; white-space: nowrap; display: block;} 
 .ai_tap li a.active,
 .ai_tap02 li a.active,
-.check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #5D1E7E); border:1px solid #5D1E7E; color: #FFF; font-size: 12px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px;}
+.check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #660F89); border:1px solid #660F89; color: #FFF; font-size: 12px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px;}
 .ai_tap_4depth{ width: 100%; height: 46px; display: flex; align-items: center; justify-content: left; padding: 0 30px; background: #fff; margin-top: 20px; gap: 20px;}
 .ai_tap_4depth li a{ color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 600; line-height: 18px; letter-spacing: -0.48px; opacity: 0.6; padding-bottom: 3px;} 
 .ai_tap_4depth li a.active{color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 700; line-height: 18px; letter-spacing: -0.48px; opacity: 1; border-bottom: 1px solid #660F89;}
