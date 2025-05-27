@@ -39,6 +39,7 @@ ol {
   word-break: keep-all;
   word-wrap: break-word;
   line-height: 1.5;
+  letter-spacing: -0.04em;
 }
 
 /* 리스트 기본 스타일 제거 */

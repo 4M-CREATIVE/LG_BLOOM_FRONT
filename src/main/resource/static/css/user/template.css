@@ -878,8 +878,8 @@
   border-radius: 90px;
 }
 .label--purple {
-  border: 1px solid #57207E;
-  color: #57207E;
+  border: 1px solid #660F89;
+  color: #660F89;
 }
 .label--gray {
   border: 1px solid #555;
@@ -1099,7 +1099,7 @@ select option {
   width: 100%;
   height: 46px;
   background-repeat: no-repeat;
-  background-position: calc(100% - 16px) 50%;
+  background-position: calc(100% - 25px) 50%;
   background-size: 20px 20px;
   cursor: pointer;
   position: relative;
@@ -1227,13 +1227,13 @@ input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 .search__box button[type="submit"] {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: url(/static/images/user/common/search_magnifying_black.svg) no-repeat;
   background-size: contain;
   position: absolute;
   top: 50%;
-  right: 18px;
+  right: 25px;
   transform: translateY(-50%);
 }
 .btn__clear {
@@ -1512,10 +1512,12 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 20px;
   margin-bottom: 10px;
   text-align: center;
+  line-height: 1.4;
 }
 .popup__text {
   font-size: 14px;
   color: #888;
+  line-height: 1.42;
   max-height: 425px;
   overflow-y: scroll;
 }
@@ -1543,7 +1545,7 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-top: 30px;
 }
 .popup .btn__box .btn {
-  height: 40px;
+  height: 46px;
   font-size: 13px;
   font-weight: 700;
 }
@@ -1629,6 +1631,7 @@ input[type="search"]::-webkit-search-cancel-button {
   align-items: center;
 }
 .pagination ul li a {
+  font-weight: 400;
   padding: 0 15px;
 }
 .pagination ul li.active a {
