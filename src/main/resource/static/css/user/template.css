@@ -450,6 +450,9 @@
 }
 
 /* background */
+.bg-none{
+  background: none!important;
+}
 .bg--primary {
   background-color: var(--primary-purple);
 }
@@ -468,11 +471,17 @@
 .bg--primary-blue {
   background-color: var(--primary-blue)!important;
 }
+.bg--blue-op {
+  background-color: rgba(42, 119, 194, 0.10)!important;
+}
 .bg--primary-pink {
   background-color: var(--primary-pink);
 }
 .bg--primary-deep-pink {
   background-color: var(--primary-deep-pink);
+}
+.bg--pink-op {
+  background: rgba(190, 6, 131, 0.10);
 }
 .bg--pink-F7F3F8{
   background-color: #F7F3F8;

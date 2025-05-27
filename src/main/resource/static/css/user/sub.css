@@ -44,7 +44,7 @@
 .main .section03 .contents li a {width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
 .main .section03 .section03_sub{ border-radius: 15px;  height: 46px;  padding: 14px 20px; align-self: stretch;  background: #EFF2FC; font-size: 1.1rem; font-weight: 400; }
 .main .section03 .section03_sub span { color:var(--primary-deep-blue); font-weight: 700;}
-.main .section03 .section03_sub .circle { background-color: #3C4690;}
+.main .section03 .section03_sub .circle { background-color: #424FAB;}
 /* main end */
 
 /* total search start */
@@ -107,7 +107,7 @@
 /* login start */
 .login-wrap { position: relative;}
 .login-wrap .footer {margin-bottom: 3.7rem;}
-.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  }
+.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
 .login-wrap .content { padding: 0 2rem;}
 .login-wrap .content .login-title{ margin-top:20rem;}
@@ -277,7 +277,8 @@
 .check__result_header {margin-bottom: 12px;}
 .check__result_header .title{width: calc(100% - 40px); display: flex; justify-content: center;}
 .check__result_sub_title{color: rgba(255, 255, 255, 0.50); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
-.check__result_popup_text{color: var(--Neutral-gray-77, #777); font-size: 10px; font-weight: 400; line-height: 18px; letter-spacing: -0.4px; width: 100%; max-height: 425px; overflow-y: scroll;}
+.check__result_popup_text{color: var(--Neutral-gray-77, #777); font-size: 10px; font-weight: 400; line-height: 18px; letter-spacing: -0.4px; width: 100%; max-height: 425px; overflow-y: scroll; padding-left: 14px;}
+.check__result_popup_text li {list-style: decimal!important;}
 .ai_tap{display: flex; align-items: center; justify-content: left; gap: 6px; margin-top: 1rem; margin-left: 25px; height: 34px;}
 .ai_tap02{display: flex; align-items: center; justify-content: left; gap: 6px; margin-top: 1rem; margin-left: 15px; overflow-x: scroll; height: 38px; margin-right: 15px; height: 34px}
 .ai_tap li,
