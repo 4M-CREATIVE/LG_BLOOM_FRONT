@@ -641,6 +641,14 @@
 }
 
 /* faq */
+.list ul > li.comment__list:first-child::before {
+  content: '';
+  display: block;
+  width: calc(100% - 4rem);
+  height: 1px;
+  background-color: #eee;
+  margin: 0 auto;
+}
 
 .list ul > li.comment__list::after,
 .list ul > li.faq__list::after {
