@@ -115,7 +115,7 @@
 .inner_contents .text_wrap,
 .inner_contents02 .text_wrap{ margin: 0 15px;}
 .ck-content.inner_contents .title_txt,
-.ck-content.inner_contents02 .title_txt{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px;}
+.ck-content.inner_contents02 .title_txt{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px; color: #222;}
 .ck-content.inner_contents .title_txt .tooltip,
 .ck-content.inner_contents02 .title_txt .tooltip{vertical-align:top;}
 .ck-content.inner_contents .description_txt,
@@ -378,6 +378,9 @@ hr {height:  1px; margin-bottom: 10px;}
   margin-top: 30px;
   margin-left: 28px;
   margin-right: 28px;
+}
+.ck-content .sm-reference-list {
+  margin-top: 30px;
 }
 
 .ck-content .reference-label {

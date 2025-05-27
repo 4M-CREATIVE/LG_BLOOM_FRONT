@@ -98,6 +98,10 @@ header .container .left a img{
   z-index: 99999;
 }
 
+.gnb #logoutButtonWrap {
+	height: 16px;
+}
+
 .gnb.open {
   left: 0;
 }
