@@ -108,24 +108,24 @@
 .outter_shadow { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04);}
 .outter_radius { border-radius: 20px;}
 .outter_margin { margin: 0 15px 0 15px;}
-.outter_padding { padding: 30px 0 25px 0;}
+.outter_padding { padding: 30px 0 25px 0!important;}
 .outter_min_height { min-height: 40vh;}
 .inner_padding {padding: 0 10px;}
 .inner_contents { border-radius: 20px; background: #FFF; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04); margin: 0 15px 0 15px; min-height: 40vh; padding: 30px 15px 25px 15px;}
 .inner_contents .text_wrap,
-.inner_contents02 .text_wrap{ margin: 0 15px;}
-.ck-content.inner_contents .title_txt,
-.ck-content.inner_contents02 .title_txt{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px; color: #222;}
-.ck-content.inner_contents .title_txt .tooltip,
-.ck-content.inner_contents02 .title_txt .tooltip{vertical-align:top;}
-.ck-content.inner_contents .description_txt,
-.ck-content.inner_contents02 .description_txt{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
-.ck-content.inner_contents .sub_title,
-.ck-content.inner_contents02 .sub_title,
-.ck-content.inner_contents02 .numb_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px;}
-.ck-content.inner_contents02 .numb_title{list-style: decimal;}
-.ck-content.inner_contents .sub_text,
-.ck-content.inner_contents02 .sub_text{ color: #555; font-size: 12px; font-weight: 400; line-height: 20px; letter-spacing: -0.48px;}
+.inner_contents .text_wrap02{ margin: 0 15px;}
+.ck-content .inner_contents .title_txt,
+.ck-content .inner_contents .title_txt02{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px; color: #222;}
+.ck-content .inner_contents .title_txt .tooltip,
+.ck-content .inner_contents .title_txt .tooltip02{vertical-align:top;}
+.ck-content .inner_contents .description_txt,
+.ck-content .inner_contents .description_txt02{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
+.ck-content .inner_contents .sub_title,
+.ck-content .inner_contents .sub_title02,
+.ck-content .inner_contents .numb_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px;}
+.ck-content .inner_contents .numb_title{list-style: decimal;}
+.ck-content .inner_contents .sub_text,
+.ck-content .inner_contents .sub_text02{ color: #555; font-size: 12px; font-weight: 400; line-height: 20px; letter-spacing: -0.48px;}
 .ck-content .padding-0-5{padding: 0 5px;}
 .ck-content .padding-0-10{padding: 0 10px;}
 
