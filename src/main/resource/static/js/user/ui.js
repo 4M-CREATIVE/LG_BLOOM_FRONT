@@ -229,8 +229,8 @@ const uiEvent = {
       const $commentList = $(this).closest('.comment__list');
       const $answerBox = $commentList.find('.comment__answer');
   
-      $answerBox.slideToggle(300);
-      $commentList.toggleClass('on');
+      $answerBox.slideDown(300);
+      $commentList.addClass('on');
     });
 
     // 댓글 접기 버튼 클릭 시 닫기
