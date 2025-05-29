@@ -30,6 +30,15 @@
 @media (max-width: 480px) {
 }
 
+/* 모바일 초소형 화면 (375px 이하) */
+@media (max-width: 375px) {
+  /* 로그인페이지 */
+  .login-wrap .content .login-title {
+    margin-top: 8rem;
+  }
+}
+
+
 /* 모바일 초소형 화면 (320px 이하) */
 @media (max-width: 320px) {
 }
