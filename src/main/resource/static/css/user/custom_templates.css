@@ -118,7 +118,7 @@
 .ck-content .inner_contents .title_txt,
 .ck-content .inner_contents .title_txt02{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px; color: #222;}
 .ck-content .inner_contents .title_txt .tooltip,
-.ck-content .inner_contents .title_txt .tooltip02{vertical-align:top;}
+.ck-content .inner_contents .title_txt02 .tooltip02{vertical-align:top;}
 .ck-content .inner_contents .description_txt,
 .ck-content .inner_contents .description_txt02{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
 .ck-content .inner_contents .sub_title,
@@ -140,7 +140,7 @@
 
 /* 테이블 */ 
 .ck-content .text-center { text-align: center;}
-.ck-content .text-left { text-align: left ;}
+.ck-content .text-left { text-align: left!important;}
 .ck-content .table-scroll { 
   overflow-x: auto; 
   -webkit-overflow-scrolling: touch;
@@ -337,6 +337,23 @@ table-layout: fixed;
   line-height: 9px;
 }
 
+.ck-content .tooltip02 {
+  width: 9px;
+  height: 9px; 
+  color: var(--Neutral-FFF, var(--Neutral-fff, #FFF));
+  text-align: center;
+  font-size: 6px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  background: var(--Neutral-gray-77, #777); 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: super;
+  margin-left: 3px;
+  line-height: 9px;
+}
+
 /* 숫자 리스트 공통 스타일 */
 .ck-content .number-list {
   font-size: 16px;
@@ -377,8 +394,8 @@ hr {height:  1px; margin-bottom: 10px;}
 /* 참고문헌 */
 .ck-content .reference-list {
   margin-top: 30px;
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-left: 13px;
+  margin-right: 13px;
 }
 .ck-content .sm-reference-list {
   margin-top: 30px;
@@ -658,4 +675,16 @@ hr {height:  1px; margin-bottom: 10px;}
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -0.48px;
+}
+
+.pl-25 {
+  padding-left: 25px;
+}
+.hangle-wrap {
+  position: relative;
+}
+.hangle-wrap .hangle {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

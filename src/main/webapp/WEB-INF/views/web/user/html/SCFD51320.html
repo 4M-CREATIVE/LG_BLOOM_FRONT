@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Bloom-난임백과-난임시술-인공수정(IUI)</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <ul class="ai_tap02 no-scrollbar">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" >난임검사</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" class="active">인공수정(IUI)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" >체외수정(IVF)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" >배아이식</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" >난자냉동</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" >시술통계
+        </a></li>
+      </ul>
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="outter_padding inner_contents">
+            <div class="inner_padding">
+              <div class="text_wrap02">
+                <h2 class="title_txt02 mb-30">
+                  <span class="text-purple">인공수정</span>&nbsp;(IUI)<span class="tooltip02">1</span>
+                </h2>
+                <h3 class="mb-10 fs_18 lh_26 fw_bold text-purple hangle-wrap pl-25">
+                  <span class="hangle">가.</span> 자궁내 정자 주입술(IntraUterine Insemination, IUI) 이란?
+                </h3>
+              </div>
+
+              <div class="text_wrap02">
+                <p class="description_txt02 mb-50 text-left">
+                  배란을 유도하고 채취한 정자를 가느다란 관을 통해
+                  자궁안으로 직접 넣어 자연 수정 및 임신 유도하는 방법입니다. 최소 한 쪽 난관이 정상적으로 개통된 여성, 원인 불명 난임,
+                  성기능 장애, 자궁경관 및 점액의 문제, 심각하지 않은 정자의 운동 장애 등의 경우 주로 시행합니다.
+                </p>
+                </div>
+            </div>
+
+            <hr class="hr_gray_d9 mb-50">
+            
+            <div class="inner_padding">
+              <div class="text_wrap02">
+                <h3 class="fs_18 fw_bold text-purple">나. 시술순서</h3>
+                <!-- 이미지 -->
+                <div class="image-scroll mb-60">
+                  <div class="image-inner">
+                    <img src="/src/main/resource/static/images/user/common/ia_test16.png" alt="샘플 이미지" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="inner_padding">
+              <div class="text_wrap02 mb-40">
+                <h2 class="sub_title02  mb-30">
+                  1. 배란 예측 또는 유도
+                </h2>
+                <div class="padding-0-5">
+                  <p class="fs_14 fw_bold text-gray-22 lh_16 mb-10  white-space-nowrap">
+                    1) 배란주기
+                  </p>
+                  <p class="fs_12 fw_regular text-gray-2 mb-30 lh_20 letter--48">
+                    체온 검사, 배란 테스트 혹은 초음파 등을 통해 배란일을 확인, 시술하며 약물 사용이 없어 부작용이 없지만 자연 임신 확률과 크게 차이가 나지 않을 수 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 이미지 -->
+              <div class="image-scroll mb-20">
+                <div class="image-inner">
+                  <img src="/src/main/resource/static/images/user/common/ia_test17.png" alt="샘플 이미지" />
+                </div>
+              </div>
+
+              <div class="text_wrap02 mb-40">
+                <div class="padding-0-5">
+                  <p class="fs_14 fw_bold text-gray-22 lh_16 mb-10">
+                    2) 배란유도주기(인공배란주기)
+                  </p>
+                  <p class="fs_12 fw_regular text-gray-2 mb-40 lh_20 letter--48">
+                    월경 2-4일부터 배란 유도 경구제 혹은 과배란 유도 주사제를 사용하여 배란을 유도합니다. 자연 임신 보다 다태아 임신
+                    확률이 증가할 수 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 이미지 -->
+              <div class="image-scroll mb-20">
+                <div class="image-inner">
+                  <img src="/src/main/resource/static/images/user/common/ia_test18.png" alt="샘플 이미지" />
+                </div>
+              </div>
+            </div>
+
+            <hr class="hr_gray_ee mb-40">
+
+            <div class="inner_padding">
+              <div class="text_wrap02 mb-40">
+                <ol>
+                  <li style="visibility: none;"></li>
+                  <li class="numb_title mb-6 ml-15">
+                    정자 채취 및 처리
+                  </li>
+                </ol>
+
+                <p class="sub_text02 mb-30">
+                  시술 당일 채취한 정액을 처리과정을 거쳐 운동성이 좋고
+                  건강한 정자를 선별하여 시술에 이용하게 됩니다.
+                  시술 전 2~3일 전부터 금욕 후 정자를 채취하여 충분한 양의
+                  정자를 확보하도록 합니다.
+                </p>
+              </div>
+            </div>
+
+            <hr class="hr_gray_ee mb-40">
+            
+            <div class="inner_padding">
+              <div class="text_wrap02 mb-40">
+                <ol>
+                  <li style="visibility: none;"></li>
+                  <li style="visibility: none;"></li>
+                  <li class="numb_title mb-6 ml-15">
+                    자궁강내 정자주입
+                  </li>
+                </ol>
+
+                <p class="sub_text02 mb-30">
+                  선별된 정자를 주입관을 통해 직접 자궁안으로 주입하는
+                  단계로, 10~20분 정도 마취 없이 진행됩니다.
+                  수정이 일어나는 나팔관으로 정자가 이동하는 것을
+                  도움으로써, 심하지 않은 남성 난임, 정자의 운동성 및 수가
+                  부족한 경우의 임신 성공률을 높입니다.
+                </p>
+              </div>
+            </div>
+
+            <hr class="hr_gray_ee mb-40">
+
+            <div class="inner_padding">
+              <div class="text_wrap02 mb-40">
+                <ol>
+                  <li style="visibility: none;"></li>
+                  <li style="visibility: none;"></li>
+                  <li style="visibility: none;"></li>
+                  <li class="numb_title mb-6 ml-15">
+                    임신 확인
+                  </li>
+                </ol>
+
+                <p class="sub_text02 mb-30">
+                  시술 후 약 12~14일부터 혈액검사를 통한 호르몬 수치로
+                  임신 여부를 확인합니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>
+                  보건복지부, 인구보건복지협회. (2017). 2017 난임 가이드북-난임, 바로알기.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>

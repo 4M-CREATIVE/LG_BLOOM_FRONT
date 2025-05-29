@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Bloom-난임백과-건강관리-추천사항-운동</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html" >추천사항</a></li>
+        <li><a href="javascript:void(0);" class="active">금기사항</a></li>
+      </ul>
+
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="inner_contents">
+            <div class="text_wrap">
+              <h2 class="title_txt mb-40">
+                임신, 금기사항
+              </h2>
+
+              <h3 class="sub_title mb-12">1. 음주</h3>
+              <p class="sub_text mb-40">
+                극소량의 알코올이라도 태아가 노출되는 일이 없도록 임신 및 임신 가능성이 있는 임신 준비 중에는 금주하는 것이 좋습니다.
+                음주는 임신 중 태아의 태아 알코올 증후군의 원인<span class="tooltip">1</span> 이 될 뿐
+                아니라 IVF 시술 시 임신 및 생아 출산율에도 영향을
+                주는 것으로 보고되었습니다.<span class="tooltip">2</span><br>
+                알코올 노출은 남녀 모두의 성기능 감퇴를 야기하므로<span class="tooltip">3</span>  
+                보통 임신 시도 전부터는 금주하는 것이 추천됩니다.
+              </p>
+
+              <h3 class="sub_title mb-12">2. 흡연</h3>
+              <p class="sub_text mb-30">
+                소량 흡연으로도 태아의 성장장애, 저체중, 조산 및 태아
+                돌연사 증후군의 확률을 높인다는 연구 보고<span class="tooltip">4</span> 가 있을 뿐
+                아니라 IVF 시술의 성공률을 낮추기도 합니다.<span class="tooltip">5</span><br>
+                뿐만 아니라 흡연 경험 여성은 비 경험자에 비하여 난임 및
+                조기 난소부전의 위험이 증가<span class="tooltip">6</span> 하고, 남성은 정자 수 감소,
+                기형 정자 비율 증가, 정자의 운동성 감소,<br>
+                수정능력 저하 위험이 증가<span class="tooltip">7</span> 하는 것으로 알려져 있습니다. 
+              </p>
+            </div>
+
+            <div class="text_wrap">
+              <h3 class="sub_title mb-12">3. 약물 복용</h3>
+              <p class="sub_text mb-40">
+                투여한 약물이 우리 체내에서 모두 제거되기까지는
+                일정 시간이 필요하므로 복용 중인 약물이 있다면 임신에
+                안전한 약인지 확인할 필요가 있습니다. 현재 임신부
+                금기약물을 복용하였거나 복용 중이라면 임신 준비 최
+                1개월가량 단약 후 임신을 시도한 것이 좋습니다.
+                대표적인 흔히 사용되는 임신부 금기약물 아이소트레티노인(여드름 치료제)은 생아 출산율을 낮추고, 유산 및 조기 출산
+                위험을 높일 뿐 아니라 기형아 확률을 높이      는 보고가
+                있으므로 특히 조심해야 합니다.
+                국소 연고제에는 스테로이드가 함유된 경우가 많고 임신부가 사용시 그 안전성에 대하여 조사된 바는 없으므로 사용하지
+                않는 것이 권장됩니다. 그 외 필수 복용 약물이 있다면 필히
+                주치의와 상의하고 안전한 약물로 교체할 수 있도록 합니다. (임산부 약물정보 센터 마더세이프: 1588-7309, http://mothersafe.or.kr) 
+              </p>
+
+              
+              <!-- 이미지 -->
+              <div class="text-center mb-30" style="width:218px; height:169px; margin: 0 auto;">
+                <img src="/src/main/resource/static/images/user/common/ia_test19.png" alt="샘플 이미지" class="inline-block" />
+              </div>
+
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>Idanpaan-Heikkila, J. et al., Am J Obstet Gynecol. 1972 Feb 1;112(3):387-93.</li>
+                <li>Rossi, B. V et al., Obstet Gynecol. 2011 Jan;117(1):136-142.</li>
+                <li>Heertum, K. V. and Rossi, B. Fertil Res Pract. 2017 Jul 10:3:10.</li>
+                <li>Alay, M. T. et al., Eur J Obstet Gynecol Reprod Biol. 2023 Dec 291:148-155.</li>
+                <li>Lintsen, A. M. E. et al., Hum Reprod. 2005 Jul;20(7):1867-1875.</li>
+                <li>Thomford, P. J. and Mattison, D. R. J., Ark Med Soc. 1986 May;82(12):597-604.</li>
+                <li>Kovac, J. R. et al., Postgrad Med. 2015 Apr;127(3):338-341.</li>
+                <li>McDonnel, B. P. and Regan, C., Obstet Gynaecol. 2019;21:169-75.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>
