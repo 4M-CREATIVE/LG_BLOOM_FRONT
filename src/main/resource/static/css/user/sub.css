@@ -297,8 +297,10 @@
 .ai_tap li a.active,
 .ai_tap02 li a.active,
 .check__result_tap li a.active{border-radius: 50px; background: var(--primary-purple, #660F89); border:1px solid #660F89; color: #FFF; font-size: 12px; font-weight: 600; line-height: 14px; letter-spacing: -0.44px;}
-.ai_tap_4depth{ width: 100%; height: 46px; display: flex; align-items: center; justify-content: left; padding: 0 30px; background: #fff; margin-top: 20px; gap: 20px;}
-.ai_tap_4depth li a{ color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 600; line-height: 18px; letter-spacing: -0.48px; opacity: 0.6; padding-bottom: 3px;} 
+.tap_4depth_wrap {margin-top:20px; padding: 0 18px 0 25px; overflow: hidden; width: 100%; height: 100%; background: #fff;}
+.ai_tap_4depth{ width: 100%; height: 46px; display: flex; align-items: center; justify-content: left; gap: 20px; overflow-x: scroll;   -ms-overflow-style: none;  scrollbar-width: none;}
+.ai_tap_4depth::-webkit-scrollbar {display: none;}
+.ai_tap_4depth li a{ color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 600; line-height: 18px; letter-spacing: -0.48px; opacity: 0.6; padding-bottom: 3px; white-space: nowrap;} 
 .ai_tap_4depth li a.active{color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 700; line-height: 18px; letter-spacing: -0.48px; opacity: 1; border-bottom: 1px solid #660F89;}
 
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
