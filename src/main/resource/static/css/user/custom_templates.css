@@ -357,8 +357,8 @@ table-layout: fixed;
 .ck-content .check_icon_pink{ background-image: url(/static/images/user/common/check_pink.svg);}
 
 .ck-content .circle_list li{ display: flex; align-items: center; gap: 6px;}
-.ck-content .circle_list_top{align-items: flex-start!important;} /* list-type 위쪽 정렬 */
-.ck-content .circle_list_top .circle_icon {margin-top: 7px;}
+.ck-content .circle_list_top{position: relative;padding-left: 10px;} /* list-type 위쪽 정렬 */
+.ck-content .circle_list_top .circle_icon {position: absolute;top: 7px;left: 0;}
 .ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle;}
 .ck-content .circle_icon_black{ background-color: #222;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}

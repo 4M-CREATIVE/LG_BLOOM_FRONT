@@ -647,6 +647,7 @@
 }
 
 /* faq */
+
 .list ul > li.comment__list:first-child::before {
   content: '';
   display: block;
