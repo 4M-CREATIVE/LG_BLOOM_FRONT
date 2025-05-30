@@ -688,3 +688,13 @@ hr {height:  1px; margin-bottom: 10px;}
   top: 0;
   left: 0;
 }
+
+/* grid */
+.grid{
+  display: grid;
+}
+
+.frame-3-7 {
+  grid-template-columns: 3fr 7fr;
+}
+

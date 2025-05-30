@@ -293,6 +293,15 @@ const uiEvent = {
       window.scrollTo(0, 0);
     };
 
+    // vh 높이 보정 (iOS 대응)
+    function setRealHeight() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setRealHeight();
+    window.addEventListener('resize', setRealHeight);
+
     // 브라우저가 자동으로 스크롤 위치 복원 막기
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -474,39 +483,39 @@ const uiEvent = {
     const $selectWrapper = $('.email-select');
     const $selectBox = $selectWrapper.find('.select__box');
     const $selectOptions = $selectWrapper.find('.select__options');
-    const $directInputWrapper = $selectWrapper.find('.direct-input-wrapper');
+    const $directInputWrapper = $('.direct-input-wrapper');
     const $directInput = $directInputWrapper.find('.email-direct-input');
-  
+
     $selectBox.on('click', function (e) {
       e.stopPropagation();
       $('.select__options').not($selectOptions).hide();
       $selectOptions.toggle();
     });
-  
+
     $selectOptions.on('click', 'div[data-value]', function (e) {
       e.stopPropagation();
       const value = $(this).data('value');
       const label = $(this).text();
-  
+
       if (value === 'direct') {
-        $selectBox.hide();
+        // select box 그대로 두고 input만 보여줌
         $directInputWrapper.show();
         $directInput.val('').focus();
+        $selectOptions.hide(); // 옵션창 닫기
       } else {
-        $selectBox.html(label).addClass('selected').show();
+        $selectBox.html(label).addClass('selected');
         $directInputWrapper.hide();
         $selectOptions.hide();
       }
     });
-  
-    $directInput.on('click', function (e) {
-      e.stopPropagation();
-      $selectOptions.show();
-    });
-  
+
     $(document).on('click', function () {
       $selectOptions.hide();
-    });  
+    });
+
+    $directInput.on('click', function (e) {
+      e.stopPropagation();
+    });
   },
   initStepEvent(prefix) {
     const firstStep = $(`div[id^='${prefix}']`).last();

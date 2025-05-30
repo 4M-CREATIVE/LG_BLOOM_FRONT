@@ -404,6 +404,9 @@
 .gap-6 {
   gap: 0.6rem;
 }
+.gap-4 {
+  gap: 0.4rem;
+}
 .gap-3 {
   gap: 0.3rem;
 }
@@ -1802,19 +1805,19 @@ input[type="search"]::-webkit-search-cancel-button {
   min-height: 100vh;
 }
 .min--136 {
-  min-height: calc(100vh - 136px);
+  min-height: calc(var(--vh, 1vh) * 100 - 136px);
 }
 .min--134 {
-  min-height: calc(100vh - 134px);
+  min-height: calc(var(--vh, 1vh) * 100 - 134px);
 }
 .min--130 {
-  min-height: calc(100vh - 130px);
+  min-height: calc(var(--vh, 1vh) * 100 - 130px);
 }
 .min--100 {
-  min-height: calc(100vh - 100px);
+  min-height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 .min--70 {
-  min-height: calc(100vh - 70px);
+  min-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 
 .tooltip {
