@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no viewport-fit=cover">
 
   <title>Bloom-회원가입</title>
 
@@ -65,10 +65,10 @@
           </p>
         </div>
 
-        <div class="form__box form__box--row">
+        <div class="form__box form__box--row mb-10">
           <input type="text" id="emailIdInput" placeholder="이메일 아이디 입력">
           <span>@</span>
-          <div class="form__group ">
+          <div class="form__group">
             <div class="select--custom email-select">
               <div class="select__box select__box_ancle_b_gray bd--gray-e5 tit--fz12">이메일 선택</div>
               <div class="select__options bd--gray-e5" style="display: none;">
@@ -77,10 +77,13 @@
                 <div data-value="hanmail.net">hanmail.net</div>
                 <div data-value="direct" class="direct-option">직접입력</div>
               </div>
-              <div class="direct-input-wrapper" style="display: none;">
-                <input type="text" class="email-direct-input" placeholder="도메인 입력 (예: example.com)" />
-              </div>
             </div>              
+          </div>
+        </div>
+        <!-- 직접입력 선택 시 나타남 -->
+        <div class="form__box">
+          <div class="direct-input-wrapper" style="display: none;">
+            <input type="text" class="email-direct-input" placeholder="@ 뒤 주소만 입력해주세요." />
           </div>
         </div>
 
