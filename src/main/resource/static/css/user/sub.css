@@ -188,9 +188,9 @@
 .swiper-button-prev{right:6.6rem; bottom: 3rem;  width: 3rem; height: 3rem;}
 .swiper-button-next{right:2rem; bottom: 3rem;  width: 3rem; height: 3rem;}
 .swiper-button-prev:after, .swiper-button-next:after{content:''; width: 3rem; height: 3rem;}
-.swiper-button-prev:after {background: url(/images/user/common/slide_left_blue_border.svg);}
-.swiper-button-next:after {background: url(/images/user/common/slide_right_blue.svg);}
-.delete_comment {border-radius: 10px; border: 1px solid var(--Neutral-gray-BB, #BBB);display: inline-flex; height: 18px; padding: 4px 10px; justify-content: center; align-items: center; gap: 10px; flex-shrink: 0;color: var(--Neutral-gray-99, #999); font-size: 10px; font-weight: 400; line-height: 10px; letter-spacing: -0.4px; margin-top: 8px;}
+.swiper-button-prev:after {background: url(/static/images/user/common/slide_left_blue_border.svg);}
+.swiper-button-next:after {background: url(/static/images/user/common/slide_right_blue.svg);}
+.delete_comment {border-radius: 10px; border: 1px solid var(--Neutral-gray-BB, #BBB);display: inline-flex; height: 20px; padding: 4px 10px; justify-content: center; align-items: center; gap: 10px; flex-shrink: 0;color: var(--Neutral-gray-99, #999); font-size: 10px; font-weight: 400; line-height: 10px; letter-spacing: -0.4px;}
 /* 난임지원 쉼터 end */
 
 /* 아이디찾기 start */
