@@ -115,7 +115,7 @@
   display: block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(/static/images/user/common/arrow_l_black.svg) no-repeat;
+  background: url(/src/main/resource/static/images/user/common/arrow_l_black.svg) no-repeat;
   background-size: contain;
   margin-right: 2rem;
 }
@@ -123,7 +123,7 @@
   padding-bottom: 0.8rem;
 }
 .header--sub02 .btn--back {
-  background: url(/static/images/user/common/arrow_l_black.svg) no-repeat;
+  background: url(/src/main/resource/static/images/user/common/arrow_l_black.svg) no-repeat;
   background-size: contain;
 }
 .btn__hamburger {
@@ -755,7 +755,7 @@
 }
 
 .comment__answer .comment__answer_header p {
-  background: url(/static/images/user/common/sm_arrow_t_gray.svg) no-repeat;
+  background: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg) no-repeat;
   background-position: 100% center;
   color: var(--Neutral-gray-55, #555);
   font-size: 14px;
@@ -821,7 +821,7 @@
 .accordian__question .accordian_btn{
   width: 18px;
   height: 18px;
-  background-image: url(/static/images/user/common/arrow_b_gray.svg);
+  background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 20px 20px;
@@ -835,7 +835,7 @@
 }
 
 .accordian__list.on .accordian__question  .accordian_btn{
-  background-image: url(/static/images/user/common/arrow_t_black.svg);
+  background-image: url(/src/main/resource/static/images/user/common/arrow_t_black.svg);
 }
 
 .accordian__question .label {
@@ -1068,17 +1068,17 @@ select option {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(/static/images/user/common/xl_arrow_l.svg) no-repeat center;
+  background: url(/src/main/resource/static/images/user/common/xl_arrow_l.svg) no-repeat center;
 }
 .prev_btn_02 {
   width: 20px;
   height: 20px;
   display: block;
-  background: url(/static/images/user/common/xl_arrow_l.svg) no-repeat center;
+  background: url(/src/main/resource/static/images/user/common/xl_arrow_l.svg) no-repeat center;
 }
 
 .form__box select {
-  background-image: url(/static/images/user/common/triangle_b_gray.svg);
+  background-image: url(/src/main/resource/static/images/user/common/triangle_b_gray.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) 50%;
   background-size: 9px 5px;
@@ -1117,19 +1117,19 @@ select option {
 }
 
 .select__box_arrow_b_white {
-  background-image: url(/static/images/user/common/arrow_b_wh.svg);
+  background-image: url(/src/main/resource/static/images/user/common/arrow_b_wh.svg);
 }
 .select__box_arrow_b_blk {
-  background-image: url(/static/images/user/common/arrow_b_black.svg);
+  background-image: url(/src/main/resource/static/images/user/common/arrow_b_black.svg);
 }
 .select__box_arrow_r_blk {
-  background-image: url(/static/images/user/common/arrow_r_black.svg);
+  background-image: url(/src/main/resource/static/images/user/common/arrow_r_black.svg);
 }
 .select__box_arrow_b_gray {
-  background-image: url(/static/images/user/common/arrow_b_gray.svg);
+  background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
 }
 .select__box_ancle_b_gray {
-  background-image: url(/static/images/user/common/triangle_b_gray.svg);
+  background-image: url(/src/main/resource/static/images/user/common/triangle_b_gray.svg);
   background-size: 9px 5px!important;
 }
 
@@ -1239,7 +1239,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .search__box button[type="submit"] {
   width: 20px;
   height: 20px;
-  background: url(/static/images/user/common/search_magnifying_black.svg) no-repeat;
+  background: url(/src/main/resource/static/images/user/common/search_magnifying_black.svg) no-repeat;
   background-size: contain;
   position: absolute;
   top: 50%;
@@ -1253,7 +1253,7 @@ input[type="search"]::-webkit-search-cancel-button {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background: url(/static/images/user/common/close_small.svg) no-repeat 0 0;
+  background: url(/src/main/resource/static/images/user/common/close_small.svg) no-repeat 0 0;
   background-size: contain;
   display: none;
   transition: .2s ease;
@@ -1293,11 +1293,11 @@ input[type="search"]::-webkit-search-cancel-button {
   border-color: #888;
 }
 .check__group .checkbox02 + label::before {
-  background: #ccc url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: #ccc url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
 }
 .check__group .checkbox03 + label::before {
-  background: #ccc url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: #ccc url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   position: absolute;
   left: 0;
@@ -1306,12 +1306,12 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-left: 28px;
 }
 .check__group.purple input[type="checkbox"]:checked + label::before {
-  background: #660F89 url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: #660F89 url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: #660F89;
 }
 .check__group.deep-blue input[type="checkbox"]:checked + label::before {
-  background: var(--primary-deep-blue) url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: var(--primary-deep-blue) url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: var(--primary-deep-blue);
 }
@@ -1341,7 +1341,7 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-right: 10px;
 }
 .radio__group input[type="radio"]:checked + label::before {
-  background: #660F89 url(/static/images/user/common/check_small.svg) no-repeat 50% 50%;
+  background: #660F89 url(/src/main/resource/static/images/user/common/check_small.svg) no-repeat 50% 50%;
   background-size: 10px 8px;
   border-color: #660F89;
 }
