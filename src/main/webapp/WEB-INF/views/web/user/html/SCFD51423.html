@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-난임백과-관련질환-자궁질환-자궁근종</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51411.html">난소질환</a></li>
+        <li><a href="javascript:void(0);"  class="active">자궁질환</a></li>
+      </ul>
+      <div  class="tap_4depth_wrap">
+        <ul class="ai_tap_4depth">
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html">자궁내막증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51422.html">자궁샘근육증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51423.html" class="active">자궁근종 </a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51424.html">자궁강내 유착</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51425.html">자궁내막용종</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51426.html">얇은자궁내막</a></li>
+        </ul>
+      </div>
+
+
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="inner_contents">
+            <div class="text_wrap">
+              <h2 class="title_txt mb-10">
+                <span class="text-purple">자궁근종</span>이란?<span class="tooltip">1</span>
+              </h2>
+              <p class="description_txt mb-40">
+                자궁근종은 자궁 평활근에 발생하는
+                양성종양으로, 가임기 여성의 20-40%에서
+                발생하는 흔한 질환입니다.<span class="tooltip">1</span><br>
+                특히 30세 이후 발생 빈도가 높아지며
+                35세 이상 여성의 약 40%에서 자궁근종이
+                발생하는 것으로 보고되고 있습니다.
+                <br><br>
+                보건복지부의 조사에 따르면 자궁근종의 환자는2023년 약 63만명으로 2013년 조사보다
+                약 30만명 증가한 것으로 나타납니다.
+                연령별로는 40대 여성이 가장 많이 나타납니다.<span class="tooltip">2</span><br>
+                자궁근종의 병인에 대해 명확히 밝혀진 것은 없으나, 유전적, 호르몬, 성장인자 요인과 관련이
+                있을 것으로 여겨집니다.<span class="tooltip">3</span><br>
+                주로 증상이 없이 우연히 발견되는 경우가 많아
+                정기적인 검진이 필요할 수 있습니다.
+              </p>
+            </div>
+
+            <!-- 이미지 -->
+            <div class="text-center mb-40">
+                <img src="/src/main/resource/static/images/user/common/ia_test20x3.jpg" alt="샘플 이미지" class="inline-block" />
+            </div>
+
+            <div class="text_wrap mb-20">
+              <h2 class="sub_title  mb-10">
+                1. 증상 및 진단검사<span class="tooltip">1</span>
+              </h2>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    증상
+                  </span>
+                </li>
+              </ul>
+
+              <ul class="circle_list">
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    월경 과다
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    골반통 및 팽만감
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-20  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    빈뇨 및 장의 압박 증상 등
+                  </span>
+                </li>
+              </ul>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    진단검사
+                  </span>
+                </li>
+              </ul>
+              <p class="sub_text mb-40  ml-10">
+                보통 정기 건강검진 시 초음파 검사에서 주로 발견되며
+                근종의 크기, 모양, 경도, 통증 정도를 확인하기 위해
+                골반 내진이 필요합니다.
+              </p>
+
+              <h2 class="sub_title  mb-20">
+                2. 치료<span class="tooltip">3</span> 
+              </h2>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    정기적인 추적관찰(기대요법)
+                  </span>
+                </li>
+              </ul>
+              <p class="sub_text mb-20 ml-10">
+                심한 증상이 없는 경우 정기적으로 추적 관찰합니다.
+              </p>
+
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    약물 또는 자궁내 장치를 이용한 내과적 치료
+                  </span>
+                </li>
+              </ul>
+              <p class="sub_text mb-20 ml-10">
+                통증이나 과다월경 증상을 줄이기 위해 호르몬 약물 치료나 호르몬을 방출하는 자궁내 장치 사용을 고려해 볼 수 있습니다.
+              </p>
+
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    외과적 치료
+                  </span>
+                </li>
+              </ul>
+              <ul class="circle_list">
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁보존을 원하는 경우, 자궁근종절제술 또는 HIFU
+                    시술을 고려할 수 있습니다.<br>
+                    그러나 HIFU 시술은 임신의 안전성에 대한 근거가 아직
+                    불충분하기 때문에 상대적 금기증으로 권고합니다.<span class="tooltip">4</span>
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    출산계획이 없는 경우, 자궁적출술 또는
+                    자궁내막절제술을 시행할 수 있습니다.
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-20  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    그 외 자궁동맥 색전술이 있으며, 색전술은 시술 후
+                    임신 예후에 대한 정확한 보고가 없어 임신 계획이 있는
+                    환자에게 적합하지 않을 수 있습니다.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>Lee, S.J. et al. J Korean Soc Matern Child Health. 2020;24(3):144-153.</li>
+                <li>보건의료빅데이터 개방시스템_질병 통계_자궁의 평활근종 accessed on 18Apr.2025</li>
+                <li>김용만. J Korean Med Assoc 2015 December; 58(12): 1147-1153.</li>
+                <li>대한산부인과학회 고강도초음파집속술(HIFU) 진료지침 (2016)</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>

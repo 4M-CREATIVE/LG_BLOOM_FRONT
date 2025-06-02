@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-난임백과-관련질환-자궁질환-자궁내막용종</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51411.html">난소질환</a></li>
+        <li><a href="javascript:void(0);"  class="active">자궁질환</a></li>
+      </ul>
+      <div  class="tap_4depth_wrap">
+        <ul class="ai_tap_4depth">
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html">자궁내막증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51422.html">자궁샘근육증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51423.html">자궁근종 </a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51424.html">자궁강내 유착</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51425.html" class="active">자궁내막용종</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51426.html">얇은자궁내막</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="inner_contents">
+            <div class="text_wrap">
+              <h2 class="title_txt mb-10">
+                <span class="text-purple">자궁내막용종</span>이란?
+              </h2>
+              <p class="description_txt mb-40">
+                자궁내막용종은 자궁내막의
+                어느 한 부분이 과도하게 증식하여 돌기 모양으로
+                튀어나와 있는 것을 말합니다.
+                자궁내막용종은 비교적 흔한 질환이며,
+                그 유병률은 잘 알려져 있지 않으나
+                난임 여성의 35%에서 발견됩니다.
+                자궁내막용종의 정확한 원인 또한 알려져 있지
+                않지만, 에스트로젠 자극과 관련이 있는 것으로
+                여겨집니다.<span class="tooltip">1</span>
+              </p>
+            </div>
+
+            <!-- 이미지 -->
+            <div class="text-center mb-40">
+                <img src="/src/main/resource/static/images/user/common/ia_test22x3.jpg" alt="샘플 이미지" class="inline-block" />
+            </div>
+
+            <div class="text_wrap mb-20">
+              <h2 class="sub_title  mb-10">
+                1. 증상 및 진단검사<span class="tooltip">1</span>
+              </h2>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    증상
+                  </span>
+                </li>
+              </ul>
+
+              <ul class="circle_list">
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    증상이 없는 경우가 많으나,
+                    부정출혈이 나타날 때도 있습니다.
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    폴립 절제술 이후 임신율이 향상되었다는
+                    연구 결과로 보아, 자궁내막용종이 난임의 원인으로
+                    여겨지기도 합니다.
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-20  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    대부분은 양성이나, 1% 정도는 악성으로
+                    변하기도 합니다.
+                  </span>
+                </li>
+              </ul>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    검사
+                  </span>
+                </li>
+              </ul>
+              <ul class="circle_list">
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁 초음파
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁 내시경
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁 조영술
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-20  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    조직검사
+                  </span>
+                </li>
+              </ul>
+
+              <h2 class="sub_title  mb-10">
+                2. 치료<span class="tooltip">1</span>
+              </h2>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁경 검사 후 자궁경 용종 절제술
+                  </span>
+                </li>
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    소파술
+                  </span>
+                </li>
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    증상이 없는 작은 용종(&lt;10mm)은 관찰하면서 추적 관리
+                  </span>
+                </li>
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁내 장치 삽입
+                  </span>
+                </li>
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    호르몬 대체 요법 등
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>Nijkang, N.P. et al., SAGE Open Med. 2019;7:2050312119848247.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-난임백과-관련질환-자궁질환-자궁강내유착</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51411.html">난소질환</a></li>
+        <li><a href="javascript:void(0);"  class="active">자궁질환</a></li>
+      </ul>
+      <div  class="tap_4depth_wrap">
+        <ul class="ai_tap_4depth">
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html">자궁내막증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51422.html">자궁샘근육증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51423.html">자궁근종 </a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51424.html" class="active">자궁강내 유착</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51425.html">자궁내막용종</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51426.html">얇은자궁내막</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="inner_contents">
+            <div class="text_wrap">
+              <h2 class="title_txt mb-10">
+                <span class="text-purple">자궁강내 유착</span>이란?
+              </h2>
+              <p class="description_txt mb-40">
+                자궁강내 유착은 자궁내막이 광범위하게 파괴된
+                상태로, 소파수술(자궁안을 긁어내는 수술) 후
+                흔히 발생합니다.<span class="tooltip">1</span><br>
+                자극 혹은 감염 등에 의해 자궁 안쪽의 깊은 층이
+                손상되고, 그 부위에 염증과 흉터조직이 생기면서
+                자궁강 내의 앞뒤 벽이 서로 붙게 됩니다.
+                이렇게 붙은 조직은 점점 굳어지면서 유착이
+                심해질 수 있습니다.<span class="tooltip">2</span><br>
+                <br>
+                무증상인 경우도 많지만 과소월경, 무월경과 같은
+                월경장애가 있을 수 있고, 착상 유지가 힘들어 난임, 반복유산 등의 문제를 일으킬 수 있습니다.<span class="tooltip">3</span>
+              </p>
+            </div>
+
+            <!-- 이미지 -->
+            <div class="text-center mb-40">
+                <img src="/src/main/resource/static/images/user/common/ia_test21x3.jpg" alt="샘플 이미지" class="inline-block" />
+            </div>
+
+            <div class="text_wrap mb-20">
+              <h2 class="sub_title  mb-10">
+                1. 진단검사 및 치료
+              </h2>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    진단검사<span class="tooltip">4</span>
+                  </span>
+                </li>
+              </ul>
+
+              <ul class="circle_list">
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    초음파 검사(가장 보편적)
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-4  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁경 검사
+                  </span>
+                </li>
+                <li class="circle_list_top fs_12 text-gray-55 fw_regular mb-20  ml-10">
+                  <span class="circle_icon circle_icon_gray" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    자궁난관조영술
+                  </span>
+                </li>
+              </ul>
+              <ul class="circle_list">
+                <li class="mb-6 fs_14">
+                  <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                  <span>
+                    치료<span class="tooltip">2</span><span class="tooltip">5</span>
+                  </span>
+                </li>
+              </ul>
+              <p class="sub_text mb-40  ml-10">
+                자궁강내 유착 치료는 유착을 제거하고 이후에
+                재발하는 것을 막는 것에 초점이 맞추어져 있습니다.
+                자궁경을 통해 유착을 제거하고, 유착 방지를 위해 자궁내
+                장치를 삽입하고 자궁내막 증식을 유도하기 위해
+                호르몬 투여가 이루어집니다.
+              </p>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>이정형, 김정식. 임신시 자궁강내유착증의 초음파소견 및 임상적 의의: 6례 보고. 대한초음파의학회지. 1994;13:171-175.</li>
+                <li>Han, W.S. et al. Korean J Obstet Gynecol. 2012;55(10):707-712.</li>
+                <li>AAGL Elevating Gynecologic Surgery. Gynecol Surg. 2017;14(1):6</li>
+                <li>Zhao, X. et al. Quant Imaging Med Surg. 2023;13(4):2314-2327.</li>
+                <li>음현지 외. Obstetrics & Gynecology Science. 2001; 44(7) 1285-1290.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>
