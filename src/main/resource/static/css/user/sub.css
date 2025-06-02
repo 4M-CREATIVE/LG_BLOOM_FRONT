@@ -106,16 +106,9 @@
 
 /* login start */
 .login-wrap { position: relative;}
-<<<<<<< HEAD
-<<<<<<< HEAD
 .login-wrap .footer {margin-bottom: 3.7rem;}
 .login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
-=======
-=======
->>>>>>> local
-.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
-.login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
 .login-wrap .content { padding: 0 2rem;}
 .login-wrap .content .login-title{ margin-top:15rem;}
 .login-wrap .content .login-title .login_logo { width: 101px; height: 32px;}

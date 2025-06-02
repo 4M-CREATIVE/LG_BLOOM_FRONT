@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-난임백과-난임시술-배아이식</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <ul class="ai_tap02 no-scrollbar">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html" >난임검사</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51320.html" >인공수정(IUI)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51331.html" >체외수정(IVF)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51340.html" class="active">배아이식</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51350.html" >난자냉동</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51361.html" >시술통계
+        </a></li>
+      </ul>
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="outter_padding inner_contents">
+            <div class="inner_padding">
+              <div class="text_wrap02">
+                <h2 class="title_txt02 mb-30">
+                  <span class="text-purple">인공수정</span>&nbsp;(IUI)<span class="tooltip02">1</span>
+                </h2>
+                <h3 class="mb-10 fs_18 lh_26 fw_bold text-purple hangle-wrap pl-25">
+                  <span class="hangle">가.</span> 배아 이식 (Embryo Transfer) 이란?
+                </h3>
+              </div>
+
+              <div class="text_wrap02">
+                <p class="description_txt02 mb-50 text-left">
+                  수정된 배아의 자궁내 안정적 착상과 성장을 돕기
+                  위하여 난자 채취일부터 황체 호르몬제를 투여합니다.<span class="tooltip">1</span> 배아를 이식할 때는 자궁내막 상태가 착상에
+                  적합한 상태여야 하며, 환경이 유지되지 못하면 초기 임신 소실이 일어날 수 있는 것으로 알려져 있습니다.<span class="tooltip">2</span>
+                  황체호르몬은 피하주사, 근육주사, 질좌제, 경구제 등 여러 제형이 있으며 조합해서 사용하기도 합니다.
+                  사용 여부 및 사용 용량과 사용 기간 등은 전문의
+                  선생님의 판단 하에 결정됩니다.<br>
+                  임신 확인 후 길게는 임신 10주차 내외까지 황체
+                  호르몬제를 투여할 수 있습니다.
+                </p>
+              </div>
+
+              <div class="text_wrap02 mb-40">
+                <h2 class="sub_title02 mb-10">
+                  1. 신선배아 이식
+                  (Fresh Embryo Transfer, ET)
+                </h2>
+                <p class="fs_12 fw_regular text-gray-55 mb-40 lh_20 letter--48">
+                  시험관 아기 시술의 마지막 단계로, 체외에서 수정 후
+                  배양된 배아를 가는 관을 통해 질과 자궁경부를 통해
+                  자궁으로 삽입하는 이식 방법입니다.
+                </p>
+              </div>
+            </div>
+
+            <hr class="hr_gray_d9 mb-40">
+
+            <div class="inner_padding">
+              <div class="text_wrap02 mb-40">
+                <h2 class="sub_title02 mb-10">
+                  2. 동결배아 이식
+                  (Frozen Embryo Transfer, FET)
+                </h2>
+                <p class="fs_12 fw_regular text-gray-55 mb-20 lh_20 letter--48">
+                  배양한 배아를 바로 자궁 내 이식하지 않고, 냉동-해동 과정을
+                  거쳐 자궁으로 이식하는 방법입니다. 신선배아 이식 후 남은
+                  배아를 동결보존하기도 하지만, 선택적으로 동결배아 이식을
+                  하는 경우도 있습니다. 과배란 요법의 부작용 등과 같은
+                  의학적인 이유와 개인적인 이유로 시행하기도 합니다.<br>
+                  해동한 배아를 이식하기 위해서 자궁 내막의 준비가
+                  필요할 수 있으며 호르몬 전처치, 자연주기, 수정된
+                  자연주기 등 여러가지 방법을 사용할 수 있습니다.<span class="tooltip">3</span>
+                </p>
+                
+                <!-- 리스트 박스 -->
+                <div class="list-box">
+                  <div class="list-title bg-deep-pink text-white fw-bold fs_12">인공 주기(호르몬 전처치)</div>
+                  <div class="list-contents bg--pink-FBF5FA p-10 fs_12 lh_20 text-gray-22 fw_regular">
+                    <ul class="circle_list">
+                      <li class="mb-10 fs_14">
+                        <span class="circle_icon circle_icon_pink" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          불규칙한 월경주기
+                        </span>
+                      </li>
+                      <li class="mb-10 fs_14">
+                        <span class="circle_icon circle_icon_pink" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          이식 날짜 확정이 필요한 경우
+                        </span>
+                      </li>
+                      <li class="mb-10 fs_14">
+                        <span class="circle_icon circle_icon_pink" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          반복 착상 실패
+                        </span>
+                      </li>
+                      <li class="fs_14">
+                        <span class="circle_icon circle_icon_pink" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          얇은 자궁 내막
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="list-box mb-30">
+                  <div class="list-title bg-purple text-white fw-bold fs_12">자연 주기(월경주기 이용)</div>
+                  <div class="list-contents bg--pink-FBF5FA p-10 fs_12 lh_20 text-gray-22 fw_regular">
+                    <ul class="circle_list">
+                      <li class="mb-10 fs_14">
+                        <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          규칙적인 월경주기
+                        </span>
+                      </li>
+                      <li class="mb-10 fs_14">
+                        <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          배란 예측이 가능한 경우
+                        </span>
+                      </li>
+                      <li class="fs_14">
+                        <span class="circle_icon circle_icon_purple" aria-hidden="true">&nbsp;</span>
+                        <span>
+                          최근에는 자연주기 이식에도 황체 호르몬 보충이 효과가 있다는 보고도 있음
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>
+                  보건복지부, 인구보건복지협회. (2017). 2017 난임 가이드북-난임, 바로알기.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>

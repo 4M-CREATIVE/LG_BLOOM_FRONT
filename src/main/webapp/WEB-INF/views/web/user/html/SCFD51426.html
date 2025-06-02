@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-난임백과-관련질환-자궁질환-얇은자궁내막</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51411.html">난소질환</a></li>
+        <li><a href="javascript:void(0);"  class="active">자궁질환</a></li>
+      </ul>
+      <div  class="tap_4depth_wrap">
+        <ul class="ai_tap_4depth">
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51421.html">자궁내막증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51422.html">자궁샘근육증</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51423.html">자궁근종 </a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51424.html">자궁강내 유착</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51425.html">자궁내막용종</a></li> 
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51426.html" class="active">얇은자궁내막</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="inner_contents">
+            <div class="text_wrap">
+              <h2 class="title_txt mb-10">
+                <span class="text-purple">얇은 자궁내막</span>이란?<span class="tooltip">1</span><span class="tooltip">2  </span>
+              </h2>
+              <p class="description_txt mb-40">
+                얇은 자궁내막은 자궁내막 두께가
+                ≤7mm인 상태를 말합니다.
+                40세 이상 여성의 약 25%에서 얇은 자궁내막이
+                발생하고, 난임 치료 주기에서 얇은 자궁내막의
+                발생률은 2~3%입니다.
+                <br><br>
+                자궁 내막은 시험관 수정과
+                배아 이식 주기에 영향을 주요 요인 중 하나이며,
+                IVF에서 이식 실패의 약 2/3가 자궁 내막
+                내성 감소로 인한 것으로 보고됩니다.
+                <br><br>
+                자궁강내 유착이나, 폴립, 자궁내막증 및 근종 등의
+                질환은 자궁 내막 두께 감소로 이어질 수 있습니다.
+                얇은 내막에 대처하기 위하여 여러가지 보조제들이 사용되어왔지만 대부분 그 효과에 대한
+                근거는 미비합니다.<span class="tooltip">1</span>
+              </p>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>Wang, Y. et al., Front Endocrinol (Lausanne). 2024;15:1269382.</li>
+                <li>Liu, E. K. et al., Reprod Biomed Online 2019 Jul;39(1):49-62</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>

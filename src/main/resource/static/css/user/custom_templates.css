@@ -374,10 +374,11 @@ table-layout: fixed;
 .ck-content .check_icon_blue{ background-image: url(/static/images/user/common/check_blue.svg);}
 .ck-content .check_icon_pink{ background-image: url(/static/images/user/common/check_pink.svg);}
 
-.ck-content .circle_list li{ display: flex; align-items: center; gap: 6px;}
+.ck-content .circle_list li{ display: flex; align-items: center; gap: 6px; position: relative;
+padding-left: 8px;}
 .ck-content .circle_list_top{position: relative;padding-left: 10px;} /* list-type 위쪽 정렬 */
 .ck-content .circle_list_top .circle_icon {position: absolute;top: 7px;left: 0;}
-.ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle;}
+.ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle; position: absolute; top: 8px; left: 0;}
 .ck-content .circle_icon_black{ background-color: #222;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}
 .ck-content .circle_icon_purple{background-color: #660F89;}
@@ -698,3 +699,5 @@ hr {height:  1px; margin-bottom: 10px;}
   grid-template-columns: 4fr 6fr;
 }
 
+.list-box .list-title { padding: 12px 0; text-align: center;}
+.list-box .list-contents {padding:20px;}
