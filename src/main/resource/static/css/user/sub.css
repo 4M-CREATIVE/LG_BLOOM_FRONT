@@ -256,7 +256,7 @@
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
-.reproductive-health-text {padding: 0 20px;}
+.reproductive-health-text {padding: 0 20px 140px 20px;}
 .reproductive-health-text .sub-text { line-height: 22px; letter-spacing: -0.56px;}
 .reproductive-health-text .logo {width: 120px; height: 38px; margin-bottom: 12px;}
 .sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
@@ -319,7 +319,7 @@ table.table-d tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;colo
 .box-color {padding:  2rem 1rem; border-radius: 2rem;}
 .box-color .title{ padding: 4.5px 10px; border-radius: 10px;}
 .box-color .txt {line-height: 20px; letter-spacing: -0.48px;}
-.box-color .contents li{display: flex; margin-bottom: 12px; gap: 12px;}
+.box-color .contents li{display: flex; gap: 9px;}
 .box-color .contents li p:last-child{width: 78.98%;}
 .box-color .contents li p:last-child span {letter-spacing: -0.4px; white-space:nowrap;}
 .balloon-text-blue { width: 22.03%; max-width: 65px; border-radius: 20px;  height: 24px; background: rgba(42, 119, 193, 0.10);}

@@ -36,6 +36,12 @@
   .login-wrap .content .login-title {
     margin-top: 8rem;
   }
+
+  /* 가임건강 체크하기 */
+  .fertility_health .img{
+    margin-bottom: 2rem!important;
+    margin-top: 4rem!important;
+  }
 }
 
 
