@@ -127,13 +127,18 @@ header .container .left a img{
   border-bottom: 2px solid #E5E5E5;
 }
 
+.gnb .container .profile_info .mypage {
+  padding: 4px 12px;
+  border-radius: 90px;
+}
+
 .gnb .container .profile_info p {
   font-size: 1.6rem;
   font-weight: 600;
 }
 
 .gnb .container .profile_info .right {
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
 .gnb .container .contents section:first-child ul li strong {
