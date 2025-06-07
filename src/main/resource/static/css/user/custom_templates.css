@@ -20,6 +20,7 @@
 .ck-content .fs_10 { font-size: 10px; }
 /* 폰트 행간 */
 .ck-content .lh_16 { line-height: 16px; }
+.ck-content .lh_20 { line-height: 20px; } /* 컴포넌트 없음*/
 .ck-content .lh_22 { line-height: 22px; }
 .ck-content .lh_24 { line-height: 24px; }
 .ck-content .lh_26 { line-height: 26px; }
@@ -108,24 +109,24 @@
 .outter_shadow { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04);}
 .outter_radius { border-radius: 20px;}
 .outter_margin { margin: 0 15px 0 15px;}
-.outter_padding { padding: 30px 0 25px 0;}
+.outter_padding { padding: 30px 0 25px 0!important;}
 .outter_min_height { min-height: 40vh;}
 .inner_padding {padding: 0 10px;}
 .inner_contents { border-radius: 20px; background: #FFF; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04); margin: 0 15px 0 15px; min-height: 40vh; padding: 30px 15px 25px 15px;}
 .inner_contents .text_wrap,
-.inner_contents02 .text_wrap{ margin: 0 15px;}
-.ck-content.inner_contents .title_txt,
-.ck-content.inner_contents02 .title_txt{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px;}
-.ck-content.inner_contents .title_txt .tooltip,
-.ck-content.inner_contents02 .title_txt .tooltip{vertical-align:top;}
-.ck-content.inner_contents .description_txt,
-.ck-content.inner_contents02 .description_txt{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
-.ck-content.inner_contents .sub_title,
-.ck-content.inner_contents02 .sub_title,
-.ck-content.inner_contents02 .numb_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px;}
-.ck-content.inner_contents02 .numb_title{list-style: decimal;}
-.ck-content.inner_contents .sub_text,
-.ck-content.inner_contents02 .sub_text{ color: #555; font-size: 12px; font-weight: 400; line-height: 20px; letter-spacing: -0.48px;}
+.inner_contents .text_wrap02{ margin: 0 15px;}
+.ck-content .inner_contents .title_txt,
+.ck-content .inner_contents .title_txt02{ text-align: center; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.96px; color: #222;}
+.ck-content .inner_contents .title_txt .tooltip,
+.ck-content .inner_contents .title_txt02 .tooltip02{vertical-align:top;}
+.ck-content .inner_contents .description_txt,
+.ck-content .inner_contents .description_txt02{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
+.ck-content .inner_contents .sub_title,
+.ck-content .inner_contents .sub_title02,
+.ck-content .inner_contents .numb_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px;}
+.ck-content .inner_contents .numb_title{list-style: decimal;}
+.ck-content .inner_contents .sub_text,
+.ck-content .inner_contents .sub_text02{ color: #555; font-size: 12px; font-weight: 400; line-height: 20px; letter-spacing: -0.48px;}
 .ck-content .padding-0-5{padding: 0 5px;}
 .ck-content .padding-0-10{padding: 0 10px;}
 
@@ -139,7 +140,7 @@
 
 /* 테이블 */ 
 .ck-content .text-center { text-align: center;}
-.ck-content .text-left { text-align: left ;}
+.ck-content .text-left { text-align: left!important;}
 .ck-content .table-scroll { 
   overflow-x: auto; 
   -webkit-overflow-scrolling: touch;
@@ -336,6 +337,23 @@ table-layout: fixed;
   line-height: 9px;
 }
 
+.ck-content .tooltip02 {
+  width: 9px;
+  height: 9px; 
+  color: var(--Neutral-FFF, var(--Neutral-fff, #FFF));
+  text-align: center;
+  font-size: 6px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  background: var(--Neutral-gray-77, #777); 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: super;
+  margin-left: 3px;
+  line-height: 9px;
+}
+
 /* 숫자 리스트 공통 스타일 */
 .ck-content .number-list {
   font-size: 16px;
@@ -350,21 +368,29 @@ table-layout: fixed;
 }
 .ck-content .numb_list li{list-style-type: decimal;}
 
-/* 도형 리스트트 */
+/* 도형 리스트 */
 .ck-content .check_icon{ width: 11.489px; height: 9px; display: inline-flex; background-size: cover; background-repeat: no-repeat;}
-.ck-content .check_icon_purple{ background-image: url(/src/main/resource/static/images/user/common/check_puple.svg);}
-.ck-content .check_icon_blue{ background-image: url(/src/main/resource/static/images/user/common/check_blue.svg);}
-.ck-content .check_icon_pink{ background-image: url(/src/main/resource/static/images/user/common/check_pink.svg);}
+.ck-content .check_icon_purple{ background-image: url(/static/images/user/common/check_puple.svg);}
+.ck-content .check_icon_blue{ background-image: url(/static/images/user/common/check_blue.svg);}
+.ck-content .check_icon_pink{ background-image: url(/static/images/user/common/check_pink.svg);}
 
-.ck-content .circle_list li{ display: flex; align-items: center; gap: 6px;}
-.ck-content .circle_list_top li {align-items: flex-start;} /* list-type 위쪽 정렬 */
-.ck-content .circle_list_top .circle_icon {margin-top: 7px;}
-.ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0;}
+.ck-content .circle_list li{ display: flex; align-items: center; gap: 6px; position: relative;}
+.ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle; position: absolute; top: 8px; left: 0;}
 .ck-content .circle_icon_black{ background-color: #222;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}
 .ck-content .circle_icon_purple{background-color: #660F89;}
 .ck-content .circle_icon_blue{background-color: #2A77C2;}
 .ck-content .circle_icon_pink{background-color: #BE0683;}
+
+.ck-content .circle_list_top {position: relative;padding-left: 10px;} /* list-type 위쪽 정렬 */
+.ck-content .circle_list::before,
+.ck-content .circle_list_top::before {content: '';display: block;width: 4px;height: 4px;border-radius: 100%;flex-shrink: 0;display: inline-block;vertical-align: middle;background-color: #660F89;}
+.ck-content .circle_list_top::before {position: absolute;top: 8px;left: 0;}
+.ck-content .circle_list_gray::before {background-color: #D9D9D9;}
+.ck-content .circle_list_black::before {background-color: #222;}
+.ck-content .circle_list_purple::before {background-color: #660F89;} /* default */
+.ck-content .circle_list_blue::before {background-color: #2A77C2;}
+.ck-content .circle_list_pink::before {background-color: #BE0683;}
 
 /* 구분 라인 */
 hr {height:  1px; margin-bottom: 10px;}
@@ -376,8 +402,11 @@ hr {height:  1px; margin-bottom: 10px;}
 /* 참고문헌 */
 .ck-content .reference-list {
   margin-top: 30px;
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+.ck-content .sm-reference-list {
+  margin-top: 30px;
 }
 
 .ck-content .reference-label {
@@ -492,7 +521,7 @@ hr {height:  1px; margin-bottom: 10px;}
  .faq__question {
   padding: 14px 56px 14px 56px;
   position: relative;
-  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_b_gray.svg);
+  background-image: url(/static/images/user/common/sm_arrow_b_gray.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 34px) 19px;
   background-size: 15px 9px;
@@ -502,7 +531,7 @@ hr {height:  1px; margin-bottom: 10px;}
 }
  .faq__list.on .faq__question {
   padding-bottom: 12px;
-  background-image: url(/src/main/resource/static/images/user/common/sm_arrow_t_gray.svg);
+  background-image: url(/static/images/user/common/sm_arrow_t_gray.svg);
 }
  .faq__question .label {
   margin-top: 7px;
@@ -608,16 +637,16 @@ hr {height:  1px; margin-bottom: 10px;}
 }
 
 /* 이용약관 페이지 */
-.ck-content  .terms{
+.ck-content.terms{
   color: #222;
 }
-.ck-content .terms h2 {
+.ck-content.terms h2 {
   font-size: 12px;
   font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.48px;
 }
-.ck-content .terms{
+.ck-content.terms{
   font-size: 12px;
   font-weight: 400;
   line-height: 22px;
@@ -655,3 +684,27 @@ hr {height:  1px; margin-bottom: 10px;}
   line-height: 20px;
   letter-spacing: -0.48px;
 }
+
+.pl-25 {
+  padding-left: 25px;
+}
+.hangle-wrap {
+  position: relative;
+}
+.hangle-wrap .hangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* grid */
+.grid{
+  display: grid;
+}
+
+.frame-4-6 {
+  grid-template-columns: 4fr 6fr;
+}
+
+.list-box .list-title { padding: 12px 0; text-align: center;}
+.list-box .list-contents {padding:20px;}
