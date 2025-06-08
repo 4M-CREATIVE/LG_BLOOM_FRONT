@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-난임백과-난임시술-시술통계-출산/임신율통계</title>
+
+    <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="faq-list bg--primary">
+  <!-- gnb -->
+  <div class="gnb no-scrollbar"></div>
+
+  <div class="search-header-wrap select-wrap">
+    <!-- header -->
+    <div class="flex flex--between gap-8">
+      
+      <div class="back-btn">
+        <a class="prev_btn" href="javascript:void(0)"></a>
+      </div>
+
+      <div class="form__group">
+        <div class="select--custom">
+          <div class="select__box select__box_arrow_b_white select--op tit--fz16 txt--fw-700">난임백과</div>
+          <div class="select__options select--bg-purple01">
+            <div data- value="option1">옵션 1</div>
+            <div data-value="option2">옵션 2</div>
+            <div data-value="option3">옵션 3</div>
+            <div data-value="option4">옵션 4</div>
+            <div data-value="option5">옵션 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- tab__lists -->
+    <div class="tab__lists tab__lists--scroll ">
+      <div class="tab__inner tab-link no-scrollbar">
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
+        </button>
+        <button class="tab-menu active color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51411.html"><strong class="tit--fz14 txt--fw-600">관련질환</strong></a>
+        </button>
+        <button class="tab-menu color--wht bd--b-wht">
+          <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51511.html"><strong class="tit--fz14 txt--fw-600">건강관리</strong></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 자리 확보 -->
+  <div class="spacer h-136"></div> 
+
+  <!-- main -->
+  <div class="content ">
+    <div class="search-result tab-content active is-radius min--136 outter_bg">
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap02 no-scrollbar">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html">난임검사</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51320.html">인공수정(IUI)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51331.html">체외수정(IVF)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51340.html">배아이식</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51350.html">난자냉동</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51361.html" class="active">시술통계</a></li>
+      </ul>
+      <div  class="tap_4depth_wrap">
+        <ul class="ai_tap_4depth">
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51361.html">국내진료/시술현황</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51362.html" class="active">출산/임신율통계</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
+        <div class="ck-content">
+          <div class="inner_contents">
+            <div class="text_wrap">
+              <h2 class="title_txt mb-10">
+                국가별 난임 시술 <span class="text-purple">출생아 통계</span>
+              </h2>
+              <p class="description_txt mb-40">
+                실제 난임시술을 통해<br>
+                태어나는 아이는 얼마나 될까요?<br>
+                국내뿐 아니라 국제적으로 난임 시술 출생아 비율이 점차 증가하고 있으며, 우리나라는 2018년 4.2 %로 높은 편으로 나타났습니다.<span class="tooltip">2</span><br>
+                그 이후로 정부의 지속적인 난임부부 지원 확대로
+                전체 출생아 중 난임시술 지원으로 태어난
+                출생아 수의 비율은 2020년 7%, 2021년 8%,
+                2022년 9%, 2023년 11%로
+                지속적인증가 추이를 보이고 있습니다.<span class="tooltip">3 </span>
+              </p>
+              <h2 class="sub_title02 mb-20">
+                난임부부 시술비 지원 출생아 현황
+              </h2>
+            </div>
+
+            <table class="table-a purple mb-50">
+              <colgroup>
+                <col width="19.05%">
+                <col width="22.22%">
+                <col width="36.51%">
+                <col width="22.22%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>연도</th>
+                  <th>출생아수<br>(A,명)</th>
+                  <th>난임지원 출생아 수<br>(B,명)</th>
+                  <th>비율<br>(B/A,%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      ‘20년
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      272,337
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      17,720
+                    </p>
+                  </td>
+                  <td>
+                    <p class="fs_12 text-center text-purple fw_bold">
+                      7%
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      ‘21년
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      272,337
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      21,219
+                    </p>
+                  </td>
+                  <td>
+                    <p class="fs_12 text-center text-purple fw_bold">
+                      8%
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      ‘21년
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      249,000
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      23,122
+                    </p>
+                  </td>
+                  <td>
+                    <p class="fs_12 text-center text-purple fw_bold">
+                      9%
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      ‘23년
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      235,039
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text text-center text-gray-22 ">
+                      26,612
+                    </p>
+                  </td>
+                  <td>
+                    <p class="fs_12 text-center text-purple fw_bold">
+                      11%
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+ 
+            <hr class="hr_purple mb-50">
+ 
+            <div class="text_wrap">
+              <h2 class="title_txt mb-10">
+                국내 연령별 <span class="text-purple">난임시술(IUI, IVF)
+                임신율통계</span>
+              </h2>
+              <p class="description_txt mb-40">
+                건강보험심사평가원에서는 난임 전문가 자문 및 관련 학회 자문을 통해 2025년부터 난임시술을 통해
+                출산에 성공한 사람들 통계 데이터를 공개하기 시작하였습니다. 그 결과 여성의 나이 35세부터 난임시술을 통한 임신 성공률이 감소하는 것이 관찰되었고,
+                45세 이상에서는 임신율이4.5~9.4%에 그쳤습니다.<span class="tooltip">1</span>
+              </p>
+              <h2 class="sub_title02 mb-20">
+                2022년 전체 시술별 시술 임신율 현황<span class="tooltip">1</span>
+              </h2>
+            </div>
+
+            <!-- 이미지 -->
+            <div class="text-center mb-20">
+                <img src="/src/main/resource/static/images/user/common/ia_test33x3.png" alt="샘플 이미지" class="inline-block" />
+            </div>
+            <!-- 이미지 -->
+            <div class="image-scroll mb-40">
+              <div class="image-inner text-center">
+                <img style="width: 978px; height:489px;" src="/src/main/resource/static/images/user/common/ia_test34x3.png" alt="샘플 이미지" class="inline-block" />
+              </div>
+            </div>
+            <!-- 이미지 -->
+            <div class="image-scroll mb-40">
+              <div class="image-inner text-center">
+                <img style="width: 667px; height:872px;" src="/src/main/resource/static/images/user/common/ia_test35x3.jpg" alt="샘플 이미지" class="inline-block" />
+              </div>
+            </div>
+ 
+            <!-- 테이블 B  -->
+            <div class="image-scroll mb-40">
+              <h2 class="sub_title02 mb-20 text-left white-space-nowrap">
+                2022년 유형별 체외수정시술 임신율
+              </h2>
+              <table class="table-b">
+                <thead>
+                  <tr class="title text-white">
+                    <th class="bg-purple10 bb-purple-20" rowspan="2">연령별</th>
+                    <th class="bg-deep-pink" colspan="3">신선배아</th>
+                    <th class="bg-purple" colspan="3">동결배아</th>
+                  </tr>
+                  <tr class="sub-title">
+                    <th class="bg-light-pink01 bb-gray-d9 lh_16 text-deep-pink">
+                      배아이식<br>
+                      <span class="fs_10">(시술 완료)</span>
+                    </th>
+                    <th class="bg-light-pink01 bb-gray-d9 text-deep-pink">
+                      정상임신<br>
+                      <span class="fs_10">(임신낭 확인)</span>
+                    </th>
+                    <th class="bg-light-pink01 bb-gray-d9 text-deep-pink">
+                      임신율<br>
+                      <span class="fs_10">(시술 성공률)</span>
+                    </th>
+                    <th class="bg-light-pink02 bb-gray-d9 text-purple">
+                      배아이식<br>
+                      <span class="fs_10">(시술 완료)</span>
+                    </th>
+                    <th class="bg-light-pink02 bb-gray-d9 text-purple">
+                      정상임신<br>
+                      <span class="fs_10">(임신낭 확인)</span>
+                    </th>
+                    <th class="bg-light-pink02 bb-gray-d9 text-purple">
+                      임신율<br>
+                      <span class="fs_10">(시술 성공률) </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw_medium text-gray-22">전체</td>
+                    <td>
+                      <p class="text">40,228건</p>
+                      <p class="sub_text text-gray-55">(100%)</p>
+                    </td>
+                    <td>
+                      <p class="text">12,135건</p>
+                      <p class="sub_text text-gray-55">(100%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">30.2%</p>
+                    </td>
+                    <td>
+                      <p class="text">53,947건</p>
+                      <p class="sub_text text-gray-55">(100%)</p>
+                    </td>
+                    <td>
+                      <p class="text">22,657건</p>
+                      <p class="sub_text text-gray-55">(100%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">42.0%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">25세 미만</td>
+                    <td>
+                      <p class="text">53건</p>
+                      <p class="sub_text text-gray-55">(0.1%)</p>
+                    </td>
+                    <td>
+                      <p class="text">22건</p>
+                      <p class="sub_text text-gray-55">(0.2%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">41.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">91건</p>
+                      <p class="sub_text text-gray-55">(0.2%)</p>
+                    </td>
+                    <td>
+                      <p class="text">40건</p>
+                      <p class="sub_text text-gray-55">(0.2%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">44.0%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">25세 ~ 29세</td>
+                    <td>
+                      <p class="text">859건</p>
+                      <p class="sub_text text-gray-55">(2.1%)</p>
+                    </td>
+                    <td>
+                      <p class="text">376건</p>
+                      <p class="sub_text text-gray-55">(3.1%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">43.8%</p>
+                    </td>
+                    <td>
+                      <p class="text">1,645건</p>
+                      <p class="sub_text text-gray-55">(3.0%)</p>
+                    </td>
+                    <td>
+                      <p class="text">837건</p>
+                      <p class="sub_text text-gray-55">(3.7%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">50.9%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">30세 ~ 34세</td>
+                    <td>
+                      <p class="text">7,797건</p>
+                      <p class="sub_text text-gray-55">(19.4%)</p>
+                    </td>
+                    <td>
+                      <p class="text">3,348건</p>
+                      <p class="sub_text text-gray-55">(27.6%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">42.9%</p>
+                    </td>
+                    <td>
+                      <p class="text">14,670건</p>
+                      <p class="sub_text text-gray-55">(27.2%)</p>
+                    </td>
+                    <td>
+                      <p class="text">7,234건</p>
+                      <p class="sub_text text-gray-55">(31.9%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">49.3%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">35세 ~ 39세</td>
+                    <td>
+                      <p class="text">14,415건</p>
+                      <p class="sub_text text-gray-55">(35.8%)</p>
+                    </td>
+                    <td>
+                      <p class="text">5,411건</p>
+                      <p class="sub_text text-gray-55">(44.6%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">37.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">21,501건</p>
+                      <p class="sub_text text-gray-55">(39.9%)</p>
+                    </td>
+                    <td>
+                      <p class="text">9,994건</p>
+                      <p class="sub_text text-gray-55">(44.1%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">46.5%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">40세 ~ 44세</td>
+                    <td>
+                      <p class="text">13,819건</p>
+                      <p class="sub_text text-gray-55">(34.4%)</p>
+                    </td>
+                    <td>
+                      <p class="text">2,829건</p>
+                      <p class="sub_text text-gray-55">(23.3%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">20.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">13,549건</p>
+                      <p class="sub_text text-gray-55">(25.1%)</p>
+                    </td>
+                    <td>
+                      <p class="text">4,317건</p>
+                      <p class="sub_text text-gray-55">(19.1%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">31.9%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">45세 이상</td>
+                    <td>
+                      <p class="text">3,285건</p>
+                      <p class="sub_text text-gray-55">(8.2%)</p>
+                    </td>
+                    <td>
+                      <p class="text">149건</p>
+                      <p class="sub_text text-gray-55">(1.2%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">4.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">2,491건</p>
+                      <p class="sub_text text-gray-55">(4.6%)</p>
+                    </td>
+                    <td>
+                      <p class="text">235건</p>
+                      <p class="sub_text text-gray-55">(1.0%)</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">9.4%</p>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 테이블 B  -->
+            <div class="image-scroll mb-30">
+              <h2 class="sub_title02 mb-20 text-left white-space-nowrap">
+                2022년 유형별 체외수정시술 40세 이상 세부 임신율
+              </h2>
+              <table class="table-b">
+                <thead>
+                  <tr class="title text-white">
+                    <th class="bg-purple10 bb-purple-20" rowspan="2">연령별</th>
+                    <th class="bg-deep-pink" colspan="3">신선배아</th>
+                    <th class="bg-purple" colspan="3">동결배아</th>
+                  </tr>
+                  <tr class="sub-title">
+                    <th class="bg-light-pink01 bb-gray-d9 lh_16 text-deep-pink">
+                      배아이식<br>
+                      <span class="fs_10">(시술 완료)</span>
+                    </th>
+                    <th class="bg-light-pink01 bb-gray-d9 text-deep-pink">
+                      정상임신<br>
+                      <span class="fs_10">(임신낭 확인)</span>
+                    </th>
+                    <th class="bg-light-pink01 bb-gray-d9 text-deep-pink">
+                      임신율<br>
+                      <span class="fs_10">(시술 성공률)</span>
+                    </th>
+                    <th class="bg-light-pink02 bb-gray-d9 text-purple">
+                      배아이식<br>
+                      <span class="fs_10">(시술 완료)</span>
+                    </th>
+                    <th class="bg-light-pink02 bb-gray-d9 text-purple">
+                      정상임신<br>
+                      <span class="fs_10">(임신낭 확인)</span>
+                    </th>
+                    <th class="bg-light-pink02 bb-gray-d9 text-purple">
+                      임신율<br>
+                      <span class="fs_10">(시술 성공률) </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw_medium text-gray-22">전체</td>
+                    <td>
+                      <p class="text">13,819건</p>
+                    </td>
+                    <td>
+                      <p class="text">2,829건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">20.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">13,549건</p>
+                    </td>
+                    <td>
+                      <p class="text">4,317건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">31.9%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">40세</td>
+                    <td>
+                      <p class="text">3,253건</p>
+                    </td>
+                    <td>
+                      <p class="text">946건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">29.1%</p>
+                    </td>
+                    <td>
+                      <p class="text">3,808건</p>
+                    </td>
+                    <td>
+                      <p class="text">1,496건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">39.3%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">41세</td>
+                    <td>
+                      <p class="text">3,070건</p>
+                    </td>
+                    <td>
+                      <p class="text">736건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">24.0%</p>
+                    </td>
+                    <td>
+                      <p class="text">3,299건</p>
+                    </td>
+                    <td>
+                      <p class="text">1,154건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">35.0%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">42세</td>
+                    <td>
+                      <p class="text">2,957건</p>
+                    </td>
+                    <td>
+                      <p class="text">556건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">18.8%</p>
+                    </td>
+                    <td>
+                      <p class="text">2,770건</p>
+                    </td>
+                    <td>
+                      <p class="text">828건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">29.9%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">43세</td>
+                    <td>
+                      <p class="text">2,526건</p>
+                    </td>
+                    <td>
+                      <p class="text">392건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">15.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">22,160건</p>
+                    </td>
+                    <td>
+                      <p class="text">569건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">26.3%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">44세</td>
+                    <td>
+                      <p class="text">2,013건</p>
+                    </td>
+                    <td>
+                      <p class="text">199건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">9.9%</p>
+                    </td>
+                    <td>
+                      <p class="text">1,512건</p>
+                    </td>
+                    <td>
+                      <p class="text">270건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">17.9%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">45세 이상</td>
+                    <td>
+                      <p class="text">3,285건</p> 
+                    </td>
+                    <td>
+                      <p class="text">149건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">4.5%</p>
+                    </td>
+                    <td>
+                      <p class="text">2,491건</p>
+                    </td>
+                    <td>
+                      <p class="text">235건</p>
+                    </td>
+                    <td>
+                      <p class="text fw_medium">9.4%</p>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 참고문헌 -->
+            <div class="reference-list">
+              <div class="reference-title">
+                <div class="reference-label">참고문헌</div>
+              </div>
+              <ol class="reference-items">
+                <li>건강보험심사평가원 보도자료_국내 최초 난임시술 통계발표 20250326</li>
+                <li>김은정. 생식건강, 난임, 그리고 난임시술 이용 현황(2023.8.31). 성인지통계시스템 분석리포트(23-3).</li>
+                <li>보건복지부(https://www.mohw.go.kr/),<br>
+                보도자료: 가임력 검사비 지원사업 1~2월 9만여 명 신청,<br> 
+                건강한 임신 준비 청신호(게시일: 2025-03-06), Accessed May2025.</li>
+              </ol>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+</body>
+
+</html>

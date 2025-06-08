@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
 
-  <title>Bloom-난임백과-난임이해-난임정의</title>
+  <title>Bloom-난임백과-난임시술-시술통계-국내진료/시술현황</title>
 
     <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -70,13 +70,13 @@
     <!-- tab__lists -->
     <div class="tab__lists tab__lists--scroll ">
       <div class="tab__inner tab-link no-scrollbar">
-        <button class="tab-menu active color--wht bd--b-wht">
+        <button class="tab-menu color--wht bd--b-wht">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html"><strong class="tit--fz14 txt--fw-600">난임이해</strong></a>
         </button>
         <button class="tab-menu color--wht bd--b-wht">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51210.html"><strong class="tit--fz14 txt--fw-600">가임력보존</strong></a>
         </button>
-        <button class="tab-menu color--wht bd--b-wht">
+        <button class="tab-menu active color--wht bd--b-wht">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html"><strong class="tit--fz14 txt--fw-600">난임시술</strong></a>
         </button>
         <button class="tab-menu color--wht bd--b-wht">
@@ -95,41 +95,48 @@
   <!-- main -->
   <div class="content ">
     <div class="search-result tab-content active is-radius min--136 outter_bg">
-      <ul class="ai_tap">
-        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51110.html" class="active">난임정의</a></li>
-        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51120.html">난임원인</a></li>
+      <!-- admin 카테고리 추가 영역 -->
+      <ul class="ai_tap02 no-scrollbar">
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51310.html">난임검사</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51320.html">인공수정(IUI)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51331.html">체외수정(IVF)</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51340.html">배아이식</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51350.html">난자냉동</a></li>
+        <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51361.html" class="active">시술통계</a></li>
       </ul>
+      <div  class="tap_4depth_wrap">
+        <ul class="ai_tap_4depth">
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51361.html" class="active">국내진료/시술현황</a></li>
+          <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD51362.html">출산/임신율통계</a></li>
+        </ul>
+      </div>
+
       <div class="container">
         <!-- 에디터 등록 후 화면 class="ck-content" 기준-->
         <div class="ck-content">
           <div class="inner_contents">
-            <div class="text_wrap mb-20">
+            <div class="text_wrap">
               <h2 class="title_txt mb-10">
-                <span class="text-purple">난임</span>이란?
+                국내 <span class="text-purple">난임 진료</span> 및 <span class="text-purple">시술 현황</span><span class="tooltip">1</span>
               </h2>
               <p class="description_txt mb-40">
-                난임은, 피임을 하지 않고 정기적인 성생활을 하고
-                있음에도 불구하고 12개월이 지나도 임신이
-                되지 않는 상태를 의미합니다.<span class="tooltip">1</span><br>
-                일반적인 부부의 경우 피임을 하지 않고 부부생활을
-                했을 때, 1년 이내에 85-90%가 임신에 성공합니다.<span class="tooltip">2</span>
-              </p>
-
-              <h3 class="sub_title mb-10">국내 난임 환자 통계<span class="tooltip">3</span></h3>
-              <p class="sub_text mb-20">
-                국내 난임 환자 수는 2018년 대비 2022년에
-                4.7% (연평균 1.2 %) 증가했습니다.<br>
-                2022년 보고된 바에 따르면 전체 난임 환자 중 30-34세가
-                전체의 36.1%, 35-39세는 전체의 35.7%를 차지했으며
-                40대 이상 환자도 전체의 약 24%를 차지했습니다.
+                국내 난임 진료 및 난임시술 건수는 해마다
+                증가하고 있고, 40세 이상의 난임 진료 이용 환자가 크게 늘었습니다. 발표에  따르면 2022년 한 해,
+                난임시술은 인공수정시술 33,137건,
+                체외수정시술 166,870건 시행되었습니다.
+                그 중 인공수정은 30~35세 연령군에서 시술 건수가 43%로 가장 많았고, 체외수정은 35~39세
+                연령군에서 시술 건수가 34.2%로 가장 많았습니다.
               </p>
             </div>
 
             <!-- 이미지 -->
-            <div class="image-inner">
-              <img src="/src/main/resource/static/images/user/common/ia_test.png" alt="샘플 이미지" />
+            <div class="text-center mb-20">
+                <img src="/src/main/resource/static/images/user/common/ia_test31x3.png" alt="샘플 이미지" class="inline-block" />
             </div>
-
+            <!-- 이미지 -->
+            <div class="text-center">
+                <img src="/src/main/resource/static/images/user/common/ia_test32x3.png" alt="샘플 이미지" class="inline-block" />
+            </div>
 
             <!-- 참고문헌 -->
             <div class="reference-list">
@@ -137,18 +144,9 @@
                 <div class="reference-label">참고문헌</div>
               </div>
               <ol class="reference-items">
-                <li>
-                  World Health Organization. Home>Newsroom>Fact sheet. Infertility. Accessed on 26Jan2025. Available at: https://www.who.int/news-room/fact-sheets/detail/infertility
-                </li>
-                <li>
-                  한국보건사회연구원. 난임 가이드북<br>
-                  (발간등록번호: G000EF6-2022-37). 2022.
-                </li>
-                <li>
-                  건강보험심사평가원. 불임 및 난임 시술 진료현황 분석 2023.05.25
-                </li>
+                <li>건강보험심사평가원 보도자료_국내 최초 난임시술 통계발표 20250326</li>
               </ol>
-            </div>
+            </div> 
           </div>
         </div>
       </div>

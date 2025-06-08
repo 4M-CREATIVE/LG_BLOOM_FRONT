@@ -47,13 +47,15 @@
   --color-white: #fff;
   --color-purple: #660F89;
   --color-purple10: #5C0E7C;
+  --color-light-purple01: #F9F6FA;
+  --color-light-purple02: #EEE5F2;
   --color-deep-blue:   #424FAB; 
   --color-blue:   #2A77C2;
   --color-light-blue:   #F7FAFD;
   --color-pink:      #BE0683;
   --color-deep-pink: #8E0B86;
   --color-light-pink01: #FBF6FA;
-  --color-light-pink02: #F9F6FA;
+  --color-light-pink02: #F7F3F8;
   --color-gray-22:   #222;  /* 기본 본문 */
   --color-gray-44:   #444;
   --color-gray-55:   #555;
@@ -79,6 +81,8 @@
 /* 배경색 클래스 */
 .ck-content .bg-purple      { background-color: var(--color-purple); }
 .ck-content .bg-purple10    { background-color: var(--color-purple10); }
+.ck-content .bg-light-purple01 { background-color: var(--color-light-purple01);}
+.ck-content .bg-light-purple02 { background-color: var(--color-light-purple02);}
 .ck-content .bg-deep-blue   { background-color: var(--color-deep-blue); }
 .ck-content .bg-blue        { background-color: var(--color-blue); }
 .ck-content .bg-light-blue        { background-color: var(--color-light-blue); }
@@ -270,17 +274,17 @@ table-layout: fixed;
   min-width: 100px;
 }
 .ck-content .table-b thead .title th {
-  padding: 35px 0;
+  padding: 12px 0;
   font-weight: 700;
 }
 .ck-content .table-b thead .sub-title th {
-  padding: 12px 0;
+  padding: 10px 0;
 }
 
 /* 테이블 C 타입  */
 .ck-content .table-c {
   width: 100%;
-  min-width: 900px;
+  min-width: 800px;
   border-collapse: collapse;
   table-layout: fixed;
   border-top: 1px solid #660F89;
@@ -296,8 +300,6 @@ table-layout: fixed;
   font-weight: 700;
 }
 .ck-content .table-c .sub-title th {
-  background-color: #F0E7F4;
-  color: #8E0B86;
   font-weight: 700;
 }
 .ck-content .table-c tr.has-caption {
@@ -374,7 +376,7 @@ table-layout: fixed;
 .ck-content .check_icon_blue{ background-image: url(/static/images/user/common/check_blue.svg);}
 .ck-content .check_icon_pink{ background-image: url(/static/images/user/common/check_pink.svg);}
 
-.ck-content .circle_list li{ display: flex; align-items: center; gap: 6px; position: relative;}
+.ck-content .circle_list{ display: flex; align-items: center; gap: 6px; position: relative; padding-left: 10px;}
 .ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle; position: absolute; top: 8px; left: 0;}
 .ck-content .circle_icon_black{ background-color: #222;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}
@@ -384,7 +386,7 @@ table-layout: fixed;
 
 .ck-content .circle_list_top {position: relative;padding-left: 10px;} /* list-type 위쪽 정렬 */
 .ck-content .circle_list::before,
-.ck-content .circle_list_top::before {content: '';display: block;width: 4px;height: 4px;border-radius: 100%;flex-shrink: 0;display: inline-block;vertical-align: middle;background-color: #660F89;}
+.ck-content .circle_list_top::before {content: '';display: block;width: 4px;height: 4px;border-radius: 100%;flex-shrink: 0;display: inline-block;vertical-align: middle;background-color: #660F89; position: absolute; top: 8px; left: 0;}
 .ck-content .circle_list_top::before {position: absolute;top: 8px;left: 0;}
 .ck-content .circle_list_gray::before {background-color: #D9D9D9;}
 .ck-content .circle_list_black::before {background-color: #222;}
@@ -476,7 +478,7 @@ hr {height:  1px; margin-bottom: 10px;}
   max-width: 100%;
   overflow-x: auto;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   scrollbar-height: thin; /* Firefox 대응 */
 }
 
@@ -688,12 +690,20 @@ hr {height:  1px; margin-bottom: 10px;}
 .pl-25 {
   padding-left: 25px;
 }
+.pl-15 {
+  padding-left: 15px;
+}
 .hangle-wrap {
   position: relative;
 }
 .hangle-wrap .hangle {
   position: absolute;
   top: 0;
+  left: 0;
+}
+.hangle-wrap .check {
+  position: absolute;
+  top: 5px;
   left: 0;
 }
 
