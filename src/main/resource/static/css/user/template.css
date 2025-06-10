@@ -1023,6 +1023,19 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #999;
 }
+/* iOS 기본 체크박스 숨기기 */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: absolute;
+  opacity: 0;
+}
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #999;
@@ -1441,31 +1454,14 @@ input[type="search"]::-webkit-search-cancel-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 50px;
-  background: #222;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.80);
-  padding: 1rem 0;
-  font-size: 1rem;
-}
-.btn--black-02 {
-  width: 48.51%;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 700;
   border-radius: 50px;
   background: #222;
   border: 1px solid rgba(255, 255, 255, 0.10);
   color: #FFF;
-  font-weight: 700;
+  font-weight: 400;
   padding: 1rem 0;
   font-size: 1rem;
+  letter-spacing: -0.4px;
 }
 .btn--purple {
   background: #660F89;
@@ -1526,6 +1522,21 @@ input[type="search"]::-webkit-search-cancel-button {
   z-index: 1000;
 }
 .pop__overlay.active{
+    display: block;
+}
+.pop__overlay2 {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 1000;
+}
+.pop__overlay2.active{
     display: block;
 }
 .popup {

@@ -73,6 +73,11 @@ const uiEvent = {
     initCommonSurveySelectEvent("survey10", '[data-type="none"]', '[data-type="disease"]');
     initCommonSurveySelectEvent("survey11", '[data-type="none"]', '[data-type="disease"]');
 
+    // 탭 가로 스크롤 이벤트
+    this.scrollToActiveTab('.tab__inner');
+    this.scrollToActiveTab('.tap_4depth_wrap .ai_tap_4depth');
+    this.scrollToActiveTab('.ai_tap02');
+
     this.initStepEvent('survey'); // 나의 가임력 체크 설문조사 페이지 진행
     this.initStepEvent('signup'); // 회원가입 절차
 
@@ -617,4 +622,16 @@ const uiEvent = {
       $(`.sub-tab-panel[data-subcontent="${target}"]`).addClass("active");
     });
   },
+  scrollToActiveTab(selector) {
+    const container = document.querySelector(selector);
+    const activeTab = container?.querySelector('.active');
+
+    if (container && activeTab) {
+      activeTab.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest'
+      });
+    }
+  }
 };

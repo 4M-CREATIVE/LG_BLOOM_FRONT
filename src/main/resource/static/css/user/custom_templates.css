@@ -368,7 +368,7 @@ table-layout: fixed;
 .ck-content .numb_list{
   margin: 0 10px ;
 }
-.ck-content .numb_list > li{list-style-type: decimal;}
+.ck-content ol > .numb_list{list-style-type: decimal;}
 
 /* 도형 리스트 */
 .ck-content .check_icon{ width: 11.489px; height: 9px; display: inline-flex; background-size: cover; background-repeat: no-repeat;}
