@@ -36,8 +36,7 @@ dd,
 ol {
   margin: 0;
   padding: 0;
-  word-break: keep-all;
-  word-wrap: break-word;
+  word-break: break-all;
   line-height: 1.5;
   letter-spacing: -0.04em;
 }
