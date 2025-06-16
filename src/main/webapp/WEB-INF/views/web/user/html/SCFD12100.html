@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
 
-  <title>Bloom-전체검색</title>
-
+  <title>Bloom-통합검색 결과</title>
+  
   <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -53,7 +53,7 @@
     <!-- tab__lists -->
     <div class="tab__lists tab__lists--scroll">
       <div class="tab__inner tab-link">
-        <button class="tab-menu color--blk bd--b-blk">
+        <button class="tab-menu active color--blk bd--b-blk">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/FD-12100.html"><strong class="tit--fz14 txt--fw-600">전체</strong></a>
         </button>
         <button class="tab-menu color--blk bd--b-blk">
@@ -61,8 +61,8 @@
         </button>
         <button class="tab-menu color--blk bd--b-blk">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/FD-12300.html"><strong class="tit--fz14 txt--fw-600">난임병원</strong></a>
-        </button> 
-        <button class="tab-menu active color--blk bd--b-blk">
+        </button>
+        <button class="tab-menu color--blk bd--b-blk">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/FD-12400.html"><strong class="tit--fz14 txt--fw-600">FAQ</strong></a>
         </button>
       </div>
@@ -76,7 +76,99 @@
   <div class="content">
     <div class="search-result tab-content active is-radius min--136">
       <div class="container">
-        <section class="pink">
+        <section class="purple mb-30">
+          <div class="tit flex flex--between">
+            <p class="flex">난임백과 <span>10</span></p>
+            <p><a class="flex flex--between" href="javascript:void(0);">결과 더보기 <del></del></a></p>
+          </div>
+          <ul class="search_list">
+            <li>
+              <a class="ellipsis" href="javascript:void(0)"><span class="purple-color">시험관</span> 아기 시술 과정아기 시술 과정아기 시술 과정아기 시술 과정</a>
+            </li>
+            <li>
+              <a class="ellipsis" href="javascript:void(0)"><span class="purple-color">시험관</span> 아기 시술 배양 상세 과정 상세과정</a>
+            </li>
+            <li>
+              <a class="ellipsis" href="javascript:void(0)"><span class="purple-color">시험관</span> 시술 실패 후 재시술 준비</a>
+            </li>
+            <li>
+              <a class="ellipsis" href="javascript:void(0)"><span class="purple-color">시험관</span> 아기 시술 과정</a>
+            </li>
+            <li>
+              <a class="ellipsis" href="javascript:void(0)"><span class="pink-color">연간키워드</span> 아기 시술 배양 상세 과정</a>
+            </li>
+          </ul>
+
+          <!-- 검색결과 없음 -->
+          <div class="no-search-result sp-77 flex flex--center drection--column color--gray44 tit--fz14 txt--fw-400 gap-16" style="display: none;">
+            <img src="/src/main/resource/static/images/user/common/icon_bang_gray.svg" alt="">
+            검색결과가 없습니다.
+          </div>
+
+        </section>
+        <section class="blue mb-30">
+          <div class="tit flex flex--between">
+            <p class="flex">난임병원 <span>3</span></p>
+          </div>
+          <ul class="search_list">
+            <li>
+              <a href="javascript:void(0);">
+                <div class="li-info flex flex--between">
+                  <div class="left">
+                    <span class="region blue-color">서울 종로구</span> 
+                    <span class="hospital gray-color">상금종합병원</span>
+                  </div> 
+                  <span class="circle circle_right_arrow_gray">
+                    <img src="/src/main/resource/static/images/user/common/sm_r_arrow.svg" alt="상세페이지 아이콘">
+                  </span>
+                </div>
+                <p class="ellipsis">
+                  강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원강남 AK시험관 의원
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="ellipsis--2" href="javascript:void(0);">
+                <div class="li-info flex flex--between">
+                  <div class="left">
+                    <span class="region blue-color">서울 종로구</span> 
+                    <span class="hospital gray-color">상금종합병원</span>
+                  </div> 
+                  <span class="circle circle_right_arrow_gray">
+                    <img src="/src/main/resource/static/images/user/common/sm_r_arrow.svg" alt="상세페이지 아이콘">
+                  </span>
+                </div>
+                <p class="ellipsis">
+                  송파 AK시험관 의원
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="ellipsis--2" href="javascript:void(0);">
+                <div class="li-info flex flex--between">
+                  <div class="left">
+                    <span class="region blue-color">서울 종로구</span> 
+                    <span class="hospital gray-color">상금종합병원</span>
+                  </div> 
+                  <span class="circle circle_right_arrow_gray">
+                    <img src="/src/main/resource/static/images/user/common/sm_r_arrow.svg" alt="상세페이지 아이콘">
+                  </span>
+                </div>
+                <p class="ellipsis">
+                  송파 잠실 시험관 의원
+                </p>
+              </a>
+            </li>
+          </ul>
+
+          <!-- 검색결과 없음 -->
+          <div class="no-search-result sp-77 flex flex--center drection--column color--gray44 tit--fz14 txt--fw-400 gap-16" style="display: none;">
+            <img src="/src/main/resource/static/images/user/common/icon_bang_gray.svg" alt="">
+            검색결과가 없습니다.
+          </div>
+
+        </section>
+        <section class="pink mb-30">
           <div class="tit flex flex--between">
             <p class="flex">FAQ <span>3</span></p>
           </div>
@@ -99,17 +191,15 @@
                 <div class="a"><del></del><p class="ellipsis--2">얼마전 <span class="pink-color">시험관</span> 시술 이후 통증 관련은 여러 테스트를 통해~~</p></div>
               </a>
             </li>
-          </ul>
-
+          </ul> 
           <!-- 검색결과 없음 -->
-          <div class="no-search-result flex flex--center drection--column color--gray44 tit--fz14 txt--fw-400 gap-16 sp-185" style="display: none;">
+          <div class="no-search-result sp-77 flex flex--center drection--column color--gray44 tit--fz14 txt--fw-400 gap-16" style="display: none;">
             <img src="/src/main/resource/static/images/user/common/icon_bang_gray.svg" alt="">
             검색결과가 없습니다.
-          </div> 
+          </div>
         </section>
       </div>
     </div>
-
   </div>
 
   <!-- footer --> 
@@ -123,7 +213,7 @@
       </li>
       <li>
         <a class="menu-open-btn flex flex--center drection--column" href="javascript:void(0);">
-          <img src="/src/main/resource/static/images/user/search/search_menu.svg" alt="검색홈버튼">
+          <img src="/src/main/resource/static/images/user/search/search_menu.svg" alt="전체메뉴">
           전체메뉴
         </a>
       </li>

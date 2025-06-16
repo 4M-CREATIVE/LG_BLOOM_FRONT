@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-scrollbar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+
+  <title>Bloom-Error</title>
+
+  <!-- Noto Sans KR 웹폰트 (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="/src/main/resource/static/css/user/style.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <!-- Initialized Include Path -->
+  <script>
+    async function loadHtml(selector, url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}:`, err);
+      }
+    }
+  
+    async function initPage() {
+      await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/login_footer.html");
+  
+      uiEvent.init();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPage);
+  </script>
+</head>
+
+<body id="wrap" class="login-wrap">
+  <header class="header header--sub header--sub02" role="header" >
+    <a href="javascript:void(0);" class="btn--back" aria-label="이전으로 돌아가기"></a>
+  </header>
+
+  <!-- background  -->
+  <div class="login_bg_l"></div>
+  <div class="login_bg_r"></div>
+
+  <main>
+    <!-- login -->
+    <div class="content align--center position-abs middle width-100">
+      <div class="warning_icon mb-40">
+        <img src="/src/main/resource/static/images/user/common/warning_icon.svg" alt="에러" class="margin-0-auto">
+      </div>
+      <div>
+        <div class="tit--fz24 txt--fw-400 color--blk  mb-12">
+          <span class="color--primary txt--fw-600">일치하는 결과</span>가 없습니다.
+        </div>
+        <div class="tit--fz16 color--gray55">일치하는 결과가 없습니다.</div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
