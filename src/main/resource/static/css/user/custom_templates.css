@@ -1,5 +1,5 @@
 /* Typography */
-.ck-content { font-family: 'Noto Sans KR', sans-serif !important;}
+.ck-content { font-family: 'Noto Sans KR', sans-serif !important; text-align: justify;}
 /* 폰트 굵기 */
 .ck-content .fw_black   { font-weight: 900; }
 .ck-content .fw_bold    { font-weight: 700; }
@@ -125,7 +125,7 @@
 .ck-content .inner_contents .title_txt .tooltip,
 .ck-content .inner_contents .title_txt02 .tooltip02{vertical-align:top;}
 .ck-content .inner_contents .description_txt,
-.ck-content .inner_contents .description_txt02{color: var(--Neutral-gray-55, #555); text-align: center; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
+.ck-content .inner_contents .description_txt02{color: var(--Neutral-gray-55, #555); font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.56px;}
 .ck-content .inner_contents .sub_title,
 .ck-content .inner_contents .sub_title02,
 .ck-content .inner_contents .numb_title{ color: var(--Neutral-black-22, #222); font-size: 16px; font-weight: 700; letter-spacing: -0.64px;}
@@ -319,7 +319,6 @@ table-layout: fixed;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
-  word-break: break-all;
 }
 
 /* Caption */
@@ -378,7 +377,7 @@ table-layout: fixed;
 .ck-content .check_icon_pink{ background-image: url(/src/main/resource/static/images/user/common/check_pink.svg);}
 
 .ck-content .circle_list{ display: flex; align-items: center; gap: 6px; position: relative; padding-left: 10px;}
-.ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle; position: absolute; top: 8px; left: 0;}
+.ck-content .circle_icon{ width: 4px; height: 4px; border-radius: 100%; flex-shrink: 0; display: inline-block; vertical-align: middle; position: absolute; top: 7px; left: 0;}
 .ck-content .circle_icon_black{ background-color: #222;}
 .ck-content .circle_icon_gray{ background-color: #D9D9D9;}
 .ck-content .circle_icon_purple{background-color: #660F89;}
@@ -387,8 +386,8 @@ table-layout: fixed;
 
 .ck-content .circle_list_top {position: relative;padding-left: 10px;} /* list-type 위쪽 정렬 */
 .ck-content .circle_list::before,
-.ck-content .circle_list_top::before {content: '';display: block;width: 4px;height: 4px;border-radius: 100%;flex-shrink: 0;display: inline-block;vertical-align: middle;background-color: #660F89; position: absolute; top: 8px; left: 0;}
-.ck-content .circle_list_top::before {position: absolute;top: 8px;left: 0;}
+.ck-content .circle_list_top::before {content: '';display: block;width: 4px;height: 4px;border-radius: 100%;flex-shrink: 0;display: inline-block;vertical-align: middle;background-color: #660F89; position: absolute; top: 7px; left: 0;}
+.ck-content .circle_list_top::before {position: absolute;top: 7px;left: 0;}
 .ck-content .circle_list_gray::before {background-color: #D9D9D9;}
 .ck-content .circle_list_black::before {background-color: #222;}
 .ck-content .circle_list_purple::before {background-color: #660F89;} /* default */
