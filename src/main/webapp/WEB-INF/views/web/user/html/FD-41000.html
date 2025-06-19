@@ -33,7 +33,7 @@
   
     async function initPage() {
       // await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/SCFD13000.html");
       uiEvent.init();
     }
   
@@ -79,17 +79,18 @@
           </ul>
         </div>
         <hr>
-        <div class="info_admin">
+        <div class="info_admin mb-40">
           <p>약관 및 방침</p>
           <ul>
             <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD44100.html">이용 약관</a></li>
             <li><a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD44200.html">개인정보처리방침</a></li>
           </ul>
         </div>
+        <div class="btn__box">
+          <button class="btn btn--line-gray txt--fw-600">로그아웃</button>
+        </div>
       </div>
-      <div class="btn__box position-abs bottom-125 width-calc40">
-        <button class="btn btn--line-gray txt--fw-600">로그아웃</button>
-      </div>
+
     </div>
   </div>
 

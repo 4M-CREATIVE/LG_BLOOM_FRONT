@@ -33,7 +33,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/SCFD13000.html");
       uiEvent.init();
     }
   
@@ -136,10 +136,10 @@
 
             <table class="table-a purple mb-50">
               <colgroup>
-                <col width="19.05%">
-                <col width="22.22%">
-                <col width="36.51%">
-                <col width="22.22%">
+                <col style="width: 19.05%;">
+                <col style="width: 22.22%;">
+                <col style="width: 36.51%;">
+                <col style="width: 22.22%;">
               </colgroup>
               <thead>
                 <tr>
@@ -264,13 +264,78 @@
             <!-- 이미지 -->
             <div class="image-scroll mb-40">
               <div class="image-inner text-center">
-                <img style="width: 978px; height:489px;" src="/src/main/resource/static/images/user/common/ia_test34x3.png" alt="샘플 이미지" class="inline-block" />
+                <img style="width: 484px; height:309px;" src="/src/main/resource/static/images/user/common/ia_test34x3.png" alt="샘플 이미지" class="inline-block" />
               </div>
             </div>
+
+            <div>
+              <h2 class="sub_title02 mb-20">
+                2022년 인공수정시술 임신율 현황<span class="tooltip">1</span>
+              </h2>
+              <table class="table-b mb-45 w-100p">
+                <colgroup>
+                  <col style="width: 26.98%;">
+                  <col style="width: 36.51%;">
+                  <col style="width: 36.51%;">
+                </colgroup>
+                <thead>
+                  <tr class="title text-white">
+                    <th class="bg-purple10 bb-purple-20">연령별</th>
+                    <th class="bg-deep-pink lh_14">
+                      자궁강 내 정자주입술<br>
+                      <span class="fs_10">(시술 완료)</span>
+                    </th>
+                    <th class="bg-purple lh_14">
+                      정상 임신<br>
+                      <span class="fs_10">(임신낭 확인)</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw_medium text-gray-22">전체</td>
+                    <td class="fw_regular text-gray-22">31,454건</td>
+                    <td class="fw_regular text-gray-22">4,081건</td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">25세 미만</td>
+                    <td class="fw_regular text-gray-22">110건</td>
+                    <td class="fw_regular text-gray-22">19건</td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">25세 ~ 29세</td>
+                    <td class="fw_regular text-gray-22">1,865건</td>
+                    <td class="fw_regular text-gray-22">309건</td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">30세 ~ 34세</td>
+                    <td class="fw_regular text-gray-22">13,580건</td>
+                    <td class="fw_regular text-gray-22">1,968건</td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">35세 ~ 39세</td>
+                    <td class="fw_regular text-gray-22">11,782건</td>
+                    <td class="fw_regular text-gray-22">1,521건</td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">40세 ~ 44세</td>
+                    <td class="fw_regular text-gray-22">3,574건</td>
+                    <td class="fw_regular text-gray-22">260건</td>
+                  </tr>
+                  <tr>
+                    <td class="fw_medium text-gray-22">45세 이상</td>
+                    <td class="fw_regular text-gray-22">543건</td>
+                    <td class="fw_regular text-gray-22">4건</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
             <!-- 이미지 -->
             <div class="image-scroll mb-40">
               <div class="image-inner text-center">
-                <img style="width: 667px; height:872px;" src="/src/main/resource/static/images/user/common/ia_test35x3.jpg" alt="샘플 이미지" class="inline-block" />
+                <img style="width: 447px; height:872px;" src="/src/main/resource/static/images/user/common/ia_test35x3.jpg" alt="샘플 이미지" class="inline-block" />
               </div>
             </div>
  
@@ -692,7 +757,7 @@
                 <div class="reference-label">참고문헌</div>
               </div>
               <ol class="reference-items">
-                <li>건강보험심사평가원 보도자료_국내 최초 난임시술 통계발표 20250326</li>
+                <li>건강보험심사평가원, 난임시술 통계 보고서: 통계로 보는 난임시술; 2022년 진료분. 발간등록번호:G000EF6-2025-35. 2025.</li>
                 <li>김은정. 생식건강, 난임, 그리고 난임시술 이용 현황(2023.8.31). 성인지통계시스템 분석리포트(23-3).</li>
                 <li>보건복지부(https://www.mohw.go.kr/),<br>
                 보도자료: 가임력 검사비 지원사업 1~2월 9만여 명 신청,<br> 

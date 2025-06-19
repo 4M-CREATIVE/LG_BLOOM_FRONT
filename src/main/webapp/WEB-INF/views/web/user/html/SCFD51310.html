@@ -23,7 +23,7 @@
       try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-  
+   
         const html = await response.text();
         document.querySelector(selector).innerHTML = html;
       } catch (err) {
@@ -33,7 +33,7 @@
   
     async function initPage() {
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/search_footer.html");
-      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/gnb.html");
+      await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/SCFD13000.html");
       uiEvent.init();
     }
   
@@ -145,7 +145,7 @@
               </h2>
               
               <div class="text_wrap02">
-                <h3 class="fs_18 fw_bold mb-10 text-purple">가. 월경 주기에 따른 검사 항목</h3>
+                <h3 class="fs_18 fw_bold mb-20 text-purple">가. 월경 주기에 따른 검사 항목</h3>
               </div>
 
               <!-- 이미지 -->
@@ -163,7 +163,7 @@
                   난소의 성장 및 배란과 관련된 호르몬 검사를 시행합니다.
                 </p>
                 <div class="padding-0-5">
-                  <p class="fs_14 fw_bold text-gray-22 lh_16 mb-10  white-space-nowrap">
+                  <p class="fs_14 fw_bold text-gray-22 lh_16 mb-10">
                     1) 난자의 성장 및 월경 주기에 직접 관여하는 호르몬
                   </p>
                   <p class="fs_12 fw_regular text-gray-2 mb-30 lh_20 letter--48 text-gray-55">
@@ -356,8 +356,7 @@
                     2) 난자의 성장에 간접적으로 영향을 미치는 호르몬
                   </p>
                   <p class="fs_12 fw_regular text-gray-2 mb-40 lh_20 letter--48 text-gray-55">
-                    월경 3일 경 난포의 성장과 배란에 영향을 미치는 호르몬 수치를 검사합니다. 여성 호르몬은 월경주기에 따른 변동성이 크기 때문에 월경 주기 초기 일정한 시기에 호르몬 검사를
-                    시행함으로써 기본적인 호르몬 상태를 파악할 수 있습니다.
+                    검사 시기에 따른 변동의 폭이 크지 않은 호르몬입니다.
                   </p>
                   <ul>
                     <li class="fs_14 mb-6 circle_list text-gray-22">
@@ -489,10 +488,9 @@
                   참여 의료 기관에서 검사 받을 수 있습니다.
                 </p>
                 <div class="mb-40">
-                  <a href="https://www.e-health.go.kr/gh/infm/selectBbsDtlViewInfo.do?bbsId=U00182&bbsNo=416835"
-                    class="link-purple fs_14">
-                    임신 사전건강관리 지원 사업 참여 의료기관 현황
-(2025. 4. 1 기준)
+                  <a onclick="showBrowserConfirmPopup('https://www.e-health.go.kr/gh/infm/selectBbsDtlViewInfo.do?bbsId=U00182&bbsNo=416835')"
+                    class="link-purple fs_14 ">
+                    [e보건소] 임신 사전건강관리 지원 사업 참여 의료기관 현황 (2025. 4. 1 기준)
                     </a>
                 </div>
 
@@ -521,7 +519,7 @@
                   </p>
                   <p class="text">
                     총 사정액 1.4ml이상, 정자수 1,600만마리/ml이상,
-                    정진성 운동정자의 비율이 30%이상 또는 운동성있는
+                    전진성 운동정자의 비율이 30%이상 또는 운동성있는
                     정자비율이 42%이상, 정상모양의 정자의 형태
                     4%이상이어야 합니다.
                   </p>
@@ -546,11 +544,11 @@
                     자궁내시경(자궁경) 검사
                   </li>
                 </ol>
-                <p class="sub_text02 mb-30">
+                <p class="sub_text02 mb-25">
                   국소 또는 수면/전신마취 하 진행되며, 초음파, 자궁난관조영술 등에서 이상 소견이 있을 때 주로 실시합니다. 질을 통해 자궁 경부로 내시경 카메라를 삽입하여 직접 자궁 내강의 상태(자궁내막용종, 자궁근종, 자궁내막협착, 자궁기형 등)를 관찰합니다. 자궁내시경을 통해 질환을 진단함과 동시에 병변에 대한 수술을 시행할 수도 있습니다. 출혈이 있으면 시야를 방해할 수 있으므로 월경 종료 후 주로 시행합니다.
                 </p>
                 <!-- 이미지 -->
-                <div class="image-scroll mb-20">
+                <div class="mb-40">
                   <div class="image-inner">
                     <img src="/src/main/resource/static/images/user/common/ia_test15.png" alt="샘플 이미지" />
                   </div>
