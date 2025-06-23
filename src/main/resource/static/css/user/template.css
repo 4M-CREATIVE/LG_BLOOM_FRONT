@@ -22,6 +22,14 @@
   min-height: 100vh;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .content {
   position: relative;
   z-index: 0;
@@ -72,6 +80,9 @@
 }
 .align--center {
   text-align: center;
+}
+.text-align--justify {
+  text-align: justify;
 }
 .vertical-super {
   vertical-align: super;
@@ -155,6 +166,7 @@
   word-wrap:normal;
   width:100%;
   overflow:hidden;
+  display: block;
 }
 .ellipsis--2 {
   display: -webkit-box;   
@@ -298,6 +310,9 @@
 .mb-80 {
   margin-bottom: 8rem;
 }
+.mb-70 {
+  margin-bottom:7rem;
+}
 .mb-62 {
   margin-bottom:6.2rem;
 }
@@ -309,6 +324,9 @@
 }
 .mb-49 {
   margin-bottom:4.9rem;
+}
+.mb-45 {
+  margin-bottom:4.5rem;
 }
 .mb-40 {
   margin-bottom:4rem;
@@ -596,6 +614,12 @@
   position: fixed;
 }
 
+.position-abs.middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .bottom-125 {
   bottom:125px;
 }
@@ -695,6 +719,10 @@
   height: 1px;
   background-color: #eee;
   margin: 0 auto;
+}
+
+.faq__list.on::after {
+  display: none!important;
 }
 
 /* comment 댓글 */
@@ -1824,6 +1852,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .w-100p {
   width: 100%;
 }
+.w-570 {
+  width: 570px;
+}
+.w-510 {
+  width: 510px;
+}
 .max-none {
   max-height: none!important;
 }
@@ -1886,4 +1920,9 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .form__box--label label{
   width: 50px;
+  word-break: keep-all;
+}
+
+.margin-0-auto {
+  margin: 0 auto;
 }

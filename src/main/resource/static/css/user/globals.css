@@ -92,7 +92,6 @@ header .container .left a img{
   position: fixed;
   top: 0;
   left: 100%;
-  z-index: 9;
   overflow-y: scroll;
   transition: left 0.3s ease-in-out;
   z-index: 99999;
@@ -107,7 +106,7 @@ header .container .left a img{
 }
 
 .gnb .container {
-  padding: 0 2rem;
+	padding: 0 2rem 0 2rem; /* 임시 패딩 하단 설정 */
 }
 
 .gnb .container .close-btn {
@@ -152,7 +151,6 @@ header .container .left a img{
   line-height: 1.2rem;
   letter-spacing: -0.48px;
   font-weight: 400;
-  white-space: nowrap;
 }
 
 .gnb .container .contents section:nth-child(3) ul li a,
@@ -161,7 +159,7 @@ header .container .left a img{
 }
 
 .gnb footer .top {
-  padding: 1.3rem 2rem;
+  padding: 2.3rem 3rem;
   background-color: #E6E6E6;
   font-weight: 400;
 }
