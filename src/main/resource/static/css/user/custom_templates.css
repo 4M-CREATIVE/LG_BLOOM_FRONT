@@ -390,7 +390,7 @@ table-layout: fixed;
 }
 
 /* Caption */
-.ck-content .tooltip {
+.tooltip {
   width: 9px;
   height: 9px; 
   color: var(--Neutral-FFF, var(--Neutral-fff, #FFF));
@@ -407,7 +407,7 @@ table-layout: fixed;
   line-height: 9px;
 }
 
-.ck-content .tooltip02 {
+.tooltip02 {
   width: 9px;
   height: 9px; 
   color: var(--Neutral-FFF, var(--Neutral-fff, #FFF));
