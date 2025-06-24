@@ -185,6 +185,16 @@
 .ls--048 {
   letter-spacing: -0.48px;
 }
+.ls--08 {
+  letter-spacing: -0.8px!important;
+}
+.ls--168 {
+  letter-spacing: -1.68px!important;
+}
+.ls--174 {
+  letter-spacing: -1.74px!important;
+}
+
 
 /* line-height */
 .lh-46 {

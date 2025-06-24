@@ -784,8 +784,8 @@ hr {height:  1px; margin-bottom: 10px;}
   display: grid;
 }
 
-.frame-4-6 {
-  grid-template-columns: 4fr 6fr;
+.frame-3-7 {
+  grid-template-columns: 3fr 7fr;
 }
 
 .list-box .list-title { padding: 12px 0; text-align: center;}
