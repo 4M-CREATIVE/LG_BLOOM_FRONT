@@ -165,6 +165,7 @@ const uiEvent = {
     const tabs = document.querySelectorAll('.tab-content');
     const searchFooter = document.querySelector('.search-footer');
     const spacer = document.querySelector('.spacer');
+    const topBtn = document.querySelector('.top-btn');
     let lastScroll = 0;
   
     window.addEventListener('scroll', () => {
@@ -190,6 +191,15 @@ const uiEvent = {
             tab.classList.remove('is-radius');
           }
         });
+      }
+
+      // 스크롤 탑버튼
+      if (topBtn) {
+        if (currentScroll > 150) {
+          topBtn.classList.add('show');
+        } else {
+          topBtn.classList.remove('show');
+        }
       }
   
       lastScroll = currentScroll;

@@ -106,14 +106,13 @@
 
 /* login start */
 .login-wrap { position: relative;}
-.login-wrap .footer {margin-bottom: 3.7rem;}
+.login-wrap .footer {margin-top: 6rem;}
 .login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
 .login-wrap .content { padding: 0 2rem;}
 .login-wrap .content .login-title{ margin-top:15rem;}
 .login-wrap .content .login-title .login_logo { width: 101px; height: 32px;}
 .login-wrap .content p { font-weight: 700; line-height: 36px; letter-spacing: -0.96px; margin-bottom: 3rem; margin-left: 2rem;}
-.login-wrap .content .login-form { margin-bottom: 9.6rem;}
 .login-wrap .content .login-form .form-group:first-child{ margin-bottom: 0.8rem;}
 .login-wrap .content .login-form .form-group:nth-child(2){ margin-bottom: 1.4rem;}
 .login-wrap .content .login-form .check__group:first-child {margin-left: 2rem;}
@@ -298,10 +297,10 @@
 .ai_tap_4depth li a.active{color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 700; line-height: 18px; letter-spacing: -0.48px; opacity: 1; border-bottom: 1px solid #660F89;}
 
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
-.normalweight_wrap{margin-bottom: 205px;}
+.normalweight_wrap{margin-bottom: 245px;}
 .normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
 .normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
-.normal_weight_illustration { width: 163.356px; height: 154px; position: absolute; bottom: 86px; left: 36%;}
+.normal_weight_illustration { width: 147px; height: 180px; position: absolute; bottom: 86px; left: 50%; transform: translate(-50%, 0);}
 /* .underweight {display: none;} */
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
 .underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
