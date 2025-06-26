@@ -163,7 +163,6 @@ const uiEvent = {
   scrollEvent() {
     const header = document.querySelector('.search-header-wrap');
     const tabs = document.querySelectorAll('.tab-content');
-    const searchFooter = document.querySelector('.search-footer');
     const spacer = document.querySelector('.spacer');
     const topBtn = document.querySelector('.top-btn');
     let lastScroll = 0;
@@ -176,7 +175,6 @@ const uiEvent = {
       $(".select__options").hide();
   
       if (currentScroll === 0) {
-        searchFooter?.classList.add('is-radius');
         tabs.forEach(tab => {
           if (tab.classList.contains('active')) {
             header.style.top = '0';
@@ -184,7 +182,6 @@ const uiEvent = {
           }
         });
       } else {
-        searchFooter?.classList.remove('is-radius');
         tabs.forEach(tab => {
           if (tab.classList.contains('active')) {
             header.style.top = `-${spacerHeight}px`;

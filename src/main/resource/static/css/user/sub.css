@@ -297,13 +297,12 @@
 .ai_tap_4depth li a.active{color: var(--primary-purple, #660F89); font-size: 12px; font-weight: 700; line-height: 18px; letter-spacing: -0.48px; opacity: 1; border-bottom: 1px solid #660F89;}
 
 .check__result_box {border-radius: 20px;background: #F7F3F8; display: flex; align-items: center;justify-content: center; padding: 25px 0 23px 0; margin-bottom: 40px;line-height: 32px; letter-spacing: -0.8px;}
-.normalweight_wrap{margin-bottom: 245px;}
+.normalweight_wrap{margin-bottom: 20px;}
 .normalweight_wrap .title {text-align: center; line-height: 24px; letter-spacing: -0.8px;}
 .normalweight_wrap .contents{line-height: 22px; letter-spacing: -0.56px;}
 .normal_weight_illustration { width: 147px; height: 180px; position: absolute; bottom: 86px; left: 50%; transform: translate(-50%, 0);}
 /* .underweight {display: none;} */
 .underweight_wrap .underweight--list {margin-bottom: 2rem;} 
-.underweight_wrap .underweight--list:last-child{margin-bottom: 0;}
 .underweight_wrap .underweight--list .title {margin-bottom: 1.4rem; display: flex; align-items: center; gap: 11.51px; letter-spacing: -0.56px;}
 .underweight_wrap .underweight--list .title::before {display: block; content: ''; width: 11.489px; height: 9px; background: url(/src/main/resource/static/images/user/common/check.svg); margin-left: 1rem; background-size: cover;}
 .underweight_wrap .underweight--list .contents {padding: 2rem;  border-radius: 20px; line-height: 20px; letter-spacing: -0.48px;}
