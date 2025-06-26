@@ -136,23 +136,9 @@
 .ck-content .inner_contents .description_txt,
 .ck-content .inner_contents .description_txt02{color: var(--Neutral-gray-55, #555); font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.64px;}
 .ck-content .inner_contents .sub_title,
-.ck-content .inner_contents .sub_title02,
-.ck-content .inner_contents .numb_title{ color: var(--Neutral-black-22, #222); font-size: 18px; font-weight: 700; letter-spacing: -0.72px; text-align: left;}
+.ck-content .inner_contents .sub_title02{ color: var(--Neutral-black-22, #222); font-size: 18px; font-weight: 700; letter-spacing: -0.72px; text-align: left;}
 .ck-content .inner_contents .numb_title{list-style: decimal;}
-.ck-content .inner_contents .numb_title::marker {
-  font-feature-settings: "tnum";
-  font-variant-numeric: tabular-nums;
-  font-family: 'Noto Sans KR', sans-serif;
-  letter-spacing: 0;
-}
-@supports (-webkit-touch-callout: none) {
-  .ck-content .inner_contents .numb_title::marker {
-    font-feature-settings: normal;
-    font-variant-numeric: normal;
-    font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: 0;
-  }
-}
+
 .ck-content .inner_contents .sub_text,
 .ck-content .inner_contents .sub_text02{ color: #555; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: -0.64px;}
 .ck-content .padding-0-5{padding: 0 5px;}
@@ -781,8 +767,14 @@ hr {height:  1px; margin-bottom: 10px;}
 .pl-25 {
   padding-left: 25px;
 }
+.pl-20 {
+  padding-left: 20px;
+}
 .pl-17 {
   padding-left: 17px;
+}
+.pl-14 {
+  padding-left: 14px;
 }
 .hangle-wrap {
   position: relative;
