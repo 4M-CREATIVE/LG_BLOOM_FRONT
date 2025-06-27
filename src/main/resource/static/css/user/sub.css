@@ -72,17 +72,17 @@
 .search-result .container .search_list li:first-child {border-top: 1px solid #eee;}
 .search-result .container .search_list li { display: block; color: #444; font-size: 1.4rem; font-weight: 400; padding: 1.4rem 1rem;}
 .search-result .container .search_list li span.purple-color,
-.search-result .container .search_list li span.pink-color {font-size: 1.4rem; font-weight: 600; line-height: 1.5rem; letter-spacing: -0.56px;}
+.search-result .container .search_list li span.pink-color, .ai {font-size: 1.2rem; font-weight: 600; line-height: 1.5rem; letter-spacing: -0.56px;}
 .search-result .container .search_list li .li-info {margin-bottom: 0.6rem;}
 .search-result .container .search_list li .li-info .left {display: flex; gap: 4px; align-items: center;}
-.search-result .container .search_list li .li-info .left span{font-size: 12px; font-weight: 500; line-height: 12px; letter-spacing: -0.48px; padding: 3px 8px 4px 8px;}
-.search-result .container .search_list li .li-info .left .region {border-radius: 90px; background: rgba(42, 119, 193, 0.10);}
-.search-result .container .search_list li .li-info .left .hospital {border-radius: 90px;}
-.search-result .container .search_list li .li-info .left .hospital.gray-color {background: var(--neutral-gray-F6, #F6F6F6);}
-.search-result .container .search_list li .li-info .left .hospital.color--deep-blue {background: rgba(66, 79, 171, 0.10);}
+.region, .hospital{font-size: 12px; font-weight: 500; line-height: 12px; letter-spacing: -0.48px; padding: 2px 8px 3px 8px; line-height: 1.5rem; letter-spacing: -0.56px;}
+.region {border-radius: 90px; background: rgba(42, 119, 193, 0.10);}
+.hospital {border-radius: 90px;}
+.hospital.gray-color {background: var(--neutral-gray-F6, #F6F6F6);}
+.hospital.color--deep-blue {background: rgba(66, 79, 171, 0.10);}
 .warning_txt .ai {margin-right: 4px;}
 .warning_txt_gray.middle::before{top:50%; left:6px; transform: translate(-50%, 0 );}
-.ai {border-radius: 90px; padding: 3px 8px 4px 8px;}
+.ai {border-radius: 90px; padding: 2px 8px 3px 8px;}
 .ai.pink-color{background: #BE06831A}
 .search-result .container .search_list li .q {margin-bottom: 0.9rem;}
 .search-result .container .search_list li .q,
