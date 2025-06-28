@@ -42,6 +42,25 @@
 </head>
 
 <body id="wrap" class="faq-list bg--primary">
+  <!-- 링크팝업 -->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_confirm">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+      </span>
+      <div class="popup__title color--blk">
+        브라우저에서 확인이 가능합니다.
+      </div> 
+      <p class="popup__text align--center">
+        지금 브라우저를 열어 확인하시겠습니까?
+      </p>
+      <div class="btn__box">
+        <button class="btn btn--gray btn__pop-close">취소</button>
+        <button type="button" class="btn bg--primary btn__pop-close">확인</button>
+      </div>
+    </div>
+  </div>
+
   <!-- gnb -->
   <div class="gnb no-scrollbar"></div>
 
@@ -145,7 +164,7 @@
                 있으므로 특히 조심해야 합니다.
                 국소 연고제에는 스테로이드가 함유된 경우가 많고 임신부가 사용시 그 안전성에 대하여 조사된 바는 없으므로 사용하지
                 않는 것이 권장됩니다. 그 외 필수 복용 약물이 있다면 반드시
-                주치의와 상의하여 임신 중 복용해도 안전한 약물인 지 확인하고, 그렇지 않다면 안전한 약물로 교체할 수 있도록 합니다. (임산부 약물정보 센터 마더세이프: 1588-7309, <a href="http://mothersafe.or.kr">http://mothersafe.or.kr</a>) 
+                주치의와 상의하여 임신 중 복용해도 안전한 약물인 지 확인하고, 그렇지 않다면 안전한 약물로 교체할 수 있도록 합니다. (임산부 약물정보 센터 마더세이프: 1588-7309, <a class="text-purple" onclick="showBrowserConfirmPopup('http://mothersafe.or.kr')">http://mothersafe.or.kr</a>) 
               </p>
             </div>
             <!-- 이미지 -->
@@ -177,7 +196,23 @@
 
   <!-- footer -->
   <footer class="footer"></footer>
+<script>
+  function showBrowserConfirmPopup(url) {
+    const popup = document.querySelector(".pop__overlay");
+    const targetPopup = $("#pop_confirm");
+      const popupOverlay = targetPopup.closest(".pop__overlay");
 
+      popupOverlay.fadeIn(300);
+      targetPopup.addClass("active");
+
+    // "확인" 버튼에 동적 이벤트 부여
+    const confirmBtn = popup.querySelector(".btn.bg--primary");
+    confirmBtn.onclick = function () {
+      popup.style.display = "none";
+      openCenterLink(url); //  실제 링크 열기 함수 호출
+    };
+	}
+</script>
 </body>
 
 </html>

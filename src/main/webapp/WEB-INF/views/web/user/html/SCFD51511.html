@@ -42,6 +42,25 @@
 </head>
 
 <body id="wrap" class="faq-list bg--primary">
+  <!-- 링크팝업 -->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_confirm">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+      </span>
+      <div class="popup__title color--blk">
+        브라우저에서 확인이 가능합니다.
+      </div> 
+      <p class="popup__text align--center">
+        지금 브라우저를 열어 확인하시겠습니까?
+      </p>
+      <div class="btn__box">
+        <button class="btn btn--gray btn__pop-close">취소</button>
+        <button type="button" class="btn bg--primary btn__pop-close">확인</button>
+      </div>
+    </div>
+  </div>
+
   <!-- gnb -->
   <div class="gnb no-scrollbar"></div>
 
@@ -161,7 +180,9 @@
               <p class="fs_12  fw_regular text-caption lh_18">
                 <span class="text-blue">*</span>국내 생백신 유통; <span class="text-pink">**</span>불활성화 백신/생백신 모두 사용됨으로 접종시 확인 필요<br>
                 B형 간염 백신: 질병관리청 주산기감염 예방 사업 링크 <br>
-                <span onclick="showBrowserConfirmPopup('https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133')">(URL : https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133)</span>
+                (URL : <span class="text-purple" onclick="showBrowserConfirmPopup('https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133')">https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133</span>)
+
+                <!-- <span class="url_link" data-url="https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133">(URL : https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=133)</span> -->
               </p>
             </div>
 
@@ -187,7 +208,23 @@
 
   <!-- footer -->
   <footer class="footer"></footer>
+<script>
+  function showBrowserConfirmPopup(url) {
+    const popup = document.querySelector(".pop__overlay");
+    const targetPopup = $("#pop_confirm");
+      const popupOverlay = targetPopup.closest(".pop__overlay");
 
+      popupOverlay.fadeIn(300);
+      targetPopup.addClass("active");
+
+    // "확인" 버튼에 동적 이벤트 부여
+    const confirmBtn = popup.querySelector(".btn.bg--primary");
+    confirmBtn.onclick = function () {
+      popup.style.display = "none";
+      openCenterLink(url); //  실제 링크 열기 함수 호출
+    };
+	}
+</script>
 </body>
 
 </html>

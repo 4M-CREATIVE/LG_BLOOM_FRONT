@@ -42,6 +42,25 @@
 </head>
 
 <body id="wrap" class="faq-list bg--primary">
+  <!-- 링크팝업 -->
+  <div class="pop__overlay" style="display: none;">
+    <div class="popup" id="pop_confirm">
+      <span class="pop_close_btn btn__pop-close pop_close_btn flex flex--center">
+        <img src="/src/main/resource/static/images/user/common/gnb_close.svg" alt="단기버튼">
+      </span>
+      <div class="popup__title color--blk">
+        브라우저에서 확인이 가능합니다.
+      </div> 
+      <p class="popup__text align--center">
+        지금 브라우저를 열어 확인하시겠습니까?
+      </p>
+      <div class="btn__box">
+        <button class="btn btn--gray btn__pop-close">취소</button>
+        <button type="button" class="btn bg--primary btn__pop-close">확인</button>
+      </div>
+    </div>
+  </div>
+
   <!-- gnb -->
   <div class="gnb no-scrollbar"></div>
 
@@ -493,10 +512,12 @@
                   참여 의료 기관에서 검사 받을 수 있습니다.
                 </p>
                 <div class="mb-40">
+
                   <a onclick="showBrowserConfirmPopup('https://www.e-health.go.kr/gh/infm/selectBbsDtlViewInfo.do?bbsId=U00182&bbsNo=416835')"
                     class="link-purple fs_16 ">
                     [e보건소] 임신 사전건강관리 지원 사업 참여 의료기관 현황 (2025. 4. 1 기준)
                     </a>
+                    
                 </div>
               </div>
             </div>
@@ -625,7 +646,23 @@
 
   <!-- footer -->
   <footer class="footer"></footer>
+<script>
+  function showBrowserConfirmPopup(url) {
+    const popup = document.querySelector(".pop__overlay");
+    const targetPopup = $("#pop_confirm");
+      const popupOverlay = targetPopup.closest(".pop__overlay");
 
+      popupOverlay.fadeIn(300);
+      targetPopup.addClass("active");
+
+    // "확인" 버튼에 동적 이벤트 부여
+    const confirmBtn = popup.querySelector(".btn.bg--primary");
+    confirmBtn.onclick = function () {
+      popup.style.display = "none";
+      openCenterLink(url); //  실제 링크 열기 함수 호출
+    };
+	}
+</script>
 </body>
 
 </html>
