@@ -1936,3 +1936,17 @@ input[type="search"]::-webkit-search-cancel-button {
 .margin-0-auto {
   margin: 0 auto;
 }
+
+.progress-bar-wrap {
+  width: 160px;
+  height: 6px;
+  background-color: #F6F6F6;
+  border-radius: 90px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  border-radius: 90px;
+  background-color: #660F89;
+  transition: width 0.3s ease;
+}

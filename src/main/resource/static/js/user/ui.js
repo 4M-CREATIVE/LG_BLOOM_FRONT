@@ -218,15 +218,13 @@ const uiEvent = {
     $(".accordian__list").removeClass("on").find(".accordian__answer").hide();
   
     $(".accordian_btn").on("click", function (e) {
-      // checkbox 클릭 막기
-      // if ($(e.target).is('input[type="checkbox"]')) {
-      //   e.preventDefault();
-      //   return;
-      // }
+      e.preventDefault(); // 기본 동작 방지
+      e.stopPropagation(); // 부모 이벤트 전파 방지
+
       const $this = $(this);
       const $parentLi = $this.closest(".accordian__list");
       const $answer = $parentLi.find(".accordian__answer");
-  
+
       if (!$answer.is(":animated")) {
         $answer.slideToggle(300);
         $parentLi.toggleClass("on");
