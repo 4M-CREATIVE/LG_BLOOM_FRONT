@@ -233,7 +233,7 @@
   font-size: 15px;
 }
 .tit--fz14 {
-  font-size: 14px;
+  font-size: 14px!important;
 }
 .tit--fz13 {
   font-size: 13px;
@@ -883,12 +883,12 @@
 .accordian__list.on .accordian__question {
   padding-bottom: 12px;
 }
-.accordian__question .accordian_btn{
+.accordian_btn{
   width: 18px;
   height: 18px;
   background-image: url(/src/main/resource/static/images/user/common/arrow_b_gray.svg);
   background-repeat: no-repeat;
-  background-position: 100% 0;
+  background-position: center;
   background-size: 20px 20px;
   font-weight: 400;
   line-height: 22px;
@@ -897,9 +897,10 @@
   position: absolute;
   top:0;
   right: 0;
+  padding: 14px;
 }
 
-.accordian__list.on .accordian__question  .accordian_btn{
+.accordian__list.on .accordian_btn{
   background-image: url(/src/main/resource/static/images/user/common/arrow_t_black.svg);
 }
 
