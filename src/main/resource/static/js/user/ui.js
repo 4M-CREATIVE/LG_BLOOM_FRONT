@@ -208,18 +208,19 @@ const uiEvent = {
       const $question = $(this);
       const $parent = $question.closest("li");
       const $answer = $parent.find(".faq__answer");
-  
+
       if (!$answer.is(":animated")) {
         $answer.slideToggle(300);
         $parent.toggleClass("on").siblings("li").removeClass("on").find(".faq__answer").slideUp(300);
       }
     });
-  
+
     $(".accordian__list").removeClass("on").find(".accordian__answer").hide();
-  
+
+    // 버튼 클릭 시 토글
     $(".accordian_btn").on("click", function (e) {
-      e.preventDefault(); // 기본 동작 방지
-      e.stopPropagation(); // 부모 이벤트 전파 방지
+      e.preventDefault();
+      e.stopPropagation();
 
       const $this = $(this);
       const $parentLi = $this.closest(".accordian__list");
@@ -228,6 +229,27 @@ const uiEvent = {
       if (!$answer.is(":animated")) {
         $answer.slideToggle(300);
         $parentLi.toggleClass("on");
+      }
+    });
+
+    // 체크박스(label 클릭 포함) 시 아코디언 열기
+    $(".accordian__question input[type='checkbox']").on("change", function () {
+      const $parentLi = $(this).closest(".accordian__list");
+      const $answer = $parentLi.find(".accordian__answer");
+
+      if (!$answer.is(":animated")) {
+        const isChecked = $(this).is(":checked");
+
+        // 열려있지 않으면 열고 class 추가
+        if (isChecked && !$parentLi.hasClass("on")) {
+          $answer.slideDown(300);
+          $parentLi.addClass("on");
+        }
+        // 체크 해제해도 아코디언은 닫지 않음 (필요시 아래 주석 해제)
+        else if (!isChecked) {
+          $answer.slideUp(300);
+          $parentLi.removeClass("on");
+        }
       }
     });
   },
