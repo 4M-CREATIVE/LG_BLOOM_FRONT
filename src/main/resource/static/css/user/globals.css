@@ -168,11 +168,11 @@ header .container .left a img{
   align-items: center;
 }
 
-.gnb footer .top a::after {
+.gnb footer .top div::after {
   content: ''; 
   width: 1px; 
   height: 1rem; 
-  background-color: #ccc; 
+  background-color: #ccc;  
   display: block;
   margin: 0 1.4rem;
 }
