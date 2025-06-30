@@ -1662,14 +1662,15 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-bottom: 2.5px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
 
 .tab__lists .tab-menu.active {
   z-index: 0;
   /* overflow: hidden; */
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
+  border-bottom-color: currentColor;
 }
 
 .search-result.tab-content {
