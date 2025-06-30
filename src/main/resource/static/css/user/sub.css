@@ -197,8 +197,8 @@
 
 /* 비밀번호 재설정 start */
 .sub02 .content .container {padding: 4rem 2rem 5rem 2rem;}
-.sub02 .content .container .title {margin-bottom: 1.2rem; letter-spacing: -0.8px;}
-.sub02 .content .container .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
+.sub02 .content .container .title {margin: 0 20px 1.2rem 20px; letter-spacing: -0.8px;}
+.sub02 .content .container .sub_title {margin: 0 20px 2.1rem 20px; line-height: 22px; letter-spacing: -0.56px;}
 .sub02 .content .container .form__box {margin-bottom: 60px;}
 /* 비밀번호 재설정 end */
 
@@ -209,7 +209,7 @@
 .sub03 .content .container .title_wrap .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
 .sub03 .content .container .form_wrap .form__box:first-child{margin-bottom: 0.8rem;}
 .sub03 .content .container .form_wrap .form__box:nth-child(2){margin-bottom: 1rem;}
-.sub03 .content .container .form_wrap .info {line-height: 16px; letter-spacing: -0.4px; display: flex; gap: 0.8rem;}
+.sub03 .content .container .form_wrap .info {line-height: 16px; letter-spacing: -0.4px; display: flex; gap: 0.8rem; margin: 0 20px;}
 .sub03 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #660F89; margin-top: 6px;}
 .sub03 .content .container .form_wrap{margin-bottom: 6rem;}
 /* 비밀번호 재설정 휴대폰 인증 end */
