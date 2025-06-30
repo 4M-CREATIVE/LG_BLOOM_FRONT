@@ -255,24 +255,29 @@ const uiEvent = {
   },
 
   commentToggleEvent() {
-    // 댓글 답글 보기/접기
-    $(".comment_button").on("click", function (e) {
-      e.preventDefault();
+    // $(".comment_button").on("click", function (e) {
+	$(document).on("click", ".comment_button", function (e) {
+      //e.preventDefault();
       const $commentList = $(this).closest('.comment__list');
       const $answerBox = $commentList.find('.comment__answer');
-  
-      $answerBox.slideDown(300);
+	  /*
+      $answerBox.slideToggle(300);
       $commentList.addClass('on');
+      */
+      $answerBox.slideToggle(200);
     });
 
     // 댓글 접기 버튼 클릭 시 닫기
-    $(".comment__answer_header").on("click", function (e) {
+	//$(".comment__answer_header").on("click", function (e) {
+    $(document).on("click", ".comment__answer_header", function (e) {
+	  /*
       e.preventDefault();
-      const $commentList = $(this).closest('.comment__list');
-      const $answerBox = $commentList.find('.comment__answer');
-  
+	  const $commentList = $(this).closest('.comment__list');
+	  const $answerBox = $commentList.find('.comment__answer');
       $answerBox.slideUp(300);
       $commentList.removeClass('on');
+	  */
+      $(this).closest('.comment__answer').slideUp(200);
     });
   },
 
