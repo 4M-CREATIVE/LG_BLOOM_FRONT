@@ -242,7 +242,7 @@
 .sub04 .content .container .form_wrap .form__box:nth-child(2){margin-bottom: 1rem;}
 .sub04 .content .container .form_wrap .info {line-height: 16px; letter-spacing: -0.4px; display: flex; gap: 0.8rem;}
 .sub04 .content .container .form_wrap .info::before {content: ''; display: block; width: 4px; height: 4px; border-radius: 100%; background-color: #660F89; margin-top: 6px;}
-.sub04 .content .container .form_wrap{margin-bottom: 43rem;}
+.sub04 .content .container .form_wrap{margin-bottom: 15rem;}
 /* 마이페이지 - 비밀번호 확인 end */
 
 /* 마이페이지 - 비밀번호 확인 start */
@@ -254,7 +254,7 @@
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
-.reproductive-health-text {padding: 0 20px 140px 20px;}
+.reproductive-health-text {padding: 0 20px 160px 20px;}
 .reproductive-health-text .sub-text { line-height: 22px; letter-spacing: -0.56px;}
 .reproductive-health-text .logo {width: 120px; height: 38px; margin-bottom: 12px;}
 .sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
