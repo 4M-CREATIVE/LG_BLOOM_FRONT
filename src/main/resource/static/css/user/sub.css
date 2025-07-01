@@ -333,7 +333,7 @@ table.table-d tbody td:nth-child(2) {width: 28%;padding: 10px 10px 5px 10px;colo
 .before--bisiting-wrap .check--list .check--list-txt{padding: 0 10px;}
 .before--bisiting-wrap .check--list .check--list-txt .check-blue{ font-weight: 600; color: #222; display: flex; align-items: center; gap: 8.23px;}
 .before--bisiting-wrap .check--list .check--list-txt .check-blue::before { display: block; content: ''; width: 12.766px; height: 10px; background: url(/src/main/resource/static/images/user/common/check_deep_blue.svg); background-size: cover;}
-.before--bisiting-wrap .check--list .accordian__question {background-position: calc(100% - 30px) 0; padding-bottom: 14px; width: calc(100% - 57px);}
+.before--bisiting-wrap .check--list .accordian__question {background-position: calc(100% - 30px) 0; padding-bottom: 14px; width: 100%;}
 .before--bisiting-wrap .check--list::after {content: ''; display: block; width: calc(100% - 40px); height: 1px; background-color: #eee; margin-bottom: 14px; margin: 0 auto 14px auto;}
 .before--bisiting-wrap .check--list.on::after{visibility: hidden;}
 .before--bisiting-wrap .check--list .check__group .checkbox03 + label::before {left: 30px;}

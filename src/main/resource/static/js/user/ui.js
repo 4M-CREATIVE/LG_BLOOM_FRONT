@@ -217,41 +217,33 @@ const uiEvent = {
 
     $(".accordian__list").removeClass("on").find(".accordian__answer").hide();
 
-    // 버튼 클릭 시 토글
-    $(".accordian_btn").on("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const $this = $(this);
-      const $parentLi = $this.closest(".accordian__list");
-      const $answer = $parentLi.find(".accordian__answer");
-
-      if (!$answer.is(":animated")) {
-        $answer.slideToggle(300);
-        $parentLi.toggleClass("on");
-      }
-    });
-
-    // 체크박스(label 클릭 포함) 시 아코디언 열기
-    $(".accordian__question input[type='checkbox']").on("change", function () {
+    $(".accordian__question, .accordian_btn").on("click", function (e) {
       const $parentLi = $(this).closest(".accordian__list");
       const $answer = $parentLi.find(".accordian__answer");
+      const $checkbox = $parentLi.find("input[type='checkbox']");
 
-      if (!$answer.is(":animated")) {
-        const isChecked = $(this).is(":checked");
+      if ($checkbox.hasClass("fixcheck")) {
+        // .fixcheck가 있으면 강제 체크 + 잠금
+        $checkbox.prop("checked", true).addClass("locked");
 
-        // 열려있지 않으면 열고 class 추가
-        if (isChecked && !$parentLi.hasClass("on")) {
+        if (!$answer.is(":animated")) {
+          $answer.slideToggle(300);
+          $parentLi.toggleClass("on");
+        }
+      } else {
+        // .fixcheck가 없으면 체크 상태에 따라 슬라이드 처리
+        const isChecked = $checkbox.prop("checked");
+        
+        if (!isChecked) {
+          $answer.slideUp(300);
+          $parentLi.removeClass("on");
+        } else {
           $answer.slideDown(300);
           $parentLi.addClass("on");
         }
-        // 체크 해제해도 아코디언은 닫지 않음 (필요시 아래 주석 해제)
-        else if (!isChecked) {
-          $answer.slideUp(300);
-          $parentLi.removeClass("on");
-        }
       }
     });
+  
   },
 
   commentToggleEvent() {
