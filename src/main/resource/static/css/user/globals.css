@@ -99,8 +99,6 @@ header .container .left a img{
   left: 100%;
   z-index: 99999;
   overflow-y: scroll;
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
   transition: left 0.3s ease-in-out;
   box-sizing: border-box;
 }
@@ -164,10 +162,6 @@ header .container .left a img{
 .gnb .container .contents section:nth-child(3) ul li a,
 .gnb .container .contents section:nth-child(5) ul li a {
   font-weight: 500;
-}
-
-.gnb footer {
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .gnb footer .top {
