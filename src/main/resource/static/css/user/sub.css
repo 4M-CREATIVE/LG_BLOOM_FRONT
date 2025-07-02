@@ -1,5 +1,7 @@
 /* main start */
 /* main section01 */
+.app{  display: flex; flex-direction: column; justify-content: space-between;}
+.main-content {margin-top: calc(56px + env(safe-area-inset-top)); /* 헤더 높이 + safe area */}
 .main {padding: 2.3rem 2rem 2.5rem 2rem;}
 .main .circle { width: 1.8rem; height: 1.8rem; border-radius: 5rem; display: flex; align-items: center; justify-content: center; }
 .main--search-header {position: absolute; top: -70px; left: 0; width: 100%; display: flex; align-items: center; height: 5rem; padding: 0rem 2rem; background: #fff; border-bottom: 1px solid #E3D9EA; z-index: 99; transition: top 0.3s ease;}
@@ -105,7 +107,7 @@
 /* total search end */
 
 /* login start */
-.login-wrap { position: relative;}
+.login-wrap {  min-height: 100vh; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); box-sizing: border-box; overflow-x: hidden; background-color: #fff;}
 .login-wrap .footer {margin-top: 6rem;}
 .login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }

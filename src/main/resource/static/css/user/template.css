@@ -1885,10 +1885,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .h-100 {
-  height: 100px;
+  height: calc(100px + env(safe-area-inset-top));
 }
 .h-136 {
-  height: 136px;
+  height: calc(136px + env(safe-area-inset-top));
 }
 
 .right-30 {

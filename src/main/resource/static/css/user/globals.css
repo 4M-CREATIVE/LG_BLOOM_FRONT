@@ -75,7 +75,7 @@ select:focus {
 
 /* header */
 header .container {
-  padding: 0.8rem 2rem;
+  padding: calc(0.8rem + env(safe-area-inset-top)) 2rem 0.8rem;
 }
 
 header .container .right {
