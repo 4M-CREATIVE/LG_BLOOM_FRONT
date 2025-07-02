@@ -90,7 +90,7 @@ header .container .left a img{
 /* gnb */
 .gnb {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
   position: fixed;
   top: 0;
