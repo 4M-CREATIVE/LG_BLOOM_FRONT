@@ -1553,7 +1553,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* popup (confirm/alert) */
 .pop__overlay {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: rgba(0,0,0,0.5);
   position: fixed;
   top: 0;
@@ -1570,7 +1570,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .pop__overlay2 {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: rgba(0,0,0,0.5);
   position: fixed;
   top: 0;
