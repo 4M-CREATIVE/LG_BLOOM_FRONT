@@ -19,7 +19,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
 }
 
 .overflow-y-hidden {
@@ -116,8 +119,8 @@
   width: 100%;
   display: flex;
   align-items: center;
+  padding: calc(env(safe-area-inset-top) + 2rem) 2rem 0 2rem;
   height: 7rem;
-  padding: 2rem 2rem 0 2rem;
   background: transparent;
   border-bottom: 1px solid transparent;
 }
@@ -1174,8 +1177,8 @@ select option {
 }
 
 /* 숨겨진 실제 select */
-.select-wrap{
-  padding: 20px 15px 0 15px;
+.select-wrap {
+  padding: calc(env(safe-area-inset-top) + 20px) 15px 0 15px;
 }
 
 .select--custom select {
@@ -1559,6 +1562,8 @@ input[type="search"]::-webkit-search-cancel-button {
   bottom: 0;
   display: none;
   z-index: 1000;
+    padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .pop__overlay.active{
     display: block;
@@ -1574,6 +1579,8 @@ input[type="search"]::-webkit-search-cancel-button {
   bottom: 0;
   display: none;
   z-index: 1000;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .pop__overlay2.active{
     display: block;
@@ -1890,6 +1897,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .min-100vh {
   min-height: 100vh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .min--136 {
   min-height: calc(var(--vh, 1vh) * 100 - 136px);

@@ -50,7 +50,6 @@ li {
 
 /* body 기본값 */
 body {
-  min-height: 100vh;
   line-height: 1.5;
   margin: 0;
 }

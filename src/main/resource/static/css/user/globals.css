@@ -1,4 +1,4 @@
- :root {
+:root {
   /* 색상 */
   --primary-purple: #660F89;
   --primary-purple10: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #660F89;
@@ -43,6 +43,9 @@
 html, body {
   font-size: 62.5%;
   overflow-x: hidden;
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
 .container {
@@ -92,9 +95,12 @@ header .container .left a img{
   position: fixed;
   top: 0;
   left: 100%;
-  overflow-y: scroll;
-  transition: left 0.3s ease-in-out;
   z-index: 99999;
+  overflow-y: scroll;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  transition: left 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 .gnb #logoutButtonWrap {
@@ -106,12 +112,12 @@ header .container .left a img{
 }
 
 .gnb .container {
-	padding: 0 2rem 0 2rem; /* 임시 패딩 하단 설정 */
+  padding: 0 2rem 0 2rem; /* 임시 패딩 하단 설정 */
 }
 
 .gnb .container .close-btn {
   position: absolute;
-  top: 26px;
+  top: calc(env(safe-area-inset-top) + 26px); /* 여유 있는 위치로 조정 */
   right: 20px;
 }
 
@@ -156,6 +162,10 @@ header .container .left a img{
 .gnb .container .contents section:nth-child(3) ul li a,
 .gnb .container .contents section:nth-child(5) ul li a {
   font-weight: 500;
+}
+
+.gnb footer {
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .gnb footer .top {
