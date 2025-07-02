@@ -159,7 +159,6 @@
 /* 난임지원 난임정책 start */
 .infertility--policy section {padding: 0 2rem;}
 .infertility--policy .txt_wrap {letter-spacing: -0.8px; margin-bottom: 3rem;}
-.infertility--policy .infertility--policy-category {margin-bottom: 12.4rem;}
 .infertility--policy .infertility--policy-category li {margin-bottom:2.1rem; }
 .infertility--policy .infertility--policy-category li a {display: flex; align-items: center; gap: 1rem; color: #444; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.64px; cursor: none;}
 /* 난임지원 난임정책 end */

@@ -177,14 +177,14 @@ const uiEvent = {
       if (currentScroll === 0) {
         tabs.forEach(tab => {
           if (tab.classList.contains('active')) {
-            header.style.top = '0';
+            header.style.top = 'env(safe-area-inset-top)';
             tab.classList.add('is-radius');
           }
         });
       } else {
         tabs.forEach(tab => {
           if (tab.classList.contains('active')) {
-            header.style.top = `-${spacerHeight}px`;
+            header.style.top = `calc(-${spacerHeight}px + env(safe-area-inset-top))`;
             tab.classList.remove('is-radius');
           }
         });

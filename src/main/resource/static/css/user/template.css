@@ -119,8 +119,9 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: calc(env(safe-area-inset-top) + 2rem) 2rem 0 2rem;
-  height: 7rem;
+  padding: 0 2rem;
+  height: calc(50px + env(safe-area-inset-top, 0));
+  padding-top: env(safe-area-inset-top, 0);
   background: transparent;
   border-bottom: 1px solid transparent;
 }
@@ -145,9 +146,7 @@
   background-size: contain;
   margin-right: 2rem;
 }
-.header--sub02 {
-  padding-bottom: 0.8rem;
-}
+
 .header--sub02 .btn--back {
   background: url(/src/main/resource/static/images/user/common/arrow_l_black.svg) no-repeat;
   background-size: contain;

@@ -126,7 +126,7 @@ header .container .left a img{
 }
 
 .gnb .container .profile_info {
-  margin-top: 74px;
+  margin-top: calc(74px + env(safe-area-inset-top));
   margin-bottom: 1.6rem;
   padding-bottom: 1.6rem;
   border-bottom: 2px solid #E5E5E5;
@@ -196,6 +196,11 @@ header .container .left a img{
 }
 
 /* footer */
+.search-footer-wrap {
+  width: 100%;
+  height: 8.5rem;
+  background: #fff;
+}
 .footer .top {
   padding: 2.2rem 4rem;
 }
