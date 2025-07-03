@@ -119,7 +119,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 8px 2rem;
   height: calc(50px + env(safe-area-inset-top, 0));
   padding-top: env(safe-area-inset-top, 0);
   background: transparent;
@@ -1651,7 +1651,7 @@ input[type="search"]::-webkit-search-cancel-button {
   background: transparent;
 }
 .tab__lists--scroll {
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .tab__lists--scroll .tab__inner {

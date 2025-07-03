@@ -56,8 +56,8 @@
 .total-search .no-search-result.sp-185 {padding: 185px 0 184px 0; }
 .total-search .no-search-result img{width:30px; height:30px;}
 .search-header-wrap { position: fixed; top: env(safe-area-inset-top); left: 0; right: 0; height: auto; color: white; display: flex; flex-direction: column;z-index: 999 ; transition: ease 0.1s;}
-.search-result{ position: sticky; top: 0px; /* 헤더 높이만큼 고정 */ padding: 16px; background-color: #fff; font-weight: bold; padding: 10px 0; z-index: 999; transition: ease 0.3s;}
-.search-result .container { padding: 3rem 2rem 13rem 2rem;}
+.search-result{ position: sticky; top: calc( env(safe-area-inset-top)); /* 헤더 높이만큼 고정 */ padding: 16px; background-color: #fff; font-weight: bold; padding: 10px 0; z-index: 999; transition: ease 0.3s;}
+.search-result .container { padding: 3rem 2rem 0 2rem; height: 100%;}
 .faq-list .search-result .container { padding: 3rem 0 12rem 0;}
 
 /* .search-result .container section {margin-bottom: 3rem;} */
@@ -195,14 +195,14 @@
 /* 아이디찾기 end */
 
 /* 비밀번호 재설정 start */
-.sub02 .content .container {padding: 4rem 2rem 5rem 2rem;}
+.sub02 .content .container {padding: 4rem 2rem 5rem 2rem; min-height: calc((100vh - 50px) - env(safe-area-inset-top));}
 .sub02 .content .container .title {margin: 0 20px 1.2rem 20px; letter-spacing: -0.8px;}
 .sub02 .content .container .sub_title {margin: 0 20px 2.1rem 20px; line-height: 22px; letter-spacing: -0.56px;}
 .sub02 .content .container .form__box {margin-bottom: 60px;}
 /* 비밀번호 재설정 end */
 
 /* 비밀번호 재설정 휴대폰 인증 start */
-.sub03 .content .container {padding: 4rem 2rem 5rem 2rem;}
+.sub03 .content .container {padding: 4rem 2rem 5rem 2rem; min-height: calc((100vh - 50px) - env(safe-area-inset-top));}
 .sub03 .content .container .title_wrap {padding: 0 1.5rem;}
 .sub03 .content .container .title_wrap .title {margin-bottom: 1.2rem; letter-spacing: -0.8px;}
 .sub03 .content .container .title_wrap .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
@@ -233,7 +233,7 @@
 /* 마이페이지 end */
 
 /* 마이페이지 - 비밀번호 확인 start */
-.sub04 .content .container {padding: 4rem 2rem 5rem 2rem;}
+.sub04 .content .container {padding: 4rem 2rem 5rem 2rem; min-height: calc((100vh - 50px) - env(safe-area-inset-top));}
 .sub04 .content .container .title_wrap {padding: 0 1.5rem;}
 .sub04 .content .container .title_wrap .title {letter-spacing: -0.8px;}
 .sub04 .content .container .title_wrap .sub_title {margin-bottom: 2.1rem; line-height: 22px; letter-spacing: -0.56px;}
