@@ -32,19 +32,16 @@
 
 /* 모바일 초소형 화면 (375px 이하) */
 @media (max-width: 375px) {
-  /* 로그인페이지 */
-  .login-wrap .content .login-title {
-    margin-top: 8rem;
-  }
 
   /* 가임건강 체크하기 */
   .fertility_health .img{
-    margin-bottom: 2rem!important;
-    margin-top: 2rem!important;
+    padding-bottom: 2rem!important;
+    padding-top: 4rem!important;
   }
   .reproductive-health-text{
     padding: 0 20px 160px 20px;
   }
+
 }
 
 

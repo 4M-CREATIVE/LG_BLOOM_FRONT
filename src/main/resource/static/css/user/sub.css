@@ -107,12 +107,10 @@
 /* total search end */
 
 /* login start */
-.login-wrap { min-height: 100dvh; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); position: relative;}
-.login-wrap .footer {margin-top: 6rem;}
-.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed; top: 0; left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
+.login-wrap { min-height: 100dvh; position: relative;}
+.login-wrap .login_bg_l { width: 60.8%; height: 19.19%; max-width: 47rem; max-height: 25.4rem; position: fixed;  top: env(safe-area-inset-top, 0); left: 0; background: url(/src/main/resource/static/images/user/login/login_bg_left.svg) no-repeat; background-size: contain;  z-index: -1;}
 .login-wrap .login_bg_r { width: 46.67%; height: 24.19%; max-width: 35rem; max-height: 32rem; position: fixed; bottom: 0; right: 0; background: url(/src/main/resource/static/images/user/login/login_bg_right.svg) no-repeat;  background-size: cover; }
-.login-wrap .content { padding: 0 2rem;}
-.login-wrap .content .login-title{ margin-top:15rem;}
+.login-wrap .content { padding: 0 2rem; display: flex; flex-direction: column; justify-content: center; min-height: calc(100dvh - 172px - env(safe-area-inset-bottom, 0));}
 .login-wrap .content .login-title .login_logo { width: 101px; height: 32px;}
 .login-wrap .content p { font-weight: 700; line-height: 36px; letter-spacing: -0.96px; margin-bottom: 3rem; margin-left: 2rem;}
 .login-wrap .content .login-form .form-group:first-child{ margin-bottom: 0.8rem;}
@@ -270,6 +268,7 @@
 .non--check-result-list{ width: 100%; height:436px; border-radius: 15px; text-align: center; padding-top: 16rem;}
 .sub06 .container {padding: 0rem 2rem;}
 .sub06 .container .title_wrap {padding: 0 2rem;}
+.test-pre-container{min-height: calc((100vh - 50px) - env(safe-area-inset-top));}
 /* 마이페이지 - 나의 가임건강 체크 end */
 
 /* 마이페이지 - 나의 가임건강 체크 결과 start */
