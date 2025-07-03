@@ -638,8 +638,8 @@
 .bottom-55 {
   bottom:55px;
 }
-.bottom-40 {
-  bottom:40px;
+.bottom-50 {
+  bottom:50px;
 }
 
 /* width */
@@ -1844,6 +1844,10 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 48px;
   border-radius: 90px;
   background: var(--primary-purple, #660F89)
+}
+
+.question-list{
+  padding-bottom: 156px; /* 버튼 간격 60px*/
 }
 
 .question-list button {

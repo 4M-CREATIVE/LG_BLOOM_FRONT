@@ -214,7 +214,7 @@
 /* 비밀번호 재설정 휴대폰 인증 end */
 
 /* 마이페이지 start */
-.mypage .content .container {padding: 6.4rem 2rem 13rem 2rem;}
+.mypage .content .container {padding: calc(6.4rem + env(safe-area-inset-top, 0)) 2rem calc(0rem + env(safe-area-inset-bottom, 0)) 2rem;}
 .mypage .content .container .l-banner{border-radius: 15px; position: relative; margin-bottom: 1rem;}
 .mypage .content .container .l-banner .l-banner-box{padding: 1.6rem 1.6rem 2rem 1.6rem;}
 .mypage .content .container .l-banner .l-banner-box .l-banner-icon{margin-bottom: 0.6rem;}
@@ -267,7 +267,7 @@
 .non--check-list{ width: 100%; height:339px; border-radius: 15px; text-align: center; padding-top: 8rem;}
 .non--check-result-list{ width: 100%; height:436px; border-radius: 15px; text-align: center; padding-top: 16rem;}
 .sub06 .container {padding: 0rem 2rem;}
-.sub06 .container .title_wrap {padding: 0 2rem;}
+.sub06 .container .title_wrap {padding: 3rem 2rem 0 2rem;}
 .test-pre-container{min-height: calc((100vh - 50px) - env(safe-area-inset-top));}
 /* 마이페이지 - 나의 가임건강 체크 end */
 

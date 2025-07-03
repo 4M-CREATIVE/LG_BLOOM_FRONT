@@ -654,61 +654,62 @@ hr {height:  1px; margin-bottom: 10px;}
 }
 
 /* 이용약관 */
-.ck-content .privacy-agreement.gray .title{
+.ck-content.privacy-agreement.gray h2{
   color: var(--Neutral-gray-77, #777);
+  margin-bottom: 10px;
 }
-.ck-content .privacy-agreement.gray .description {
+.ck-content.privacy-agreement.gray p {
   color: var(--Neutral-gray-99, #999);
 }
-.ck-content .privacy-agreement.gray .table-a {
+.ck-content.privacy-agreement.gray .table-a {
   border-top: 1px solid var(--Neutral-gray-77, #777);
 }
-.ck-content .privacy-agreement.gray .table-a thead th{
+.ck-content.privacy-agreement.gray .table-a thead th{
   color: var(--Neutral-gray-77, #777);
 }
-.ck-content .privacy-agreement.gray .table-a tbody td p.text{
+.ck-content.privacy-agreement.gray .table-a tbody td p.text{
   color: var(--Neutral-gray-99, #999);
 }
 
-.ck-content .privacy-agreement.black .title{
+.ck-content.privacy-agreement.black h2{
   color: var(--Neutral-black-22, #222);
 }
-.ck-content .privacy-agreement.black .description {
+.ck-content.privacy-agreement.black p{
   color: var(--Neutral-black-22, #222);
 }
-.ck-content .privacy-agreement.black .table-a {
+.ck-content.privacy-agreement.black .table-a {
   border-top: 1px solid var(--Neutral-black-22, #222);
 }
-.ck-content .privacy-agreement.black .table-a thead th{
+.ck-content.privacy-agreement.black .table-a thead th{
   color: var(--Neutral-black-22, #222);
   background: var(--Neutral-gray-F6, #F6F6F6);
 
 }
-.ck-content .privacy-agreement.black .table-a tbody td p.text{
+.ck-content.privacy-agreement.black .table-a tbody td p.text{
   color: var(--Neutral-black-22, #222); 
 }
-.ck-content .privacy-agreement .title {
+.ck-content.privacy-agreement h2 {
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: -0.48px;
 }
-.ck-content .privacy-agreement .description {
+.ck-content.privacy-agreement p {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: -0.4px;
 }
 
-.ck-content .privacy-agreement .table-a thead th{padding: 10px 15px;
+.ck-content.privacy-agreement .table-a thead th{padding: 10px 15px;
   font-size: 10px;
   font-weight: 700;
   line-height: 14px;
   letter-spacing: -0.4px;
 }
-.ck-content .privacy-agreement.gray .table-a thead th:nth-child(2) { min-width: 124px; width: 39.62%;}
-.ck-content .privacy-agreement.black .table-a thead th:nth-child(2) { min-width: 185px; width: 55.224%;}
+.ck-content.privacy-agreement.gray .table-a thead th:nth-child(2) { min-width: 124px; width: 39.62%;}
+.ck-content.privacy-agreement.black .table-a thead th:nth-child(2) { min-width: 185px; width: 55.224%;}
 
-.ck-content .privacy-agreement .table-a tbody td p.text{
+.ck-content.privacy-agreement .table-a tbody td p.text{
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
