@@ -188,10 +188,9 @@
 
 /* 아이디찾기 start */
 .title__box { display: block; width: calc(100% - 8.8rem); text-align: center;}
-.sub01 .content .container {padding: 10rem 2rem 5rem 2rem;}
+.sub01 .content .container {padding: 10rem 2rem 0 2rem;}
 .sub01 .content .container .check_box {margin: 0 0 5rem 2rem;}
 .sub01 .content .container p {line-height: 36px;  letter-spacing: -0.96px; margin: 0 0 20px 20px;}
-.sub01 .content .container .form__box {margin-bottom: 14rem;}
 /* 아이디찾기 end */
 
 /* 비밀번호 재설정 start */
@@ -253,7 +252,7 @@
 
 /* 마이페이지 - 비밀번호 확인 end */
 /* 마이페이지 - 나의 가임건강 체크 start */
-.reproductive-health-text {padding: 0 20px 160px 20px;}
+.reproductive-health-text {padding: 100px 20px 160px 20px;}
 .reproductive-health-text .sub-text { line-height: 22px; letter-spacing: -0.56px;}
 .reproductive-health-text .logo {width: 120px; height: 38px; margin-bottom: 12px;}
 .sub08 .content .container {padding: 10rem 2rem 5rem 2rem;}
@@ -269,6 +268,7 @@
 .sub06 .container {padding: 0rem 2rem;}
 .sub06 .container .title_wrap {padding: 3rem 2rem 0 2rem;}
 .test-pre-container{min-height: calc((100vh - 50px) - env(safe-area-inset-top));}
+.fertility_health .reproductive-health-text {padding: 0 20px 160px 20px;}
 /* 마이페이지 - 나의 가임건강 체크 end */
 
 /* 마이페이지 - 나의 가임건강 체크 결과 start */

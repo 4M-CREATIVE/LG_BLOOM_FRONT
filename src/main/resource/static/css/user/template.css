@@ -419,6 +419,9 @@
 .pb-146 {
   padding-bottom:14.6rem;
 }
+.pb-30 {
+  padding-bottom:3rem;
+}
 .pt-105 {
   padding-top: 10.5rem;
 }
@@ -875,9 +878,9 @@
 
 /* accordian */
 
-.accordian__list:first-of-type.on {
+/* .accordian__list:first-of-type.on {
   margin-top: -1px;
-}
+} */
 .accordian__question {
   position: relative;
 }

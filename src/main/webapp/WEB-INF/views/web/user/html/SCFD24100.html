@@ -51,8 +51,8 @@
     </header>
 
     <!-- main -->
-    <div class="content min--70">
-      <div class="container">
+    <div class="content">
+      <div class="container" style="min-height: calc((100vh - 50px) - env(safe-area-inset-top));">
         <p class="title tit--fz20 color--blk txt--fw-700 ">
           휴대폰 인증으로 재설정하기
         </p>
@@ -63,7 +63,7 @@
         <div class="form__box">
           <input type="text" name="" placeholder="아이디를 입력하세요." id="">
         </div>
-        <div class="btn__box">
+        <div class="btn__box position-abs bottom-50 width-calc40 transform-left-50">
           <a href="/src/main/webapp/WEB-INF/views/web/user/html/SCFD24300.html" class="btn btn--purple" >비밀번호 재설정</a>
         </div>
       </div>
