@@ -202,7 +202,7 @@ const uiEvent = {
       lastScroll = currentScroll;
     });
   },
-  accordionEvent() {
+  accordionEvent() { 
     $(".faq__question").on("click", function (e) {
       e.preventDefault();
       const $question = $(this);
@@ -217,7 +217,7 @@ const uiEvent = {
 
     $(".accordian__list").removeClass("on").find(".accordian__answer").hide();
 
-    $(".accordian__question, .accordian_btn").on("click", function (e) {
+    $(".open-check, .accordian_btn").on("click", function (e) {
       const $parentLi = $(this).closest(".accordian__list");
       const $answer = $parentLi.find(".accordian__answer");
       const $checkbox = $parentLi.find("input[type='checkbox']");
@@ -243,6 +243,17 @@ const uiEvent = {
         }
       }
     });
+
+      // accordian_btn 클릭 시: 토글 애니메이션 + .on 클래스 토글
+  $(".accordian_btn").on("click", function (e) {
+    const $parentLi = $(this).closest(".accordian__list");
+    const $answer = $parentLi.find(".accordian__answer");
+
+    if (!$answer.is(":animated")) {
+      $answer.slideToggle(300);
+      $parentLi.toggleClass("on");
+    }
+  });
   
   },
 
