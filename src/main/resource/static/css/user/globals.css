@@ -182,6 +182,9 @@ header .container .left a img{
   display: block;
   margin: 0 1.4rem;
 }
+.gnb footer .top div:last-child::after {
+  display: none;
+}
 
 .gnb footer .top a:last-child::after {
   display: none;
