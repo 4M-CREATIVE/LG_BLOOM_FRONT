@@ -1,3 +1,76 @@
+// context 감지 함수
+function detectContext() {
+  const ua = navigator.userAgent || '';
+
+  // 1) PWA 독립 실행(홈 화면에 추가) 여부
+  const isStandalonePWA = window.matchMedia('(display-mode: standalone)').matches
+    || window.navigator.standalone === true;
+
+  // 2) iOS / Android WebView 여부
+  const isIOSWebView = /iPhone|iPad|iPod/.test(ua) && !/Safari/.test(ua);
+  const isAndroidWebView = /Android/.test(ua) && /Version\/\d+\.\d/.test(ua);
+
+  // 3) 일반 모바일 브라우저 여부
+  const isMobileBrowser = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+    .test(ua);
+
+  if (isStandalonePWA) {
+	alert('pwa');
+    return 'pwa';
+  } else if (isIOSWebView || isAndroidWebView) {
+	alert('webview');
+    return 'webview';
+  } else if (isMobileBrowser) {
+	alert('mobile-browser');
+    return 'mobile-browser';
+  } else {
+	alert('desktop');
+    return 'desktop';
+  }
+}
+
+// 메인 페이지 핸드폰 기기별 뷰포트 화면 수정
+function detectDeviceAndApplyClass() {
+	
+  // 전체 화면 CSS 픽셀
+  const w = Math.round(window.screen.width);
+  const h = Math.round(window.screen.height);
+
+  // key 생성
+  const key = `${w}x${h}`;
+
+  // 디버그 alert
+  alert(`Detected full‑screen key: ${key}`);
+
+  // 매핑 테이블
+  const map = {
+    // --- iOS ---
+    '375x812': 'iphone58',       // iPhone X, XS, 11 Pro, 12 mini, 13 mini /* 적용 */
+    '390x844': 'iphone14',       // iPhone 12, 13, 12 Pro, 13 Pro, 14 /* 적용 */
+    '393x852': 'iphone15',       // iPhone 14 Pro, 15, 15 Pro, 16 /* 적용 */
+    '402x874': 'iphone16pro',    // iPhone 16 Pro
+    '430x932': 'iphone15pm',     // iPhone 14 Pro Max, 15 Pro Max
+    '440x956': 'iphone16pm',     // iPhone 16 Pro Max
+
+    // --- Android ---
+    '360x780': 'galaxyBase',     // Galaxy S22~S25 기본형 /* 적용 */
+    '384x832': 'galaxyPlus',     // Galaxy S22+ ~ S25+ /* 적용 */
+    '360x772': 'galaxyUltraQHD', // Galaxy S22~S24 Ultra (QHD 모드) /* 적용 */
+    '385x833': 'galaxyUltra25QHD', // Galaxy S25 Ultra(QHD 모드) /* 적용 */
+    '384x824': 'galaxyUltraFHD', // Galaxy S23~S25 Ultra (FHD 모드) /* 적용 */
+    //'360x800': 'galaxyZFlip34',  // Galaxy Z Flip 3/4
+    //'360x816': 'galaxyZFlip56',  // Galaxy Z Flip 5/6
+  };
+
+  // 클래스 적용
+  const classes = map[key];
+  if (classes) {
+    document.documentElement.classList.add(...classes.split(' '));
+  } else {
+    document.documentElement.classList.add('unknown-device');
+  }
+}
+
 // 나의 가임력 체크
 function initCommonSurveySelectEvent(surveyId, noneSelector, diseaseSelector) {
   const $container = $(`#${surveyId}`);

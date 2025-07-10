@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
   <title>Bloom</title>
 
@@ -16,6 +15,21 @@
   <!-- js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="/src/main/resource/static/js/user/ui.js?v=1.0"></script>
+
+  <script>
+    (function() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+      const meta = document.createElement('meta');
+      meta.name = "viewport";
+      meta.content = isIOS
+        ? "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        : "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+
+      document.head.appendChild(meta);
+    })();
+  </script>
 
   <!-- Initialized Include Path -->
   <script>
@@ -35,9 +49,14 @@
       await loadHtml(".header", "/src/main/webapp/WEB-INF/views/web/user/components/main_header.html?v=1.0");
       await loadHtml(".gnb", "/src/main/webapp/WEB-INF/views/web/user/components/SCFD13000.html");
       await loadHtml(".footer", "/src/main/webapp/WEB-INF/views/web/user/components/main_footer.html");
-  
-      uiEvent.init();
-    }
+
+      const context = detectContext();
+      if (context === 'webview') {
+        detectDeviceAndApplyClass();
+      }
+    
+        uiEvent.init();
+      }
   
     document.addEventListener("DOMContentLoaded", initPage);
   </script>

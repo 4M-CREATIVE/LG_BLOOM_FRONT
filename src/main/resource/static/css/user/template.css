@@ -1996,3 +1996,116 @@ input[type="search"]::-webkit-search-cancel-button {
   text-decoration: underline;
   text-underline-offset: 2px; 
 }
+
+/* iPhone X, XS, 11 Pro, 12 mini, 13 mini 375x812*/
+html.iphone58 .main {
+	padding: 2rem 2rem 2rem 2rem;
+}
+html.iphone58 .main .section01 {
+	margin-bottom: 1rem;
+}
+html.iphone58 .main .section01 h2 {
+	margin-bottom: 1rem;
+}
+html.iphone58 .main .section02 {
+	margin-bottom: 1rem;
+}
+html.iphone58 .main .section02 .contents li, html.iphone58 .main .section03 .contents li{
+	height: 90px;
+}
+
+/* iPhone 14 Pro, 15, 15 Pro, 16 393x852*/
+html.iphone15 .main {
+	padding: 2rem 2rem 2rem 2rem;
+}
+html.iphone15 .main .section02 .contents li, html.iphone15 .main .section03 .contents li{
+	height: 90px;
+}
+
+/* Galaxy S22~S25 기본형 360x780*/
+html.galaxyBase .main {
+	padding: 0.5rem 2rem 1rem 2rem;
+}
+html.galaxyBase .main .section01 {
+	margin-bottom: 1rem;
+}
+html.galaxyBase .main .section01 h2 {
+	margin-bottom: 1rem;
+}
+html.galaxyBase .main .section02 {
+	margin-bottom: 1rem;
+}
+html.galaxyBase .main .section02 .contents li, html.galaxyBase .main .section03 .contents li{
+	height: 80px;
+}
+html.galaxyBase .footer .top {
+	padding: 1.8rem 4rem;
+}
+
+/* Galaxy S22+ ~ S25+ 384x832*/
+html.galaxyPlus .main {
+	padding: 2.5rem 2rem 2rem 2rem;
+}
+html.galaxyPlus .main .section01 {
+	margin-bottom: 1rem;
+}
+html.galaxyPlus .main .section01 h2 {
+	margin-bottom: 1rem;
+}
+html.galaxyPlus .main .section02 {
+	margin-bottom: 1rem;
+}
+html.galaxyPlus .main .section02 .contents li, html.galaxyPlus .main .section03 .contents li{
+	height: 80px;
+}
+
+/* Galaxy S22~S24 Ultra (QHD 모드) 360x772*/
+html.galaxyUltraQHD .main {
+	padding: 2rem 2rem 2rem 2rem;
+}
+html.galaxyUltraQHD .main .section01 {
+	margin-bottom: 1rem;
+}
+html.galaxyUltraQHD .main .section01 h2 {
+	margin-bottom: 1rem;
+}
+html.galaxyUltraQHD .main .section02 {
+	margin-bottom: 1rem;
+}
+html.galaxyUltraQHD .main .section02 .contents li, html.galaxyUltraQHD .main .section03 .contents li{
+	height: 80px;
+}
+html.galaxyUltraQHD .footer .top {
+	padding: 1.8rem 4rem;
+}
+
+/* Galaxy S25 Ultra(QHD 모드) 360x833*/
+html.galaxyUltra25QHD .main {
+	padding: 2rem 2rem 2rem 2rem;
+}
+html.galaxyUltra25QHD .main .section02 .contents li, html.galaxyUltra25QHD .main .section03 .contents li{
+	height: 80px;
+}
+html.galaxyUltra25QHD .footer .top {
+	padding: 1.8rem 4rem;
+}
+
+/* Galaxy S23~S25 Ultra (FHD 모드) 384x824*/
+html.galaxyUltraFHD .main {
+	padding: 2rem 2rem 2rem 2rem;
+}
+html.galaxyUltraFHD .main .section01 {
+	margin-bottom: 1rem;
+}
+html.galaxyUltraFHD .main .section01 h2 {
+	margin-bottom: 1rem;
+}
+html.galaxyUltraFHD .main .section02 {
+	margin-bottom: 1rem;
+}
+html.galaxyUltraFHD .main .section02 .contents li, html.galaxyUltraFHD .main .section03 .contents li{
+	height: 80px;
+}
+html.galaxyUltraFHD .footer .top {
+	padding: 1.8rem 4rem;
+}
