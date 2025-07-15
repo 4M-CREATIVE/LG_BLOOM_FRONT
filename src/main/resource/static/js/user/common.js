@@ -1,8 +1,0 @@
-const uiEvent = {
-  init() {
-  },
-
-  headerEvent() {
-
-  },
-};
